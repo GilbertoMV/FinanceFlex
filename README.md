@@ -1,5 +1,5 @@
 # FinanceFlex
-## Integranntes
+## Integrantes
 
  - Gilberto Valenzuela Martínez.
  - Juan Pablo Chipres Arteaga.
