@@ -1,0 +1,18 @@
+[01-Sep-2022 03:52:53 Europe/Berlin] inicio de aplicacion web
+[01-Sep-2022 03:52:53 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Controller' not found in C:\xamppp\htdocs\finance\controllers\errores.php:3
+Stack trace:
+#0 C:\xamppp\htdocs\finance\libs\app.php(2): require_once()
+#1 C:\xamppp\htdocs\finance\index.php(9): require_once('C:\\xamppp\\htdoc...')
+#2 {main}
+  thrown in C:\xamppp\htdocs\finance\controllers\errores.php on line 3
+[01-Sep-2022 03:54:36 Europe/Berlin] inicio de aplicacion web
+[01-Sep-2022 03:54:36 Europe/Berlin] PHP Warning:  require_once(Controller.php): failed to open stream: No such file or directory in C:\xamppp\htdocs\finance\controllers\errores.php on line 2
+[01-Sep-2022 03:54:36 Europe/Berlin] PHP Fatal error:  require_once(): Failed opening required 'Controller.php' (include_path='C:\xamppp\php\PEAR') in C:\xamppp\htdocs\finance\controllers\errores.php on line 2
+[01-Sep-2022 03:55:08 Europe/Berlin] inicio de aplicacion web
+[01-Sep-2022 03:55:13 Europe/Berlin] inicio de aplicacion web
+[01-Sep-2022 03:55:13 Europe/Berlin] Login::construct->inicio de login
+[01-Sep-2022 03:55:13 Europe/Berlin] Login::Render->Carga el index del login
+[02-Sep-2022 00:20:28 Europe/Berlin] inicio de aplicacion web
+[02-Sep-2022 00:20:28 Europe/Berlin] Login::construct->inicio de login
+[02-Sep-2022 00:20:28 Europe/Berlin] Login::Render->Carga el index del login
+[02-Sep-2022 00:20:35 Europe/Berlin] inicio de aplicacion web
