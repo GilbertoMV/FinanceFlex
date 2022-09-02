@@ -1,13 +1,13 @@
 <?php
 class ErrorMessages{
     //ERROR_CONTROLLER_METHOD_ACTION
-    const ERROR_ADMIN_NEWCATEGORY_EXISTS = "ERROR_1";
+    const PRUEBA = "ERROR_1";
     
     private $errorList = [];
 
     public function __construct(){
         $this->errorList = [
-            ErrorMessages::ERROR_ADMIN_NEWCATEGORY_EXISTS => 'El nombre de la categoria ya existe.'
+            ErrorMessages::PRUEBA => 'El nombre de la categoria ya existe.'
         ];
 
     }

@@ -9,5 +9,10 @@
     </head>
 <body>
     <h1>Login</h1>
+    <p><?php
+    $this->showMessages();
+    ?>
+
+    </p>
 </body>
 </html>

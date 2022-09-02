@@ -2,12 +2,12 @@
 
 class SuccessMessages{
     //SUCCESS_CONTROLLER_METHOD_ACTION
-    const SUCCESS_ADMIN_NEWCATEGORY_EXISTS = "OK_1";
+    const PRUEBA = "OK_1";
     
     private $successList = [];
     public function __construct(){
         $this->successList = [
-            SuccessMessages::SUCCESS_ADMIN_NEWCATEGORY_EXISTS => 'El nombre de la categoria ya existe.'
+            SuccessMessages::PRUEBA => 'Este es un mensaje de exito.'
         ];
         
     }
