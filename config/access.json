@@ -6,6 +6,11 @@
             "role":""
         },
         {
+            "site":"",
+            "access":"public",
+            "role":""
+        },
+        {
             "site":"signup",
             "access":"public",
             "role":""

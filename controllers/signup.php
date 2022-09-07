@@ -1,4 +1,6 @@
 <?php
+require_once 'models/usermodel.php';
+
 class Signup extends SessionController{
 
     function __construct()
@@ -26,9 +28,11 @@ class Signup extends SessionController{
             $user->setRole('user');
 
             if($user->exists($email)){
-                $this->redirect('sig', ['error' =>ErrorMessages::ERROR_SIGNUP_NEWUSER_EXIST]);
+                $this->redirect('signup', ['error' =>ErrorMessages::ERROR_SIGNUP_NEWUSER_EXIST]);
             }else if($user->save()){
-                $this->redirect('sig', ['success' =>SuccessMessages::SUCCESS_REGISTER_OK]);
+                $this->redirect('', ['success' =>SuccessMessages::SUCCESS_REGISTER_OK]);
+            }else{
+                $this->redirect('signup', ['error' =>ErrorMessages::ERROR_SIGNUP_NEWUSER]);
             }
 
         }else{

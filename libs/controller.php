@@ -58,10 +58,10 @@ class Controller{
         /**ejemplo 
          * ?nombre=Juan&apellido=Chipres
         */
-        if($params =! ''){
+        if($params != ''){
             $params = '?' . $params;
         }
-        header('Location: ' . constant('URL') . $route . $params);
+        header('Location: ' . constant('URL') . '/' . $route . $params);
     }
 
 }

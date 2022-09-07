@@ -7,7 +7,24 @@
     <title>Registro</title>
 </head>
 <body>
-    <h1>Registro</h1>
+    <?php $this->showMessages();?>
     
+    <form action="<?php echo constant('URL'); ?>/signup/newUser" method="post">
+        <h2>Registrarse</h2>
+        <p>
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email">
+        </p>
+        <p>
+            <label for="password">Password</label>
+            <input type="text" name="password" id="password">
+        </p>
+        <p>
+            <input type="submit" value="Iniciar sesion" />
+        </p>
+        <p>
+            Tienes una cuenta? <a href="<?php echo constant('URL'); ?>">Iniciar sesion</a>
+        </p>
+    </form>
 </body>
 </html>

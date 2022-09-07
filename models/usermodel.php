@@ -105,14 +105,11 @@ class UserModel extends Model implements IModel{
 
     public function save(){
         try{
-            $query = $this->prepare('INSERT INTO users (username, password, role, budget, photo, name) VALUES(:username, :password, :role, :budget, :photo, :name )');
+            $query = $this->prepare('INSERT INTO users (email, password, role) VALUES(:email, :password, :role)');
             $query->execute([
-                'username'  => $this->username, 
+                'email'  => $this->email, 
                 'password'  => $this->password,
-                'role'      => $this->role,
-                'budget'    => $this->budget,
-                'photo'     => $this->photo,
-                'name'      => $this->name
+                'role' => $this->role
                 ]);
             return true;
         }catch(PDOException $e){
@@ -204,7 +201,7 @@ class UserModel extends Model implements IModel{
 
     public function exists($email){
         try{
-            $query = $this->prepare('SELECT email FROM users WHERE username = :username');
+            $query = $this->prepare('SELECT email FROM users WHERE email = :email');
             $query->execute( ['email' => $email]);
             
             if($query->rowCount() > 0){
