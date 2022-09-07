@@ -6,11 +6,6 @@
             "role":""
         },
         {
-            "site":"",
-            "access":"public",
-            "role":""
-        },
-        {
             "site":"signup",
             "access":"public",
             "role":""
@@ -18,7 +13,7 @@
         {
             "site":"dashboard",
             "access":"private",
-            "role":"user"
+            "role":"admin"
         },
         {
             "site":"expenses",

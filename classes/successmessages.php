@@ -11,6 +11,7 @@ class SuccessMessages{
         $this->successList = [
             SuccessMessages::PRUEBA => 'Este es un mensaje de exito.',
             SuccessMessages::SUCCESS_REGISTER_OK=> 'Se ha registrado correctamente.'
+        
         ];
         
     }

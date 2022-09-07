@@ -1,189 +1,250 @@
-[07-Sep-2022 23:06:42 Europe/Berlin] inicio de aplicacion web
-[07-Sep-2022 23:06:42 Europe/Berlin] SESSIONCONTROLLER::validateSession
-[07-Sep-2022 23:06:42 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->signup
-[07-Sep-2022 23:06:42 Europe/Berlin] sessionController::isPublic(): currentURL => signup
-[07-Sep-2022 23:06:42 Europe/Berlin] SessionController::validateSession() public page
-[07-Sep-2022 23:06:57 Europe/Berlin] inicio de aplicacion web
-[07-Sep-2022 23:06:57 Europe/Berlin] SESSIONCONTROLLER::validateSession
-[07-Sep-2022 23:06:57 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->signup
-[07-Sep-2022 23:06:57 Europe/Berlin] sessionController::isPublic(): currentURL => signup
-[07-Sep-2022 23:06:57 Europe/Berlin] SessionController::validateSession() public page
-[07-Sep-2022 23:06:57 Europe/Berlin] Conexión a BD exitosa
-[07-Sep-2022 23:06:57 Europe/Berlin] Conexión a BD exitosa
-[07-Sep-2022 23:06:57 Europe/Berlin] inicio de aplicacion web
-[07-Sep-2022 23:06:57 Europe/Berlin] SESSIONCONTROLLER::validateSession
-[07-Sep-2022 23:06:57 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->signup?error=ERROR_2
-[07-Sep-2022 23:06:57 Europe/Berlin] sessionController::isPublic(): currentURL => signup?error=ERROR_2
-[07-Sep-2022 23:06:57 Europe/Berlin] SessionController::validateSession() public page
-[07-Sep-2022 23:07:57 Europe/Berlin] inicio de aplicacion web
-[07-Sep-2022 23:07:57 Europe/Berlin] SESSIONCONTROLLER::validateSession
-[07-Sep-2022 23:07:57 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->signup
-[07-Sep-2022 23:07:57 Europe/Berlin] sessionController::isPublic(): currentURL => signup
-[07-Sep-2022 23:07:57 Europe/Berlin] SessionController::validateSession() public page
-[07-Sep-2022 23:07:58 Europe/Berlin] inicio de aplicacion web
-[07-Sep-2022 23:07:58 Europe/Berlin] SESSIONCONTROLLER::validateSession
-[07-Sep-2022 23:07:58 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
-[07-Sep-2022 23:07:58 Europe/Berlin] sessionController::isPublic(): currentURL => 
-[07-Sep-2022 23:07:58 Europe/Berlin] SessionController::validateSession() public page
-[07-Sep-2022 23:07:58 Europe/Berlin] Login::construct->inicio de login
-[07-Sep-2022 23:07:58 Europe/Berlin] Login::Render->Carga el index del login
-[07-Sep-2022 23:07:59 Europe/Berlin] inicio de aplicacion web
-[07-Sep-2022 23:07:59 Europe/Berlin] SESSIONCONTROLLER::validateSession
-[07-Sep-2022 23:07:59 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
-[07-Sep-2022 23:07:59 Europe/Berlin] sessionController::isPublic(): currentURL => 
-[07-Sep-2022 23:07:59 Europe/Berlin] SessionController::validateSession() public page
-[07-Sep-2022 23:07:59 Europe/Berlin] Login::construct->inicio de login
-[07-Sep-2022 23:07:59 Europe/Berlin] Login::Render->Carga el index del login
-[07-Sep-2022 23:08:10 Europe/Berlin] inicio de aplicacion web
-[07-Sep-2022 23:08:10 Europe/Berlin] SESSIONCONTROLLER::validateSession
-[07-Sep-2022 23:08:10 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
-[07-Sep-2022 23:08:10 Europe/Berlin] sessionController::isPublic(): currentURL => 
-[07-Sep-2022 23:08:10 Europe/Berlin] SessionController::validateSession() public page
-[07-Sep-2022 23:08:10 Europe/Berlin] Login::construct->inicio de login
-[07-Sep-2022 23:08:10 Europe/Berlin] Login::Render->Carga el index del login
-[07-Sep-2022 23:08:30 Europe/Berlin] inicio de aplicacion web
-[07-Sep-2022 23:08:30 Europe/Berlin] SESSIONCONTROLLER::validateSession
-[07-Sep-2022 23:08:30 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
-[07-Sep-2022 23:08:30 Europe/Berlin] sessionController::isPublic(): currentURL => 
-[07-Sep-2022 23:08:30 Europe/Berlin] SessionController::validateSession() public page
-[07-Sep-2022 23:08:30 Europe/Berlin] Login::construct->inicio de login
-[07-Sep-2022 23:08:30 Europe/Berlin] Login::Render->Carga el index del login
-[07-Sep-2022 23:08:35 Europe/Berlin] inicio de aplicacion web
-[07-Sep-2022 23:08:35 Europe/Berlin] SESSIONCONTROLLER::validateSession
-[07-Sep-2022 23:08:35 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->signup
-[07-Sep-2022 23:08:35 Europe/Berlin] sessionController::isPublic(): currentURL => signup
-[07-Sep-2022 23:08:35 Europe/Berlin] SessionController::validateSession() public page
-[07-Sep-2022 23:08:40 Europe/Berlin] inicio de aplicacion web
-[07-Sep-2022 23:08:40 Europe/Berlin] SESSIONCONTROLLER::validateSession
-[07-Sep-2022 23:08:40 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->signup
-[07-Sep-2022 23:08:40 Europe/Berlin] sessionController::isPublic(): currentURL => signup
-[07-Sep-2022 23:08:40 Europe/Berlin] SessionController::validateSession() public page
-[07-Sep-2022 23:08:40 Europe/Berlin] Conexión a BD exitosa
-[07-Sep-2022 23:08:40 Europe/Berlin] Conexión a BD exitosa
-[07-Sep-2022 23:08:40 Europe/Berlin] inicio de aplicacion web
-[07-Sep-2022 23:08:40 Europe/Berlin] SESSIONCONTROLLER::validateSession
-[07-Sep-2022 23:08:40 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->signup?error=ERROR_2
-[07-Sep-2022 23:08:40 Europe/Berlin] sessionController::isPublic(): currentURL => signup?error=ERROR_2
-[07-Sep-2022 23:08:40 Europe/Berlin] SessionController::validateSession() public page
-[07-Sep-2022 23:08:48 Europe/Berlin] inicio de aplicacion web
-[07-Sep-2022 23:08:48 Europe/Berlin] SESSIONCONTROLLER::validateSession
-[07-Sep-2022 23:08:48 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->signup?error=ERROR_2
-[07-Sep-2022 23:08:48 Europe/Berlin] sessionController::isPublic(): currentURL => signup?error=ERROR_2
-[07-Sep-2022 23:08:48 Europe/Berlin] SessionController::validateSession() public page
-[07-Sep-2022 23:08:51 Europe/Berlin] inicio de aplicacion web
-[07-Sep-2022 23:08:51 Europe/Berlin] SESSIONCONTROLLER::validateSession
-[07-Sep-2022 23:08:51 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->signup
-[07-Sep-2022 23:08:51 Europe/Berlin] sessionController::isPublic(): currentURL => signup
-[07-Sep-2022 23:08:51 Europe/Berlin] SessionController::validateSession() public page
-[07-Sep-2022 23:08:52 Europe/Berlin] inicio de aplicacion web
-[07-Sep-2022 23:08:52 Europe/Berlin] SESSIONCONTROLLER::validateSession
-[07-Sep-2022 23:08:52 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->signup
-[07-Sep-2022 23:08:52 Europe/Berlin] sessionController::isPublic(): currentURL => signup
-[07-Sep-2022 23:08:52 Europe/Berlin] SessionController::validateSession() public page
-[07-Sep-2022 23:09:02 Europe/Berlin] inicio de aplicacion web
-[07-Sep-2022 23:09:02 Europe/Berlin] SESSIONCONTROLLER::validateSession
-[07-Sep-2022 23:09:02 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->signup
-[07-Sep-2022 23:09:02 Europe/Berlin] sessionController::isPublic(): currentURL => signup
-[07-Sep-2022 23:09:02 Europe/Berlin] SessionController::validateSession() public page
-[07-Sep-2022 23:09:07 Europe/Berlin] inicio de aplicacion web
-[07-Sep-2022 23:09:07 Europe/Berlin] SESSIONCONTROLLER::validateSession
-[07-Sep-2022 23:09:07 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->signup
-[07-Sep-2022 23:09:07 Europe/Berlin] sessionController::isPublic(): currentURL => signup
-[07-Sep-2022 23:09:07 Europe/Berlin] SessionController::validateSession() public page
-[07-Sep-2022 23:09:07 Europe/Berlin] Conexión a BD exitosa
-[07-Sep-2022 23:09:07 Europe/Berlin] Conexión a BD exitosa
-[07-Sep-2022 23:09:07 Europe/Berlin] inicio de aplicacion web
-[07-Sep-2022 23:09:07 Europe/Berlin] SESSIONCONTROLLER::validateSession
-[07-Sep-2022 23:09:07 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->signup?error=ERROR_2
-[07-Sep-2022 23:09:07 Europe/Berlin] sessionController::isPublic(): currentURL => signup?error=ERROR_2
-[07-Sep-2022 23:09:07 Europe/Berlin] SessionController::validateSession() public page
-[07-Sep-2022 23:14:46 Europe/Berlin] inicio de aplicacion web
-[07-Sep-2022 23:14:46 Europe/Berlin] SESSIONCONTROLLER::validateSession
-[07-Sep-2022 23:14:46 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->signup
-[07-Sep-2022 23:14:46 Europe/Berlin] sessionController::isPublic(): currentURL => signup
-[07-Sep-2022 23:14:46 Europe/Berlin] SessionController::validateSession() public page
-[07-Sep-2022 23:14:47 Europe/Berlin] inicio de aplicacion web
-[07-Sep-2022 23:14:47 Europe/Berlin] SESSIONCONTROLLER::validateSession
-[07-Sep-2022 23:14:47 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->signup
-[07-Sep-2022 23:14:47 Europe/Berlin] sessionController::isPublic(): currentURL => signup
-[07-Sep-2022 23:14:47 Europe/Berlin] SessionController::validateSession() public page
-[07-Sep-2022 23:14:51 Europe/Berlin] inicio de aplicacion web
-[07-Sep-2022 23:14:51 Europe/Berlin] SESSIONCONTROLLER::validateSession
-[07-Sep-2022 23:14:51 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->signup
-[07-Sep-2022 23:14:51 Europe/Berlin] sessionController::isPublic(): currentURL => signup
-[07-Sep-2022 23:14:51 Europe/Berlin] SessionController::validateSession() public page
-[07-Sep-2022 23:14:51 Europe/Berlin] Conexión a BD exitosa
-[07-Sep-2022 23:14:51 Europe/Berlin] Conexión a BD exitosa
-[07-Sep-2022 23:14:51 Europe/Berlin] inicio de aplicacion web
-[07-Sep-2022 23:14:51 Europe/Berlin] SESSIONCONTROLLER::validateSession
-[07-Sep-2022 23:14:51 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->signup?error=ERROR_2
-[07-Sep-2022 23:14:51 Europe/Berlin] sessionController::isPublic(): currentURL => signup?error=ERROR_2
-[07-Sep-2022 23:14:51 Europe/Berlin] SessionController::validateSession() public page
-[07-Sep-2022 23:22:45 Europe/Berlin] inicio de aplicacion web
-[07-Sep-2022 23:22:45 Europe/Berlin] SESSIONCONTROLLER::validateSession
-[07-Sep-2022 23:22:45 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->signup
-[07-Sep-2022 23:22:45 Europe/Berlin] sessionController::isPublic(): currentURL => signup
-[07-Sep-2022 23:22:45 Europe/Berlin] SessionController::validateSession() public page
-[07-Sep-2022 23:22:46 Europe/Berlin] inicio de aplicacion web
-[07-Sep-2022 23:22:46 Europe/Berlin] SESSIONCONTROLLER::validateSession
-[07-Sep-2022 23:22:46 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->signup
-[07-Sep-2022 23:22:46 Europe/Berlin] sessionController::isPublic(): currentURL => signup
-[07-Sep-2022 23:22:46 Europe/Berlin] SessionController::validateSession() public page
-[07-Sep-2022 23:22:48 Europe/Berlin] inicio de aplicacion web
-[07-Sep-2022 23:22:48 Europe/Berlin] SESSIONCONTROLLER::validateSession
-[07-Sep-2022 23:22:48 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->signup
-[07-Sep-2022 23:22:48 Europe/Berlin] sessionController::isPublic(): currentURL => signup
-[07-Sep-2022 23:22:48 Europe/Berlin] SessionController::validateSession() public page
-[07-Sep-2022 23:23:02 Europe/Berlin] inicio de aplicacion web
-[07-Sep-2022 23:23:02 Europe/Berlin] SESSIONCONTROLLER::validateSession
-[07-Sep-2022 23:23:02 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->signup
-[07-Sep-2022 23:23:02 Europe/Berlin] sessionController::isPublic(): currentURL => signup
-[07-Sep-2022 23:23:02 Europe/Berlin] SessionController::validateSession() public page
-[07-Sep-2022 23:23:02 Europe/Berlin] Conexión a BD exitosa
-[07-Sep-2022 23:23:02 Europe/Berlin] Conexión a BD exitosa
-[07-Sep-2022 23:23:02 Europe/Berlin] inicio de aplicacion web
-[07-Sep-2022 23:23:02 Europe/Berlin] SESSIONCONTROLLER::validateSession
-[07-Sep-2022 23:23:02 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->signup?error=ERROR_2
-[07-Sep-2022 23:23:02 Europe/Berlin] sessionController::isPublic(): currentURL => signup?error=ERROR_2
-[07-Sep-2022 23:23:02 Europe/Berlin] SessionController::validateSession() public page
-[07-Sep-2022 23:25:25 Europe/Berlin] inicio de aplicacion web
-[07-Sep-2022 23:25:25 Europe/Berlin] SESSIONCONTROLLER::validateSession
-[07-Sep-2022 23:25:25 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->signup
-[07-Sep-2022 23:25:25 Europe/Berlin] sessionController::isPublic(): currentURL => signup
-[07-Sep-2022 23:25:25 Europe/Berlin] SessionController::validateSession() public page
-[07-Sep-2022 23:25:26 Europe/Berlin] inicio de aplicacion web
-[07-Sep-2022 23:25:26 Europe/Berlin] SESSIONCONTROLLER::validateSession
-[07-Sep-2022 23:25:26 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->signup
-[07-Sep-2022 23:25:26 Europe/Berlin] sessionController::isPublic(): currentURL => signup
-[07-Sep-2022 23:25:26 Europe/Berlin] SessionController::validateSession() public page
-[07-Sep-2022 23:25:32 Europe/Berlin] inicio de aplicacion web
-[07-Sep-2022 23:25:32 Europe/Berlin] SESSIONCONTROLLER::validateSession
-[07-Sep-2022 23:25:32 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->signup
-[07-Sep-2022 23:25:32 Europe/Berlin] sessionController::isPublic(): currentURL => signup
-[07-Sep-2022 23:25:32 Europe/Berlin] SessionController::validateSession() public page
-[07-Sep-2022 23:25:32 Europe/Berlin] Conexión a BD exitosa
-[07-Sep-2022 23:25:32 Europe/Berlin] Conexión a BD exitosa
-[07-Sep-2022 23:25:32 Europe/Berlin] inicio de aplicacion web
-[07-Sep-2022 23:25:32 Europe/Berlin] SESSIONCONTROLLER::validateSession
-[07-Sep-2022 23:25:32 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->?success=OK_2
-[07-Sep-2022 23:25:32 Europe/Berlin] sessionController::isPublic(): currentURL => ?success=OK_2
-[07-Sep-2022 23:25:32 Europe/Berlin] SessionController::validateSession() public page
-[07-Sep-2022 23:25:32 Europe/Berlin] Login::construct->inicio de login
-[07-Sep-2022 23:25:32 Europe/Berlin] Login::Render->Carga el index del login
-[07-Sep-2022 23:25:32 Europe/Berlin] PHP Notice:  Undefined index: error in C:\xamppp\htdocs\FinanceFlex\libs\view.php on line 19
-[07-Sep-2022 23:25:48 Europe/Berlin] inicio de aplicacion web
-[07-Sep-2022 23:25:48 Europe/Berlin] SESSIONCONTROLLER::validateSession
-[07-Sep-2022 23:25:48 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->signup
-[07-Sep-2022 23:25:48 Europe/Berlin] sessionController::isPublic(): currentURL => signup
-[07-Sep-2022 23:25:48 Europe/Berlin] SessionController::validateSession() public page
-[07-Sep-2022 23:25:53 Europe/Berlin] inicio de aplicacion web
-[07-Sep-2022 23:25:53 Europe/Berlin] SESSIONCONTROLLER::validateSession
-[07-Sep-2022 23:25:53 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->signup
-[07-Sep-2022 23:25:53 Europe/Berlin] sessionController::isPublic(): currentURL => signup
-[07-Sep-2022 23:25:53 Europe/Berlin] SessionController::validateSession() public page
-[07-Sep-2022 23:25:53 Europe/Berlin] Conexión a BD exitosa
-[07-Sep-2022 23:25:53 Europe/Berlin] inicio de aplicacion web
-[07-Sep-2022 23:25:53 Europe/Berlin] SESSIONCONTROLLER::validateSession
-[07-Sep-2022 23:25:53 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->signup?error=ERROR_4
-[07-Sep-2022 23:25:53 Europe/Berlin] sessionController::isPublic(): currentURL => signup?error=ERROR_4
-[07-Sep-2022 23:25:53 Europe/Berlin] SessionController::validateSession() public page
+[08-Sep-2022 01:36:03 Europe/Berlin] inicio de aplicacion web
+[08-Sep-2022 01:36:03 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[08-Sep-2022 01:36:03 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
+[08-Sep-2022 01:36:03 Europe/Berlin] sessionController::isPublic(): currentURL => 
+[08-Sep-2022 01:36:03 Europe/Berlin] SessionController::validateSession() redirect al login
+[08-Sep-2022 01:36:03 Europe/Berlin] Login::construct->inicio de login
+[08-Sep-2022 01:36:03 Europe/Berlin] Login::Render->Carga el index del login
+[08-Sep-2022 01:36:03 Europe/Berlin] inicio de aplicacion web
+[08-Sep-2022 01:36:03 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[08-Sep-2022 01:36:03 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
+[08-Sep-2022 01:36:03 Europe/Berlin] sessionController::isPublic(): currentURL => 
+[08-Sep-2022 01:36:03 Europe/Berlin] SessionController::validateSession() redirect al login
+[08-Sep-2022 01:36:03 Europe/Berlin] Login::construct->inicio de login
+[08-Sep-2022 01:36:03 Europe/Berlin] Login::Render->Carga el index del login
+[08-Sep-2022 01:36:03 Europe/Berlin] inicio de aplicacion web
+[08-Sep-2022 01:36:03 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[08-Sep-2022 01:36:03 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
+[08-Sep-2022 01:36:03 Europe/Berlin] sessionController::isPublic(): currentURL => 
+[08-Sep-2022 01:36:03 Europe/Berlin] SessionController::validateSession() redirect al login
+[08-Sep-2022 01:36:03 Europe/Berlin] Login::construct->inicio de login
+[08-Sep-2022 01:36:03 Europe/Berlin] Login::Render->Carga el index del login
+[08-Sep-2022 01:36:03 Europe/Berlin] inicio de aplicacion web
+[08-Sep-2022 01:36:03 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[08-Sep-2022 01:36:03 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
+[08-Sep-2022 01:36:03 Europe/Berlin] sessionController::isPublic(): currentURL => 
+[08-Sep-2022 01:36:03 Europe/Berlin] SessionController::validateSession() redirect al login
+[08-Sep-2022 01:36:03 Europe/Berlin] Login::construct->inicio de login
+[08-Sep-2022 01:36:03 Europe/Berlin] Login::Render->Carga el index del login
+[08-Sep-2022 01:36:03 Europe/Berlin] inicio de aplicacion web
+[08-Sep-2022 01:36:03 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[08-Sep-2022 01:36:03 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
+[08-Sep-2022 01:36:03 Europe/Berlin] sessionController::isPublic(): currentURL => 
+[08-Sep-2022 01:36:03 Europe/Berlin] SessionController::validateSession() redirect al login
+[08-Sep-2022 01:36:03 Europe/Berlin] Login::construct->inicio de login
+[08-Sep-2022 01:36:03 Europe/Berlin] Login::Render->Carga el index del login
+[08-Sep-2022 01:36:03 Europe/Berlin] inicio de aplicacion web
+[08-Sep-2022 01:36:03 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[08-Sep-2022 01:36:03 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
+[08-Sep-2022 01:36:03 Europe/Berlin] sessionController::isPublic(): currentURL => 
+[08-Sep-2022 01:36:03 Europe/Berlin] SessionController::validateSession() redirect al login
+[08-Sep-2022 01:36:03 Europe/Berlin] Login::construct->inicio de login
+[08-Sep-2022 01:36:03 Europe/Berlin] Login::Render->Carga el index del login
+[08-Sep-2022 01:36:03 Europe/Berlin] inicio de aplicacion web
+[08-Sep-2022 01:36:03 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[08-Sep-2022 01:36:03 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
+[08-Sep-2022 01:36:03 Europe/Berlin] sessionController::isPublic(): currentURL => 
+[08-Sep-2022 01:36:03 Europe/Berlin] SessionController::validateSession() redirect al login
+[08-Sep-2022 01:36:03 Europe/Berlin] Login::construct->inicio de login
+[08-Sep-2022 01:36:03 Europe/Berlin] Login::Render->Carga el index del login
+[08-Sep-2022 01:36:03 Europe/Berlin] inicio de aplicacion web
+[08-Sep-2022 01:36:03 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[08-Sep-2022 01:36:03 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
+[08-Sep-2022 01:36:03 Europe/Berlin] sessionController::isPublic(): currentURL => 
+[08-Sep-2022 01:36:03 Europe/Berlin] SessionController::validateSession() redirect al login
+[08-Sep-2022 01:36:03 Europe/Berlin] Login::construct->inicio de login
+[08-Sep-2022 01:36:03 Europe/Berlin] Login::Render->Carga el index del login
+[08-Sep-2022 01:36:03 Europe/Berlin] inicio de aplicacion web
+[08-Sep-2022 01:36:03 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[08-Sep-2022 01:36:03 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
+[08-Sep-2022 01:36:03 Europe/Berlin] sessionController::isPublic(): currentURL => 
+[08-Sep-2022 01:36:03 Europe/Berlin] SessionController::validateSession() redirect al login
+[08-Sep-2022 01:36:03 Europe/Berlin] Login::construct->inicio de login
+[08-Sep-2022 01:36:03 Europe/Berlin] Login::Render->Carga el index del login
+[08-Sep-2022 01:36:03 Europe/Berlin] inicio de aplicacion web
+[08-Sep-2022 01:36:03 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[08-Sep-2022 01:36:03 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
+[08-Sep-2022 01:36:03 Europe/Berlin] sessionController::isPublic(): currentURL => 
+[08-Sep-2022 01:36:03 Europe/Berlin] SessionController::validateSession() redirect al login
+[08-Sep-2022 01:36:03 Europe/Berlin] Login::construct->inicio de login
+[08-Sep-2022 01:36:03 Europe/Berlin] Login::Render->Carga el index del login
+[08-Sep-2022 01:36:13 Europe/Berlin] inicio de aplicacion web
+[08-Sep-2022 01:36:13 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[08-Sep-2022 01:36:13 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->dashboard
+[08-Sep-2022 01:36:13 Europe/Berlin] sessionController::isPublic(): currentURL => dashboard
+[08-Sep-2022 01:36:13 Europe/Berlin] SessionController::validateSession() redirect al login
+[08-Sep-2022 01:36:13 Europe/Berlin] Dashboard::construct->inicio de Dashboard
+[08-Sep-2022 01:36:13 Europe/Berlin] Dashboard::Render->Carga el index del Dashboard
+[08-Sep-2022 01:36:13 Europe/Berlin] inicio de aplicacion web
+[08-Sep-2022 01:36:13 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[08-Sep-2022 01:36:13 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
+[08-Sep-2022 01:36:13 Europe/Berlin] sessionController::isPublic(): currentURL => 
+[08-Sep-2022 01:36:13 Europe/Berlin] SessionController::validateSession() public page
+[08-Sep-2022 01:36:13 Europe/Berlin] Login::construct->inicio de login
+[08-Sep-2022 01:36:13 Europe/Berlin] Login::Render->Carga el index del login
+[08-Sep-2022 01:36:24 Europe/Berlin] inicio de aplicacion web
+[08-Sep-2022 01:36:24 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[08-Sep-2022 01:36:24 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->signup
+[08-Sep-2022 01:36:24 Europe/Berlin] sessionController::isPublic(): currentURL => signup
+[08-Sep-2022 01:36:24 Europe/Berlin] SessionController::validateSession() public page
+[08-Sep-2022 01:36:25 Europe/Berlin] inicio de aplicacion web
+[08-Sep-2022 01:36:25 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[08-Sep-2022 01:36:25 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
+[08-Sep-2022 01:36:25 Europe/Berlin] sessionController::isPublic(): currentURL => 
+[08-Sep-2022 01:36:25 Europe/Berlin] SessionController::validateSession() public page
+[08-Sep-2022 01:36:25 Europe/Berlin] Login::construct->inicio de login
+[08-Sep-2022 01:36:25 Europe/Berlin] Login::Render->Carga el index del login
+[08-Sep-2022 01:36:37 Europe/Berlin] inicio de aplicacion web
+[08-Sep-2022 01:36:37 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[08-Sep-2022 01:36:37 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
+[08-Sep-2022 01:36:37 Europe/Berlin] sessionController::isPublic(): currentURL => 
+[08-Sep-2022 01:36:37 Europe/Berlin] SessionController::validateSession() redirect al login
+[08-Sep-2022 01:36:37 Europe/Berlin] Login::construct->inicio de login
+[08-Sep-2022 01:36:37 Europe/Berlin] Login::Render->Carga el index del login
+[08-Sep-2022 01:36:37 Europe/Berlin] inicio de aplicacion web
+[08-Sep-2022 01:36:37 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[08-Sep-2022 01:36:37 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
+[08-Sep-2022 01:36:37 Europe/Berlin] sessionController::isPublic(): currentURL => 
+[08-Sep-2022 01:36:37 Europe/Berlin] SessionController::validateSession() redirect al login
+[08-Sep-2022 01:36:37 Europe/Berlin] Login::construct->inicio de login
+[08-Sep-2022 01:36:37 Europe/Berlin] Login::Render->Carga el index del login
+[08-Sep-2022 01:36:37 Europe/Berlin] inicio de aplicacion web
+[08-Sep-2022 01:36:37 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[08-Sep-2022 01:36:37 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
+[08-Sep-2022 01:36:37 Europe/Berlin] sessionController::isPublic(): currentURL => 
+[08-Sep-2022 01:36:37 Europe/Berlin] SessionController::validateSession() redirect al login
+[08-Sep-2022 01:36:37 Europe/Berlin] Login::construct->inicio de login
+[08-Sep-2022 01:36:37 Europe/Berlin] Login::Render->Carga el index del login
+[08-Sep-2022 01:36:37 Europe/Berlin] inicio de aplicacion web
+[08-Sep-2022 01:36:37 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[08-Sep-2022 01:36:37 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
+[08-Sep-2022 01:36:37 Europe/Berlin] sessionController::isPublic(): currentURL => 
+[08-Sep-2022 01:36:37 Europe/Berlin] SessionController::validateSession() redirect al login
+[08-Sep-2022 01:36:37 Europe/Berlin] Login::construct->inicio de login
+[08-Sep-2022 01:36:37 Europe/Berlin] Login::Render->Carga el index del login
+[08-Sep-2022 01:36:37 Europe/Berlin] inicio de aplicacion web
+[08-Sep-2022 01:36:37 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[08-Sep-2022 01:36:37 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
+[08-Sep-2022 01:36:37 Europe/Berlin] sessionController::isPublic(): currentURL => 
+[08-Sep-2022 01:36:37 Europe/Berlin] SessionController::validateSession() redirect al login
+[08-Sep-2022 01:36:37 Europe/Berlin] Login::construct->inicio de login
+[08-Sep-2022 01:36:37 Europe/Berlin] Login::Render->Carga el index del login
+[08-Sep-2022 01:36:37 Europe/Berlin] inicio de aplicacion web
+[08-Sep-2022 01:36:37 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[08-Sep-2022 01:36:37 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
+[08-Sep-2022 01:36:37 Europe/Berlin] sessionController::isPublic(): currentURL => 
+[08-Sep-2022 01:36:37 Europe/Berlin] SessionController::validateSession() redirect al login
+[08-Sep-2022 01:36:37 Europe/Berlin] Login::construct->inicio de login
+[08-Sep-2022 01:36:37 Europe/Berlin] Login::Render->Carga el index del login
+[08-Sep-2022 01:36:37 Europe/Berlin] inicio de aplicacion web
+[08-Sep-2022 01:36:37 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[08-Sep-2022 01:36:37 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
+[08-Sep-2022 01:36:37 Europe/Berlin] sessionController::isPublic(): currentURL => 
+[08-Sep-2022 01:36:37 Europe/Berlin] SessionController::validateSession() redirect al login
+[08-Sep-2022 01:36:37 Europe/Berlin] Login::construct->inicio de login
+[08-Sep-2022 01:36:37 Europe/Berlin] Login::Render->Carga el index del login
+[08-Sep-2022 01:36:37 Europe/Berlin] inicio de aplicacion web
+[08-Sep-2022 01:36:37 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[08-Sep-2022 01:36:37 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
+[08-Sep-2022 01:36:37 Europe/Berlin] sessionController::isPublic(): currentURL => 
+[08-Sep-2022 01:36:37 Europe/Berlin] SessionController::validateSession() redirect al login
+[08-Sep-2022 01:36:37 Europe/Berlin] Login::construct->inicio de login
+[08-Sep-2022 01:36:37 Europe/Berlin] Login::Render->Carga el index del login
+[08-Sep-2022 01:36:37 Europe/Berlin] inicio de aplicacion web
+[08-Sep-2022 01:36:37 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[08-Sep-2022 01:36:37 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
+[08-Sep-2022 01:36:37 Europe/Berlin] sessionController::isPublic(): currentURL => 
+[08-Sep-2022 01:36:37 Europe/Berlin] SessionController::validateSession() redirect al login
+[08-Sep-2022 01:36:37 Europe/Berlin] Login::construct->inicio de login
+[08-Sep-2022 01:36:37 Europe/Berlin] Login::Render->Carga el index del login
+[08-Sep-2022 01:36:37 Europe/Berlin] inicio de aplicacion web
+[08-Sep-2022 01:36:37 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[08-Sep-2022 01:36:37 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
+[08-Sep-2022 01:36:37 Europe/Berlin] sessionController::isPublic(): currentURL => 
+[08-Sep-2022 01:36:37 Europe/Berlin] SessionController::validateSession() redirect al login
+[08-Sep-2022 01:36:37 Europe/Berlin] Login::construct->inicio de login
+[08-Sep-2022 01:36:37 Europe/Berlin] Login::Render->Carga el index del login
+[08-Sep-2022 01:36:38 Europe/Berlin] inicio de aplicacion web
+[08-Sep-2022 01:36:38 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[08-Sep-2022 01:36:38 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
+[08-Sep-2022 01:36:38 Europe/Berlin] sessionController::isPublic(): currentURL => 
+[08-Sep-2022 01:36:38 Europe/Berlin] SessionController::validateSession() redirect al login
+[08-Sep-2022 01:36:38 Europe/Berlin] Login::construct->inicio de login
+[08-Sep-2022 01:36:38 Europe/Berlin] Login::Render->Carga el index del login
+[08-Sep-2022 01:36:38 Europe/Berlin] inicio de aplicacion web
+[08-Sep-2022 01:36:38 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[08-Sep-2022 01:36:38 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
+[08-Sep-2022 01:36:38 Europe/Berlin] sessionController::isPublic(): currentURL => 
+[08-Sep-2022 01:36:38 Europe/Berlin] SessionController::validateSession() redirect al login
+[08-Sep-2022 01:36:38 Europe/Berlin] Login::construct->inicio de login
+[08-Sep-2022 01:36:38 Europe/Berlin] Login::Render->Carga el index del login
+[08-Sep-2022 01:36:38 Europe/Berlin] inicio de aplicacion web
+[08-Sep-2022 01:36:38 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[08-Sep-2022 01:36:38 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
+[08-Sep-2022 01:36:38 Europe/Berlin] sessionController::isPublic(): currentURL => 
+[08-Sep-2022 01:36:38 Europe/Berlin] SessionController::validateSession() redirect al login
+[08-Sep-2022 01:36:38 Europe/Berlin] Login::construct->inicio de login
+[08-Sep-2022 01:36:38 Europe/Berlin] Login::Render->Carga el index del login
+[08-Sep-2022 01:36:38 Europe/Berlin] inicio de aplicacion web
+[08-Sep-2022 01:36:38 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[08-Sep-2022 01:36:38 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
+[08-Sep-2022 01:36:38 Europe/Berlin] sessionController::isPublic(): currentURL => 
+[08-Sep-2022 01:36:38 Europe/Berlin] SessionController::validateSession() redirect al login
+[08-Sep-2022 01:36:38 Europe/Berlin] Login::construct->inicio de login
+[08-Sep-2022 01:36:38 Europe/Berlin] Login::Render->Carga el index del login
+[08-Sep-2022 01:36:38 Europe/Berlin] inicio de aplicacion web
+[08-Sep-2022 01:36:38 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[08-Sep-2022 01:36:38 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
+[08-Sep-2022 01:36:38 Europe/Berlin] sessionController::isPublic(): currentURL => 
+[08-Sep-2022 01:36:38 Europe/Berlin] SessionController::validateSession() redirect al login
+[08-Sep-2022 01:36:38 Europe/Berlin] Login::construct->inicio de login
+[08-Sep-2022 01:36:38 Europe/Berlin] Login::Render->Carga el index del login
+[08-Sep-2022 01:36:38 Europe/Berlin] inicio de aplicacion web
+[08-Sep-2022 01:36:38 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[08-Sep-2022 01:36:38 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
+[08-Sep-2022 01:36:38 Europe/Berlin] sessionController::isPublic(): currentURL => 
+[08-Sep-2022 01:36:38 Europe/Berlin] SessionController::validateSession() redirect al login
+[08-Sep-2022 01:36:38 Europe/Berlin] Login::construct->inicio de login
+[08-Sep-2022 01:36:38 Europe/Berlin] Login::Render->Carga el index del login
+[08-Sep-2022 01:36:38 Europe/Berlin] inicio de aplicacion web
+[08-Sep-2022 01:36:38 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[08-Sep-2022 01:36:38 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
+[08-Sep-2022 01:36:38 Europe/Berlin] sessionController::isPublic(): currentURL => 
+[08-Sep-2022 01:36:38 Europe/Berlin] SessionController::validateSession() redirect al login
+[08-Sep-2022 01:36:38 Europe/Berlin] Login::construct->inicio de login
+[08-Sep-2022 01:36:38 Europe/Berlin] Login::Render->Carga el index del login
+[08-Sep-2022 01:36:38 Europe/Berlin] inicio de aplicacion web
+[08-Sep-2022 01:36:38 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[08-Sep-2022 01:36:38 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
+[08-Sep-2022 01:36:38 Europe/Berlin] sessionController::isPublic(): currentURL => 
+[08-Sep-2022 01:36:38 Europe/Berlin] SessionController::validateSession() redirect al login
+[08-Sep-2022 01:36:38 Europe/Berlin] Login::construct->inicio de login
+[08-Sep-2022 01:36:38 Europe/Berlin] Login::Render->Carga el index del login
+[08-Sep-2022 01:36:38 Europe/Berlin] inicio de aplicacion web
+[08-Sep-2022 01:36:38 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[08-Sep-2022 01:36:38 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
+[08-Sep-2022 01:36:38 Europe/Berlin] sessionController::isPublic(): currentURL => 
+[08-Sep-2022 01:36:38 Europe/Berlin] SessionController::validateSession() redirect al login
+[08-Sep-2022 01:36:38 Europe/Berlin] Login::construct->inicio de login
+[08-Sep-2022 01:36:38 Europe/Berlin] Login::Render->Carga el index del login
+[08-Sep-2022 01:36:38 Europe/Berlin] inicio de aplicacion web
+[08-Sep-2022 01:36:38 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[08-Sep-2022 01:36:38 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
+[08-Sep-2022 01:36:38 Europe/Berlin] sessionController::isPublic(): currentURL => 
+[08-Sep-2022 01:36:38 Europe/Berlin] SessionController::validateSession() redirect al login
+[08-Sep-2022 01:36:38 Europe/Berlin] Login::construct->inicio de login
+[08-Sep-2022 01:36:38 Europe/Berlin] Login::Render->Carga el index del login
+[08-Sep-2022 01:36:43 Europe/Berlin] inicio de aplicacion web
+[08-Sep-2022 01:36:43 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[08-Sep-2022 01:36:43 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
+[08-Sep-2022 01:36:43 Europe/Berlin] sessionController::isPublic(): currentURL => 
+[08-Sep-2022 01:36:43 Europe/Berlin] SessionController::validateSession() public page
+[08-Sep-2022 01:36:43 Europe/Berlin] Login::construct->inicio de login
+[08-Sep-2022 01:36:43 Europe/Berlin] Login::Render->Carga el index del login
+[08-Sep-2022 01:36:43 Europe/Berlin] inicio de aplicacion web
+[08-Sep-2022 01:36:43 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[08-Sep-2022 01:36:43 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
+[08-Sep-2022 01:36:43 Europe/Berlin] sessionController::isPublic(): currentURL => 
+[08-Sep-2022 01:36:43 Europe/Berlin] SessionController::validateSession() public page
+[08-Sep-2022 01:36:43 Europe/Berlin] Login::construct->inicio de login
+[08-Sep-2022 01:36:43 Europe/Berlin] Login::Render->Carga el index del login

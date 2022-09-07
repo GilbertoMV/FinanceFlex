@@ -218,12 +218,8 @@ class UserModel extends Model implements IModel{
     public function from($array){
         $this->id = $array['id'];
         $this->email = $array['email'];
-        $this->username = $array['username'];
         $this->password = $array['password'];
         $this->role = $array['role'];
-        $this->budget = $array['budget'];
-        $this->photo = $array['photo'];
-        $this->name = $array['name'];
     }
 
     private function getHashedPassword($password){

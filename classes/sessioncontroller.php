@@ -1,5 +1,6 @@
 <?php
 require_once 'classes/session.php';
+require_once 'models/usermodel.php';
 class SessionController extends Controller{
     private $userSession;
     private $email;
@@ -77,7 +78,7 @@ class SessionController extends Controller{
     }
 
     function getUserSessionData(){
-        $id = $this->userid;
+        $id = $this->session->getCurrentUser();
         $this->user=new UserModel();
         $this->user->get($id);
         return $this->user;
@@ -90,7 +91,7 @@ class SessionController extends Controller{
         $currentURL=preg_replace("/\?.*/","",$currentURL);
 
         for($i=0; $i < sizeof($this->sites); $i++){
-            if($currentURL = $this->sites[$i]['site'] && $this->sites[$i]['access']=='public'){
+            if($currentURL === $this->sites[$i]['site'] && $this->sites[$i]['access'] === 'public'){
                 return true;
             }
         }
@@ -113,7 +114,7 @@ class SessionController extends Controller{
             break;
             }
         }
-        header('location:' . $url);
+        header('location:' . constant('URL') . $url);
 
     }
     private function isAuthorized($role){
@@ -130,12 +131,12 @@ class SessionController extends Controller{
     }
 
     function initialize($user){
+        //coloca variables en la sesion
         $this->session->setCurrentUser($user->getId());
         $this->authorizeAccess($user->getRole());
     }
 
     function authorizeAccess($role){
-        error_log("sessionController::authorizeAccess(): role: $role");
         switch($role){
             case 'user':
                 $this->redirect($this->defaultSites['user'], []);
@@ -143,7 +144,6 @@ class SessionController extends Controller{
             case 'admin':
                 $this->redirect($this->defaultSites['admin'], []);
                 break;
-                default:
         }
     }
     function logout() {
