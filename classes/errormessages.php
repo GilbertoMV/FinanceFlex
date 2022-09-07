@@ -2,12 +2,17 @@
 class ErrorMessages{
     //ERROR_CONTROLLER_METHOD_ACTION
     const PRUEBA = "ERROR_1";
-    
+    const ERROR_SIGNUP_NEWUSER = "ERROR_2";
+    const ERROR_SIGNUP_NEWUSER_EMPTY = "ERROR_3";
+    const ERROR_SIGNUP_NEWUSER_EXIST = "ERROR_4";
     private $errorList = [];
 
     public function __construct(){
         $this->errorList = [
-            ErrorMessages::PRUEBA => 'El nombre de la categoria ya existe.'
+            ErrorMessages::PRUEBA => 'El nombre de la categoria ya existe.',
+            ErrorMessages::ERROR_SIGNUP_NEWUSER => 'Hubo un error al intentar procesar la solicitud.',
+            ErrorMessages::ERROR_SIGNUP_NEWUSER_EMPTY => 'Llena los campos de email y password.',
+            ErrorMessages::ERROR_SIGNUP_NEWUSER_EXIST => 'El email ya existe.'
         ];
 
     }

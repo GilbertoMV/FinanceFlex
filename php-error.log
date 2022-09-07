@@ -1,32 +1,201 @@
-[01-Sep-2022 03:52:53 Europe/Berlin] inicio de aplicacion web
-[01-Sep-2022 03:52:53 Europe/Berlin] PHP Fatal error:  Uncaught Error: Class 'Controller' not found in C:\xamppp\htdocs\finance\controllers\errores.php:3
-Stack trace:
-#0 C:\xamppp\htdocs\finance\libs\app.php(2): require_once()
-#1 C:\xamppp\htdocs\finance\index.php(9): require_once('C:\\xamppp\\htdoc...')
-#2 {main}
-  thrown in C:\xamppp\htdocs\finance\controllers\errores.php on line 3
-[01-Sep-2022 03:54:36 Europe/Berlin] inicio de aplicacion web
-[01-Sep-2022 03:54:36 Europe/Berlin] PHP Warning:  require_once(Controller.php): failed to open stream: No such file or directory in C:\xamppp\htdocs\finance\controllers\errores.php on line 2
-[01-Sep-2022 03:54:36 Europe/Berlin] PHP Fatal error:  require_once(): Failed opening required 'Controller.php' (include_path='C:\xamppp\php\PEAR') in C:\xamppp\htdocs\finance\controllers\errores.php on line 2
-[01-Sep-2022 03:55:08 Europe/Berlin] inicio de aplicacion web
-[01-Sep-2022 03:55:13 Europe/Berlin] inicio de aplicacion web
-[01-Sep-2022 03:55:13 Europe/Berlin] Login::construct->inicio de login
-[01-Sep-2022 03:55:13 Europe/Berlin] Login::Render->Carga el index del login
-[02-Sep-2022 00:20:28 Europe/Berlin] inicio de aplicacion web
-[02-Sep-2022 00:20:28 Europe/Berlin] Login::construct->inicio de login
-[02-Sep-2022 00:20:28 Europe/Berlin] Login::Render->Carga el index del login
-[02-Sep-2022 00:20:35 Europe/Berlin] inicio de aplicacion web
-[02-Sep-2022 02:16:15 Europe/Berlin] inicio de aplicacion web
-[02-Sep-2022 02:16:15 Europe/Berlin] Login::construct->inicio de login
-[02-Sep-2022 02:16:15 Europe/Berlin] Login::Render->Carga el index del login
-[02-Sep-2022 02:16:21 Europe/Berlin] inicio de aplicacion web
-[02-Sep-2022 02:27:07 Europe/Berlin] inicio de aplicacion web
-[02-Sep-2022 02:27:07 Europe/Berlin] Login::construct->inicio de login
-[02-Sep-2022 02:27:07 Europe/Berlin] Login::Render->Carga el index del login
-[02-Sep-2022 02:27:40 Europe/Berlin] inicio de aplicacion web
-[02-Sep-2022 02:27:40 Europe/Berlin] Login::construct->inicio de login
-[02-Sep-2022 02:27:40 Europe/Berlin] Login::Render->Carga el index del login
-[02-Sep-2022 02:27:40 Europe/Berlin] PHP Notice:  Undefined index: error in C:\xamppp\htdocs\finance\FinanceFlex\libs\view.php on line 19
-[02-Sep-2022 02:29:42 Europe/Berlin] inicio de aplicacion web
-[02-Sep-2022 02:29:42 Europe/Berlin] Login::construct->inicio de login
-[02-Sep-2022 02:29:42 Europe/Berlin] Login::Render->Carga el index del login
+[07-Sep-2022 01:29:14 Europe/Berlin] inicio de aplicacion web
+[07-Sep-2022 01:29:14 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[07-Sep-2022 01:29:14 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->FinanceFlex
+[07-Sep-2022 01:29:14 Europe/Berlin] sessionController::isPublic(): currentURL => FinanceFlex
+[07-Sep-2022 01:29:14 Europe/Berlin] SessionController::validateSession() public page
+[07-Sep-2022 01:29:14 Europe/Berlin] Login::construct->inicio de login
+[07-Sep-2022 01:29:14 Europe/Berlin] Login::Render->Carga el index del login
+[07-Sep-2022 01:32:36 Europe/Berlin] inicio de aplicacion web
+[07-Sep-2022 01:32:36 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[07-Sep-2022 01:32:36 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->FinanceFlex
+[07-Sep-2022 01:32:36 Europe/Berlin] sessionController::isPublic(): currentURL => FinanceFlex
+[07-Sep-2022 01:32:36 Europe/Berlin] SessionController::validateSession() redirect al login
+[07-Sep-2022 01:32:36 Europe/Berlin] Login::construct->inicio de login
+[07-Sep-2022 01:32:36 Europe/Berlin] Login::Render->Carga el index del login
+[07-Sep-2022 01:32:56 Europe/Berlin] inicio de aplicacion web
+[07-Sep-2022 01:32:56 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[07-Sep-2022 01:32:56 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->FinanceFlex
+[07-Sep-2022 01:32:56 Europe/Berlin] sessionController::isPublic(): currentURL => FinanceFlex
+[07-Sep-2022 01:32:56 Europe/Berlin] SessionController::validateSession() public page
+[07-Sep-2022 01:32:56 Europe/Berlin] Login::construct->inicio de login
+[07-Sep-2022 01:32:56 Europe/Berlin] Login::Render->Carga el index del login
+[07-Sep-2022 01:32:58 Europe/Berlin] inicio de aplicacion web
+[07-Sep-2022 01:32:58 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[07-Sep-2022 01:32:58 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->FinanceFlex
+[07-Sep-2022 01:32:58 Europe/Berlin] sessionController::isPublic(): currentURL => FinanceFlex
+[07-Sep-2022 01:32:58 Europe/Berlin] SessionController::validateSession() public page
+[07-Sep-2022 01:32:58 Europe/Berlin] Login::construct->inicio de login
+[07-Sep-2022 01:32:58 Europe/Berlin] Login::Render->Carga el index del login
+[07-Sep-2022 01:32:59 Europe/Berlin] inicio de aplicacion web
+[07-Sep-2022 01:32:59 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[07-Sep-2022 01:32:59 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->FinanceFlex
+[07-Sep-2022 01:32:59 Europe/Berlin] sessionController::isPublic(): currentURL => FinanceFlex
+[07-Sep-2022 01:32:59 Europe/Berlin] SessionController::validateSession() public page
+[07-Sep-2022 01:32:59 Europe/Berlin] Login::construct->inicio de login
+[07-Sep-2022 01:32:59 Europe/Berlin] Login::Render->Carga el index del login
+[07-Sep-2022 01:33:03 Europe/Berlin] inicio de aplicacion web
+[07-Sep-2022 01:33:03 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[07-Sep-2022 01:33:03 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->FinanceFlex
+[07-Sep-2022 01:33:03 Europe/Berlin] sessionController::isPublic(): currentURL => FinanceFlex
+[07-Sep-2022 01:33:03 Europe/Berlin] SessionController::validateSession() public page
+[07-Sep-2022 01:33:03 Europe/Berlin] Login::construct->inicio de login
+[07-Sep-2022 01:33:03 Europe/Berlin] Login::Render->Carga el index del login
+[07-Sep-2022 01:33:05 Europe/Berlin] inicio de aplicacion web
+[07-Sep-2022 01:33:05 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[07-Sep-2022 01:33:05 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->FinanceFlex
+[07-Sep-2022 01:33:05 Europe/Berlin] sessionController::isPublic(): currentURL => FinanceFlex
+[07-Sep-2022 01:33:05 Europe/Berlin] SessionController::validateSession() public page
+[07-Sep-2022 01:33:05 Europe/Berlin] Login::construct->inicio de login
+[07-Sep-2022 01:33:05 Europe/Berlin] Login::Render->Carga el index del login
+[07-Sep-2022 01:33:23 Europe/Berlin] inicio de aplicacion web
+[07-Sep-2022 01:33:23 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[07-Sep-2022 01:33:23 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->FinanceFlex
+[07-Sep-2022 01:33:23 Europe/Berlin] sessionController::isPublic(): currentURL => FinanceFlex
+[07-Sep-2022 01:33:23 Europe/Berlin] SessionController::validateSession() redirect al login
+[07-Sep-2022 01:33:23 Europe/Berlin] Login::construct->inicio de login
+[07-Sep-2022 01:33:23 Europe/Berlin] Login::Render->Carga el index del login
+[07-Sep-2022 01:33:25 Europe/Berlin] inicio de aplicacion web
+[07-Sep-2022 01:33:25 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[07-Sep-2022 01:33:25 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->FinanceFlex
+[07-Sep-2022 01:33:25 Europe/Berlin] sessionController::isPublic(): currentURL => FinanceFlex
+[07-Sep-2022 01:33:25 Europe/Berlin] SessionController::validateSession() redirect al login
+[07-Sep-2022 01:33:25 Europe/Berlin] Login::construct->inicio de login
+[07-Sep-2022 01:33:25 Europe/Berlin] Login::Render->Carga el index del login
+[07-Sep-2022 01:34:18 Europe/Berlin] inicio de aplicacion web
+[07-Sep-2022 01:34:18 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[07-Sep-2022 01:34:18 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->FinanceFlex
+[07-Sep-2022 01:34:18 Europe/Berlin] sessionController::isPublic(): currentURL => FinanceFlex
+[07-Sep-2022 01:34:18 Europe/Berlin] SessionController::validateSession() public page
+[07-Sep-2022 01:34:18 Europe/Berlin] Login::construct->inicio de login
+[07-Sep-2022 01:34:18 Europe/Berlin] Login::Render->Carga el index del login
+[07-Sep-2022 01:34:54 Europe/Berlin] inicio de aplicacion web
+[07-Sep-2022 01:34:54 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[07-Sep-2022 01:34:54 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->FinanceFlex
+[07-Sep-2022 01:34:54 Europe/Berlin] sessionController::isPublic(): currentURL => FinanceFlex
+[07-Sep-2022 01:34:54 Europe/Berlin] SessionController::validateSession() public page
+[07-Sep-2022 01:34:54 Europe/Berlin] Login::construct->inicio de login
+[07-Sep-2022 01:34:54 Europe/Berlin] Login::Render->Carga el index del login
+[07-Sep-2022 01:34:56 Europe/Berlin] inicio de aplicacion web
+[07-Sep-2022 01:34:56 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[07-Sep-2022 01:34:56 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->FinanceFlex
+[07-Sep-2022 01:34:56 Europe/Berlin] sessionController::isPublic(): currentURL => FinanceFlex
+[07-Sep-2022 01:34:56 Europe/Berlin] SessionController::validateSession() public page
+[07-Sep-2022 01:34:56 Europe/Berlin] Login::construct->inicio de login
+[07-Sep-2022 01:34:56 Europe/Berlin] Login::Render->Carga el index del login
+[07-Sep-2022 01:35:31 Europe/Berlin] inicio de aplicacion web
+[07-Sep-2022 01:35:31 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[07-Sep-2022 01:35:31 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->FinanceFlex
+[07-Sep-2022 01:35:31 Europe/Berlin] sessionController::isPublic(): currentURL => FinanceFlex
+[07-Sep-2022 01:35:31 Europe/Berlin] SessionController::validateSession() redirect al login
+[07-Sep-2022 01:35:31 Europe/Berlin] Login::construct->inicio de login
+[07-Sep-2022 01:35:31 Europe/Berlin] Login::Render->Carga el index del login
+[07-Sep-2022 01:36:07 Europe/Berlin] inicio de aplicacion web
+[07-Sep-2022 01:36:07 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[07-Sep-2022 01:36:07 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->FinanceFlex
+[07-Sep-2022 01:36:07 Europe/Berlin] sessionController::isPublic(): currentURL => FinanceFlex
+[07-Sep-2022 01:36:07 Europe/Berlin] SessionController::validateSession() redirect al login
+[07-Sep-2022 01:36:07 Europe/Berlin] Login::construct->inicio de login
+[07-Sep-2022 01:36:07 Europe/Berlin] Login::Render->Carga el index del login
+[07-Sep-2022 01:38:06 Europe/Berlin] inicio de aplicacion web
+[07-Sep-2022 01:38:06 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[07-Sep-2022 01:38:06 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->FinanceFlex
+[07-Sep-2022 01:38:06 Europe/Berlin] sessionController::isPublic(): currentURL => FinanceFlex
+[07-Sep-2022 01:38:06 Europe/Berlin] SessionController::validateSession() redirect al login
+[07-Sep-2022 01:38:06 Europe/Berlin] Login::construct->inicio de login
+[07-Sep-2022 01:38:06 Europe/Berlin] Login::Render->Carga el index del login
+[07-Sep-2022 01:38:19 Europe/Berlin] inicio de aplicacion web
+[07-Sep-2022 01:38:19 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[07-Sep-2022 01:38:19 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->FinanceFlex
+[07-Sep-2022 01:38:19 Europe/Berlin] sessionController::isPublic(): currentURL => FinanceFlex
+[07-Sep-2022 01:38:19 Europe/Berlin] SessionController::validateSession() redirect al login
+[07-Sep-2022 01:38:19 Europe/Berlin] Login::construct->inicio de login
+[07-Sep-2022 01:38:19 Europe/Berlin] Login::Render->Carga el index del login
+[07-Sep-2022 01:38:20 Europe/Berlin] inicio de aplicacion web
+[07-Sep-2022 01:38:20 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[07-Sep-2022 01:38:20 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->FinanceFlex
+[07-Sep-2022 01:38:20 Europe/Berlin] sessionController::isPublic(): currentURL => FinanceFlex
+[07-Sep-2022 01:38:20 Europe/Berlin] SessionController::validateSession() redirect al login
+[07-Sep-2022 01:38:20 Europe/Berlin] Login::construct->inicio de login
+[07-Sep-2022 01:38:20 Europe/Berlin] Login::Render->Carga el index del login
+[07-Sep-2022 01:38:20 Europe/Berlin] inicio de aplicacion web
+[07-Sep-2022 01:38:20 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[07-Sep-2022 01:38:20 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->FinanceFlex
+[07-Sep-2022 01:38:20 Europe/Berlin] sessionController::isPublic(): currentURL => FinanceFlex
+[07-Sep-2022 01:38:20 Europe/Berlin] SessionController::validateSession() redirect al login
+[07-Sep-2022 01:38:20 Europe/Berlin] Login::construct->inicio de login
+[07-Sep-2022 01:38:20 Europe/Berlin] Login::Render->Carga el index del login
+[07-Sep-2022 01:38:21 Europe/Berlin] inicio de aplicacion web
+[07-Sep-2022 01:38:21 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[07-Sep-2022 01:38:21 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->FinanceFlex
+[07-Sep-2022 01:38:21 Europe/Berlin] sessionController::isPublic(): currentURL => FinanceFlex
+[07-Sep-2022 01:38:21 Europe/Berlin] SessionController::validateSession() redirect al login
+[07-Sep-2022 01:38:21 Europe/Berlin] Login::construct->inicio de login
+[07-Sep-2022 01:38:21 Europe/Berlin] Login::Render->Carga el index del login
+[07-Sep-2022 01:38:22 Europe/Berlin] inicio de aplicacion web
+[07-Sep-2022 01:38:22 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[07-Sep-2022 01:38:22 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->FinanceFlex
+[07-Sep-2022 01:38:22 Europe/Berlin] sessionController::isPublic(): currentURL => FinanceFlex
+[07-Sep-2022 01:38:22 Europe/Berlin] SessionController::validateSession() redirect al login
+[07-Sep-2022 01:38:22 Europe/Berlin] Login::construct->inicio de login
+[07-Sep-2022 01:38:22 Europe/Berlin] Login::Render->Carga el index del login
+[07-Sep-2022 01:38:58 Europe/Berlin] inicio de aplicacion web
+[07-Sep-2022 01:38:58 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[07-Sep-2022 01:38:58 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->FinanceFlex
+[07-Sep-2022 01:38:58 Europe/Berlin] sessionController::isPublic(): currentURL => FinanceFlex
+[07-Sep-2022 01:38:58 Europe/Berlin] SessionController::validateSession() public page
+[07-Sep-2022 01:38:58 Europe/Berlin] Login::construct->inicio de login
+[07-Sep-2022 01:38:58 Europe/Berlin] Login::Render->Carga el index del login
+[07-Sep-2022 01:54:50 Europe/Berlin] inicio de aplicacion web
+[07-Sep-2022 01:54:50 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[07-Sep-2022 01:54:50 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->FinanceFlex
+[07-Sep-2022 01:54:50 Europe/Berlin] sessionController::isPublic(): currentURL => FinanceFlex
+[07-Sep-2022 01:54:50 Europe/Berlin] SessionController::validateSession() public page
+[07-Sep-2022 01:54:50 Europe/Berlin] Login::construct->inicio de login
+[07-Sep-2022 01:54:50 Europe/Berlin] Login::Render->Carga el index del login
+[07-Sep-2022 01:55:01 Europe/Berlin] inicio de aplicacion web
+[07-Sep-2022 01:55:01 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[07-Sep-2022 01:55:01 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->FinanceFlex
+[07-Sep-2022 01:55:01 Europe/Berlin] sessionController::isPublic(): currentURL => FinanceFlex
+[07-Sep-2022 01:55:01 Europe/Berlin] SessionController::validateSession() public page
+[07-Sep-2022 01:55:01 Europe/Berlin] Login::construct->inicio de login
+[07-Sep-2022 01:55:01 Europe/Berlin] Login::Render->Carga el index del login
+[07-Sep-2022 01:55:05 Europe/Berlin] inicio de aplicacion web
+[07-Sep-2022 01:55:05 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[07-Sep-2022 01:55:05 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->FinanceFlex
+[07-Sep-2022 01:55:05 Europe/Berlin] sessionController::isPublic(): currentURL => FinanceFlex
+[07-Sep-2022 01:55:05 Europe/Berlin] SessionController::validateSession() public page
+[07-Sep-2022 01:55:05 Europe/Berlin] Login::construct->inicio de login
+[07-Sep-2022 01:55:05 Europe/Berlin] Login::Render->Carga el index del login
+[07-Sep-2022 01:58:42 Europe/Berlin] inicio de aplicacion web
+[07-Sep-2022 01:58:42 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[07-Sep-2022 01:58:42 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->FinanceFlex
+[07-Sep-2022 01:58:42 Europe/Berlin] sessionController::isPublic(): currentURL => FinanceFlex
+[07-Sep-2022 01:58:42 Europe/Berlin] SessionController::validateSession() public page
+[07-Sep-2022 01:58:42 Europe/Berlin] Login::construct->inicio de login
+[07-Sep-2022 01:58:42 Europe/Berlin] Login::Render->Carga el index del login
+[07-Sep-2022 01:58:55 Europe/Berlin] inicio de aplicacion web
+[07-Sep-2022 01:58:55 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[07-Sep-2022 01:58:55 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->FinanceFlex
+[07-Sep-2022 01:58:55 Europe/Berlin] sessionController::isPublic(): currentURL => FinanceFlex
+[07-Sep-2022 01:58:55 Europe/Berlin] SessionController::validateSession() public page
+[07-Sep-2022 01:58:55 Europe/Berlin] Login::construct->inicio de login
+[07-Sep-2022 01:58:55 Europe/Berlin] Login::Render->Carga el index del login
+[07-Sep-2022 01:59:06 Europe/Berlin] inicio de aplicacion web
+[07-Sep-2022 01:59:06 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[07-Sep-2022 01:59:06 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->FinanceFlex
+[07-Sep-2022 01:59:06 Europe/Berlin] sessionController::isPublic(): currentURL => FinanceFlex
+[07-Sep-2022 01:59:06 Europe/Berlin] SessionController::validateSession() redirect al login
+[07-Sep-2022 01:59:06 Europe/Berlin] Login::construct->inicio de login
+[07-Sep-2022 01:59:06 Europe/Berlin] Login::Render->Carga el index del login
+[07-Sep-2022 02:09:06 Europe/Berlin] inicio de aplicacion web
+[07-Sep-2022 02:09:06 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[07-Sep-2022 02:09:06 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->FinanceFlex
+[07-Sep-2022 02:09:06 Europe/Berlin] sessionController::isPublic(): currentURL => FinanceFlex
+[07-Sep-2022 02:09:06 Europe/Berlin] SessionController::validateSession() public page
+[07-Sep-2022 02:09:06 Europe/Berlin] Login::construct->inicio de login
+[07-Sep-2022 02:09:06 Europe/Berlin] Login::Render->Carga el index del login
+[07-Sep-2022 02:09:12 Europe/Berlin] inicio de aplicacion web
+[07-Sep-2022 02:09:12 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[07-Sep-2022 02:09:12 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->FinanceFlex
+[07-Sep-2022 02:09:12 Europe/Berlin] sessionController::isPublic(): currentURL => FinanceFlex
+[07-Sep-2022 02:09:12 Europe/Berlin] SessionController::validateSession() public page

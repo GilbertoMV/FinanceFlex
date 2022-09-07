@@ -1,6 +1,5 @@
 <?php
-require_once "libs/controller.php";
-class Login extends Controller{
+class Login extends sessionController{
     function __construct(){
         //llama al constructor padre
         parent::__construct();
