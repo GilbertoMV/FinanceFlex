@@ -24,20 +24,20 @@ body{
 .contenedor-textos{
     flex-basis: 50%;
     position: absolute;
-    width: 765px;
-    height: 158px;
+    width: 760px;
+    height: 120px;
     left: 35px;
     top: 447px;
 
     font-family: 'M PLUS 1 Code';
     font-style: normal;
     font-weight: 500;
-    font-size: 25px;
+    font-size: 20px;
     line-height: 79px; 
 }
 .cta{
     margin-left: 250px;
-    width: 250px;
+    width: 160px;
     display: inline-block;
     text-align: center;
     background: #d9d9d9;
