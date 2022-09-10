@@ -155,14 +155,12 @@ class UserModel extends Model implements IModel{
             $user = $query->fetch(PDO::FETCH_ASSOC);
 
             $this->id = $user['id'];
-            $this->username = $user['username'];
             $this->email = $user['email'];
             $this->password = $user['password'];
             $this->role = $user['role'];
-            $this->budget = $user['budget'];
+            /*$this->budget = $user['budget'];
             $this->photo = $user['photo'];
-            $this->name = $user['name'];
-
+            $this->name = $user['name']; */
             return $this;
         }catch(PDOException $e){
             return false;

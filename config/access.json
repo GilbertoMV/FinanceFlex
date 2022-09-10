@@ -1,41 +1,39 @@
 {
     "sites":[
         {
-            "site":"",
-            "access":"public",
-            "role":""
+            "site" : "", 
+            "access" : "public", 
+            "role" : ""
         },
         {
-            "site":"signup",
-            "access":"public",
-            "role":""
+            "site" : "signup", 
+            "access" : "public", 
+            "role" : ""
         },
         {
-            "site":"dashboard",
-            "access":"private",
-            "role":"admin"
+            "site" : "dashboard", 
+            "access" : "private", 
+            "role" : "user"
         },
         {
-            "site":"expenses",
-            "access":"private",
-            "role":"user"
+            "site" : "expenses", 
+            "access" : "private", 
+            "role" : "user"
         },
         {
-            "site":"user",
-            "access":"private",
-            "role":"user"
+            "site" : "user", 
+            "access" : "private", 
+            "role" : "user"
         },
         {
-            "site":"admin",
-            "access":"private",
-            "role":"admin"
+            "site" : "admin", 
+            "access" : "private", 
+            "role" : "admin"
         }
     ],
 
-    "default-sites": [
-        {
-            "user":"dashboard",
-            "admin":"admin"
-        }
-    ]
+    "default-sites":{
+        "user": "dashboard",
+        "admin": "admin"
+    }
 }

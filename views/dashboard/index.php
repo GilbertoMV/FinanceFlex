@@ -7,6 +7,7 @@
     <title>Dashboard</title>
 </head>
 <body>
+    <p><?php $this->showMessages(); ?></p>
 <h1>Dashboard</h1>   
 </body>
 </html>

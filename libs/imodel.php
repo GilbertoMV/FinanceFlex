@@ -5,7 +5,7 @@ interface IModel{
     public function getAll();
     public function get($id);
     public function delete($id);
-    public function update($id);
+    public function update();
     public function from($array);
 }
 ?>

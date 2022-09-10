@@ -10,5 +10,13 @@ class Dashboard extends sessionController{
         error_log('Dashboard::Render->Carga el index del Dashboard');
         $this->view->render('dashboard/index');
     }
+
+    public function getExpenses(){
+        
+
+    }
+    public function getCategories(){
+        
+    }
 }
 ?>
