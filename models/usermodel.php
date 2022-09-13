@@ -178,7 +178,7 @@ class UserModel extends Model implements IModel{
         }
     }
 
-    public function update($id){
+    public function update(){
         try{
             $query = $this->prepare('UPDATE users SET username = :username, password = :password, budget = :budget, photo = :photo, name = :name WHERE id = :id');
             $query->execute([
