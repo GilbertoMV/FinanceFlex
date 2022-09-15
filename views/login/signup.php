@@ -20,7 +20,7 @@
             <input type="text" name="password" id="password">
         </p>
         <p>
-            <input type="submit" value="Iniciar sesion" />
+            <input type="submit" value="Registrarse" />
         </p>
         <p>
             Tienes una cuenta? <a href="<?php echo constant('URL'); ?>">Iniciar sesion</a>

@@ -1,4 +1,6 @@
 <?php
+require_once 'models/expensesmodel.php';
+require_once 'models/categoriesmodel.php';
 class Dashboard extends sessionController{
     private $user;
     
@@ -55,7 +57,7 @@ class Dashboard extends sessionController{
                 $categoryArray['total'] = $total;
                 $categoryArray['count'] = $numberOfExpenses;
                 $categoryArray['category'] = $category;
-                array_push($res, $categoryArray)
+                array_push($res, $categoryArray);
 
 
             }

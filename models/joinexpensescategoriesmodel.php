@@ -59,9 +59,17 @@ class JoinExpensesCategoriesModel extends Model{
     public function getAmount(){return $this->amount;}
     public function getDate(){return $this->date;}
     public function getUserid(){ return $this->userid;}
-    public function getName(){return $this->name;}
+    public function getNameCategory(){return $this->nameCategory;}
     public function getColor(){ return $this->color;}
 
+    public function setExpenseId($value){$this->expenseId = $value;}
+    public function setTitle($value){$this->title = $value;}
+    public function setCategoryId($value){$this->categoryId = $value;}
+    public function setAmount($value){$this->amount = $value;}
+    public function setDate($value){$this->date = $value;}
+    public function setUserid($value){$this->userid = $value;}
+    public function setNameCategory($value){$this->nameCategory = $value;}
+    public function setColor($value){$this->color = $value;}
 }
 
 ?>
