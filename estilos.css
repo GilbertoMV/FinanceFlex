@@ -3,12 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body{
     font-family: 'M PLUS 1 Code', sans-serif;
     min-height: 100vh;
 }
-
 .contenedor{
     position:relative;
     height: 768px;
@@ -29,7 +27,6 @@ body{
     left: 35px;
     top: 447px;
 
-    font-family: 'M PLUS 1 Code';
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
