@@ -49,13 +49,13 @@ class Expenses extends sessionController{
             'user'=>$this->user
         ]);
     }
-    function getCategoriesId(){
+    function getCategoryId(){
         $joinModel = new JoinExpensesCategoriesModel();
         $categories = $joinModel->getAll($this->user->getId());
         $res = [];
 
         foreach ($categories as $cat) {
-            array_push($res, $cat->getCategoriesId());
+            array_push($res, $cat->getCategoryId());
         }
         $res = array_values(array_unique($res));
 
@@ -63,7 +63,7 @@ class Expenses extends sessionController{
     }
 
     private function getDateList(){
-        $month = [];
+        $months = [];
         $res = [];
         $joinModel = new JoinExpensesCategoriesModel();
         $expenses = $joinModel->getAll($this->user->getId());
@@ -97,7 +97,7 @@ class Expenses extends sessionController{
     function getCategoryColorList(){
         $res = [];
         $joinModel = new JoinExpensesCategoriesModel();
-        $expenses = $joinModel->getAll($this->user->getId);
+        $expenses = $joinModel->getAll($this->user->getId());
         
         foreach ($expenses as $expense) {
             array_push($res, $expense->getColor());
@@ -125,12 +125,12 @@ class Expenses extends sessionController{
         header('Content-Type: application/json');
 
         $res=[];
-        $categoryIds=$this->getCategoriesId();
+        $categoryIds=$this->getCategoryId();
         $categoryNames = $this->getCategoryList();
         $categoryColors = $this->getCategoryColorList();
 
-        array_unshift($categorNames, 'mes');
-        array_unshift($categoryColors, 'categories');
+        array_unshift($categoryNames, 'mes');
+        array_unshift($categoryColors, 'categorias');
 
         $months = $this->getDateList();
 
