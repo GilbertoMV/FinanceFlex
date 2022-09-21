@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@300;400;500&display=swap');
-
 *{
     margin: 0;
     padding: 0;
@@ -8,45 +7,164 @@
 body, input{
     font-family: 'M PLUS 1 Code', sans-serif;
 }
-.contenedor{
-    position:relative;
-    height: 768px;
+.cont{
+    width: 100%;
+    min-height: 100vh;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.navbar{
+    width: 100%;
     display: flex;
     align-items: center;
 }
-.wave1{
-    position: absolute;
-    top:0;
-    left:0;
-    width:10%;
+.logo{
+    width: 90px;
+    cursor: pointer;
+    margin: 30px 0;
 }
-.contenedor-textos{
-    flex-basis: 50%;
-    position: absolute;
-    width: 760px;
-    height: 120px;
-    left: 35px;
-    top: 447px;
-
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 79px; 
+.menu{
+    width: 25px;
+    cursor: pointer;
+    display: none;
 }
-.cta{
-    margin-left: 250px;
-    width: 160px;
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul li{
+    list-style: none;
     display: inline-block;
-    text-align: center;
-    background: #d9d9d9;
-    border-radius: 8px;
-    text-decoration: none;
+    margin-right: 30px;
 }
-.link{
-    margin-top: 0px;
-    margin-left: 260px;
+nav ul li a{
     text-decoration: none;
+    color:#20236D;
+    font-size: 14px;
 }
+nav ul li a:hover{
+    color:#FA4848;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0;
+}
+.col-1{
+    flex-basis: 40%;
+    position: relative;
+    margin-left: 50px;
+}
+.col-1 h2{
+    font-size: 54px;
+    color: #FA4848;
+}
+.col-1 h3{
+    font-size: 40px;
+    font-weight: 500;
+    margin: 20px 0 10px;
+}
+.col-1 p{
+    font-size: 20px;
+    color:#5639A6;
+    font-weight: 500;
+    margin: 30px 0;
+}
+button{
+    width: 140px;
+    border: 0;
+    padding: 12px 10px;
+    outline: none;
+    color: #fff;
+    background: linear-gradient(to right, #20236D, #FA4848);
+    border-radius: 20px;
+    cursor: pointer;
+}
+button a{
+    text-decoration: none;
+    color: white;
+}
+.col-1::after{
+    content: '';
+    width: 10px;
+    height: 57%;
+    background: linear-gradient(#20236D,#FA4848);
+    position: absolute;
+    left: -40px;
+    top: 8px;
+}
+.col-2{
+    position: relative;
+    flex-basis: 60%;
+    align-items: center;
+}
+.col-2 .person{
+    width: 80%;
+}
+.color-box{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: linear-gradient(#20236D,#FA4848);
+    border-radius: 20px 0 0 20px;
+    height: 100%;
+    width: 80%;
+    z-index: -1;
+    transform: translateX(150px);
+}
+@media only screen and (max-width:700px){
+    nav ul{
+        width: 100%;
+        background: linear-gradient(#20236D,#FA4848);
+        position: absolute;
+        top: 110px;
+        right: 0;
+        z-index: 2;
+    }
+    nav ul li{
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    nav ul li a{
+        color: white;
+    }
+    .menu{
+        display: block;
+    }
+    #menuList{
+        overflow: hidden;
+        transition: 0.5s;
+    }
+    .row{
+        flex-direction: column-reverse;
+        margin: 50px 0;
+    }
+    .col-2{
+        flex-basis: 100%;
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+    .col-2 .person{
+        width: 77%;
+    }
+    .color-box{
+        transform: translateX(75px);
+    }
+    .col-1{
+        flex-basis: 100%;
+    }
+    .col-1 h2{
+        font-size: 35px;
+    }
+    .col-1 h3{
+        font-size: 25px;
+    }
+}
+/*DISEÑO DEL REGISTRO*/
 .container {
     position: relative;
     width: 100%;

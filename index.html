@@ -2,27 +2,54 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, ">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FinanceFlex</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="estilos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@300;400&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6dc1722754.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <main class="contenedor">
-        <div class="contenedor-textos">
-            <h1 class="titulo"><font color="#FA4848">COMIENZA</font> A ADMINISTRAR TUS CUENTAS</h1>    
-            <div class="boton"><a href="registro.html" class="cta">Comienza ahora</a></div>
+    <div class="cont">
+        <div class="navbar">
+            <img src="img/logo_transparent-white.png" class="logo">
+            <nav>
+                <ul id="menuList">
+                    <li><a href="">INICIO</a></li>
+                    <li><a href="#nosotros">NOSOTROS</a></li>
+                    <li><a href="">ACERCA DE</a></li>
+                </ul>
+            </nav>
+            <img src="img/menu.png" class="menu" onClick="togglemenu()">
         </div>
-        <div class="wave1">
-            <img src="img/wave-up.svg" alt="">
+        <div class="row">
+            <div class="col-1">
+                <h2>COMIENZA</h2>
+                <h3>A ADMINISTRAR TU DINERO</h3>
+                <p>con FinanceFlex</p>
+                <button type="button"><a href="registro.html">Empieza Ya</button></a>
+            </div>
+            <div class="col-2">
+                <img src="img/Character 1.png" class="person">
+                <div class="color-box"></div>
+            </div>
         </div>
-        <div class="contenedor-imagen-grupo">
-            <img src="img/Group 1.svg" alt="">
-        </div>
-            
-    </main>
+    </div>
+    <script>
+        var menuList = document.getElementById("menuList");
+        menuList.style.maxHeight = "0px";
+
+        function togglemenu(){
+            if(menuList.style.maxHeight == "0px"){
+                menuList.style.maxHeight = "130px";
+            }
+            else 
+                {
+                  menuList.style.maxHeight = "0px";  
+                }
+        }
+    </script>
+    
 </body>
 </html>
