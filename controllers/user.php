@@ -1,4 +1,5 @@
 <?php
+require_once "models/usermodel.php";
 class User extends SessionController{
 
     private $user;

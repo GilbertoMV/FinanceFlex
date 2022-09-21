@@ -16,29 +16,27 @@ class Dashboard extends sessionController{
         error_log('Dashboard::Render->Carga el index del Dashboard');
         
         $expensesModel = new ExpensesModel();
-        $expense = $this->getExpense(5);
+        $expenses = $this->getExpense(5);
         $totalThisMonth = $expensesModel->getTotalAmountThisMonth($this->user->getId());
-        $maxExpensesThisMonth = $expensesModel->getMaxAmountThisMonth($this->user->getId());
+        $maxExpensesThisMonth = $expensesModel->getMaxExpensesThisMonth($this->user->getId());
         $categories = $this->getCategories();
 
 
 
         $this->view->render('dashboard/index', [
             'user' => $this->user,
-            'expense' => $expense,
-            'totalAmmountThisMonth' => $totalThisMonth,
+            'expenses' => $expenses,
+            'totalAmountThisMonth' => $totalThisMonth,
             'maxExpensesThisMonth' => $maxExpensesThisMonth,
             'categories' => $categories
         ]);
     }
 
     private function getExpense($n = 0){
-        if($n < 0){
-            return NULL;
-        }else{
-            $expenses = new ExpensesModel();
-            return $expenses -> getByUserIdAndLimit($this->user->getId(),$n);
-        }
+        if($n < 0)return NULL;
+        error_log("Dashboard::getExpenses() id = " . $this->user->getId());
+        $expenses = new ExpensesModel();
+        return $expenses -> getByUserIdAndLimit($this->user->getId(),$n);
     }
     private function getCategories(){
         $res = [];

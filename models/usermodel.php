@@ -158,9 +158,9 @@ class UserModel extends Model implements IModel{
             $this->email = $user['email'];
             $this->password = $user['password'];
             $this->role = $user['role'];
-            /*$this->budget = $user['budget'];
+            /*$this->budget = $user['budget']; */
             $this->photo = $user['photo'];
-            $this->name = $user['name']; */
+            /*$this->name = $user['name']; */
             return $this;
         }catch(PDOException $e){
             return false;

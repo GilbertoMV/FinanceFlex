@@ -1,6 +1,8 @@
 <?php
 require_once 'models/expensesmodel.php';
 require_once 'models/categoriesmodel.php';
+require_once 'models/joinexpensescategoriesmodel.php';
+
 class Expenses extends sessionController{
     private $user;
 

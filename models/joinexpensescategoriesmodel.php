@@ -26,7 +26,7 @@ class JoinExpensesCategoriesModel extends Model{
             }
             return $items;
         } catch (PDOException $e) {
-            return NULL;
+            error_log("**ERROR: JoinExpensesCategoriesModel::getAll: error: " . $e);
         }
     }
     public function from($array){
@@ -35,7 +35,7 @@ class JoinExpensesCategoriesModel extends Model{
         $this->categoryId = $array['category_id'];
         $this->amount = $array['amount'];
         $this->date=$array['date'];
-        $this->userId = $array['user_id'];
+        $this->userId = $array['id_user'];
         $this->nameCategory = $array['name'];
         $this->color = $array['color'];
     }
