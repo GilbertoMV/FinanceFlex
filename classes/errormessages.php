@@ -8,6 +8,8 @@ class ErrorMessages{
     const ERROR_LOGIN_AUTHENTICATE_EMPTY = "ERROR_5";
     const ERROR_LOGIN_AUTHENTICATE_DATA = "ERROR_6";
     const ERROR_LOGIN_AUTHENTICATE = "ERROR_7";
+    const ERROR_USER_UPDATEBUDGET = "ERROR_8";
+    const ERROR_EXPENSES_NEWEXPENSES = "ERROR_9";
 
 
     private $errorList = [];
@@ -21,7 +23,9 @@ class ErrorMessages{
             ErrorMessages::ERROR_SIGNUP_NEWUSER_EMPTY => 'Llena los campos de email y password.',
             ErrorMessages::ERROR_LOGIN_AUTHENTICATE_EMPTY => 'Inicia sesion.',
             ErrorMessages::ERROR_LOGIN_AUTHENTICATE_DATA => 'Email y/o password incorrecto.',
-            ErrorMessages::ERROR_LOGIN_AUTHENTICATE => 'No se puede procesar la solicitud. Ingresa email y password.'
+            ErrorMessages::ERROR_LOGIN_AUTHENTICATE => 'No se puede procesar la solicitud. Ingresa email y password.',
+            ErrorMessages::ERROR_USER_UPDATEBUDGET => 'Ingresa un valor valido.',
+            ErrorMessages::ERROR_EXPENSES_NEWEXPENSES => 'Valores invalidos'
 
         ];
 

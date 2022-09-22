@@ -27,7 +27,6 @@ class UserModel extends Model implements IModel{
         try{
             $query = $this->db->connect()->prepare('UPDATE users SET budget = :val WHERE id = :id');
             $query->execute(['val' => $budget, 'id' => $iduser]);
-
             if($query->rowCount() > 0){
                 return true;
             }else{
@@ -35,6 +34,7 @@ class UserModel extends Model implements IModel{
             }
         
         }catch(PDOException $e){
+            error_log("Error-USERMODEL-updateBudget".$e);
             return NULL;
         }
     }
@@ -158,7 +158,7 @@ class UserModel extends Model implements IModel{
             $this->email = $user['email'];
             $this->password = $user['password'];
             $this->role = $user['role'];
-            /*$this->budget = $user['budget']; */
+            $this->budget = $user['budget']; 
             $this->photo = $user['photo'];
             /*$this->name = $user['name']; */
             return $this;
@@ -180,19 +180,17 @@ class UserModel extends Model implements IModel{
 
     public function update(){
         try{
-            $query = $this->prepare('UPDATE users SET username = :username, password = :password, budget = :budget, photo = :photo, name = :name WHERE id = :id');
+            $query = $this->prepare('UPDATE users SET email = :email, password = :password, budget = :budget, photo = :photo WHERE id = :id');
             $query->execute([
                 'id'        => $this->id,
-                'username' => $this->username, 
                 'email'    => $this->email,
                 'password' => $this->password,
                 'budget' => $this->budget,
-                'photo' => $this->photo,
-                'name' => $this->name
+                'photo' => $this->photo
                 ]);
             return true;
         }catch(PDOException $e){
-            echo $e;
+            //echo $e;
             return false;
         }
     }

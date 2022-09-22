@@ -57,8 +57,8 @@ class ExpensesModel extends Model implements IModel{
         try {
             $query = $this->prepare('SELECT * FROM expenses WHERE id = :id');
             $query->execute(['id' => $id]);
-            $expense = $query->fetch(PDO::FETCH_ASSOC);
-            $this->from($expense);
+            $user = $query->fetch(PDO::FETCH_ASSOC);
+            $this->from($user);
 
             return $this;
 
@@ -78,10 +78,11 @@ class ExpensesModel extends Model implements IModel{
     public function update(){
         try {
             $query = $this->prepare('UPDATE INTO expenses SET title=:title, amount=:amount, category_id = :category, date = :d, id_user = :user WHERE id= :id');
-            $query->execute(['title' => $this->title, 'amount' => $this->amount, 'category' => $this->categoryid, 'user' => $this->userid, 'd'=>$this->date, 'id' => $this->id]);
-            if($query->rowCount())return true;
-            return false;
+            $query->execute(['title' => $this->title, 'amount' => $this->amount, 'category' => $this->categoryid, 'user' => $this->userid, 'd'=>$this->date]);
+            return true;
         } catch (PDOException $e) {
+
+            echo $e;
             return false;
         }
     }
@@ -94,11 +95,11 @@ class ExpensesModel extends Model implements IModel{
         $this->date = $array['date'];
         $this->userid = $array['id_user'];
     }
-    public function getAllByUserId($user_id){
+    public function getAllByUserId($userid){
         $items = [];
         try {
             $query = $this->prepare('SELECT * FROM expenses WHERE id_user = :userid');
-            $query->execute(['userid' => $user_id]);
+            $query->execute(['userid' => $userid]);
 
             while($p = $query->fetch(PDO::FETCH_ASSOC)){
                 $item = new ExpensesModel();
@@ -107,16 +108,17 @@ class ExpensesModel extends Model implements IModel{
                 array_push($items, $item);
 
             }
+
             return $items;
         } catch (PDOException $e) {
-            return [];
+            echo $e;
         }
     }
-    public function getByUserIdAndLimit($user_id, $n){
+    public function getByUserIdAndLimit($userid, $n){
         $items = [];
         try {
             $query = $this->prepare('SELECT * FROM expenses WHERE id_user = :userid ORDER BY expenses.date DESC LIMIT 0, :n');
-            $query->execute(['userid' => $user_id, 
+            $query->execute(['userid' => $userid, 
             'n' => $n]);
             while($p = $query->fetch(PDO::FETCH_ASSOC)){
                 $item = new ExpensesModel();
@@ -148,12 +150,12 @@ class ExpensesModel extends Model implements IModel{
             return NULL;
         }
     }
-    public function getMaxExpensesThisMonth($user_id){
+    public function getMaxExpensesThisMonth($userid){
         try {
             $year = date('Y');
             $month = date('m');
             $query = $this->prepare('SELECT MAX(amount) AS total FROM expenses WHERE YEAR(date) = :year AND MONTH(date) = :month AND id_user = :userid');
-            $query->execute(['userid' => $user_id, 
+            $query->execute(['userid' => $userid, 
             'year' => $year, 'month' => $month]);
             $total = $query->fetch(PDO::FETCH_ASSOC)['total'];
             if($total == NULL) $total =0;
@@ -170,7 +172,7 @@ class ExpensesModel extends Model implements IModel{
             $total = 0;
             $year = substr($date, 0, 4);
             $month = substr($date, 5,7);
-            $query = $this->prepare('SELECT SUM(amount) ad total FROM expenses WHERE category_id = :categoryid AND id_user = :user AND YEAR(date) = :year AND MONTH(date) = :month');
+            $query = $this->prepare('SELECT SUM(amount) as total FROM expenses WHERE category_id = :categoryid AND id_user = :userid AND YEAR(date) = :year AND MONTH(date) = :month');
             $query ->execute(['categoryid'=>$categoryid,'userid'=>$userid, 'year'=>$year, 'month'=>$month]);
             if($query ->rowCount() > 0){
                 $total = $query->fetch(PDO::FETCH_ASSOC)['total'];
@@ -206,12 +208,17 @@ class ExpensesModel extends Model implements IModel{
             $total =0;
             $year = date('Y');
             $month = date('m');
-            $query = $this->prepare('SELECT COUNT(amount) AS total FROM expenses WHERE category_id = :categoryid and YEAR(date) = :year AND MONTH(date) = :month AND id_user = :userid ');
+            $query = $this->prepare('SELECT COUNT(id) AS total FROM expenses WHERE category_id = :categoryid and YEAR(date) = :year AND MONTH(date) = :month AND id_user = :userid ');
             $query->execute(['userid' => $user_id, 
             'year' => $year, 'month' => $month, 'categoryid' => $categoryid]);
             $total = $query->fetch(PDO::FETCH_ASSOC)['total'];
-            if($total == NULL) $total =0;
-            return $total;
+            if($total == NULL){
+                $total =0;
+            }else{
+                error_log("**OK: ExpensesModel::getTotalByCategoryThisMonth: OK: ");
+                return $total;
+            } 
+
 
         } catch (PDOException $e) {
             error_log("**ERROR: ExpensesModel::getNumberOfExpensesByCategoryThisMonth: error: " . $e);

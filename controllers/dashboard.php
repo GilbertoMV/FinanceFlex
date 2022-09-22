@@ -47,8 +47,9 @@ class Dashboard extends sessionController{
 
         foreach($categories as $category){
             $categoryArray = [];
-
+            //obtenemos la suma de amount de expenses por categoria
             $total = $expensesModel ->getTotalByCategoryThisMonth($category->getId(), $this->user->getId());
+             // obtenemos el número de expenses por categoria por mes
             $numberOfExpenses = $expensesModel ->getNumberOfExpensesByCategoryThisMonth($category->getId(), $this->user->getId());
 
             if($numberOfExpenses > 0){
@@ -60,6 +61,7 @@ class Dashboard extends sessionController{
 
             }
         }
+        return $res;
     }
 }
 ?>

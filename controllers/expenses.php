@@ -20,8 +20,9 @@ class Expenses extends sessionController{
     }
 
     function newExpense(){
+        error_log('Expenses::newExpense()');
         if(!$this->existPOST(['title', 'amount', 'category', 'date'])){
-            $this->redirect('dashboard', []);
+            $this->redirect('dashboard', [ErrorMessages::ERROR_EXPENSES_NEWEXPENSES]);
             return;
 
         }
@@ -39,7 +40,7 @@ class Expenses extends sessionController{
         $expense->setUserId($this->user->getId());
 
         $expense->save();
-        $this->redirect('dashboard', []); //success
+        $this->redirect('dashboard', ['success' => SuccessMessages::SUCCESS_NEWEXPENSES]); //success
     }
 
     function create(){

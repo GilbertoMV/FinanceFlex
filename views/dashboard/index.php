@@ -65,10 +65,11 @@
                                             <?php
                                                 $gap = $user->getBudget() - $totalThisMonth;
                                                 if($gap < 0){
-                                                    echo "-$" . number_format(abs($user->getBudget() - $totalThisMonth), 2);
+                                                    echo "-$";
                                                 }else{
-                                                    echo "$" . number_format($user->getBudget() - $totalThisMonth, 2);
+                                                    echo "$";
                                                 }
+                                                echo number_format(abs($user->getBudget() - $totalThisMonth), 2);
                                             
                                         ?>
                                         </span>
@@ -83,7 +84,7 @@
                             </div>
                             <div class="total-expense">
                                 <?php
-                                    if($totalThisMonth === NULL){
+                                    if($maxExpensesThisMonth === NULL){
                                         'Hubo un problema al cargar la información';
                                     }else{?>
                                         <span>$<?php
