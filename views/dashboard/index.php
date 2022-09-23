@@ -115,7 +115,7 @@
                                         <div class="content category-name">
                                             <?php echo $category['category']->getName() ?>
                                         </div>
-                                        <div class="title category-total">$<?php echo $category['total'] ?></div>
+                                        <div class="title category-total">$<?php echo number_format($category['total'], 2) ?></div>
                                         <div class="content category-count">
                                             <p><?php
                                                 $count = $category['count'];

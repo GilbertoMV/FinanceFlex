@@ -14,8 +14,10 @@ class Expenses extends sessionController{
     }
 
     function render(){
-        $this->view->render('expenses/index',[
-            'user' => $this->user
+        $this->view->render('expenses/index', [
+            'user' => $this->user,
+            'dates' => $this->getDateList(),
+            'categories' => $this->getCategoryList()
         ]);
     }
 
@@ -27,7 +29,7 @@ class Expenses extends sessionController{
 
         }
         if($this->user == NULL){
-            $this->redirect('dashboard', []);
+            $this->redirect('dashboard', ['error' => ErrorMessages::ERROR_EXPENSES_NEWEXPENSES]);
             return;
         }
 
