@@ -9,7 +9,7 @@ body, input{
 }
 .cont{
     width: 100%;
-    min-height: 100vh;
+    min-height: 700px;
     padding-left: 8%;
     padding-right: 8%;
     box-sizing: border-box;
@@ -115,10 +115,119 @@ button a{
     z-index: -1;
     transform: translateX(150px);
 }
+.container-n{
+    background: #dad2f0;
+}
+.nosotros{
+    padding-top: 5vh;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 5vh;
+}
+.nosotros>h1{
+    font-size: 45px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    color: #5639A6;
+}
+.nosotros>h2{
+    font-size: 35px;
+    font-weight: 900;
+    margin-bottom: 0px;
+    color: #20236D;
+}
+.nosotros>p{
+    color:#333;
+    margin-bottom: 50px;
+    font-weight: 500;
+}
+.hacer{
+    width: 80%;
+    margin-top:0%;
+    margin-left: auto;
+    margin-right: auto;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 5vh;
+}
+.item{
+    margin-left: 25px;
+}
+.item>img{
+    width: 80px;
+    margin-bottom: 20px;
+}
+.item>h1{
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #20236D;
+}
+.item>p{
+    color:#333;
+    margin-bottom: 15px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+footer{
+    background-color: white;
+    height: auto;
+    width: 100%;
+    padding-top: 40px;
+}
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.footer-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+}
+.footer-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+}
+.social{
+    list-style:none;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.social li{
+    margin: 0 10px;
+}
+.social a i{
+    font-size: 1.1rem;
+    transition: color .4s ease;
+}
+.social a:hover i{
+    color:#FA4848;
+}
+.footer-bottom{
+    background:#FFE087;
+    width:100%;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-bottom p{
+    font-size: 16px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
 @media only screen and (max-width:700px){
     nav ul{
         width: 100%;
-        background: linear-gradient(#20236D,#FA4848);
+        background: #20236D;
         position: absolute;
         top: 110px;
         right: 0;
@@ -162,6 +271,14 @@ button a{
     }
     .col-1 h3{
         font-size: 25px;
+    }
+    .col-1-item{
+        flex-basis: 100%;
+    }
+    .col-2-item{
+        flex-basis: 100%;
+        margin-top: 10px;
+        margin-bottom: 50px;
     }
 }
 /*DISEÑO DEL REGISTRO*/
