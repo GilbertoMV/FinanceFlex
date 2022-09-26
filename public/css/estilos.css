@@ -7,6 +7,8 @@
 body, input{
     font-family: 'M PLUS 1 Code', sans-serif;
 }
+
+/* DISEÑO PÁGINA PRINCIPAL*/
 .cont{
     width: 100%;
     min-height: 700px;
@@ -281,6 +283,7 @@ footer{
         margin-bottom: 50px;
     }
 }
+
 /*DISEÑO DEL REGISTRO*/
 .container {
     position: relative;
@@ -444,7 +447,7 @@ form.sign-up-form{
 .right-panel .content, .right-panel .image{
     transform: translateX(800px);
 }
-/* ANIMACIÓN */
+/* ANIMACIÓN DEL REGISTRO */
 .container.sign-up-mode:before{
     transform: translate(100%, -50%);
     right: 52%;

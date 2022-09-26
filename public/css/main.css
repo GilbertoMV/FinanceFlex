@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, input{
+    font-family: 'M PLUS 1 Code', sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 66px;
+    top: 28px;
+    left: 36px;
+}
+.linea{
+    position: absolute;
+    width: 1100px;
+    height: 0px;
+    left: 140px;
+    top: 94px;
+
+    border: 1px solid rgba(138, 138, 138, 0.35);
+}
+nav{
+   display: flex;
+   padding: 2% 6%;
+   justify-content: space-between;
+   align-items: center;
+}
+nav img{
+    width: 60px;
+}
+nav h1{
+    color:#FC003C;
+}
+nav a{
+    color:#9A9A9A;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+nav a:hover{
+    color:#4D4B4B;
+    font-weight:bold;
+}
+.nav-links{
+    flex: 1;
+    text-align: left;
+}
+.nav-links ul li{
+    list-style-type: none;
+    display: inline-block;
+    left: 20px;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background:#FA4848;
+    display:block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
