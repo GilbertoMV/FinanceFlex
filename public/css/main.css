@@ -70,3 +70,32 @@ nav a:hover{
     width: 100%;
 }
 
+/* BANNER*/ 
+.banner{
+    position: absolute;
+    width: 756px;
+    left: 46px;
+    height: 245px;
+    top: 132px; 
+    background:linear-gradient(89.59deg, rgba(255, 224, 135, 0) -28.52%, #FFE087 108.73%);
+    border-radius: 50px;
+}
+.tarjetas{
+    position: absolute;
+    width: 467px;
+    height: 681px;
+    left: 826px;
+    top: 200px;
+
+    background: linear-gradient(163.82deg, rgba(255, 224, 135, 0.17) -33.32%, #FFE087 104.62%);
+    background-blend-mode: darken;
+    border-radius: 40px;
+}
+.transacciones{
+    position: absolute;
+    width: 747px;
+    height: 504px;
+    left: 46px;
+    top: 421px;
+    background:#9A9A9A;
+}
