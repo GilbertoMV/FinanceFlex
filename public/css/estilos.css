@@ -123,8 +123,7 @@ button a{
 .nosotros{
     padding-top: 5vh;
     width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    margin:auto;
     padding-bottom: 5vh;
 }
 .nosotros>h1{
@@ -132,47 +131,69 @@ button a{
     font-weight: 900;
     margin-bottom: 20px;
     color: #5639A6;
+    text-align: center;
 }
 .nosotros>h2{
     font-size: 35px;
     font-weight: 900;
-    margin-bottom: 0px;
     color: #20236D;
+    margin-bottom: 30px;
+    text-align: center;
 }
 .nosotros>p{
     color:#333;
-    margin-bottom: 50px;
     font-weight: 500;
+    text-align: center;
+    margin-bottom: 40px;
 }
 .hacer{
-    width: 80%;
-    margin-top:0%;
-    margin-left: auto;
-    margin-right: auto;
-    display:flex;
-    justify-content: space-between;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
     align-items: center;
     padding-bottom: 5vh;
 }
+.bloque__imagen {
+    width: 30%;
+    padding: auto;
+}
 .item{
-    margin-left: 25px;
+    text-align: center;
 }
-.item>img{
-    width: 80px;
-    margin-bottom: 20px;
-}
+
 .item>h1{
-    font-size: 25px;
-    font-weight: 500;
-    margin-bottom: 10px;
+    font-size: 17px;
     color: #20236D;
+    text-align: center;
 }
 .item>p{
     color:#333;
-    margin-bottom: 15px;
+    font-size: 15px;
     font-weight: 500;
-    margin-bottom: 50px;
+    text-align: center;
 }
+@media (min-width: 769px) {
+    .hacer {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .item>h1{
+    font-size: 25px;
+    color: #20236D;
+    text-align: center;
+    }
+
+    .item>p{
+    color:#333;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    }
+}
+
+
+
 footer{
     background-color: white;
     height: auto;
