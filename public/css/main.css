@@ -1,42 +1,123 @@
 @import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@300;400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body, input{
-    font-family: 'M PLUS 1 Code', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada&display=swap');
+/* 
+  Reset CSS 
+*/
+
+:root {
+  --negro: #393939;
+  --tipo-principal: Helvetica, Arial, sans-serif;
+  --tipo-secundaria: Verdana;
 }
 
-header{
-    width: 100%;
-    height: 66px;
-    top: 28px;
-    left: 36px;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --negro: #ececec;
+  }
 }
-.linea{
-    position: absolute;
-    width: 1100px;
-    height: 0px;
-    left: 140px;
-    top: 94px;
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation: none !important;
+            animation: none !important;
+    -webkit-transition: none !important;
+    transition: none !important;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  vertical-align: baseline;
+}
 
-    border: 1px solid rgba(138, 138, 138, 0.35);
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
 }
-nav{
-   display: flex;
-   padding: 2% 6%;
-   justify-content: space-between;
-   align-items: center;
+
+p a {
+  display: inline;
 }
-nav img{
-    width: 60px;
+
+li {
+  list-style-type: none;
 }
-nav h1{
-    color:#FC003C;
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+::-moz-selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+::selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  background-color: transparent;
+  display: block;
+
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: var(--tipo-principal);
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.logo{
+    height: 50px;
+    width: 50px;
 }
 nav a{
+
+    font-style: bold;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0.03em;
     color:#9A9A9A;
     text-decoration: none;
     font-size: 16px;
@@ -46,18 +127,14 @@ nav a:hover{
     color:#4D4B4B;
     font-weight:bold;
 }
-.nav-links{
-    flex: 1;
-    text-align: left;
-}
-.nav-links ul li{
+.container ul li{
     list-style-type: none;
     display: inline-block;
     left: 20px;
     padding: 8px 12px;
     position: relative;
 }
-.nav-links ul li::after{
+.container ul li::after{
     content: '';
     width: 0%;
     height: 2px;
@@ -66,8 +143,75 @@ nav a:hover{
     margin: auto;
     transition: 0.5s;
 }
-.nav-links ul li:hover::after{
+.container ul li:hover::after{
     width: 100%;
+}
+.linea{
+    position: absolute;
+    width: 1100px;
+    height: 0px;
+    left: 140px;
+    top: 80px;
+
+    border: 1px solid rgba(138, 138, 138, 0.35);
+}
+.header{
+    width:100;
+    padding: 2% 8%;
+    background-color: #ffffff;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    color:#9A9A9A; 
+}
+.header .h1{
+    font-family: 'Radio Canada', sans-serif;
+    text-align: left;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 32px;
+    /* identical to box height */
+    letter-spacing: 0.03em;
+    color: #FC003C;
+    /* background-color: aqua; */
+}
+.header .a{}
+
+.header .button{
+    /* background-color: crimson; */
+    display: none;
+}
+.header .svg{
+    width:2em;
+    height:2em;
+}
+.header .nav{
+
+    /*display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center; */
+}
+
+.header .ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+.header .li{
+    margin: 0 .5em;
+}
+.welcome{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 23px;
+    letter-spacing: 0.03em;
+    color: #4D4B4B;
 }
 
 /* BANNER*/ 
@@ -98,4 +242,37 @@ nav a:hover{
     left: 46px;
     top: 421px;
     background:#9A9A9A;
+}
+@media screen and (max-width:768px){
+
+    .header .button{
+      display: block;
+      cursor: pointer;
+    }
+    .header .nav{
+
+        background-color: #FFE087;
+      width:100%;
+      /* display: none; */
+      height:0;
+      pointer-events: none;
+      overflow: hidden;
+      transition: all .5s ease;
+  
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+    }
+    .header .nav.activo{
+      /* display: block; */
+      height:50vh;
+      pointer-events: auto;
+    }
+    .header .ul{
+      flex-direction: column;
+    }
+    .header .li{
+      margin: 1rem 0;
+    }
 }
