@@ -1,0 +1,7 @@
+[29-Sep-2022 01:28:38 Europe/Berlin] inicio de aplicacion web
+[29-Sep-2022 01:28:38 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[29-Sep-2022 01:28:38 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
+[29-Sep-2022 01:28:38 Europe/Berlin] sessionController::isPublic(): currentURL => 
+[29-Sep-2022 01:28:38 Europe/Berlin] SessionController::validateSession() public page
+[29-Sep-2022 01:28:38 Europe/Berlin] Login::construct->inicio de login
+[29-Sep-2022 01:28:38 Europe/Berlin] Login::Render->Carga el index del login
