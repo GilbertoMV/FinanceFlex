@@ -42,7 +42,7 @@ class Expenses extends sessionController{
         $expense->setUserId($this->user->getId());
 
         $expense->save();
-        $this->redirect('dashboard', ['success' => SuccessMessages::SUCCESS_NEWEXPENSES]); //success
+        $this->redirect('dashboard', ['success' => SuccessMessages::SUCCESS_NEWEXPENSES]. $expense); //success
     }
 
     function create(){
@@ -75,12 +75,11 @@ class Expenses extends sessionController{
         }
         $months = array_values(array_unique($months));
 
-        if(count($months) > 3) {
-            array_push($res, array_pop($months));
-            array_push($res, array_pop($months));
-            array_push($res, array_pop($months));
+        foreach($months as $month) {
+            array_push($res, $month);
         }
 
+        error_log('Expenses::getDateList ->'. count($res));
         return $res;
     }
 
@@ -115,7 +114,7 @@ class Expenses extends sessionController{
         header('Content-Type: application/json');
         $res=[];
         $joinModel = new JoinExpensesCategoriesModel();
-        $expenses = $joinModel->getAll($this->user->getId);
+        $expenses = $joinModel->getAll($this->user->getId());
         
         foreach ($expenses as $expense) {
             array_push($res, $expense->toArray());

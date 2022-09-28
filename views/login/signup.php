@@ -17,15 +17,15 @@
             <h2>Registrarse</h2>
 
             <p>
-                <label for="username">Username</label>
-                <input type="text" name="username" id="username">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email">
             </p>
             <p>
-                <label for="password">password</label>
+                <label for="password">Password</label>
                 <input type="text" name="password" id="password">
             </p>
             <p>
-                <input type="submit" value="Iniciar sesión" />
+                <input type="submit" value="Registrar" />
             </p>
             <p>
                 ¿Tienes una cuenta? <a href="<?php echo constant('URL'); ?>">Iniciar sesion</a>

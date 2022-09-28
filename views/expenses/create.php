@@ -14,12 +14,12 @@
     </div>
     <div class="section">
         <label for="title">Descripción</label>
-        <div><input type="text" name="title" autocomplete="off" required></div>
+        <div><input type="text" name="title" id="title" autocomplete="off" required></div>
     </div>
     
     <div class="section">
         <label for="date">Fecha de gasto</label>
-        <input type="date" name="date" id="" required>
+        <input type="date" name="date" id="date" required>
     </div>    
 
     <div class="section">

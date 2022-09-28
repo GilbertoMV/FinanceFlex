@@ -37,6 +37,6 @@ btnCategory.addEventListener('click', async e =>{
 });
 
 async function getContent(){
-  const html = await fetch('http://localhost:80/FinanceFlex/admin/createCategory').then(res => res.text());
+  const html = await fetch('http://localhost:80/FinanceFlex/admin/create-category').then(res => res.text());
   return html;
 }

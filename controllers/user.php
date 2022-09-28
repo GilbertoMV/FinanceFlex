@@ -32,6 +32,8 @@ class User extends SessionController{
         $this->user->setBudget($budget);
         if($this->user->update()){
             $this->redirect('user', ['success' => SuccessMessages::SUCCESS_USER_UPDATEBUDGET]); //TODO
+        }else{
+            
         }
     }
     function updateName(){

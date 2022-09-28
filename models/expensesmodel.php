@@ -28,11 +28,12 @@ class ExpensesModel extends Model implements IModel{
     }
     public function save(){
         try {
-            $query = $this->prepare('INSERT INTO expenses (title, amount, category_id, date, id_user) VALUES (:title, :amount, :category, :d, :user');
-            $query->execute(['title' => $this->title, 'amount' => $this->amount, 'category' => $this->categoryid, 'user' => $this->userid, 'd'=>$this->date]);
+            $query = $this->prepare('INSERT INTO expenses (title, category_id, amount, date, id_user) VALUES (:title, :category, :amount, :d, :user');
+            $query->execute(['title' => $this->title, 'category' => $this->categoryid, 'amount' => $this->amount, 'd'=>$this->date, 'user' => $this->userid]);
             if($query->rowCount())return true;
             return false;
         } catch (PDOException $e) {
+            echo $e;
             return false;
         }
     }

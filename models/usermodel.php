@@ -127,12 +127,10 @@ class UserModel extends Model implements IModel{
             while($p = $query->fetch(PDO::FETCH_ASSOC)){
                 $item = new UserModel();
                 $item->setId($p['id']);
-                $item->setUsername($p['username']);
                 $item->setPassword($p['password'], false);
                 $item->setRole($p['role']);
                 $item->setBudget($p['budget']);
                 $item->setPhoto($p['photo']);
-                $item->setName($p['name']);
                 
 
                 array_push($items, $item);
@@ -160,7 +158,7 @@ class UserModel extends Model implements IModel{
             $this->role = $user['role'];
             $this->budget = $user['budget']; 
             $this->photo = $user['photo'];
-            /*$this->name = $user['name']; */
+            $this->name = $user['name']; 
             return $this;
         }catch(PDOException $e){
             return false;

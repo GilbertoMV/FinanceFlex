@@ -52,12 +52,12 @@
                     </div>
                     <div class="panel">
                         <div class="title">Categorías</div>
-                        <div class="datum"><?php echo $stats['mostused-category']; ?></div>
+                        <div class="datum"><?php echo $stats['mostused-categories']; ?></div>
                         <div class="description">Categorias más usada</div>
                     </div>
                     <div class="panel">
                         <div class="title">Categorías</div>
-                        <div class="datum"><?php echo $stats['lessused-category']; ?></div>
+                        <div class="datum"><?php echo $stats['lessused-categories']; ?></div>
                         <div class="description">Categorias menos usada</div>
                     </div>
                 </div>
@@ -66,7 +66,6 @@
                 <div class="transactions-container">
                     <section class="operations-container">
                         <h2>Operaciones</h2>  
-                        
                         <button class="btn-main" id="new-category">
                             <i class="material-icons">add</i>
                             <span>Registrar nueva categoría</span>

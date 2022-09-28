@@ -1,10 +1,8 @@
 
 <?php
-    $expenses = $this->d['expenses'];
-    $totalThisMonth = $this->d['totalAmountThisMonth'];
-    $maxThisMonth = $this->d['maxAmountThisMonth'];
-    $user = $this->d['user'];
-    $categories = $this->d['categories'];
+$user = $this->d['user'];
+$dates = $this->d['dates'];
+$categories = $this->d['categories'];
 ?>
 
 <link rel="stylesheet" href="<?php echo constant('URL') ?>public/css/history.css">
