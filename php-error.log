@@ -5,3 +5,82 @@
 [29-Sep-2022 01:28:38 Europe/Berlin] SessionController::validateSession() public page
 [29-Sep-2022 01:28:38 Europe/Berlin] Login::construct->inicio de login
 [29-Sep-2022 01:28:38 Europe/Berlin] Login::Render->Carga el index del login
+[29-Sep-2022 01:30:18 Europe/Berlin] inicio de aplicacion web
+[29-Sep-2022 01:30:25 Europe/Berlin] inicio de aplicacion web
+[29-Sep-2022 01:30:25 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[29-Sep-2022 01:30:25 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
+[29-Sep-2022 01:30:25 Europe/Berlin] sessionController::isPublic(): currentURL => 
+[29-Sep-2022 01:30:25 Europe/Berlin] SessionController::validateSession() public page
+[29-Sep-2022 01:30:25 Europe/Berlin] Login::construct->inicio de login
+[29-Sep-2022 01:30:25 Europe/Berlin] Login::Render->Carga el index del login
+[29-Sep-2022 01:32:06 Europe/Berlin] inicio de aplicacion web
+[29-Sep-2022 01:32:06 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[29-Sep-2022 01:32:06 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
+[29-Sep-2022 01:32:06 Europe/Berlin] sessionController::isPublic(): currentURL => 
+[29-Sep-2022 01:32:06 Europe/Berlin] SessionController::validateSession() public page
+[29-Sep-2022 01:32:06 Europe/Berlin] Login::construct->inicio de login
+[29-Sep-2022 01:32:06 Europe/Berlin] Login::Render->Carga el index del login
+[29-Sep-2022 01:32:08 Europe/Berlin] inicio de aplicacion web
+[29-Sep-2022 01:32:08 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[29-Sep-2022 01:32:08 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->signup
+[29-Sep-2022 01:32:08 Europe/Berlin] sessionController::isPublic(): currentURL => signup
+[29-Sep-2022 01:32:08 Europe/Berlin] SessionController::validateSession() public page
+[29-Sep-2022 01:32:10 Europe/Berlin] inicio de aplicacion web
+[29-Sep-2022 01:32:10 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[29-Sep-2022 01:32:10 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
+[29-Sep-2022 01:32:10 Europe/Berlin] sessionController::isPublic(): currentURL => 
+[29-Sep-2022 01:32:10 Europe/Berlin] SessionController::validateSession() public page
+[29-Sep-2022 01:32:10 Europe/Berlin] Login::construct->inicio de login
+[29-Sep-2022 01:32:10 Europe/Berlin] Login::Render->Carga el index del login
+[29-Sep-2022 01:32:15 Europe/Berlin] inicio de aplicacion web
+[29-Sep-2022 01:32:15 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[29-Sep-2022 01:32:15 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
+[29-Sep-2022 01:32:15 Europe/Berlin] sessionController::isPublic(): currentURL => 
+[29-Sep-2022 01:32:15 Europe/Berlin] SessionController::validateSession() public page
+[29-Sep-2022 01:32:15 Europe/Berlin] Login::construct->inicio de login
+[29-Sep-2022 01:32:15 Europe/Berlin] Login::Render->Carga el index del login
+[29-Sep-2022 01:36:36 Europe/Berlin] inicio de aplicacion web
+[29-Sep-2022 01:36:36 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[29-Sep-2022 01:36:36 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
+[29-Sep-2022 01:36:36 Europe/Berlin] sessionController::isPublic(): currentURL => 
+[29-Sep-2022 01:36:36 Europe/Berlin] SessionController::validateSession() public page
+[29-Sep-2022 01:36:36 Europe/Berlin] Login::construct->inicio de login
+[29-Sep-2022 01:36:36 Europe/Berlin] Login::Render->Carga el index del login
+[29-Sep-2022 01:36:39 Europe/Berlin] inicio de aplicacion web
+[29-Sep-2022 01:36:39 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[29-Sep-2022 01:36:39 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->signup
+[29-Sep-2022 01:36:39 Europe/Berlin] sessionController::isPublic(): currentURL => signup
+[29-Sep-2022 01:36:39 Europe/Berlin] SessionController::validateSession() public page
+[29-Sep-2022 01:38:58 Europe/Berlin] inicio de aplicacion web
+[29-Sep-2022 01:38:58 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[29-Sep-2022 01:38:58 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->signup?
+[29-Sep-2022 01:38:58 Europe/Berlin] sessionController::isPublic(): currentURL => signup?
+[29-Sep-2022 01:38:58 Europe/Berlin] SessionController::validateSession() public page
+[29-Sep-2022 01:54:12 Europe/Berlin] inicio de aplicacion web
+[29-Sep-2022 01:54:12 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[29-Sep-2022 01:54:12 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->signup?
+[29-Sep-2022 01:54:12 Europe/Berlin] sessionController::isPublic(): currentURL => signup?
+[29-Sep-2022 01:54:12 Europe/Berlin] SessionController::validateSession() public page
+[29-Sep-2022 01:54:15 Europe/Berlin] inicio de aplicacion web
+[29-Sep-2022 01:54:15 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[29-Sep-2022 01:54:15 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->login
+[29-Sep-2022 01:54:15 Europe/Berlin] sessionController::isPublic(): currentURL => login
+[29-Sep-2022 01:54:15 Europe/Berlin] SessionController::validateSession() redirect al login
+[29-Sep-2022 01:54:15 Europe/Berlin] Login::construct->inicio de login
+[29-Sep-2022 01:54:15 Europe/Berlin] Conexión a BD exitosa
+[29-Sep-2022 01:54:15 Europe/Berlin] LoginModel::login->success
+[29-Sep-2022 01:54:15 Europe/Berlin] inicio de aplicacion web
+[29-Sep-2022 01:54:15 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[29-Sep-2022 01:54:15 Europe/Berlin] Conexión a BD exitosa
+[29-Sep-2022 01:54:15 Europe/Berlin] PHP Notice:  Undefined index: name in C:\xamppp\htdocs\FinanceFlex\models\usermodel.php on line 161
+[29-Sep-2022 01:54:15 Europe/Berlin] sessionController::validateSession(): email:designsap27@gmail.com - role: admin
+[29-Sep-2022 01:54:15 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->admin
+[29-Sep-2022 01:54:15 Europe/Berlin] sessionController::isPublic(): currentURL => admin
+[29-Sep-2022 01:54:15 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->admin
+[29-Sep-2022 01:54:15 Europe/Berlin] SessionController::validateSession() => autorizado, lo deja pasar
+[29-Sep-2022 01:54:15 Europe/Berlin] Conexión a BD exitosa
+[29-Sep-2022 01:54:15 Europe/Berlin] Conexión a BD exitosa
+[29-Sep-2022 01:54:15 Europe/Berlin] Conexión a BD exitosa
+[29-Sep-2022 01:54:15 Europe/Berlin] Conexión a BD exitosa
+[29-Sep-2022 01:54:15 Europe/Berlin] Admin::getCategoryMostUse() ->1
+[29-Sep-2022 01:54:15 Europe/Berlin] Conexión a BD exitosa

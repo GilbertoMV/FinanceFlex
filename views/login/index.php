@@ -28,7 +28,7 @@
                 <h2>COMIENZA</h2>
                 <h3>A ADMINISTRAR TU DINERO</h3>
                 <p>con FinanceFlex</p>
-                <button type="button"><a href="<?php echo constant('URL'); ?>signup.php">Empieza Ya</button></a>
+                <button type="button"><a href="<?php echo constant('URL'); ?>signup">Empieza Ya</button></a>
             </div>
             <div class="col-2">
                 <img src="<?php echo constant('URL'); ?>/public/img/Character 1.png" class="person">
