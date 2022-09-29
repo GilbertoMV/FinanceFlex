@@ -250,8 +250,7 @@ nav a:hover{
       cursor: pointer;
     }
     .header .nav{
-
-        background-color: #FFE087;
+      background-color: #dce2ee;
       width:100%;
       /* display: none; */
       height:0;
