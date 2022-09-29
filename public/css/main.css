@@ -176,7 +176,6 @@ nav a:hover{
     color: #FC003C;
     /* background-color: aqua; */
 }
-.header .a{}
 
 .header .button{
     /* background-color: crimson; */
@@ -185,13 +184,6 @@ nav a:hover{
 .header .svg{
     width:2em;
     height:2em;
-}
-.header .nav{
-
-    /*display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center; */
 }
 
 .header .ul{
