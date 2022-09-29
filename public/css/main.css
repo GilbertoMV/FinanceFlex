@@ -38,6 +38,7 @@ a {
   text-decoration: none;
   color: inherit;
   font-size: inherit;
+
 }
 
 p a {
@@ -173,8 +174,16 @@ nav a:hover{
     line-height: 32px;
     /* identical to box height */
     letter-spacing: 0.03em;
-    color: #FC003C;
+
     /* background-color: aqua; */
+}
+.title-logo{
+  color: #FC003C;
+  text-decoration: none;
+}
+.title-logo:hover{
+  color: #FC003C;
+
 }
 .header .a{}
 
@@ -214,12 +223,16 @@ nav a:hover{
 }
 
 /* BANNER*/ 
-.banner{
-    position: absolute;
-    width: 756px;
+.loan{
+
+    /*
+    max-width: 756px;
     left: 46px;
+    max-height: 245px;
+    top: 132px;  */
+    max-width: 550px;
     height: 245px;
-    top: 132px; 
+    margin-left: 5.5em !important;
     background:linear-gradient(89.59deg, rgba(255, 224, 135, 0) -28.52%, #FFE087 108.73%);
     border-radius: 50px;
 }
