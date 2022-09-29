@@ -130,7 +130,7 @@ nav a:hover{
 .container ul li{
     list-style-type: none;
     display: inline-block;
-    left: 20px;
+    left: 180px;
     padding: 8px 12px;
     position: relative;
 }
@@ -161,7 +161,6 @@ nav a:hover{
     background-color: #ffffff;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-between;
     align-items: center;
     color:#9A9A9A; 
 }
