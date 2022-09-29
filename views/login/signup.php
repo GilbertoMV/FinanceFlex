@@ -26,26 +26,24 @@
                     <input type="submit" value="Iniciar Sesión" class="btn solid">
                 </form>
                 <form action="" class="sign-up-form">
-                    <h2 class="title">Registrate</h2>
-                    <div class="input-field">
-                        <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Usuario">
+                    <h2 class="title-request">Se te pedira la siguiente información:</h2>
+                    <div class="text-request">
+                        <p class="input-field-p">Nombre completo</p>
                     </div>
-                    <div class="input-field">
-                        <i class="fas fa-phone"></i>
-                        <input type="number" placeholder="Telefono">
+                    <div class="text-request">
+                        <p class="input-field-p">RFC</p>
                     </div>
-                    <div class="input-field">
-                        <i class="fas fa-house"></i>
-                        <input type="text" placeholder="Dirección">
+                    <div class="text-request">
+                        <p class="input-field-p">CURP</p>
                     </div>
-                    <div class="input-field">
-                        <i class="fas fa-envelope"></i>
-                        <input type="email" placeholder="Email">
+                    <div class="text-request">
+                        <p class="input-field-p">FECHA DE NACIMIENTO</p>
                     </div>
-                    <div class="input-field">
-                        <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Contraseña">
+                    <div class="text-request">
+                        <p class="input-field-p">TELEFONO</p>
+                    </div>
+                    <div class="text-request">
+                        <p class="input-field-p">EMAIL</p>
                     </div>
                     <input type="submit" value="Registrarse" class="btn solid">
                 </form>
@@ -56,15 +54,15 @@
             <div class="panel left-panel">
                 <div class="content">
                     <h3>Nuevo por aquí?</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, laboriosam.</p>
-                    <button class="btn transparent" id="sign-up-btn">Registrate</button>
+                    <p>Para poder registrate en FinanceFlex es necesario acudir con uno de nuestros ejecutivos.</p>
+                    <button class="btn transparent" id="sign-up-btn">Mas información</button>
                 </div>
                 <img src="<?php echo constant('URL'); ?>/public/img/Character_2.png" class="image" alt="Imagen de ladaz3d en Freepik">
             </div>
             <div class="panel right-panel">
                 <div class="content">
                     <h3>Bienvenido</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, laboriosam.</p>
+                    <p>Ya te encuentras registrado en Finance Flex?</p>
                     <button class="btn transparent" id="sign-in-btn">Inicia sesión</button>
                 </div>
                 <img src="<?php echo constant('URL'); ?>/public/img/mobile_pay.svg" class="image" alt="">

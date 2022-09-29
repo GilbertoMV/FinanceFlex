@@ -14,7 +14,7 @@ class UserModel extends Model implements IModel{
     public function __construct(){
         parent::__construct();
 
-        $this->username = '';
+        $this->email = '';
         $this->password = '';
         $this->role = '';
         $this->budget = 0.0;
@@ -41,7 +41,7 @@ class UserModel extends Model implements IModel{
 
     function updateName($name, $iduser){
         try{
-            $query = $this->db->connect()->prepare('UPDATE users SET name = :val WHERE id = :id');
+            $query = $this->db->connect()->prepare('UPDATE usuarios SET name = :val WHERE id = :id');
             $query->execute(['val' => $name, 'id' => $iduser]);
 
             if($query->rowCount() > 0){
@@ -74,7 +74,7 @@ class UserModel extends Model implements IModel{
     function updatePassword($new, $iduser){
         try{
             $hash = password_hash($new, PASSWORD_DEFAULT, ['cost' => 10]);
-            $query = $this->db->connect()->prepare('UPDATE users SET password = :val WHERE id = :id');
+            $query = $this->db->connect()->prepare('UPDATE usuarios SET password = :val WHERE id = :id');
             $query->execute(['val' => $hash, 'id' => $iduser]);
 
             if($query->rowCount() > 0){
@@ -105,7 +105,7 @@ class UserModel extends Model implements IModel{
 
     public function save(){
         try{
-            $query = $this->prepare('INSERT INTO users (email, password, role) VALUES(:email, :password, :role)');
+            $query = $this->prepare('INSERT INTO usuarios (email, password, role) VALUES(:email, :password, :role)');
             $query->execute([
                 'email'  => $this->email, 
                 'password'  => $this->password,
@@ -148,7 +148,7 @@ class UserModel extends Model implements IModel{
      */
     public function get($id){
         try{
-            $query = $this->prepare('SELECT * FROM users WHERE id = :id');
+            $query = $this->prepare('SELECT * FROM usuarios WHERE id = :id');
             $query->execute([ 'id' => $id]);
             $user = $query->fetch(PDO::FETCH_ASSOC);
 
@@ -178,7 +178,7 @@ class UserModel extends Model implements IModel{
 
     public function update(){
         try{
-            $query = $this->prepare('UPDATE users SET email = :email, password = :password, budget = :budget, photo = :photo WHERE id = :id');
+            $query = $this->prepare('UPDATE usuarios SET email = :email, password = :password, budget = :budget, photo = :photo WHERE id = :id');
             $query->execute([
                 'id'        => $this->id,
                 'email'    => $this->email,
