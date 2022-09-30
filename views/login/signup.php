@@ -7,6 +7,7 @@
     <title>FiannceFlex</title>
     <link rel="shortcut icon" href="<?php echo constant('URL'); ?>/public/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="<?php echo constant('URL'); ?>/public/css/estilos.css">
+    
     <script src="https://kit.fontawesome.com/6dc1722754.js" crossorigin="anonymous"></script>
 </head>
 <body>

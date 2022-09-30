@@ -16,7 +16,7 @@ class JoinExpensesCategoriesModel extends Model{
     public function getAll($userId){
         $items=[];
         try {
-            $query = $this->prepare('SELECT expenses.id as expense_id, title, category_id, amount, date, id_user, categories.id, name, color FROM expenses INNER JOIN categories WHERE expenses.category_id = categories.id AND expenses.id_user = :userid ORDER BY date;');
+            $query = $this->prepare('SELECT cartera.id as cartera_id, title, category_id, amount, date, id_user, categories.id, name, color FROM expenses INNER JOIN categories WHERE expenses.category_id = categories.id AND expenses.id_user = :userid ORDER BY date;');
             $query ->execute(['userid'=> $userId]);
             
             while ($p = $query->fetch(PDO::FETCH_ASSOC)){

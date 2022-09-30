@@ -3,23 +3,38 @@
 class UserModel extends Model implements IModel{
 
     private $id;
-    private $username;
+    private $rfc;
+    private $nombres;
+    private $apellido_p;
+    private $apellido_m;
+    private $curp;
+    private $telefono;
     private $password;
-    private $role;
-    private $budget;
-    private $photo;
-    private $name;
     private $email;
+    private $fecha_naci;
+    private $foto;
+    private $role;
+    private $saldo;
+    private $id_genero;
+    private $clave_eje;
 
     public function __construct(){
         parent::__construct();
 
-        $this->email = '';
+        $this->rfc = '';
+        $this->nombres = '';
+        $this->apellido_p = '';
+        $this->apellido_m = '';
+        $this->curp = '';
+        $this->telefono = '';
         $this->password = '';
+        $this->email = '';
+        $this->fecha_naci = '';
+        $this->foto = '';
         $this->role = '';
-        $this->budget = 0.0;
-        $this->photo = '';
-        $this->name = '';
+        $this->saldo = 0.0;
+        $this->id_genero = 0;
+        $this->clave_eje = 0;
     }
 
     
@@ -105,11 +120,22 @@ class UserModel extends Model implements IModel{
 
     public function save(){
         try{
-            $query = $this->prepare('INSERT INTO usuarios (email, password, role) VALUES(:email, :password, :role)');
+            $query = $this->prepare('INSERT INTO usuarios (rfc, nombres, apellido_paterno, apellido_materno, curp, telefono, password, email, fecha_de_nacimiento, foto, role, saldo, id_genero, clave_ejecutivo	
+            ) VALUES(:rfc, :nombres, :apellido_p, apellido_m, curp, telefono, password, email, fecha_naci, foto, role, saldo, id_genero, clave_eje)');
             $query->execute([
-                'email'  => $this->email, 
-                'password'  => $this->password,
-                'role' => $this->role
+                'rfc' => $this->rfc,
+                'nombres'  => $this->nombres, 
+                'apellido_p' => $this->apellido_p,
+                'apellido_m' => $this->apellido_m,
+                'curp' => $this->curp,
+                'telefono' => $this->telefono,
+                'password' => $this->password,
+                'fecha_naci'  => $this->fecha_naci,
+                'foto' => $this->foto,
+                'role' => $this->role,
+                'saldo' => $this->saldo,
+                'id_genero' => $this->id_genero,
+                'clave_eje' => $this->clave_eje
                 ]);
             return true;
         }catch(PDOException $e){
@@ -122,11 +148,12 @@ class UserModel extends Model implements IModel{
         $items = [];
 
         try{
-            $query = $this->query('SELECT * FROM users');
+            $query = $this->query('SELECT * FROM usuarios');
 
             while($p = $query->fetch(PDO::FETCH_ASSOC)){
                 $item = new UserModel();
                 $item->setId($p['id']);
+                $item->setNombres($p['nombres']);
                 $item->setPassword($p['password'], false);
                 $item->setRole($p['role']);
                 $item->setBudget($p['budget']);
@@ -195,7 +222,7 @@ class UserModel extends Model implements IModel{
 
     public function exists($email){
         try{
-            $query = $this->prepare('SELECT email FROM users WHERE email = :email');
+            $query = $this->prepare('SELECT email FROM usuarios WHERE email = :email');
             $query->execute( ['email' => $email]);
             
             if($query->rowCount() > 0){
@@ -211,17 +238,34 @@ class UserModel extends Model implements IModel{
 
     public function from($array){
         $this->id = $array['id'];
-        $this->email = $array['email'];
+        $this->rfc = $array['rfc'];
+        $this->nombres = $array['nombres'];
+        $this->apellido_p = $array['apellido_paterno'];
+        $this->apellido_m = $array['apellido_materno'];
+        $this->curp = $array['curp'];
+        $this->telefono = $array['telefono'];
         $this->password = $array['password'];
+        $this->email = $array['email'];
+        $this->fecha_naci = $array['fecha_nacimiento'];
+        $this->foto = $array['foto'];
         $this->role = $array['role'];
+        $this->saldo = $array['saldo'];
+        $this->id_genero = $array['id_genero'];
+        $this->clave_eje = $array['clave_ejecutivo'];
     }
 
     private function getHashedPassword($password){
         return password_hash($password, PASSWORD_DEFAULT, ['cost' => 10]);
     }
 
-    public function setUsername($username){ $this->username = $username;}
-    //FIXME: validar si se requiere el parametro de hash
+    //SETTERS
+    public function setId($id){                    $this->id = $id;}
+    public function setRfc($rfc){                  $this->rfc = $rfc;}
+    public function setNombres($nombres){          $this->nombres = $nombres;}
+    public function setApellidoP($apellido_p){     $this->apellido_p = $apellido_p;}
+    public function setApellidoM($apellido_m){     $this->apellido_m = $apellido_m;}
+    public function setCurp($curp){                $this->curp = $curp;}
+    public function setTelefono($telefono){        $this->telefono = $telefono;}
     public function setPassword($password, $hash = true){ 
         if($hash){
             $this->password = $this->getHashedPassword($password);
@@ -229,21 +273,32 @@ class UserModel extends Model implements IModel{
             $this->password = $password;
         }
     }
-    public function setId($id){             $this->id = $id;}
-    public function setRole($role){         $this->role = $role;}
-    public function setBudget($budget){     $this->budget = $budget;}
-    public function setPhoto($photo){       $this->photo = $photo;}
-    public function setName($name){         $this->name = $name;}
-    public function setEmail($email){       $this->email = $email;}
+    public function setEmail($email){             $this->email = $email;}
+    public function setFechaN($fecha_naci){       $this->fecha_naci = $fecha_naci;}
+    public function setFoto($foto){               $this->foto = $foto;}
+    public function setRole($role){               $this->role = $role;}
+    public function setSaldo($saldo){             $this->saldo = $saldo;}
+    public function setGenero($id_genero){        $this->id_genero = $id_genero;}
+    public function setEjecutivo($clave_eje){     $this->clave_eje = $clave_eje;}
 
-    public function getId(){        return $this->id;}
-    public function getEmail(){  return $this->email;}
-    public function getUsername(){  return $this->username;}
-    public function getPassword(){  return $this->password;}
-    public function getRole(){      return $this->role;}
-    public function getBudget(){    return $this->budget;}
-    public function getPhoto(){     return $this->photo;}
-    public function getName(){      return $this->name;}
+
+    //GETTERS
+    public function getId(){                return    $this->id;}
+    public function getRfc(){               return    $this->rfc;}
+    public function getNombres(){           return    $this->nombres;}
+    public function getApellidoP(){         return    $this->apellido_p;}
+    public function getApellidoM(){         return    $this->apellido_m;}
+    public function getCurp(){              return    $this->curp;}
+    public function getTelefono(){          return    $this->telefono;}
+    public function getPassword(){          return    $this->password;}
+    public function getEmail(){             return    $this->email;}
+    public function getFechaN(){            return    $this->fecha_naci;}
+    public function getFoto(){              return    $this->foto;}
+    public function getRole(){              return    $this->role;}
+    public function getSaldo(){             return    $this->saldo;}
+    public function getGenero(){            return    $this->id_genero;}
+    public function getEjecutivo(){         return    $this->clave_eje;}
+    
 }
 
 ?>
