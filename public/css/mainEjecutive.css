@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300&display=swap');
+/* 
+  Reset CSS 
+*/
+body {
+    background-color: #2F2F2F;
+}
+:root {
+  --negro: #393939;
+  --tipo-principal: Helvetica, Arial, sans-serif;
+  --tipo-secundaria: Verdana;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --negro: #ececec;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation: none !important;
+            animation: none !important;
+    -webkit-transition: none !important;
+    transition: none !important;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+p a {
+  display: inline;
+}
+
+li {
+  list-style-type: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, strong, blockquote, i, b, u, em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+span {
+  font-size: 15px;  
+  color: #868AF1;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+::-moz-selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+::selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  background-color: transparent;
+  display: block;
+
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: var(--tipo-principal);
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.logo{
+    height: 60px;
+    width: 60px;
+    padding: 10px;
+}
+
+nav a{
+
+    font-style: bold;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0.03em;
+    color:#9A9A9A;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+nav a:hover{
+    color:#ececec;
+}
+ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 4px 3px;
+    position: relative;
+}
+.li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background:#FA4848;
+    display:block;
+    margin: auto;
+    transition: 0.5s;
+}
+ul li:hover::after{
+    width: 30%;
+}
+
+.linea{
+    position: absolute;
+    width: 80%;
+    height: 0px;
+    top: 80px;
+
+    border: 1px solid rgba(138, 138, 138, 0.35);
+}
+.header{
+    margin: 1% 5%;
+    background-color: #2F2F2F;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    color:#9A9A9A;
+    justify-content: center;
+}
+.header .h1{
+    font-family:  'Rajdhani', sans-serif;
+    text-align: left;
+    font-size: 25px;
+    font-weight: bolder;
+    /* identical to box height */
+    color: #FC003C;
+    /* background-color: aqua; */
+}
+.header span {
+    color: #868AF1;
+    font-size: 20px;
+}
+.header .a{
+    line-height: 20px;
+}
+
+.header .ul{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+    gap: 1rem;
+    align-items: center;
+    text-align: center;
+    padding: 0 50px 0 50px;
+}
+
+/* DAR DE ALTA PAGINA */
+main{
+    width: 95%;
+    height: auto;
+    margin:auto;
+    padding: 1%;
+    margin-bottom: 30px;
+    background-color: #212121;
+    border-radius: 26px;
+    text-align: center;
+}
+main h1 {
+    font-family: 'Roboto', sans-serif;
+    color: #ffff;
+    font-weight: 900;
+    font-size: 25px;
+}
+main .lineaR {
+    border: 1px solid #FC003C;
+    width: 5%;
+    margin: auto;
+}
+.loadphoto {
+    width: 200px;
+    height: auto;
+    margin:auto;
+    padding: 15px;
+}
+.loadphoto img {
+    width: 70%;
+    height: 70%;
+}
+.contenedor-btn-file input[type="file"] {
+    appearance: none;
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+}
+.contenedor-btn-file input[type="submit"] {
+    appearance: none;
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+}
+.contenedor-btn-file {
+    display: inline-block;
+    position: relative;
+    background: rgb(32,35,109);
+    background: linear-gradient(90deg, rgba(32,35,109,1) 0%, rgba(252,0,60,1) 100%);
+    color: #fff;
+    border: 0;
+    padding: 10px;
+    border-radius: 30px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, .15);
+    overflow: hidden;
+    transition: ease-out 120ms background-color;
+    margin-top: 20px;
+}
+.contenedor-btn-file label {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+.contenedor-formulario {
+    width: 95%;
+    height: auto;
+    margin: auto;
+    margin-top: 40px;
+}
+form {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 50px;
+    row-gap: 30px;
+    align-items: end;
+    justify-content: center;
+}
+.labels {
+    font-size: 20px;
+    color: #ffff;
+    font-family: 'Roboto';
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+.inputs {
+    background-color: #464646;
+    width: 100%;
+    padding: 7px 10px;  
+    border-color: #5e3a3a;
+    outline: 0 none;
+    border-radius: 30px;
+    border: 3px solid #B1AFAF;
+    color: #fff;
+}
+.center {
+    text-align: center;
+}
+.di {
+    grid-row: 3/4;
+    grid-column: 2/4;
+}
+.bloque {
+    line-height: 10px;
+}
+.lineaF {
+    border: 1px solid #FC003C;
+    width: 15%;
+    margin: auto;
+    margin-bottom: 15px;
+}
