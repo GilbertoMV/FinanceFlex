@@ -9,6 +9,7 @@
   --negro: #393939;
   --tipo-principal: 'M PLUS 1 Code', Arial, sans-serif;
   --tipo-secundaria: Verdana;
+  
 }
 
 @media (prefers-color-scheme: dark) {
@@ -292,18 +293,44 @@ main {
 }
 .linne{
   position: absolute;
-  width: 150px;
+  width: 120px;
   height: 0px;
-  left: 5px;
-  top: 35px;
+  left: 2px;
+  top: 25px;
+  font-weight: bold;
 
   border: 1px solid rgb(250,72,72);
 }
+main .transacciones {
+  margin-top: 2rem;
+}
+main .transacciones h2{
+  margin-bottom: 50px;
+}
 .transacciones table{
-  width: 100%;
-  padding: 1.8rem;
+  background: #f2f0f0;
+  width: 1200px;
+  border-radius: 2rem;
+  padding: 10rem;
   text-align: center;
 }
+.transacciones td{
+  height: 2rem;
+}
+.transacciones a{
+  text-align: center;
+  display: block;
+  margin: auto;
+  color:#393939;
+}
+.transacciones .warning{
+  color:#FC003C;
+}
+.rec a{
+  text-decoration: none;
+  color: #20236D;
+}
+
 @media screen and (max-width:768px){
 
     .header .button{
