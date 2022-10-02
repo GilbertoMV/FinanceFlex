@@ -1,3 +1,10 @@
+<?php
+session_start();
+error_log($_SESSION['clave_ejecutivo']);
+if(isset($_SESSION["clave_ejecutivo"])){
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -16,7 +23,7 @@
     <header class="header">
         <img class="logo" src="../public/img/logito.png" alt="">
         <h1 class="h1">
-            <a href="#" class="a">EJECUTIVOS<br><span>FinanceFlex</span></a>
+            <a href="#" class="a">EJECUTIVOS <?php echo $_SESSION['clave_ejecutivo']; ?><br><span>FinanceFlex</span></a>
 
         </h1>
         <?php require 'nav.php' ?>
@@ -95,3 +102,11 @@
     </main>
 </body>
 </html>
+<?php
+}else
+{
+    header('Location:../login.php');
+
+
+}
+?>

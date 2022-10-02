@@ -181,7 +181,7 @@ ul li:hover::after{
 
 .header .ul{
     display: grid;
-    grid-template-columns: auto auto auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
     gap: 1rem;
     align-items: center;
     text-align: center;

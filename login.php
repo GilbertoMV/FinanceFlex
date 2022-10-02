@@ -10,6 +10,7 @@ include 'error-log.php';
     <title>FiannceFlex</title>
     <link rel="shortcut icon" href="./public/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./public/css/estilos.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     
     <script src="https://kit.fontawesome.com/6dc1722754.js" crossorigin="anonymous"></script>
 </head>
@@ -17,8 +18,9 @@ include 'error-log.php';
     <div class="container">
         <div class="forms-container">
             <div class="singin-singup">
-                <form action="<?php echo constant('URL'); ?>login/authenticate" method="POST" class="sign-in-form">
+                <form action="./includes/functions.php" method="POST" class="sign-in-form">
                     <h2 class="title">Inicia Sesión</h2>
+                
                     <?php error_log("LOGIN") ?>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
@@ -30,8 +32,11 @@ include 'error-log.php';
                     </div>
                     <input type="submit" value="Iniciar Sesión" class="btn solid">
                 </form>
-                <form action="<?php echo constant('URL'); ?>loginadmin/authenticate" method="POST" class="sign-up-form">
+                <form action="" method="POST" class="sign-up-form">
                 <h2 class="title">ADMINISTRADOR</h2>
+                <?php 
+                        include "controllers/loginadmin.php";
+                        ?>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
                         <input type="text" name="email" id="email" placeholder="Usuario" autocomplete="off">
@@ -40,7 +45,7 @@ include 'error-log.php';
                         <i class="fas fa-lock"></i>
                         <input type="password" name="password" id="password" placeholder="Contraseña" autocomplete="off">
                     </div>
-                    <input type="submit" value="Iniciar Sesión" class="btn solid">
+                    <input type="submit" name="ini-admin" id="ini-admin" value="Iniciar Sesión" class="btn solid">
                 </form>
             </div>
         </div>
