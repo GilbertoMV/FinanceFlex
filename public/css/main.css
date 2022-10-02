@@ -7,7 +7,7 @@
 
 :root {
   --negro: #393939;
-  --tipo-principal: Helvetica, Arial, sans-serif;
+  --tipo-principal: 'M PLUS 1 Code', Arial, sans-serif;
   --tipo-secundaria: Verdana;
 }
 
@@ -32,27 +32,21 @@
           box-sizing: border-box;
   vertical-align: baseline;
 }
-
 a {
   display: block;
   text-decoration: none;
   color: inherit;
   font-size: inherit;
-
 }
-
 p a {
   display: inline;
 }
-
 li {
   list-style-type: none;
 }
-
 html {
   scroll-behavior: smooth;
 }
-
 h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
   font-size: 1em;
   font-weight: inherit;
@@ -60,12 +54,10 @@ h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
   text-decoration: none;
   color: inherit;
 }
-
 blockquote:before, blockquote:after, q:before, q:after {
   content: "";
   content: none;
 }
-
 ::-moz-selection {
   background-color: var(--negro);
   color: var(--blanco);
@@ -74,7 +66,6 @@ blockquote:before, blockquote:after, q:before, q:after {
   background-color: var(--negro);
   color: var(--blanco);
 }
-
 form, input, textarea, select, button, label {
   font-family: inherit;
   font-size: inherit;
@@ -88,19 +79,17 @@ form, input, textarea, select, button, label {
      -moz-appearance: none;
           appearance: none;
 }
-
 table, tr, td {
   border-collapse: collapse;
   border-spacing: 0;
 }
-
 svg {
   width: 100%;
   display: block;
   fill: currentColor;
 }
 body {
-  min-height: 100vh;
+ min-height: 100vh;
   font-size: 100%;
   font-family: var(--tipo-principal);
   font-smooth: always;
@@ -114,7 +103,6 @@ body {
     width: 50px;
 }
 nav a{
-
     font-style: bold;
     font-weight: 400;
     line-height: 23px;
@@ -174,7 +162,6 @@ nav a:hover{
     line-height: 32px;
     /* identical to box height */
     letter-spacing: 0.03em;
-
     /* background-color: aqua; */
 }
 .title-logo{
@@ -183,10 +170,7 @@ nav a:hover{
 }
 .title-logo:hover{
   color: #FC003C;
-
 }
-.header .a{}
-
 .header .button{
     /* background-color: crimson; */
     display: none;
@@ -195,13 +179,11 @@ nav a:hover{
     width:2em;
     height:2em;
 }
-
 .header .ul{
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-end;
     align-items: center;
-    
 }
 .header .li{
     margin: 0 .5em;
@@ -215,43 +197,111 @@ nav a:hover{
     color: #4D4B4B;
 }
 
-/* BANNER*/ 
-.loan{
+/* MAIN*/ 
+main {
+  margin-top: 1rem;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(2,auto);
+  grid-gap: 8px;
+}
+.banner {
+  position: absolute;
+  display: flex;
+  left: 40px;
+  height: 245px;
+  width: 734px;
+  background: linear-gradient(89deg, rgba(255,224,135,0)-28.52%,#ffe087 108.73%);
+  border-radius: 50px;
+  margin-top: 1rem;
+}
+.log{
+  position: absolute;
+  margin-top: 30px;
+  display: flex;
+  text-align: left;
+  color:#B92B5E;
+  font-family: 'M PLUS 1 code';
+}
+.log img{
+  display:flex;
+  width: 50px;
+  height: 50px;
+  left: 30px;
+  right: 0px;
+}
+.info h2{
+  display: flex;
+  margin-top: 5rem;
+  font-size: 30px;
+  margin-left: 40px;
+}
+.info p{
+  margin-left: 40px;
+  font-size: 20px;
+  font-weight:500;
+}
+.info button a{
+  background-color:#FA4848;
+  width: 120px;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  margin-left: 60px;
+}
+.det{
+  position: absolute;
+  display: flex;
+  left: 800px;
+  height: 245px;
+  width: 467px;
+  background: linear-gradient(89deg, rgba(255,224,135,0)-28.52%,#ffe087 108.73%);
+  border-radius: 50px;
+  margin-top: 1rem;
+}
+.saldo h3{
+  display: flex;
+  margin-top: 15px;
+  font-size: 20px;
+  margin-left: 40px;
+}
+.line{
+  position: absolute;
+  width: 120px;
+  height: 0px;
+  left: 40px;
+  top: 40px;
 
-    /*
-    max-width: 756px;
-    left: 46px;
-    max-height: 245px;
-    top: 132px;  */
-    max-width: 550px;
-    height: 245px;
-    margin-left: 5.5em !important;
-    background:linear-gradient(89.59deg, rgba(255, 224, 135, 0) -28.52%, #FFE087 108.73%);
-    border-radius: 50px;
+  border: 1px solid rgb(250,72,72);
 }
-.logo img{
-  width: 100px;
+.fond{
+  position: absolute;
+  width:380px;
+  height:174px;
+  left: 40px;
+  border-radius: 24px;
+  background: linear-gradient(90deg, rgba(239, 169, 43, 0.22) 106.99%, rgba(203, 203, 203, 0)133.29%);
 }
+.trans{
+  position: absolute;
+  margin-top: 19rem;
+  margin-left: 60px;
+}
+.transacciones h2{
+  font-size: 20px;
+  font-family: 'M PLUS 1 code';
+}
+.linne{
+  position: absolute;
+  width: 150px;
+  height: 0px;
+  left: 5px;
+  top: 35px;
 
-.tarjetas{
-    position: absolute;
-    width: 467px;
-    height: 245px;
-    left: 826px;
-    top: 132px;
-
-    background: linear-gradient(163.82deg, rgba(255, 224, 135, 0.17) -33.32%, #FFE087 104.62%);
-    background-blend-mode: darken;
-    border-radius: 40px;
+  border: 1px solid rgb(250,72,72);
 }
-.transacciones{
-    position: absolute;
-    width: 1245px;
-    height: 504px;
-    left: 46px;
-    top: 421px;
-}
-.transacciones p{
+.transacciones table{
+  width: 100%;
+  padding: 1.8rem;
   text-align: center;
 }
 @media screen and (max-width:768px){
