@@ -1,6 +1,4 @@
 <?php
-include '../error-log.php';
-
 
 $servername ='localhost';
 $dbname = 'appfinance';

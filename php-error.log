@@ -1,0 +1,6 @@
+[03-Oct-2022 20:09:12 Europe/Berlin] inicio de aplicacion web
+[03-Oct-2022 20:09:12 Europe/Berlin] 2018963
+[03-Oct-2022 20:09:12 Europe/Berlin] Connected successfully
+[03-Oct-2022 20:09:12 Europe/Berlin] Connected successfully
+[03-Oct-2022 20:09:12 Europe/Berlin] Connected successfully
+[03-Oct-2022 20:09:12 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 109

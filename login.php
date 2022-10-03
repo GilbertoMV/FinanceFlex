@@ -35,7 +35,7 @@ include 'error-log.php';
                 <form action="" method="POST" class="sign-up-form">
                 <h2 class="title">ADMINISTRADOR</h2>
                 <?php 
-                        include "controllers/loginadmin.php";
+                        include __DIR__ . "\controllers\loginadmin.php";
                         ?>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
