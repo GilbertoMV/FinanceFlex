@@ -331,6 +331,17 @@ main .transacciones h2{
   color: #20236D;
 }
 
+.prest-rec{
+  position:absolute;
+  width: 1159px;
+  height: 253px;
+  top: 150px;
+  left: 126px;
+
+  background: linear-gradient(270deg, rgba(252, 0, 60, 0.42)-12.08%, rgba(5, 0, 252, 0.62) 24.26%, #FFB8B8 108.23%);
+  border-radius: 24px;
+}
+
 @media screen and (max-width:768px){
 
     .header .button{
