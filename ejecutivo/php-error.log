@@ -1,0 +1,56 @@
+[03-Oct-2022 01:42:09 Europe/Berlin] inicio de aplicacion web
+[03-Oct-2022 01:42:09 Europe/Berlin] Connected successfully
+[03-Oct-2022 04:23:43 Europe/Berlin] inicio de aplicacion web
+[03-Oct-2022 04:23:43 Europe/Berlin] Connected successfully
+[03-Oct-2022 04:24:28 Europe/Berlin] inicio de aplicacion web
+[03-Oct-2022 04:24:28 Europe/Berlin] Connected successfully
+[03-Oct-2022 04:27:07 Europe/Berlin] inicio de aplicacion web
+[03-Oct-2022 04:27:07 Europe/Berlin] Connected successfully
+[03-Oct-2022 04:27:07 Europe/Berlin] PHP Notice:  Undefined variable: categories in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 100
+[03-Oct-2022 04:27:07 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 100
+[03-Oct-2022 04:27:45 Europe/Berlin] inicio de aplicacion web
+[03-Oct-2022 04:27:45 Europe/Berlin] Connected successfully
+[03-Oct-2022 04:27:45 Europe/Berlin] PHP Notice:  Undefined variable: categories in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 100
+[03-Oct-2022 04:27:45 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 100
+[03-Oct-2022 04:28:07 Europe/Berlin] inicio de aplicacion web
+[03-Oct-2022 04:28:07 Europe/Berlin] Connected successfully
+[03-Oct-2022 04:28:35 Europe/Berlin] inicio de aplicacion web
+[03-Oct-2022 04:28:35 Europe/Berlin] Connected successfully
+[03-Oct-2022 04:28:47 Europe/Berlin] inicio de aplicacion web
+[03-Oct-2022 04:28:47 Europe/Berlin] Connected successfully
+[03-Oct-2022 04:36:13 Europe/Berlin] inicio de aplicacion web
+[03-Oct-2022 04:36:13 Europe/Berlin] Connected successfully
+[03-Oct-2022 04:36:13 Europe/Berlin] inicio de aplicacion web
+[03-Oct-2022 04:36:13 Europe/Berlin] Connected successfully
+[03-Oct-2022 04:36:13 Europe/Berlin] PHP Notice:  Trying to get property 'nombre' of non-object in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 107
+[03-Oct-2022 04:37:21 Europe/Berlin] inicio de aplicacion web
+[03-Oct-2022 04:37:21 Europe/Berlin] Connected successfully
+[03-Oct-2022 04:37:21 Europe/Berlin] inicio de aplicacion web
+[03-Oct-2022 04:37:21 Europe/Berlin] Connected successfully
+[03-Oct-2022 04:37:21 Europe/Berlin] PHP Notice:  Trying to get property 'nombre' of non-object in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 107
+[03-Oct-2022 04:37:50 Europe/Berlin] inicio de aplicacion web
+[03-Oct-2022 04:37:50 Europe/Berlin] Connected successfully
+[03-Oct-2022 04:37:50 Europe/Berlin] inicio de aplicacion web
+[03-Oct-2022 04:37:50 Europe/Berlin] Connected successfully
+[03-Oct-2022 04:38:44 Europe/Berlin] inicio de aplicacion web
+[03-Oct-2022 04:38:44 Europe/Berlin] Connected successfully
+[03-Oct-2022 04:38:44 Europe/Berlin] inicio de aplicacion web
+[03-Oct-2022 04:38:44 Europe/Berlin] Connected successfully
+[03-Oct-2022 04:39:27 Europe/Berlin] inicio de aplicacion web
+[03-Oct-2022 04:39:27 Europe/Berlin] Connected successfully
+[03-Oct-2022 04:39:27 Europe/Berlin] inicio de aplicacion web
+[03-Oct-2022 04:39:27 Europe/Berlin] Connected successfully
+[03-Oct-2022 04:39:44 Europe/Berlin] inicio de aplicacion web
+[03-Oct-2022 04:39:44 Europe/Berlin] Connected successfully
+[03-Oct-2022 04:39:44 Europe/Berlin] inicio de aplicacion web
+[03-Oct-2022 04:39:44 Europe/Berlin] Connected successfully
+[03-Oct-2022 04:40:46 Europe/Berlin] inicio de aplicacion web
+[03-Oct-2022 04:40:46 Europe/Berlin] Connected successfully
+[03-Oct-2022 04:40:46 Europe/Berlin] inicio de aplicacion web
+[03-Oct-2022 04:40:46 Europe/Berlin] Connected successfully
+[03-Oct-2022 04:40:46 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 108
+[03-Oct-2022 04:41:10 Europe/Berlin] inicio de aplicacion web
+[03-Oct-2022 04:41:10 Europe/Berlin] Connected successfully
+[03-Oct-2022 04:41:10 Europe/Berlin] inicio de aplicacion web
+[03-Oct-2022 04:41:10 Europe/Berlin] Connected successfully
+[03-Oct-2022 04:41:10 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 108

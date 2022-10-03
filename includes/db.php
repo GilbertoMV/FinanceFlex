@@ -1,5 +1,5 @@
 <?php
-include './error-log.php';
+include '../error-log.php';
 
 
 $servername ='localhost';

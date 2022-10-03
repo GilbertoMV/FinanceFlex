@@ -1,7 +1,13 @@
 <?php
 session_start();
 error_log($_SESSION['clave_ejecutivo']);
+
 if(isset($_SESSION["clave_ejecutivo"])){
+    require_once '../includes/db.php';
+    $records = $conn->query('SELECT * FROM genero');
+    $records->execute();
+    $results = $records->fetchAll(PDO::FETCH_ASSOC);
+
 
 ?>
 
@@ -23,7 +29,7 @@ if(isset($_SESSION["clave_ejecutivo"])){
     <header class="header">
         <img class="logo" src="../public/img/logito.png" alt="">
         <h1 class="h1">
-            <a href="#" class="a">EJECUTIVOS <?php echo $_SESSION['clave_ejecutivo']; ?><br><span>FinanceFlex</span></a>
+            <a href="#" class="a">EJECUTIVOS><br><span>FinanceFlex</span></a>
 
         </h1>
         <?php require 'nav.php' ?>
@@ -35,7 +41,7 @@ if(isset($_SESSION["clave_ejecutivo"])){
         <div class="loadphoto">
             <img src="../public/img/profile.png" alt="foto de perfil">
             <button class="contenedor-btn-file">
-                Subir foto
+                Subir foto <?php     //print_r($results);?>
                 <label for="btn-file"></label>
                 <input type="file" id="btn-file">
             </button>
@@ -43,56 +49,67 @@ if(isset($_SESSION["clave_ejecutivo"])){
         <h1>Datos</h1>
         <div class="lineaR"></div>
         <div class="contenedor-formulario">
-            <form action="">
+            <form action="" method="post">
+            <?php 
+                include "../controllers/registrocontroller.php";
+                ?>
                 <div class="bloque">
                     <label for="nombres" class="labels">Nombre(s)</label>
                     <p class="lineaF"></p>
-                    <input type="text" name="Nombres" id="nombres" class="inputs center">
+                    <input type="text" name="Nombres" id="nombres" class="inputs center" required>
                 </div>
                 <div class="bloque">
                     <label for="apellidoM" class="labels">Apellido Materno</label>
                     <p class="lineaF"></p>
-                    <input type="text" name="ApellidoM" id="apeM" class="inputs center">
+                    <input type="text" name="ApellidoM" id="apeM" class="inputs center" required>
                 </div>
                 <div class="bloque">
                     <label for="apellidoP" class="labels">Apellido Paterno</label>
                     <p class="lineaF"></p>
-                    <input type="text" name="ApellidoM" id="apeM" class="inputs center">
+                    <input type="text" name="ApellidoM" id="apeM" class="inputs center" required>
                 </div>
                 <div class="bloque">
                     <label for="email" class="labels">Correo</label>
                     <p class="lineaF"></p>
-                    <input type="email" name="correo" id="email" class="inputs center">
+                    <input type="email" name="correo" id="email" class="inputs center" required>
                 </div>
                 <div class="bloque">
                     <label for="telefono" class="labels">Numero de teléfono</label>
                     <p class="lineaF"></p>
-                    <input type="text" name="telefono" id="Ntelefono" class="inputs center">
+                    <input type="text" name="telefono" id="Ntelefono" class="inputs center" required>
                 </div>
                 <div class="bloque">
                     <label for="CURP" class="labels ">CURP</label>
                     <p class="lineaF"></p>
-                    <input type="text" name="CURP" id="curp" class="inputs center">
+                    <input type="text" name="CURP" id="curp" class="inputs center" required>
                 </div>
                 <div class="bloque">
                     <label for="echaN" class="labels">Fecha de Nacimiento</label>
                     <p class="lineaF"></p>
-                    <input type="date" name="fechaN" id="fechaN" class="inputs center">
+                    <input type="date" name="fechaN" id="fechaN" class="inputs center" required>
                 </div class="bloque">
                 <div class="di bloque">
                     <label for="Direccion" class="labels">Dirección</label>
                     <p class="lineaF"></p>
-                    <input type="text" name="Direccion" id="direccion" class="inputs">
+                    <input type="text" name="Direccion" id="direccion" class="inputs" required>
                 </div>
                 <div class="bloque">
                     <label for="rfc" class="labels">RFC</label>
                     <p class="lineaF"></p>
-                    <input type="text" name="rfc" id="rfc" class="inputs">
+                    <input type="text" name="rfc" id="rfc" class="inputs" required>
                 </div>
                 <div class="bloque">
                     <label for="genero" class="labels">GENERO</label>
                     <p class="lineaF"></p>
-                    <input type="text" name="genero" id="genero" class="inputs">
+                    <select name="category" id="" required>
+                        <?php 
+                        foreach ($results as $cat) {
+                            ?>
+                        <option value="<?php echo $cat['id']?>"><?php echo $cat['nombre']?></option>
+                        <?php
+                        }
+                        ?>
+                    </select>
                 </div>
                 <div class="bloque">
                     <input type="submit" value="Dar de Alta" class="contenedor-btn-file">
