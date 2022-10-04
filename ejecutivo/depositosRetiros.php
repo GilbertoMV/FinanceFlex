@@ -17,10 +17,39 @@
         <img class="logo" src="../public/img/logito.png" alt="">
         <h1 class="h1">
             <a href="#" class="a">EJECUTIVOS<br><span>FinanceFlex</span></a>
-
         </h1>
         <?php require 'nav.php' ?>
+        <div class="linea"></div>
     </header>
-    
+    <main>
+        <div class="tablaBaja">
+            <table>
+                <tr class="cabeceraTablaBaja">
+                    <th>Número Cliente</th>
+                    <th>Tipo de Tramite</th>
+                    <th>Estado</th>
+                    <th width="20%">Rechazar / Aceptar</th>
+                </tr>
+                <tr class="cuerpoTablaBaja">
+                    <td>20181150</td>
+                    <td>Retiro</td>
+                    <td><input type="button" value="Pendiente" class="btn-pendiente"></input></td>
+                    <td class="buttons">
+                        <button class="btn"><img src="../public/img/aprobado.png" alt=""></button>
+                        <button class="btn"><img src="../public/img/rechazado.png" alt=""></button>
+                    </td>
+                </tr>
+                <tr class="cuerpoTablaBaja">
+                    <td>20181150</td>
+                    <td>Depósito</td>                    
+                    <td><input type="button" value="Pendiente" class="btn-pendiente"></input></td>
+                    <td class="buttons">
+                        <button class="btn"><img src="../public/img/aprobado.png" alt=""></button>
+                        <button class="btn"><img src="../public/img/rechazado.png" alt=""></button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </main>
 </body>
 </html>

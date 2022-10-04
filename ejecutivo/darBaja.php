@@ -17,9 +17,39 @@
         <img class="logo" src="../public/img/logito.png" alt="">
         <h1 class="h1">
             <a href="#" class="a">EJECUTIVOS<br><span>FinanceFlex</span></a>
-
         </h1>
         <?php require 'nav.php' ?>
+        <div class="linea"></div>
     </header>
+    <main>
+        <div class="tablaBaja">
+            <table>
+                <tr class="cabeceraTablaBaja">
+                    <th width="30%">Número Cliente</th>
+                    <th witdth="20%">Nombre</th>
+                    <th width="30%">Apellidos</th>
+                    <th>Teléfono</th>
+                    <th width="20%">Acciones</th>
+                    <th>Estado</th>
+                </tr>
+                <tr class="cuerpoTablaBaja">
+                    <td>20181150</td>
+                    <td>Gilberto</td>
+                    <td>Valenzuela Martínez</td>
+                    <td>3141438337</td>
+                    <td><input type="button" value="Eliminar" class="btn-tabla"></input></td>
+                    <td><input type="button" value="Activo" class="btn-activo"></input></td>
+                </tr>
+                <tr class="cuerpoTablaBaja">
+                    <td>20181150</td>
+                    <td>Gilberto</td>
+                    <td>Valenzuela Martínez</td>
+                    <td>3141438337</td>
+                    <td><input type="button" value="Eliminar" class="btn-tabla"></input></td>
+                    <td><input type="button" value="Inactivo" class="btn-inactivo"></input></td>
+                </tr>
+            </table>
+        </div>
+    </main>
 </body>
 </html>

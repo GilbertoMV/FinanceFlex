@@ -17,22 +17,30 @@
         <img class="logo" src="../public/img/logito.png" alt="">
         <h1 class="h1">
             <a href="#" class="a">EJECUTIVOS<br><span>FinanceFlex</span></a>
-            <?php require 'nav.php' ?>
         </h1>
-        <nav class="nav">
-            <div class="container">
-                <ul class="ul">
-                    <li class="li"><a href="index.html" class="a">Dar de alta</a></li>
-                    <li class="li"><a href="modificaciones.html" class="a">Modificaciones</a></li>
-                    <li class="li"><a href="darBaja.html" class="a">Dar de Baja</a></li>
-                    <li class="li"><a href="prestamos.html" class="a">Prestamos</a></li>
-                    <li class="li"><a href="pagos.html" class="a">Pagos</a></li>
-                    <li class="li"><a href="depositosRetiros.html" class="a">Depositos y Retiros</a></li>
-                    <li><a href="#" ></a><img src="../public/img/profile.png" alt="perfil" class="logo"></li>
-                </ul>
-            </div>
-            <div class="linea"></div>
-        </nav>
+        <?php require 'nav.php' ?>
+        <div class="linea"></div>
     </header>
+    <main>
+        <div class="tablaPrestamos">
+            <table>
+                <tr class="cabeceraTablaPrestamos">
+                    <th width="30%">Número Cliente</th>
+                    <th witdth="20%">Cantidad</th>
+                    <th width="30%">Mensualidades</th>
+                    <th width="20%">Acciones</th>
+                </tr>
+                <tr class="cuerpoTablaMod">
+                    <td>20181150</td>
+                    <td>$30,000</td>
+                    <td>7 meses</td>
+                    <td class="buttons">
+                        <button class="btn"><img src="../public/img/aprobado.png" alt=""></button>
+                        <button class="btn"><img src="../public/img/rechazado.png" alt=""></button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </main>
 </body>
 </html>

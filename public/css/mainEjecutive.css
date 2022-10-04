@@ -144,7 +144,9 @@ ul li{
 ul li:hover::after{
     width: 30%;
 }
-
+.check {
+  color: #ffff;
+}
 .linea{
     position: absolute;
     width: 80%;
@@ -237,7 +239,6 @@ main .lineaR {
 .contenedor-btn-file {
     display: inline-block;
     position: relative;
-    background: rgb(32,35,109);
     background: linear-gradient(90deg, rgba(32,35,109,1) 0%, rgba(252,0,60,1) 100%);
     color: #fff;
     border: 0;
@@ -269,7 +270,7 @@ form {
     grid-template-columns: repeat(3,1fr);
     gap: 50px;
     row-gap: 30px;
-    align-items: end;
+    align-items: center;
     justify-content: center;
 }
 .labels {
@@ -288,6 +289,7 @@ form {
     border-radius: 30px;
     border: 3px solid #B1AFAF;
     color: #fff;
+    font-family: 'Roboto';
 }
 .center {
     text-align: center;
@@ -304,4 +306,144 @@ form {
     width: 15%;
     margin: auto;
     margin-bottom: 15px;
+}
+/* FIN DAR DE ALTA */
+
+/* INICIO DE MODIFICACIONES */
+
+.tablaMod {
+  width: auto;
+  height: auto;
+  margin: 2rem;
+  border-radius: 30px;
+  background: linear-gradient(180deg, rgba(32,35,109,0.763725473099396) 0%, rgba(91,26,96,0.7189075459285277) 15%, rgba(183,11,76,0.38837533304337357) 56%, rgba(252,0,60,0) 100%);
+}
+table {
+  display: table;
+  border-collapse: collapse;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  
+}
+th, td {
+  padding: 10px 10px;
+  display: table-cell;
+  vertical-align: middle;
+  margin: auto;
+  text-align: center;
+}
+tr {
+  margin: auto;
+}
+.cabeceraTablaMod {
+  font-family: 'Roboto';
+  color: #ffff;
+  font-weight: bold;
+  font-size: 20px;
+  background: linear-gradient(90deg, rgba(32,35,109,1) 0%, rgba(252,0,60,1) 100%);
+}
+.cuerpoTablaMod {
+  font-family: 'Rajdhani';
+  font-weight: bold;
+  font-size: 20px;
+  color: #D2D2D2;
+}
+.btn-tabla {
+  background: linear-gradient(90deg, rgba(250,72,72,1) 0%, rgba(239,169,43,1) 100%);
+  padding: 5px 10px;
+  border-radius: 30px;
+  font-weight: bold;
+  color: #ffff;
+  width: 150px;
+  height: auto;
+  cursor: pointer;
+  margin: auto;
+}
+/* FIN MODIFICACIONES */
+
+/* INICIO DE DAR DE BAJA */
+
+.tablaBaja {
+  width: auto;
+  height: auto;
+  margin: 2rem;
+  border-radius: 30px;
+  background: radial-gradient(circle, rgba(32,35,109,0.24551819018623078) 0%, rgba(118,46,109,0.2595237924271271) 100%);
+}
+.cabeceraTablaBaja {
+  font-family: 'Roboto';
+  color: #ffff;
+  font-weight: bold;
+  font-size: 20px;
+  background: radial-gradient(circle, rgba(32,35,109,1) 0%, rgba(118,46,109,1) 100%);
+}
+.cuerpoTablaBaja {
+  font-family: 'Rajdhani';
+  font-weight: bold;
+  font-size: 20px;
+  color: #D2D2D2;
+}
+.btn-activo {
+  background-color: green;
+  padding: 5px 10px;
+  border-radius: 30px;
+  font-weight: bold;
+  color: #ffff;
+  width: 150px;
+  height: auto;
+  cursor: pointer;
+  margin: auto;
+}
+.btn-inactivo {
+  background-color: red;
+  padding: 5px 10px;
+  border-radius: 30px;
+  font-weight: bold;
+  color: #ffff;
+  width: 150px;
+  height: auto;
+  cursor: pointer;
+  margin: auto;
+}
+
+/* FIN DAR DE BAJA */
+
+/* INICIO DE PRESTAMOS */
+.tablaPrestamos {
+  width: auto;
+  height: auto;
+  margin: 2rem;
+  border-radius: 30px;
+  background: linear-gradient(180deg, rgba(109,32,77,0.5396358372450543) 0%, rgba(168,105,18,0.29313723780527834) 100%);
+}
+.cabeceraTablaPrestamos {
+  font-family: 'Roboto';
+  color: #ffff;
+  font-weight: bold;
+  font-size: 20px;
+  background: linear-gradient(90deg, rgba(109,32,78,1) 0%, rgba(170,107,17,1) 100%);
+}
+
+.btn img{
+  width: 50%;
+  height: auto;
+  cursor: pointer;
+  margin: auto;
+}
+.buttons {
+  display: flex;
+}
+/* FIN DE PRESTAMOS  */
+
+.btn-pendiente {
+  background-color: rgb(189, 180, 53);
+  padding: 5px 10px;
+  border-radius: 30px;
+  font-weight: bold;
+  color: #ffff;
+  width: 150px;
+  height: auto;
+  margin: auto;
 }
