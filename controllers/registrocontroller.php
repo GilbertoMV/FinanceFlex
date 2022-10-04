@@ -14,6 +14,7 @@ if(!empty($_POST['registrar'])){
     $_POST['genero'] = $idgenero;
     $_POST['email'] = $email;
     $_POST['pass'] = $pass;
+    $_SESSION['id_ejecutivo'] = $idEje;
     $getEmail = $conn->prepare("SELECT email FROM usuarios WHERE email = :email");
     $getEmail->bindParam(':email', $_POST['email']);
     $getEmail ->execute();
@@ -21,32 +22,28 @@ if(!empty($_POST['registrar'])){
         header('Location: ../ejecutivo/index.php');
         echo('Ya esta registrado este email');
     }else{        
-        $query = $conn->prepare('SELECT id, password FROM usuarios WHERE id = :id');
-        $query->execute(['id' => $userid]);
-        if($row = $query->fetch(PDO::FETCH_ASSOC)) 
-        password_verify($current, $row['password']);
-
+        $password=password_hash($pass, PASSWORD_DEFAULT, ['cost' => 10]);
+        $registrar=$conn->prepare('SELECT INTO usuarios VALUES(:rfc, :nombres, :apellidoP, :apellidoM, :curp, :telefono, :email, :password, :fechaNac, :id_genero, :id_ejecutivo)');
+        $registrar->execute([
+            'rfc' => $rfc,
+            'nombres' => $nombres,
+            'apellidoP' => $apellidop,
+            'apellidoM' => $apellidom,
+            'curp' => $curp,
+            'telefono' => $tel,
+            'email' => $email,
+            'password' => $password,
+            'fechaNac' => $fechan,
+            'id_genero'=> $idgenero,
+            'id_ejecutivo' => $idEje 
+        ]);
+        if($registrar->rowCount()){
+            echo "cliente registrado";
+        }else{
+            echo "error registrando cliente";
         }
-    $registrar=$conn->prepare('SELECT INTO usuarios VALUES(:rfc, :nombres, :apellidoP, :apellidoM, :curp, :telefono, :email, :password, :fechaNac, :id_genero, :id_ejecutivo)');
-    $registrar->execute([
-        'rfc' => $rfc,
-        'nombres' => $nombres,
-        'apellidoP' => $apellidop,
-        'apellidoM' => $apellidom,
-        'curp' => $curp,
-        'telefono' => $tel,
-        'email' => $email,
-        'password' => $pass,
-        'fechaNac' => $fechan,
-        'id_genero'=> $idgenero,
-        'id_ejecutivo' => $id_ejecutivo 
-    ]);
-    if($registrar->rowCount()){
-        echo "cliente registrado";
-    }else{
-        echo "error registrando cliente";
-
     }
+
 }
 
     

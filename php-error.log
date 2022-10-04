@@ -1,6 +1,102 @@
-[03-Oct-2022 20:09:12 Europe/Berlin] inicio de aplicacion web
-[03-Oct-2022 20:09:12 Europe/Berlin] 2018963
-[03-Oct-2022 20:09:12 Europe/Berlin] Connected successfully
-[03-Oct-2022 20:09:12 Europe/Berlin] Connected successfully
-[03-Oct-2022 20:09:12 Europe/Berlin] Connected successfully
-[03-Oct-2022 20:09:12 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 109
+[03-Oct-2022 23:50:11 Europe/Berlin] inicio de aplicacion web
+[03-Oct-2022 23:50:15 Europe/Berlin] inicio de aplicacion web
+[03-Oct-2022 23:50:15 Europe/Berlin] LOGIN
+[03-Oct-2022 23:50:15 Europe/Berlin] Connected successfully
+[03-Oct-2022 23:50:22 Europe/Berlin] inicio de aplicacion web
+[03-Oct-2022 23:50:22 Europe/Berlin] LOGIN
+[03-Oct-2022 23:50:22 Europe/Berlin] Connected successfully
+[03-Oct-2022 23:50:22 Europe/Berlin] PHP Notice:  Undefined index: clave_ejecutivo in C:\xamppp\htdocs\php-financeflex\FinanceFlex\controllers\loginadmin.php on line 14
+[03-Oct-2022 23:50:22 Europe/Berlin] 
+[03-Oct-2022 23:50:22 Europe/Berlin] inicio de aplicacion web
+[03-Oct-2022 23:50:22 Europe/Berlin] 2018963
+[03-Oct-2022 23:50:22 Europe/Berlin] Connected successfully
+[03-Oct-2022 23:50:22 Europe/Berlin] Connected successfully
+[03-Oct-2022 23:50:22 Europe/Berlin] Connected successfully
+[03-Oct-2022 23:50:22 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 109
+[04-Oct-2022 01:36:09 Europe/Berlin] inicio de aplicacion web
+[04-Oct-2022 01:36:09 Europe/Berlin] 2018963
+[04-Oct-2022 01:36:09 Europe/Berlin] Connection failed: PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in C:\xamppp\htdocs\php-financeflex\FinanceFlex\includes\db.php:9
+Stack trace:
+#0 C:\xamppp\htdocs\php-financeflex\FinanceFlex\includes\db.php(9): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php(7): require_once('C:\\xamppp\\htdoc...')
+#2 {main}
+[04-Oct-2022 01:36:09 Europe/Berlin] PHP Notice:  Undefined variable: conn in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 8
+[04-Oct-2022 01:36:09 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php:8
+Stack trace:
+#0 {main}
+  thrown in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 8
+[04-Oct-2022 01:36:10 Europe/Berlin] inicio de aplicacion web
+[04-Oct-2022 01:36:10 Europe/Berlin] 2018963
+[04-Oct-2022 01:36:10 Europe/Berlin] Connection failed: PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in C:\xamppp\htdocs\php-financeflex\FinanceFlex\includes\db.php:9
+Stack trace:
+#0 C:\xamppp\htdocs\php-financeflex\FinanceFlex\includes\db.php(9): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php(7): require_once('C:\\xamppp\\htdoc...')
+#2 {main}
+[04-Oct-2022 01:36:10 Europe/Berlin] PHP Notice:  Undefined variable: conn in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 8
+[04-Oct-2022 01:36:10 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php:8
+Stack trace:
+#0 {main}
+  thrown in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 8
+[04-Oct-2022 01:36:11 Europe/Berlin] inicio de aplicacion web
+[04-Oct-2022 01:36:11 Europe/Berlin] 2018963
+[04-Oct-2022 01:36:11 Europe/Berlin] Connection failed: PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in C:\xamppp\htdocs\php-financeflex\FinanceFlex\includes\db.php:9
+Stack trace:
+#0 C:\xamppp\htdocs\php-financeflex\FinanceFlex\includes\db.php(9): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php(7): require_once('C:\\xamppp\\htdoc...')
+#2 {main}
+[04-Oct-2022 01:36:11 Europe/Berlin] PHP Notice:  Undefined variable: conn in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 8
+[04-Oct-2022 01:36:11 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php:8
+Stack trace:
+#0 {main}
+  thrown in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 8
+[04-Oct-2022 01:36:12 Europe/Berlin] inicio de aplicacion web
+[04-Oct-2022 01:36:12 Europe/Berlin] 2018963
+[04-Oct-2022 01:36:12 Europe/Berlin] Connection failed: PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in C:\xamppp\htdocs\php-financeflex\FinanceFlex\includes\db.php:9
+Stack trace:
+#0 C:\xamppp\htdocs\php-financeflex\FinanceFlex\includes\db.php(9): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php(7): require_once('C:\\xamppp\\htdoc...')
+#2 {main}
+[04-Oct-2022 01:36:12 Europe/Berlin] PHP Notice:  Undefined variable: conn in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 8
+[04-Oct-2022 01:36:12 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php:8
+Stack trace:
+#0 {main}
+  thrown in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 8
+[04-Oct-2022 01:36:13 Europe/Berlin] inicio de aplicacion web
+[04-Oct-2022 01:36:13 Europe/Berlin] 2018963
+[04-Oct-2022 01:36:13 Europe/Berlin] Connection failed: PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in C:\xamppp\htdocs\php-financeflex\FinanceFlex\includes\db.php:9
+Stack trace:
+#0 C:\xamppp\htdocs\php-financeflex\FinanceFlex\includes\db.php(9): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php(7): require_once('C:\\xamppp\\htdoc...')
+#2 {main}
+[04-Oct-2022 01:36:13 Europe/Berlin] PHP Notice:  Undefined variable: conn in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 8
+[04-Oct-2022 01:36:13 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php:8
+Stack trace:
+#0 {main}
+  thrown in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 8
+[04-Oct-2022 01:39:00 Europe/Berlin] inicio de aplicacion web
+[04-Oct-2022 01:39:00 Europe/Berlin] 2018963
+[04-Oct-2022 01:39:00 Europe/Berlin] Connected successfully
+[04-Oct-2022 01:39:00 Europe/Berlin] Connected successfully
+[04-Oct-2022 01:39:00 Europe/Berlin] Connected successfully
+[04-Oct-2022 01:39:00 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 109
+[04-Oct-2022 15:48:02 Europe/Berlin] inicio de aplicacion web
+[04-Oct-2022 15:48:04 Europe/Berlin] inicio de aplicacion web
+[04-Oct-2022 15:48:04 Europe/Berlin] LOGIN
+[04-Oct-2022 15:48:04 Europe/Berlin] Connected successfully
+[04-Oct-2022 15:48:24 Europe/Berlin] inicio de aplicacion web
+[04-Oct-2022 15:48:24 Europe/Berlin] LOGIN
+[04-Oct-2022 15:48:24 Europe/Berlin] Connected successfully
+[04-Oct-2022 15:48:24 Europe/Berlin] PHP Notice:  Undefined index: clave_ejecutivo in C:\xamppp\htdocs\php-financeflex\FinanceFlex\controllers\loginadmin.php on line 14
+[04-Oct-2022 15:48:24 Europe/Berlin] 
+[04-Oct-2022 15:48:24 Europe/Berlin] inicio de aplicacion web
+[04-Oct-2022 15:48:24 Europe/Berlin] 2018963
+[04-Oct-2022 15:48:24 Europe/Berlin] Connected successfully
+[04-Oct-2022 15:48:24 Europe/Berlin] Connected successfully
+[04-Oct-2022 15:48:24 Europe/Berlin] Connected successfully
+[04-Oct-2022 15:48:24 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 109
+[04-Oct-2022 15:48:48 Europe/Berlin] inicio de aplicacion web
+[04-Oct-2022 15:48:48 Europe/Berlin] 2018963
+[04-Oct-2022 15:48:48 Europe/Berlin] Connected successfully
+[04-Oct-2022 15:48:48 Europe/Berlin] Connected successfully
+[04-Oct-2022 15:48:48 Europe/Berlin] Connected successfully
+[04-Oct-2022 15:48:48 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 109

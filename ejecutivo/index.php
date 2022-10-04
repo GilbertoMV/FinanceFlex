@@ -92,7 +92,7 @@ if(isset($_SESSION["id_ejecutivo"])){
                 <div class="di bloque">
                     <label for="password" class="labels">Password</label>
                     <p class="lineaF"></p>
-                    <input type="text" name="password" id="password" class="inputs" required>
+                    <input type="password" name="password" id="password" class="inputs" required>
                 </div>
                 <div class="bloque">
                     <label for="rfc" class="labels">RFC</label>
