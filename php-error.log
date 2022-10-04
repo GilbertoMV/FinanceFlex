@@ -1,91 +1,50 @@
-[30-Sep-2022 04:34:24 Europe/Berlin] inicio de aplicacion web
-[30-Sep-2022 04:34:24 Europe/Berlin] SESSIONCONTROLLER::validateSession
-[30-Sep-2022 04:34:24 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
-[30-Sep-2022 04:34:24 Europe/Berlin] sessionController::isPublic(): currentURL => 
-[30-Sep-2022 04:34:24 Europe/Berlin] SessionController::validateSession() public page
-[30-Sep-2022 04:34:24 Europe/Berlin] Login::construct->inicio de login
-[30-Sep-2022 04:34:24 Europe/Berlin] Login::Render->Carga el index del login
-[30-Sep-2022 04:34:33 Europe/Berlin] inicio de aplicacion web
-[30-Sep-2022 04:34:33 Europe/Berlin] SESSIONCONTROLLER::validateSession
-[30-Sep-2022 04:34:33 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->admin
-[30-Sep-2022 04:34:33 Europe/Berlin] sessionController::isPublic(): currentURL => admin
-[30-Sep-2022 04:34:33 Europe/Berlin] SessionController::validateSession() redirect al login
-[30-Sep-2022 04:34:33 Europe/Berlin] Conexión a BD exitosa
-[30-Sep-2022 04:34:33 Europe/Berlin] Conexión a BD exitosa
-[30-Sep-2022 04:34:33 Europe/Berlin] Conexión a BD exitosa
-[30-Sep-2022 04:34:33 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xamppp\htdocs\FinanceFlex\controllers\admin.php on line 29
-[30-Sep-2022 04:34:33 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xamppp\htdocs\FinanceFlex\controllers\admin.php on line 30
-[30-Sep-2022 04:34:33 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xamppp\htdocs\FinanceFlex\controllers\admin.php on line 44
-[30-Sep-2022 04:34:33 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xamppp\htdocs\FinanceFlex\controllers\admin.php on line 52
-[30-Sep-2022 04:34:33 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xamppp\htdocs\FinanceFlex\controllers\admin.php on line 61
-[30-Sep-2022 04:34:33 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xamppp\htdocs\FinanceFlex\controllers\admin.php on line 65
-[30-Sep-2022 04:34:33 Europe/Berlin] PHP Warning:  Division by zero in C:\xamppp\htdocs\FinanceFlex\controllers\admin.php on line 65
-[30-Sep-2022 04:34:33 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xamppp\htdocs\FinanceFlex\controllers\admin.php on line 35
-[30-Sep-2022 04:34:33 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xamppp\htdocs\FinanceFlex\controllers\admin.php on line 71
-[30-Sep-2022 04:34:33 Europe/Berlin] PHP Warning:  max(): Array must contain at least one element in C:\xamppp\htdocs\FinanceFlex\controllers\admin.php on line 78
-[30-Sep-2022 04:34:33 Europe/Berlin] Conexión a BD exitosa
-[30-Sep-2022 04:34:33 Europe/Berlin] Admin::getCategoryMostUse() ->0
-[30-Sep-2022 04:34:33 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xamppp\htdocs\FinanceFlex\controllers\admin.php on line 96
-[30-Sep-2022 04:34:33 Europe/Berlin] PHP Warning:  min(): Array must contain at least one element in C:\xamppp\htdocs\FinanceFlex\controllers\admin.php on line 105
-[30-Sep-2022 04:34:33 Europe/Berlin] Conexión a BD exitosa
-[30-Sep-2022 04:34:33 Europe/Berlin] inicio de aplicacion web
-[30-Sep-2022 04:34:33 Europe/Berlin] SESSIONCONTROLLER::validateSession
-[30-Sep-2022 04:34:33 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
-[30-Sep-2022 04:34:33 Europe/Berlin] sessionController::isPublic(): currentURL => 
-[30-Sep-2022 04:34:33 Europe/Berlin] SessionController::validateSession() public page
-[30-Sep-2022 04:34:33 Europe/Berlin] Login::construct->inicio de login
-[30-Sep-2022 04:34:33 Europe/Berlin] Login::Render->Carga el index del login
-[30-Sep-2022 04:35:30 Europe/Berlin] inicio de aplicacion web
-[30-Sep-2022 04:35:30 Europe/Berlin] SESSIONCONTROLLER::validateSession
-[30-Sep-2022 04:35:30 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
-[30-Sep-2022 04:35:30 Europe/Berlin] sessionController::isPublic(): currentURL => 
-[30-Sep-2022 04:35:30 Europe/Berlin] SessionController::validateSession() public page
-[30-Sep-2022 04:35:30 Europe/Berlin] Login::construct->inicio de login
-[30-Sep-2022 04:35:30 Europe/Berlin] Login::Render->Carga el index del login
-[30-Sep-2022 04:35:33 Europe/Berlin] inicio de aplicacion web
-[30-Sep-2022 04:35:33 Europe/Berlin] SESSIONCONTROLLER::validateSession
-[30-Sep-2022 04:35:33 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->admin
-[30-Sep-2022 04:35:33 Europe/Berlin] sessionController::isPublic(): currentURL => admin
-[30-Sep-2022 04:35:33 Europe/Berlin] SessionController::validateSession() public page
-[30-Sep-2022 04:35:33 Europe/Berlin] Conexión a BD exitosa
-[30-Sep-2022 04:35:34 Europe/Berlin] Conexión a BD exitosa
-[30-Sep-2022 04:35:34 Europe/Berlin] Conexión a BD exitosa
-[30-Sep-2022 04:35:34 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xamppp\htdocs\FinanceFlex\controllers\admin.php on line 29
-[30-Sep-2022 04:35:34 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xamppp\htdocs\FinanceFlex\controllers\admin.php on line 30
-[30-Sep-2022 04:35:34 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xamppp\htdocs\FinanceFlex\controllers\admin.php on line 44
-[30-Sep-2022 04:35:34 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xamppp\htdocs\FinanceFlex\controllers\admin.php on line 52
-[30-Sep-2022 04:35:34 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xamppp\htdocs\FinanceFlex\controllers\admin.php on line 61
-[30-Sep-2022 04:35:34 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xamppp\htdocs\FinanceFlex\controllers\admin.php on line 65
-[30-Sep-2022 04:35:34 Europe/Berlin] PHP Warning:  Division by zero in C:\xamppp\htdocs\FinanceFlex\controllers\admin.php on line 65
-[30-Sep-2022 04:35:34 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xamppp\htdocs\FinanceFlex\controllers\admin.php on line 35
-[30-Sep-2022 04:35:34 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xamppp\htdocs\FinanceFlex\controllers\admin.php on line 71
-[30-Sep-2022 04:35:34 Europe/Berlin] PHP Warning:  max(): Array must contain at least one element in C:\xamppp\htdocs\FinanceFlex\controllers\admin.php on line 78
-[30-Sep-2022 04:35:34 Europe/Berlin] Conexión a BD exitosa
-[30-Sep-2022 04:35:34 Europe/Berlin] Admin::getCategoryMostUse() ->0
-[30-Sep-2022 04:35:34 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xamppp\htdocs\FinanceFlex\controllers\admin.php on line 96
-[30-Sep-2022 04:35:34 Europe/Berlin] PHP Warning:  min(): Array must contain at least one element in C:\xamppp\htdocs\FinanceFlex\controllers\admin.php on line 105
-[30-Sep-2022 04:35:34 Europe/Berlin] Conexión a BD exitosa
-[30-Sep-2022 04:35:34 Europe/Berlin] inicio de aplicacion web
-[30-Sep-2022 04:38:52 Europe/Berlin] inicio de aplicacion web
-[30-Sep-2022 04:38:52 Europe/Berlin] SESSIONCONTROLLER::validateSession
-[30-Sep-2022 04:38:52 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->admin
-[30-Sep-2022 04:38:52 Europe/Berlin] sessionController::isPublic(): currentURL => admin
-[30-Sep-2022 04:38:52 Europe/Berlin] SessionController::validateSession() public page
-[30-Sep-2022 04:38:52 Europe/Berlin] Conexión a BD exitosa
-[30-Sep-2022 04:38:52 Europe/Berlin] Conexión a BD exitosa
-[30-Sep-2022 04:38:52 Europe/Berlin] Conexión a BD exitosa
-[30-Sep-2022 04:38:52 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xamppp\htdocs\FinanceFlex\controllers\admin.php on line 30
-[30-Sep-2022 04:38:52 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xamppp\htdocs\FinanceFlex\controllers\admin.php on line 44
-[30-Sep-2022 04:38:52 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xamppp\htdocs\FinanceFlex\controllers\admin.php on line 52
-[30-Sep-2022 04:38:52 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xamppp\htdocs\FinanceFlex\controllers\admin.php on line 61
-[30-Sep-2022 04:38:52 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xamppp\htdocs\FinanceFlex\controllers\admin.php on line 65
-[30-Sep-2022 04:38:52 Europe/Berlin] PHP Warning:  Division by zero in C:\xamppp\htdocs\FinanceFlex\controllers\admin.php on line 65
-[30-Sep-2022 04:38:52 Europe/Berlin] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in C:\xamppp\htdocs\FinanceFlex\controllers\admin.php on line 35
-[30-Sep-2022 04:38:52 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xamppp\htdocs\FinanceFlex\controllers\admin.php on line 71
-[30-Sep-2022 04:38:52 Europe/Berlin] PHP Warning:  max(): Array must contain at least one element in C:\xamppp\htdocs\FinanceFlex\controllers\admin.php on line 78
-[30-Sep-2022 04:38:52 Europe/Berlin] Conexión a BD exitosa
-[30-Sep-2022 04:38:52 Europe/Berlin] Admin::getCategoryMostUse() ->0
-[30-Sep-2022 04:38:52 Europe/Berlin] PHP Warning:  Invalid argument supplied for foreach() in C:\xamppp\htdocs\FinanceFlex\controllers\admin.php on line 96
-[30-Sep-2022 04:38:52 Europe/Berlin] PHP Warning:  min(): Array must contain at least one element in C:\xamppp\htdocs\FinanceFlex\controllers\admin.php on line 105
-[30-Sep-2022 04:38:52 Europe/Berlin] Conexión a BD exitosa
-[30-Sep-2022 04:38:52 Europe/Berlin] inicio de aplicacion web
+[03-Oct-2022 23:18:24 Europe/Berlin] inicio de aplicacion web
+[03-Oct-2022 23:18:24 Europe/Berlin] SESSIONCONTROLLER::validateSession
+[03-Oct-2022 23:18:24 Europe/Berlin] SESSIONCONTROLLER::getCurrentPage ->
+[03-Oct-2022 23:18:24 Europe/Berlin] sessionController::isPublic(): currentURL => 
+[03-Oct-2022 23:18:24 Europe/Berlin] SessionController::validateSession() public page
+[03-Oct-2022 23:18:24 Europe/Berlin] Login::construct->inicio de login
+[03-Oct-2022 23:18:24 Europe/Berlin] SESSIONADMINCONTROLLER::validateSession
+[03-Oct-2022 23:18:24 Europe/Berlin] SESSIONADMINCONTROLLER::getCurrentPage ->
+[03-Oct-2022 23:18:24 Europe/Berlin] sessionADMINController::isPublic(): currentURL => 
+[03-Oct-2022 23:18:24 Europe/Berlin] SessionADMINController::validateSession() public page
+[03-Oct-2022 23:18:24 Europe/Berlin] Login::construct->inicio de login
+[03-Oct-2022 23:18:24 Europe/Berlin] Login::Render->Carga el index del login
+[03-Oct-2022 23:18:24 Europe/Berlin] Login::Render->Carga el index del login
+[03-Oct-2022 23:51:32 Europe/Berlin] inicio de aplicacion web
+[03-Oct-2022 23:51:32 Europe/Berlin] SESSIONADMINCONTROLLER::validateSession
+[03-Oct-2022 23:51:32 Europe/Berlin] SESSIONADMINCONTROLLER::getCurrentPage ->
+[03-Oct-2022 23:51:32 Europe/Berlin] sessionADMINController::isPublic(): currentURL => 
+[03-Oct-2022 23:51:32 Europe/Berlin] SessionADMINController::validateSession() public page
+[03-Oct-2022 23:51:32 Europe/Berlin] PHP Notice:  Undefined index: user in C:\xamppp\htdocs\FinanceFlex\classes\session.php on line 18
+[03-Oct-2022 23:51:32 Europe/Berlin] Conexión a BD exitosa
+[03-Oct-2022 23:51:32 Europe/Berlin] Dashboard::construct->inicio de Dashboard
+[03-Oct-2022 23:51:32 Europe/Berlin] SESSIONADMINCONTROLLER::validateSession
+[03-Oct-2022 23:51:32 Europe/Berlin] SESSIONADMINCONTROLLER::getCurrentPage ->
+[03-Oct-2022 23:51:32 Europe/Berlin] sessionADMINController::isPublic(): currentURL => 
+[03-Oct-2022 23:51:32 Europe/Berlin] SessionADMINController::validateSession() public page
+[03-Oct-2022 23:51:32 Europe/Berlin] Conexión a BD exitosa
+[03-Oct-2022 23:51:32 Europe/Berlin] Dashboard::construct->inicio de Dashboard
+[03-Oct-2022 23:51:32 Europe/Berlin] Conexión a BD exitosa
+[03-Oct-2022 23:51:32 Europe/Berlin] Conexión a BD exitosa
+[03-Oct-2022 23:51:32 Europe/Berlin] PHP Warning:  Division by zero in C:\xamppp\htdocs\FinanceFlex\controllers\admin.php on line 79
+[03-Oct-2022 23:51:32 Europe/Berlin] PHP Warning:  max(): Array must contain at least one element in C:\xamppp\htdocs\FinanceFlex\controllers\admin.php on line 92
+[03-Oct-2022 23:51:32 Europe/Berlin] Conexión a BD exitosa
+[03-Oct-2022 23:51:32 Europe/Berlin] Admin::getCategoryMostUse() ->0
+[03-Oct-2022 23:51:32 Europe/Berlin] PHP Warning:  min(): Array must contain at least one element in C:\xamppp\htdocs\FinanceFlex\controllers\admin.php on line 119
+[03-Oct-2022 23:51:32 Europe/Berlin] Conexión a BD exitosa
+[03-Oct-2022 23:51:32 Europe/Berlin] controllers::admin-getGeneros
+[03-Oct-2022 23:51:32 Europe/Berlin] Models::GenerosModel-getAll
+[03-Oct-2022 23:51:32 Europe/Berlin] Conexión a BD exitosa
+[03-Oct-2022 23:51:32 Europe/Berlin] Conexión a BD exitosa
+[03-Oct-2022 23:51:32 Europe/Berlin] Conexión a BD exitosa
+[03-Oct-2022 23:51:32 Europe/Berlin] PHP Warning:  Division by zero in C:\xamppp\htdocs\FinanceFlex\controllers\admin.php on line 79
+[03-Oct-2022 23:51:32 Europe/Berlin] PHP Warning:  max(): Array must contain at least one element in C:\xamppp\htdocs\FinanceFlex\controllers\admin.php on line 92
+[03-Oct-2022 23:51:32 Europe/Berlin] Conexión a BD exitosa
+[03-Oct-2022 23:51:32 Europe/Berlin] Admin::getCategoryMostUse() ->0
+[03-Oct-2022 23:51:32 Europe/Berlin] PHP Warning:  min(): Array must contain at least one element in C:\xamppp\htdocs\FinanceFlex\controllers\admin.php on line 119
+[03-Oct-2022 23:51:32 Europe/Berlin] Conexión a BD exitosa
+[03-Oct-2022 23:51:32 Europe/Berlin] controllers::admin-getGeneros
+[03-Oct-2022 23:51:32 Europe/Berlin] Models::GenerosModel-getAll
+[03-Oct-2022 23:51:32 Europe/Berlin] Conexión a BD exitosa
+[03-Oct-2022 23:51:32 Europe/Berlin] inicio de aplicacion web

@@ -1,3 +1,3 @@
 <div id="footer">
-© Vida MRR 2018
+© FinanceFlex 2022
 </div>

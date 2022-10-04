@@ -1,8 +1,8 @@
 <?php
 require_once 'classes/session.php';
-require_once 'models/usermodel.php';
+require_once 'models/adminmodel.php';
 
-class SessionController extends Controller{
+class SessionAdmin extends Controller{
     private $userSession;
     private $email;
     private $userid;
@@ -34,23 +34,23 @@ class SessionController extends Controller{
         return $json;
     }
     public function validateSession(){
-        error_log('SESSIONCONTROLLER::validateSession');
+        error_log('SESSIONADMINCONTROLLER::validateSession');
         //si existe la sesion
         if($this->existsSession()){
             $role = $this->getUserSessionData()->getRole();
-            error_log("sessionController::validateSession(): email:" . $this->user->getEmail() . " - role: " . $this->user->getRole());
+            error_log("sessionADMINController::validateSession(): email:" . $this->user->getEmail() . " - role: " . $this->user->getRole());
             //validar si la pagina a la que accedera es publica
             if($this->isPublic()){
                 $this->redirectDefaultSiteByRole($role);
-                error_log( "SessionController::validateSession() => sitio público, redirige al main de cada rol" );
+                error_log( "SessionADMINController::validateSession() => sitio público, redirige al main de cada rol" );
 
             }else{
                 if($this->isAuthorized($role)){
-                    error_log( "SessionController::validateSession() => autorizado, lo deja pasar" );
+                    error_log( "SessionADMINController::validateSession() => autorizado, lo deja pasar" );
 
                     //dejarlo pasar
                 }else{
-                    error_log( "SessionController::validateSession() => no autorizado, redirige al main de cada rol" );
+                    error_log( "SessionADMINController::validateSession() => no autorizado, redirige al main de cada rol" );
                     $this->redirectDefaultSiteByRole($role);
                 }
 
@@ -58,10 +58,10 @@ class SessionController extends Controller{
         }else{
             //no existe la sesion
             if($this->isPublic()){
-                error_log('SessionController::validateSession() public page');
+                error_log('SessionADMINController::validateSession() public page');
                 //dejar entrar
             }else{
-                error_log('SessionController::validateSession() redirect al login');
+                error_log('SessionADMINController::validateSession() redirect al login');
                 header('Location: ' . constant('URL') . '');
 
             }
@@ -80,7 +80,7 @@ class SessionController extends Controller{
 
     function getUserSessionData(){
         $id = $this->session->getCurrentUser();
-        $this->user=new UserModel();
+        $this->user=new AdminModel();
         $this->user->get($id);
         return $this->user;
     }
@@ -88,7 +88,7 @@ class SessionController extends Controller{
     function isPublic(){
         $currentURL=$this->getCurrentPage();
         //remplazamos
-        error_log("sessionController::isPublic(): currentURL => " . $currentURL);
+        error_log("sessionADMINController::isPublic(): currentURL => " . $currentURL);
         $currentURL=preg_replace("/\?.*/","",$currentURL);
 
         for($i=0; $i < sizeof($this->sites); $i++){
@@ -103,7 +103,7 @@ class SessionController extends Controller{
         $actualLink=trim("$_SERVER[REQUEST_URI]");
         //Separar lo obtenido y lo guarda como un arreglo
         $url=explode("/",$actualLink);
-        error_log('SESSIONCONTROLLER::getCurrentPage ->'. $url[2]);
+        error_log('SESSIONADMINCONTROLLER::getCurrentPage ->'. $url[2]);
         //retornamos la posicion 2
         return $url[2];
     }

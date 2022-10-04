@@ -26,27 +26,17 @@
                     </div>
                     <input type="submit" value="Iniciar Sesión" class="btn solid">
                 </form>
-                <form action="" class="sign-up-form">
-                    <h2 class="title-request">Se te pedira la siguiente información:</h2>
-                    <div class="text-request">
-                        <p class="input-field-p">Nombre completo</p>
+                <form action="<?php echo constant('URL'); ?>loginadmin/authenticate" method="POST" class="sign-up-form">
+                <h2 class="title">ADMINISTRADOR</h2>
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" name="email" id="email" placeholder="Usuario" autocomplete="off">
                     </div>
-                    <div class="text-request">
-                        <p class="input-field-p">RFC</p>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" name="password" id="password" placeholder="Contraseña" autocomplete="off">
                     </div>
-                    <div class="text-request">
-                        <p class="input-field-p">CURP</p>
-                    </div>
-                    <div class="text-request">
-                        <p class="input-field-p">FECHA DE NACIMIENTO</p>
-                    </div>
-                    <div class="text-request">
-                        <p class="input-field-p">TELEFONO</p>
-                    </div>
-                    <div class="text-request">
-                        <p class="input-field-p">EMAIL</p>
-                    </div>
-                    <input type="submit" value="Registrarse" class="btn solid">
+                    <input type="submit" value="Iniciar Sesión" class="btn solid">
                 </form>
             </div>
         </div>
@@ -56,7 +46,7 @@
                 <div class="content">
                     <h3>Nuevo por aquí?</h3>
                     <p>Para poder registrate en FinanceFlex es necesario acudir con uno de nuestros ejecutivos.</p>
-                    <button class="btn transparent" id="sign-up-btn">Mas información</button>
+                    <button class="btn transparent" id="sign-up-btn">Soy ejecutivo</button>
                 </div>
                 <img src="<?php echo constant('URL'); ?>/public/img/Character_2.png" class="image" alt="Imagen de ladaz3d en Freepik">
             </div>

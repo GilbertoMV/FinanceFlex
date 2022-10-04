@@ -1,18 +1,24 @@
 <?php
 require_once 'models/expensesmodel.php';
 require_once 'models/categoriesmodel.php';
-class Admin extends SessionController{
-    function __construct()
-    {
-        parent::__construct(); 
-        
-    }
+require_once 'models/generosmodel.php';
+class Admin extends SessionAdmin{
+    function __construct(){
+        //llama al constructor padre
+        parent::__construct();
+        //obtener info del usuario actual
+        $this->user = $this->getUserSessionData();
+        error_log('Dashboard::construct->inicio de Dashboard');
 
+    }
     function render(){
         $stats = $this->getStatistics();
+        $generos = $this->getGeneros();
         $this->view->render('admin/index', [
-            'stats' => $stats
+            'stats' => $stats,
+            'generos' => $generos
         ]);
+        
     }
     function getStatistics(){
         $res = [];
@@ -23,8 +29,8 @@ class Admin extends SessionController{
         $expenseModel = new ExpensesModel();
         $expenses = $expenseModel->getAll();
 
-        $categoriesModel = new CategoriesModel();
-        $categories = $categoriesModel->getAll();
+        //$categoriesModel = new CategoriesModel();
+        //$categories = $categoriesModel->getAll();
 
         $res['count-users'] = count($users);
         $res['count-expenses'] = count($expenses);
@@ -32,10 +38,18 @@ class Admin extends SessionController{
         $res['min-expenses'] = $this->getMinAmount($expenses);
         $res['avg-expenses'] = $this->getAverageAmount($expenses);
         
-        $res['count-categories'] = count($categories);
+        //$res['count-categories'] = count($categories);
         $res['mostused-categories'] = $this->getCategoryMostUsed($expenses);
         $res['lessused-categories'] = $this->getCategoryLessUsed($expenses);
 
+        return $res;
+
+    }
+    private function getGeneros(){
+        error_log("controllers::admin-getGeneros");
+        $res = []; //
+        $generosModel = new GenerosModel();
+        $res = $generosModel->getAll();
         return $res;
 
     }

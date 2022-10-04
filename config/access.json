@@ -27,8 +27,8 @@
         },
         {
             "site" : "admin", 
-            "access" : "public",  
-            "role" : ""
+            "access" : "private",  
+            "role" : "admin"
         }
     ],
 

@@ -1,40 +1,23 @@
 <?php
 
-class UserModel extends Model implements IModel{
+class AdminModel extends Model implements IModel{
 
-    private $id;
-    private $rfc;
-    private $nombres;
-    private $apellido_p;
-    private $apellido_m;
-    private $curp;
-    private $telefono;
+    private $id; //clave_ejecutivo
+    private $nombre;
     private $password;
     private $email;
-    private $fecha_naci;
-    private $foto;
     private $role;
-    private $saldo;
-    private $id_genero;
-    private $clave_eje;
+    private $id_ejecutivo;
+
 
     public function __construct(){
         parent::__construct();
 
-        $this->rfc = '';
-        $this->nombres = '';
-        $this->apellido_p = '';
-        $this->apellido_m = '';
-        $this->curp = '';
-        $this->telefono = '';
+        $this->nombre = '';
         $this->password = '';
         $this->email = '';
-        $this->fecha_naci = '';
-        $this->foto = '';
         $this->role = '';
-        $this->saldo = 0.0;
-        $this->id_genero = 0;
-        $this->clave_eje = 0;
+        $this->id_ejecutivo = 0;
     }
 
     
@@ -102,25 +85,26 @@ class UserModel extends Model implements IModel{
             return NULL;
         }
     }
-
-    function comparePasswords($current, $userid){
+//UTILIZANDOSE
+    function comparePasswords($current, $id){
         try{
-            $query = $this->db->connect()->prepare('SELECT id, password FROM usuarios WHERE id = :id');
-            $query->execute(['id' => $userid]);
+            $query = $this->db->connect()->prepare('SELECT clave_ejecutivo, password FROM ejecutivos WHERE id = :id');
+            $query->execute(['id' => $id]);
             
             if($row = $query->fetch(PDO::FETCH_ASSOC)) return password_verify($current, $row['password']);
 
             return NULL;
         }catch(PDOException $e){
+            error_log($e);
             return NULL;
         }
     }
 
-
-
+//USAR PARA REGISTRO DE EJECUTIVOS
     public function save(){
         try{
-            $query = $this->prepare('INSERT INTO usuarios (rfc, nombres, apellido_paterno, apellido_materno, curp, telefono, email, password, fechaNac, id_genero, id_ejecutivo) VALUES(:rfc, :nombres, :apellido_p, :apellido_m, :curp, :telefono, :password, :email, :fecha_naci, :id_genero, :clave_eje)');
+            $query = $this->prepare('INSERT INTO ejecutivos (rfc, nombres, apellido_paterno, apellido_materno, curp, telefono, password, email, fecha_de_nacimiento, foto, role, saldo, id_genero, clave_ejecutivo	
+            ) VALUES(:rfc, :nombres, :apellido_p, apellido_m, curp, telefono, password, email, fecha_naci, foto, role, saldo, id_genero, clave_eje)');
             $query->execute([
                 'rfc' => $this->rfc,
                 'nombres'  => $this->nombres, 
@@ -128,9 +112,11 @@ class UserModel extends Model implements IModel{
                 'apellido_m' => $this->apellido_m,
                 'curp' => $this->curp,
                 'telefono' => $this->telefono,
-                'email' => $this->password,
                 'password' => $this->password,
                 'fecha_naci'  => $this->fecha_naci,
+                'foto' => $this->foto,
+                'role' => $this->role,
+                'saldo' => $this->saldo,
                 'id_genero' => $this->id_genero,
                 'clave_eje' => $this->clave_eje
                 ]);
@@ -141,30 +127,22 @@ class UserModel extends Model implements IModel{
         }
     } 
 
+    //USANDOSE PARA OBTENER UN INFORMACION DE LA TABLA EJECUTIVOS
+
     public function getAll(){
         $items = [];
 
         try{
-            $query = $this->query('SELECT * FROM usuarios');
+            $query = $this->query('SELECT * FROM ejecutivos');
 
             while($p = $query->fetch(PDO::FETCH_ASSOC)){
-                $item = new UserModel();
-                $item->setId($p['id']);
-                $item->setRfc($p['rfc']);
-                $item->setNombres($p['nombres']);
-                $item->setApellidoP($p['apellido_paterno']);
-                $item->setApellidoM($p['apellido_materno']);
-                $item->setCurp($p['curp']);
-                $item->setTelefono($p['telefono']);
-                $item->setPassword($p['password'], false);
+                $item = new AdminModel();
+                $item->setId($p['clave_ejecutivo']);
+                $item->setNombre($p['nombre']);
+                $item->setIdEjecutivo($p['id_ejecutivo']);
                 $item->setEmail($p['email']);
-                $item->setFechaN($p['fecha_de_nacimiento']);
-                $item->setFoto($p['foto']);
+                $item->setPassword($p['password'], false);
                 $item->setRole($p['role']);
-                $item->setSaldo($p['saldo']);
-                $item->setGenero($p['id_genero']);
-                $item->setEjecutivo($p['clave_ejecutivo']);
-
 
                 array_push($items, $item);
             }
@@ -181,24 +159,15 @@ class UserModel extends Model implements IModel{
      */
     public function get($id){
         try{
-            $query = $this->prepare('SELECT * FROM usuarios WHERE id = :id');
+            $query = $this->prepare('SELECT * FROM ejecutivos WHERE id = :id');
             $query->execute([ 'id' => $id]);
             $user = $query->fetch(PDO::FETCH_ASSOC);
-            $this->id           = $user['id'];
-            $this->rfc          = $user['rfc'];
-            $this->nombres      = $user['nombres'];
-            $this->apellido_p   = $user['apellido_paterno'];
-            $this->apellido_m   = $user['apellido_materno'];
-            $this->curp         = $user['curp'];
-            $this->telefono     = $user['telefono'];
-            $this->password     = $user['password'];
+            $this->id           = $user['clave_ejecutivo'];
+            $this->nombre       = $user['nombre'];
+            $this->id_ejecutivo = $user['id_ejecutivo'];
             $this->email        = $user['email'];
-            $this->fecha_naci   = $user['fecha_nacimiento'];
-            $this->foto         = $user['foto'];
+            $this->password     = $user['password'];
             $this->role         = $user['role'];
-            $this->saldo        = $user['saldo'];
-            $this->id_genero    = $user['id_genero'];
-            $this->clave_eje    = $user['clave_ejecutivo'];
             return $this;
         }catch(PDOException $e){
             return false;
@@ -235,7 +204,7 @@ class UserModel extends Model implements IModel{
 
     public function exists($email){
         try{
-            $query = $this->prepare('SELECT email FROM usuarios WHERE email = :email');
+            $query = $this->prepare('SELECT email FROM ejecutivos WHERE email = :email');
             $query->execute( ['email' => $email]);
             
             if($query->rowCount() > 0){
@@ -250,21 +219,12 @@ class UserModel extends Model implements IModel{
     }
 
     public function from($array){
-        $this->id = $array['id'];
-        $this->rfc = $array['rfc'];
-        $this->nombres = $array['nombres'];
-        $this->apellido_p = $array['apellido_paterno'];
-        $this->apellido_m = $array['apellido_materno'];
-        $this->curp = $array['curp'];
-        $this->telefono = $array['telefono'];
-        $this->password = $array['password'];
-        $this->email = $array['email'];
-        $this->fecha_naci = $array['fecha_nacimiento'];
-        $this->foto = $array['foto'];
-        $this->role = $array['role'];
-        $this->saldo = $array['saldo'];
-        $this->id_genero = $array['id_genero'];
-        $this->clave_eje = $array['clave_ejecutivo'];
+        $this->id           = $array['clave_ejecutivo'];
+        $this->nombre       = $array['nombre'];
+        $this->id_ejecutivo = $array['id_ejecutivo'];
+        $this->email        = $array['email'];
+        $this->password     = $array['password'];
+        $this->role         = $array['role'];
     }
 
     private function getHashedPassword($password){
@@ -272,17 +232,13 @@ class UserModel extends Model implements IModel{
     }
 
 
-
-
     
     //SETTERS
-    public function setId($id){                    $this->id = $id;}
-    public function setRfc($rfc){                  $this->rfc = $rfc;}
-    public function setNombres($nombres){          $this->nombres = $nombres;}
-    public function setApellidoP($apellido_p){     $this->apellido_p = $apellido_p;}
-    public function setApellidoM($apellido_m){     $this->apellido_m = $apellido_m;}
-    public function setCurp($curp){                $this->curp = $curp;}
-    public function setTelefono($telefono){        $this->telefono = $telefono;}
+    public function setId($id){                           $this->id = $id;}
+    public function setNombre($nombre){                   $this->nombre = $nombre;}
+    public function setEmail($email){                     $this->email = $email;}
+    public function setRole($role){                       $this->role = $role;}
+    public function setIdEjecutivo($id_ejecutivo){        $this->id_ejecutivo = $id_ejecutivo;}
     public function setPassword($password, $hash = true){ 
         if($hash){
             $this->password = $this->getHashedPassword($password);
@@ -290,31 +246,14 @@ class UserModel extends Model implements IModel{
             $this->password = $password;
         }
     }
-    public function setEmail($email){             $this->email = $email;}
-    public function setFechaN($fecha_naci){       $this->fecha_naci = $fecha_naci;}
-    public function setFoto($foto){               $this->foto = $foto;}
-    public function setRole($role){               $this->role = $role;}
-    public function setSaldo($saldo){             $this->saldo = $saldo;}
-    public function setGenero($id_genero){        $this->id_genero = $id_genero;}
-    public function setEjecutivo($clave_eje){     $this->clave_eje = $clave_eje;}
-
 
     //GETTERS
     public function getId(){                return    $this->id;}
-    public function getRfc(){               return    $this->rfc;}
-    public function getNombres(){           return    $this->nombres;}
-    public function getApellidoP(){         return    $this->apellido_p;}
-    public function getApellidoM(){         return    $this->apellido_m;}
-    public function getCurp(){              return    $this->curp;}
-    public function getTelefono(){          return    $this->telefono;}
+    public function getNombre(){            return     $this->nombre;}
     public function getPassword(){          return    $this->password;}
     public function getEmail(){             return    $this->email;}
-    public function getFechaN(){            return    $this->fecha_naci;}
-    public function getFoto(){              return    $this->foto;}
     public function getRole(){              return    $this->role;}
-    public function getSaldo(){             return    $this->saldo;}
-    public function getGenero(){            return    $this->id_genero;}
-    public function getEjecutivo(){         return    $this->clave_eje;}
+    public function getIdEjecutivo(){       return  $this->id_ejecutivo;}
     
 }
 

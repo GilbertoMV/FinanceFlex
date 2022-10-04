@@ -18,24 +18,33 @@ class App{
         // cuando se ingresa sin definir controlador
         if(empty($url[0])){
             $archivoController = 'controllers/login.php';
+            $archivoControllerAdmin = 'controllers/loginadmin.php';
             require_once $archivoController;
-            $controller = new Login();
-            $controller->loadModel('login');
-            $controller->render();
+            require_once $archivoControllerAdmin;
+            $controllerl = new Login();
+            $controllera = new LoginAdmin();
+            $controllerl->loadModel('login');
+            $controllera->loadModel('loginadmin');
+            $controllerl->render();
+            $controllera->render();
             return false;
         }
         $archivoController = 'controllers/' . $url[0] . '.php';
+        $archivoControllerAdmin = 'controllers/' . $url[0] . '.php';
 
-        if(file_exists($archivoController)){
+        if(file_exists($archivoController) || file_exists($archivoControllerAdmin)){
             require_once $archivoController;
+            require_once $archivoControllerAdmin;
 
             // inicializar controlador
-            $controller = new $url[0];
-            $controller->loadModel($url[0]);
+            $controllera = new $url[0];
+            $controllera->loadModel($url[0]);
+            $controllerl = new $url[0];
+            $controllerl->loadModel($url[0]);
 
             // si hay un método que se requiere cargar
             if(isset($url[1])){
-                if(method_exists($controller, $url[1])){
+                if(method_exists($controllera, $url[1]) || method_exists($controllerl, $url[1])){
                     if(isset($url[2])){
                         //el método tiene parámetros
                         //sacamos e # de parametros
@@ -47,18 +56,23 @@ class App{
                             array_push($params, $url[$i + 2]);
                         }
                         //pasarlos al metodo   
-                        $controller->{$url[1]}($params);
+                        $controllera->{$url[1]}($params);
+                        $controllerl->{$url[1]}($params);
                     }else{
-                        $controller->{$url[1]}();    
+                        $controllera->{$url[1]}();    
+                        $controllerl->{$url[1]}();  
                     }
                 }else{
-                    $controller = new Errores(); 
+                    $controllera = new Errores(); 
+                    $controllerl = new Errores(); 
                 }
             }else{
-                $controller->render();
+                $controllera->render();
+                $controllerl->render();
             }
         }else{
-            $controller = new Errores();
+            $controllera = new Errores();
+            $controllerl = new Errores();
         }
     }
 }

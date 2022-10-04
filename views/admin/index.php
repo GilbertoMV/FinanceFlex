@@ -1,3 +1,6 @@
+<?php
+    $generos = $this->d['generos'];
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -93,6 +96,18 @@
                     <label for="rfc" class="labels">RFC</label>
                     <p class="lineaF"></p>
                     <input type="text" name="rfc" id="rfc" class="inputs">
+                </div>
+                <div class="bloque">
+                    <label for="genero" class="labels">GENERO</label>
+                    <select id="scategory" class="custom-select">
+                        <?php 
+                        foreach ($generos as $gen) {
+                            ?>
+                            <option value="<?php echo $gen->getId() ?>"><?php echo $gen->getNombre() ?></option>
+                            <?php
+                            }
+                            ?>
+                    </select>
                 </div>
                 <div class="bloque">
                     <input type="submit" value="Dar de Alta" class="contenedor-btn-file">
