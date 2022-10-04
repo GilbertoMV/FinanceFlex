@@ -1,102 +1,172 @@
-[03-Oct-2022 23:50:11 Europe/Berlin] inicio de aplicacion web
-[03-Oct-2022 23:50:15 Europe/Berlin] inicio de aplicacion web
-[03-Oct-2022 23:50:15 Europe/Berlin] LOGIN
-[03-Oct-2022 23:50:15 Europe/Berlin] Connected successfully
-[03-Oct-2022 23:50:22 Europe/Berlin] inicio de aplicacion web
-[03-Oct-2022 23:50:22 Europe/Berlin] LOGIN
-[03-Oct-2022 23:50:22 Europe/Berlin] Connected successfully
-[03-Oct-2022 23:50:22 Europe/Berlin] PHP Notice:  Undefined index: clave_ejecutivo in C:\xamppp\htdocs\php-financeflex\FinanceFlex\controllers\loginadmin.php on line 14
-[03-Oct-2022 23:50:22 Europe/Berlin] 
-[03-Oct-2022 23:50:22 Europe/Berlin] inicio de aplicacion web
-[03-Oct-2022 23:50:22 Europe/Berlin] 2018963
-[03-Oct-2022 23:50:22 Europe/Berlin] Connected successfully
-[03-Oct-2022 23:50:22 Europe/Berlin] Connected successfully
-[03-Oct-2022 23:50:22 Europe/Berlin] Connected successfully
-[03-Oct-2022 23:50:22 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 109
-[04-Oct-2022 01:36:09 Europe/Berlin] inicio de aplicacion web
-[04-Oct-2022 01:36:09 Europe/Berlin] 2018963
-[04-Oct-2022 01:36:09 Europe/Berlin] Connection failed: PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in C:\xamppp\htdocs\php-financeflex\FinanceFlex\includes\db.php:9
-Stack trace:
-#0 C:\xamppp\htdocs\php-financeflex\FinanceFlex\includes\db.php(9): PDO->__construct('mysql:host=loca...', 'root', '')
-#1 C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php(7): require_once('C:\\xamppp\\htdoc...')
-#2 {main}
-[04-Oct-2022 01:36:09 Europe/Berlin] PHP Notice:  Undefined variable: conn in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 8
-[04-Oct-2022 01:36:09 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php:8
-Stack trace:
-#0 {main}
-  thrown in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 8
-[04-Oct-2022 01:36:10 Europe/Berlin] inicio de aplicacion web
-[04-Oct-2022 01:36:10 Europe/Berlin] 2018963
-[04-Oct-2022 01:36:10 Europe/Berlin] Connection failed: PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in C:\xamppp\htdocs\php-financeflex\FinanceFlex\includes\db.php:9
-Stack trace:
-#0 C:\xamppp\htdocs\php-financeflex\FinanceFlex\includes\db.php(9): PDO->__construct('mysql:host=loca...', 'root', '')
-#1 C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php(7): require_once('C:\\xamppp\\htdoc...')
-#2 {main}
-[04-Oct-2022 01:36:10 Europe/Berlin] PHP Notice:  Undefined variable: conn in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 8
-[04-Oct-2022 01:36:10 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php:8
-Stack trace:
-#0 {main}
-  thrown in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 8
-[04-Oct-2022 01:36:11 Europe/Berlin] inicio de aplicacion web
-[04-Oct-2022 01:36:11 Europe/Berlin] 2018963
-[04-Oct-2022 01:36:11 Europe/Berlin] Connection failed: PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in C:\xamppp\htdocs\php-financeflex\FinanceFlex\includes\db.php:9
-Stack trace:
-#0 C:\xamppp\htdocs\php-financeflex\FinanceFlex\includes\db.php(9): PDO->__construct('mysql:host=loca...', 'root', '')
-#1 C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php(7): require_once('C:\\xamppp\\htdoc...')
-#2 {main}
-[04-Oct-2022 01:36:11 Europe/Berlin] PHP Notice:  Undefined variable: conn in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 8
-[04-Oct-2022 01:36:11 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php:8
-Stack trace:
-#0 {main}
-  thrown in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 8
-[04-Oct-2022 01:36:12 Europe/Berlin] inicio de aplicacion web
-[04-Oct-2022 01:36:12 Europe/Berlin] 2018963
-[04-Oct-2022 01:36:12 Europe/Berlin] Connection failed: PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in C:\xamppp\htdocs\php-financeflex\FinanceFlex\includes\db.php:9
-Stack trace:
-#0 C:\xamppp\htdocs\php-financeflex\FinanceFlex\includes\db.php(9): PDO->__construct('mysql:host=loca...', 'root', '')
-#1 C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php(7): require_once('C:\\xamppp\\htdoc...')
-#2 {main}
-[04-Oct-2022 01:36:12 Europe/Berlin] PHP Notice:  Undefined variable: conn in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 8
-[04-Oct-2022 01:36:12 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php:8
-Stack trace:
-#0 {main}
-  thrown in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 8
-[04-Oct-2022 01:36:13 Europe/Berlin] inicio de aplicacion web
-[04-Oct-2022 01:36:13 Europe/Berlin] 2018963
-[04-Oct-2022 01:36:13 Europe/Berlin] Connection failed: PDOException: SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO) in C:\xamppp\htdocs\php-financeflex\FinanceFlex\includes\db.php:9
-Stack trace:
-#0 C:\xamppp\htdocs\php-financeflex\FinanceFlex\includes\db.php(9): PDO->__construct('mysql:host=loca...', 'root', '')
-#1 C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php(7): require_once('C:\\xamppp\\htdoc...')
-#2 {main}
-[04-Oct-2022 01:36:13 Europe/Berlin] PHP Notice:  Undefined variable: conn in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 8
-[04-Oct-2022 01:36:13 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function query() on null in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php:8
-Stack trace:
-#0 {main}
-  thrown in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 8
-[04-Oct-2022 01:39:00 Europe/Berlin] inicio de aplicacion web
-[04-Oct-2022 01:39:00 Europe/Berlin] 2018963
-[04-Oct-2022 01:39:00 Europe/Berlin] Connected successfully
-[04-Oct-2022 01:39:00 Europe/Berlin] Connected successfully
-[04-Oct-2022 01:39:00 Europe/Berlin] Connected successfully
-[04-Oct-2022 01:39:00 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 109
-[04-Oct-2022 15:48:02 Europe/Berlin] inicio de aplicacion web
-[04-Oct-2022 15:48:04 Europe/Berlin] inicio de aplicacion web
-[04-Oct-2022 15:48:04 Europe/Berlin] LOGIN
-[04-Oct-2022 15:48:04 Europe/Berlin] Connected successfully
-[04-Oct-2022 15:48:24 Europe/Berlin] inicio de aplicacion web
-[04-Oct-2022 15:48:24 Europe/Berlin] LOGIN
-[04-Oct-2022 15:48:24 Europe/Berlin] Connected successfully
-[04-Oct-2022 15:48:24 Europe/Berlin] PHP Notice:  Undefined index: clave_ejecutivo in C:\xamppp\htdocs\php-financeflex\FinanceFlex\controllers\loginadmin.php on line 14
-[04-Oct-2022 15:48:24 Europe/Berlin] 
-[04-Oct-2022 15:48:24 Europe/Berlin] inicio de aplicacion web
-[04-Oct-2022 15:48:24 Europe/Berlin] 2018963
-[04-Oct-2022 15:48:24 Europe/Berlin] Connected successfully
-[04-Oct-2022 15:48:24 Europe/Berlin] Connected successfully
-[04-Oct-2022 15:48:24 Europe/Berlin] Connected successfully
-[04-Oct-2022 15:48:24 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 109
-[04-Oct-2022 15:48:48 Europe/Berlin] inicio de aplicacion web
-[04-Oct-2022 15:48:48 Europe/Berlin] 2018963
-[04-Oct-2022 15:48:48 Europe/Berlin] Connected successfully
-[04-Oct-2022 15:48:48 Europe/Berlin] Connected successfully
-[04-Oct-2022 15:48:48 Europe/Berlin] Connected successfully
-[04-Oct-2022 15:48:48 Europe/Berlin] PHP Notice:  Undefined index: id in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 109
+[04-Oct-2022 23:37:11 Europe/Berlin] inicio de aplicacion web
+[04-Oct-2022 23:37:11 Europe/Berlin] 2018963
+[04-Oct-2022 23:37:11 Europe/Berlin] Connected successfully
+[04-Oct-2022 23:40:07 Europe/Berlin] inicio de aplicacion web
+[04-Oct-2022 23:40:07 Europe/Berlin] 2018963
+[04-Oct-2022 23:40:07 Europe/Berlin] Connected successfully
+[04-Oct-2022 23:40:08 Europe/Berlin] inicio de aplicacion web
+[04-Oct-2022 23:40:08 Europe/Berlin] 2018963
+[04-Oct-2022 23:40:08 Europe/Berlin] Connected successfully
+[04-Oct-2022 23:52:57 Europe/Berlin] inicio de aplicacion web
+[04-Oct-2022 23:52:57 Europe/Berlin] 2018963
+[04-Oct-2022 23:52:57 Europe/Berlin] Connected successfully
+[04-Oct-2022 23:52:59 Europe/Berlin] inicio de aplicacion web
+[04-Oct-2022 23:52:59 Europe/Berlin] 2018963
+[04-Oct-2022 23:52:59 Europe/Berlin] Connected successfully
+[05-Oct-2022 00:09:22 Europe/Berlin] inicio de aplicacion web
+[05-Oct-2022 00:09:22 Europe/Berlin] 2018963
+[05-Oct-2022 00:09:22 Europe/Berlin] Connected successfully
+[05-Oct-2022 00:09:23 Europe/Berlin] inicio de aplicacion web
+[05-Oct-2022 00:09:23 Europe/Berlin] 2018963
+[05-Oct-2022 00:09:23 Europe/Berlin] Connected successfully
+[05-Oct-2022 00:10:15 Europe/Berlin] inicio de aplicacion web
+[05-Oct-2022 00:10:15 Europe/Berlin] 2018963
+[05-Oct-2022 00:10:15 Europe/Berlin] Connected successfully
+[05-Oct-2022 00:13:59 Europe/Berlin] inicio de aplicacion web
+[05-Oct-2022 00:13:59 Europe/Berlin] 2018963
+[05-Oct-2022 00:13:59 Europe/Berlin] Connected successfully
+[05-Oct-2022 00:16:51 Europe/Berlin] inicio de aplicacion web
+[05-Oct-2022 00:16:51 Europe/Berlin] 2018963
+[05-Oct-2022 00:16:51 Europe/Berlin] Connected successfully
+[05-Oct-2022 00:16:52 Europe/Berlin] inicio de aplicacion web
+[05-Oct-2022 00:16:52 Europe/Berlin] 2018963
+[05-Oct-2022 00:16:52 Europe/Berlin] Connected successfully
+[05-Oct-2022 00:22:15 Europe/Berlin] inicio de aplicacion web
+[05-Oct-2022 00:22:15 Europe/Berlin] 2018963
+[05-Oct-2022 00:22:15 Europe/Berlin] Connected successfully
+[05-Oct-2022 00:25:29 Europe/Berlin] inicio de aplicacion web
+[05-Oct-2022 00:25:29 Europe/Berlin] 
+[05-Oct-2022 00:25:29 Europe/Berlin] inicio de aplicacion web
+[05-Oct-2022 00:25:29 Europe/Berlin] LOGIN
+[05-Oct-2022 00:25:29 Europe/Berlin] Connected successfully
+[05-Oct-2022 00:25:31 Europe/Berlin] inicio de aplicacion web
+[05-Oct-2022 00:25:31 Europe/Berlin] LOGIN
+[05-Oct-2022 00:25:31 Europe/Berlin] Connected successfully
+[05-Oct-2022 00:25:43 Europe/Berlin] inicio de aplicacion web
+[05-Oct-2022 00:25:43 Europe/Berlin] LOGIN
+[05-Oct-2022 00:25:43 Europe/Berlin] Connected successfully
+[05-Oct-2022 00:25:44 Europe/Berlin] PHP Notice:  Undefined index: clave_ejecutivo in C:\xamppp\htdocs\php-financeflex\FinanceFlex\controllers\loginadmin.php on line 14
+[05-Oct-2022 00:25:44 Europe/Berlin] 
+[05-Oct-2022 00:25:44 Europe/Berlin] inicio de aplicacion web
+[05-Oct-2022 00:25:44 Europe/Berlin] 2018963
+[05-Oct-2022 00:25:44 Europe/Berlin] Connected successfully
+[05-Oct-2022 00:25:44 Europe/Berlin] PHP Warning:  include(C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\..\controllersegistrocontroller.php): failed to open stream: No such file or directory in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 56
+[05-Oct-2022 00:25:44 Europe/Berlin] PHP Warning:  include(): Failed opening 'C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\..\controllersegistrocontroller.php' for inclusion (include_path='C:\xamppp\php\PEAR') in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 56
+[05-Oct-2022 00:34:58 Europe/Berlin] inicio de aplicacion web
+[05-Oct-2022 00:34:58 Europe/Berlin] 
+[05-Oct-2022 00:34:58 Europe/Berlin] inicio de aplicacion web
+[05-Oct-2022 00:34:58 Europe/Berlin] LOGIN
+[05-Oct-2022 00:34:58 Europe/Berlin] Connected successfully
+[05-Oct-2022 00:35:05 Europe/Berlin] inicio de aplicacion web
+[05-Oct-2022 00:35:05 Europe/Berlin] LOGIN
+[05-Oct-2022 00:35:05 Europe/Berlin] Connected successfully
+[05-Oct-2022 00:35:05 Europe/Berlin] PHP Notice:  Undefined index: clave_ejecutivo in C:\xamppp\htdocs\php-financeflex\FinanceFlex\controllers\loginadmin.php on line 14
+[05-Oct-2022 00:35:05 Europe/Berlin] 
+[05-Oct-2022 00:35:05 Europe/Berlin] inicio de aplicacion web
+[05-Oct-2022 00:35:05 Europe/Berlin] 2018963
+[05-Oct-2022 00:35:05 Europe/Berlin] Connected successfully
+[05-Oct-2022 00:35:05 Europe/Berlin] PHP Warning:  include(C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\..\controllersegistrocontroller.php): failed to open stream: No such file or directory in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 56
+[05-Oct-2022 00:35:05 Europe/Berlin] PHP Warning:  include(): Failed opening 'C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\..\controllersegistrocontroller.php' for inclusion (include_path='C:\xamppp\php\PEAR') in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 56
+[05-Oct-2022 00:37:58 Europe/Berlin] inicio de aplicacion web
+[05-Oct-2022 00:37:58 Europe/Berlin] LOGIN
+[05-Oct-2022 00:37:58 Europe/Berlin] Connected successfully
+[05-Oct-2022 00:38:13 Europe/Berlin] inicio de aplicacion web
+[05-Oct-2022 00:38:13 Europe/Berlin] LOGIN
+[05-Oct-2022 00:38:13 Europe/Berlin] Connected successfully
+[05-Oct-2022 00:38:13 Europe/Berlin] PHP Notice:  Undefined index: clave_ejecutivo in C:\xamppp\htdocs\php-financeflex\FinanceFlex\controllers\loginadmin.php on line 14
+[05-Oct-2022 00:38:13 Europe/Berlin] 
+[05-Oct-2022 00:38:13 Europe/Berlin] inicio de aplicacion web
+[05-Oct-2022 00:38:13 Europe/Berlin] 2018963
+[05-Oct-2022 00:38:13 Europe/Berlin] Connected successfully
+[05-Oct-2022 00:38:13 Europe/Berlin] PHP Warning:  include(C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\..\controllersegistrocontroller.php): failed to open stream: No such file or directory in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 56
+[05-Oct-2022 00:38:13 Europe/Berlin] PHP Warning:  include(): Failed opening 'C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\..\controllersegistrocontroller.php' for inclusion (include_path='C:\xamppp\php\PEAR') in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 56
+[05-Oct-2022 00:39:27 Europe/Berlin] inicio de aplicacion web
+[05-Oct-2022 00:39:27 Europe/Berlin] 2018963
+[05-Oct-2022 00:39:27 Europe/Berlin] Connected successfully
+[05-Oct-2022 00:39:27 Europe/Berlin] PHP Warning:  include(C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\..\controllersegistrocontroller.php): failed to open stream: No such file or directory in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 56
+[05-Oct-2022 00:39:27 Europe/Berlin] PHP Warning:  include(): Failed opening 'C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\..\controllersegistrocontroller.php' for inclusion (include_path='C:\xamppp\php\PEAR') in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 56
+[05-Oct-2022 00:39:28 Europe/Berlin] inicio de aplicacion web
+[05-Oct-2022 00:39:28 Europe/Berlin] 2018963
+[05-Oct-2022 00:39:28 Europe/Berlin] Connected successfully
+[05-Oct-2022 00:39:28 Europe/Berlin] PHP Warning:  include(C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\..\controllersegistrocontroller.php): failed to open stream: No such file or directory in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 56
+[05-Oct-2022 00:39:28 Europe/Berlin] PHP Warning:  include(): Failed opening 'C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\..\controllersegistrocontroller.php' for inclusion (include_path='C:\xamppp\php\PEAR') in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 56
+[05-Oct-2022 00:43:08 Europe/Berlin] inicio de aplicacion web
+[05-Oct-2022 00:43:08 Europe/Berlin] 2018963
+[05-Oct-2022 00:43:08 Europe/Berlin] Connected successfully
+[05-Oct-2022 00:43:08 Europe/Berlin] PHP Warning:  include(C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\..\controllersegistrocontroller.php): failed to open stream: No such file or directory in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 56
+[05-Oct-2022 00:43:08 Europe/Berlin] PHP Warning:  include(): Failed opening 'C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\..\controllersegistrocontroller.php' for inclusion (include_path='C:\xamppp\php\PEAR') in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 56
+[05-Oct-2022 00:45:04 Europe/Berlin] inicio de aplicacion web
+[05-Oct-2022 00:45:04 Europe/Berlin] 2018963
+[05-Oct-2022 00:45:04 Europe/Berlin] Connected successfully
+[05-Oct-2022 00:45:04 Europe/Berlin] PHP Warning:  include(C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\..\controllersegistrocontroller.php): failed to open stream: No such file or directory in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 56
+[05-Oct-2022 00:45:04 Europe/Berlin] PHP Warning:  include(): Failed opening 'C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\..\controllersegistrocontroller.php' for inclusion (include_path='C:\xamppp\php\PEAR') in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 56
+[05-Oct-2022 00:45:51 Europe/Berlin] inicio de aplicacion web
+[05-Oct-2022 00:45:51 Europe/Berlin] 2018963
+[05-Oct-2022 00:45:51 Europe/Berlin] Connected successfully
+[05-Oct-2022 00:45:51 Europe/Berlin] PHP Warning:  include(C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\..\controllersegistrocontroller.php): failed to open stream: No such file or directory in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 56
+[05-Oct-2022 00:45:51 Europe/Berlin] PHP Warning:  include(): Failed opening 'C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\..\controllersegistrocontroller.php' for inclusion (include_path='C:\xamppp\php\PEAR') in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 56
+[05-Oct-2022 00:45:52 Europe/Berlin] inicio de aplicacion web
+[05-Oct-2022 00:45:52 Europe/Berlin] 2018963
+[05-Oct-2022 00:45:52 Europe/Berlin] Connected successfully
+[05-Oct-2022 00:45:52 Europe/Berlin] PHP Warning:  include(C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\..\controllersegistrocontroller.php): failed to open stream: No such file or directory in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 56
+[05-Oct-2022 00:45:52 Europe/Berlin] PHP Warning:  include(): Failed opening 'C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\..\controllersegistrocontroller.php' for inclusion (include_path='C:\xamppp\php\PEAR') in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 56
+[05-Oct-2022 00:49:22 Europe/Berlin] inicio de aplicacion web
+[05-Oct-2022 00:49:22 Europe/Berlin] 2018963
+[05-Oct-2022 00:49:22 Europe/Berlin] Connected successfully
+[05-Oct-2022 00:49:22 Europe/Berlin] PHP Warning:  include(C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\..\controllersegistrocontroller.php): failed to open stream: No such file or directory in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 56
+[05-Oct-2022 00:49:22 Europe/Berlin] PHP Warning:  include(): Failed opening 'C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\..\controllersegistrocontroller.php' for inclusion (include_path='C:\xamppp\php\PEAR') in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 56
+[05-Oct-2022 00:49:24 Europe/Berlin] inicio de aplicacion web
+[05-Oct-2022 00:49:24 Europe/Berlin] 2018963
+[05-Oct-2022 00:49:24 Europe/Berlin] Connected successfully
+[05-Oct-2022 00:49:24 Europe/Berlin] PHP Warning:  include(C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\..\controllersegistrocontroller.php): failed to open stream: No such file or directory in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 56
+[05-Oct-2022 00:49:24 Europe/Berlin] PHP Warning:  include(): Failed opening 'C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\..\controllersegistrocontroller.php' for inclusion (include_path='C:\xamppp\php\PEAR') in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 56
+[05-Oct-2022 00:49:49 Europe/Berlin] inicio de aplicacion web
+[05-Oct-2022 00:49:49 Europe/Berlin] 2018963
+[05-Oct-2022 00:49:49 Europe/Berlin] Connected successfully
+[05-Oct-2022 00:49:49 Europe/Berlin] PHP Warning:  include(C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\..\controllersegistrocontroller.php): failed to open stream: No such file or directory in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 56
+[05-Oct-2022 00:49:49 Europe/Berlin] PHP Warning:  include(): Failed opening 'C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\..\controllersegistrocontroller.php' for inclusion (include_path='C:\xamppp\php\PEAR') in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 56
+[05-Oct-2022 00:50:03 Europe/Berlin] inicio de aplicacion web
+[05-Oct-2022 00:50:03 Europe/Berlin] 2018963
+[05-Oct-2022 00:50:03 Europe/Berlin] Connected successfully
+[05-Oct-2022 00:50:03 Europe/Berlin] PHP Warning:  include(C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\..\controllersegistrocontroller.php): failed to open stream: No such file or directory in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 56
+[05-Oct-2022 00:50:03 Europe/Berlin] PHP Warning:  include(): Failed opening 'C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\..\controllersegistrocontroller.php' for inclusion (include_path='C:\xamppp\php\PEAR') in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 56
+[05-Oct-2022 00:50:04 Europe/Berlin] inicio de aplicacion web
+[05-Oct-2022 00:50:04 Europe/Berlin] 2018963
+[05-Oct-2022 00:50:04 Europe/Berlin] Connected successfully
+[05-Oct-2022 00:50:04 Europe/Berlin] PHP Warning:  include(C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\..\controllersegistrocontroller.php): failed to open stream: No such file or directory in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 56
+[05-Oct-2022 00:50:04 Europe/Berlin] PHP Warning:  include(): Failed opening 'C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\..\controllersegistrocontroller.php' for inclusion (include_path='C:\xamppp\php\PEAR') in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 56
+[05-Oct-2022 00:50:48 Europe/Berlin] inicio de aplicacion web
+[05-Oct-2022 00:50:48 Europe/Berlin] 2018963
+[05-Oct-2022 00:50:48 Europe/Berlin] Connected successfully
+[05-Oct-2022 00:50:48 Europe/Berlin] PHP Warning:  include(C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\..\controllersegistrocontroller.php): failed to open stream: No such file or directory in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 56
+[05-Oct-2022 00:50:48 Europe/Berlin] PHP Warning:  include(): Failed opening 'C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\..\controllersegistrocontroller.php' for inclusion (include_path='C:\xamppp\php\PEAR') in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 56
+[05-Oct-2022 00:51:33 Europe/Berlin] inicio de aplicacion web
+[05-Oct-2022 00:51:33 Europe/Berlin] 2018963
+[05-Oct-2022 00:51:33 Europe/Berlin] Connected successfully
+[05-Oct-2022 00:51:33 Europe/Berlin] PHP Warning:  include(C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\..\controllersegistrocontroller.php): failed to open stream: No such file or directory in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 56
+[05-Oct-2022 00:51:33 Europe/Berlin] PHP Warning:  include(): Failed opening 'C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\..\controllersegistrocontroller.php' for inclusion (include_path='C:\xamppp\php\PEAR') in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 56
+[05-Oct-2022 00:51:49 Europe/Berlin] inicio de aplicacion web
+[05-Oct-2022 00:51:49 Europe/Berlin] 2018963
+[05-Oct-2022 00:51:49 Europe/Berlin] Connected successfully
+[05-Oct-2022 00:51:49 Europe/Berlin] PHP Warning:  include(C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\..\controllersegistrocontroller.php): failed to open stream: No such file or directory in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 56
+[05-Oct-2022 00:51:49 Europe/Berlin] PHP Warning:  include(): Failed opening 'C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\..\controllersegistrocontroller.php' for inclusion (include_path='C:\xamppp\php\PEAR') in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 56
+[05-Oct-2022 00:51:57 Europe/Berlin] inicio de aplicacion web
+[05-Oct-2022 00:51:57 Europe/Berlin] 2018963
+[05-Oct-2022 00:51:57 Europe/Berlin] Connected successfully
+[05-Oct-2022 00:51:57 Europe/Berlin] PHP Warning:  include(C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\..\controllersegistrocontroller.php): failed to open stream: No such file or directory in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 56
+[05-Oct-2022 00:51:57 Europe/Berlin] PHP Warning:  include(): Failed opening 'C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\..\controllersegistrocontroller.php' for inclusion (include_path='C:\xamppp\php\PEAR') in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 56
+[05-Oct-2022 00:52:45 Europe/Berlin] inicio de aplicacion web
+[05-Oct-2022 00:52:45 Europe/Berlin] 2018963
+[05-Oct-2022 00:52:45 Europe/Berlin] Connected successfully
+[05-Oct-2022 00:52:45 Europe/Berlin] PHP Warning:  include(C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\..\controllersegistrocontroller.php): failed to open stream: No such file or directory in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 56
+[05-Oct-2022 00:52:45 Europe/Berlin] PHP Warning:  include(): Failed opening 'C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\..\controllersegistrocontroller.php' for inclusion (include_path='C:\xamppp\php\PEAR') in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 56
+[05-Oct-2022 00:53:06 Europe/Berlin] inicio de aplicacion web
+[05-Oct-2022 00:53:06 Europe/Berlin] 2018963
+[05-Oct-2022 00:53:06 Europe/Berlin] Connected successfully
+[05-Oct-2022 00:53:06 Europe/Berlin] PHP Warning:  include(C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\..\controllersegistrocontroller.php): failed to open stream: No such file or directory in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 56
+[05-Oct-2022 00:53:06 Europe/Berlin] PHP Warning:  include(): Failed opening 'C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\..\controllersegistrocontroller.php' for inclusion (include_path='C:\xamppp\php\PEAR') in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 56
+[05-Oct-2022 00:56:58 Europe/Berlin] inicio de aplicacion web
+[05-Oct-2022 00:56:58 Europe/Berlin] 2018963
+[05-Oct-2022 00:56:58 Europe/Berlin] Connected successfully
+[05-Oct-2022 00:56:58 Europe/Berlin] PHP Warning:  include(C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\..\controllersegistrocontroller.php): failed to open stream: No such file or directory in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 56
+[05-Oct-2022 00:56:58 Europe/Berlin] PHP Warning:  include(): Failed opening 'C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\..\controllersegistrocontroller.php' for inclusion (include_path='C:\xamppp\php\PEAR') in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 56
