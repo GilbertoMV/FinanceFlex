@@ -9,7 +9,6 @@
   --negro: #393939;
   --tipo-principal: 'M PLUS 1 Code', Arial, sans-serif;
   --tipo-secundaria: Verdana;
-  
 }
 
 @media (prefers-color-scheme: dark) {
@@ -97,7 +96,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 
 .logo{
     height: 50px;
@@ -197,8 +195,7 @@ nav a:hover{
     letter-spacing: 0.03em;
     color: #4D4B4B;
 }
-
-/* MAIN*/ 
+/* Diesño MAIN*/ 
 main {
   margin-top: 1rem;
   grid-template-columns: repeat(2,1fr);
@@ -308,7 +305,6 @@ main .transacciones h2{
   margin-bottom: 50px;
 }
 .transacciones table{
-  background: #f2f0f0;
   width: 1200px;
   border-radius: 2rem;
   padding: 10rem;
@@ -316,6 +312,7 @@ main .transacciones h2{
 }
 .transacciones td{
   height: 2rem;
+  margin-bottom: 15px;
 }
 .transacciones a{
   text-align: center;
@@ -326,20 +323,23 @@ main .transacciones h2{
 .transacciones .warning{
   color:#FC003C;
 }
-.rec a{
-  text-decoration: none;
-  color: #20236D;
+.transacciones .safe{
+  color:green;
 }
-
-.prest-rec{
-  position:absolute;
-  width: 1159px;
-  height: 253px;
-  top: 150px;
-  left: 126px;
-
-  background: linear-gradient(270deg, rgba(252, 0, 60, 0.42)-12.08%, rgba(5, 0, 252, 0.62) 24.26%, #FFB8B8 108.23%);
-  border-radius: 24px;
+.btn-tabla{
+  padding: 5px 10px;
+  border: 1px solid;
+  border-radius: 30px;
+  color: #000;
+  width: 90px;
+  height: auto;
+  cursor: pointer;
+  margin: auto;
+  margin-bottom: 8px;
+}
+.vectores img{
+  position: absolute;
+  margin-top: -10px;
 }
 .elipse{
   position: absolute;
@@ -348,9 +348,7 @@ main .transacciones h2{
   left: 67px;
   top: 55px;
   border-radius: 100px;
-  text-align: center;
-
-  background: linear-gradient(165.12deg, rgba(123, 123, 123, 0.21) 10.5%, rgba(123, 123, 123, 0.49) 85.67%);
+  text-align: center; 
 }
 .txt{
   display: flex;
@@ -363,7 +361,7 @@ main .transacciones h2{
   width: 68.94px;
   height: 31.05px;
   left: 10px;
-  top: 20px;
+  top: 15px;
 }
 .txt h6{
   color: #fff;;
@@ -372,11 +370,6 @@ main .transacciones h2{
   font-size: 11px;
   color: #e7e7e7;
 }
-/*.elipse p{
-  font-size: 11px;
-  margin-top: 55px;
-  color: #E7E7E7;
-}*/
 .ingreso{
   position: absolute;
   width: 112px;
@@ -405,7 +398,157 @@ main .transacciones h2{
   font-size: 12px;
   margin-left: 10px;
 }
+/* Diseño Prestamos*/
+.prest h2{
+  font-family: var(--tipo-principal);
+  position: absolute;
+  margin-left: 140px;
+  font-size: 20px;
+}
+.prest .line{
+  margin-top: 97px;
+  margin-left: 100px;
+  width: 90px;
+}
+.prest-rec{
+  position:absolute;
+  width: 1159px;
+  height: 253px;
+  top: 150px;
+  left: 126px;
 
+  background: linear-gradient(270deg, rgba(252, 0, 60, 0.42)-12.08%, rgba(5, 0, 252, 0.62) 24.26%, #FFB8B8 108.23%);
+  border-radius: 24px;
+}
+.tuprest img{
+  position: absolute;
+  margin-top: -30px;
+}
+.abono img{
+  position:absolute;
+  margin-top: -30px;
+  margin-left: 320px;
+}
+.solicitar{
+  position: absolute;
+  width: 257px;
+  height: 85px;
+  left: 800px;
+  top: 20px;
+  color: #FFFFFF;
+  border: 1px solid #fff;
+  border-radius: 33px;
+}
+.solicitar h2{
+  position: absolute;
+  left: -94px;
+  top: 27.9px;
+  color: #fff;
+}
+.abo{
+  position: absolute;
+  width: 257px;
+  height: 85px;
+  left: 800px;
+  top: 140px;
+  color: #FFFFFF;
+  border: 1px solid #fff;
+  border-radius: 33px;
+}
+.abo h2{
+  position: absolute;
+  left: -45px;
+  color: #FFFFFF;
+  top: 27.9px;
+}
+.prestamo{
+  font-family: var(--tipo-principal);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 7.13px;
+
+  position: absolute;
+  width: 114px;
+  height: 47px;
+  left: 140px;
+  top: 100px;
+}
+.adeudo{
+  font-family: var(--tipo-principal);
+  color:#fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 7.13px;
+
+  position: absolute;
+  width: 114px;
+  height: 47px;
+  left: 455px;
+  top: 100px;
+}
+.detalles{
+  position: absolute;
+  width:1108px;
+  height: 310px;
+  left: 114px;
+  top: 430px;
+}
+.detalles h2{
+  font-family: var(--tipo-principal);
+  position: absolute;
+  margin-left: 14px;
+  font-size: 20px;
+}
+.detalles .line{
+  left: 13px;
+  top: 24px;
+  width: 85px;
+}
+.pago{
+  position:absolute;
+  width: 200px;
+  height: 32px;
+  left: 1009px;
+  top: 4px;
+}
+.pago h4{
+  font-family: var(--tipo-secundaria);
+  font-size:medium;
+  font-weight:bold;
+}
+.pago .line{
+  width: 90px;
+  border: 1px solid rgba(252, 0, 60, 0.42);
+}
+.detalles table{
+  width: 1010px;
+  text-align: center;
+  margin-top: 70px;
+  margin-left: 70px;
+  overflow:hidden;
+  margin-bottom: 0px;
+}
+.detalles tr{
+  height: 3rem;
+  padding: 10px;
+  margin-left: 10px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.chi{
+  font-family: var(--tipo-principal);
+  font-weight:400;
+}
+.detalles a{
+  margin-top: 10px;
+  text-align: center;
+  color: black;
+}
 @media screen and (max-width:768px){
 
     .header .button{
