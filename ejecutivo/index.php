@@ -99,7 +99,7 @@ if(isset($_SESSION["id_ejecutivo"])){
                 <div class="bloque">
                     <label for="genero" class="labels">GENERO</label>
                     <p class="lineaF"></p>
-                    <select name="genero" id="">
+                    <select name="genero" id="" class="inputSelect">
                         <?php 
                         foreach ($results as $cat) {
                             ?>

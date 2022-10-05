@@ -189,6 +189,19 @@ ul li:hover::after{
     text-align: center;
     padding: 0 50px 0 50px;
 }
+.inputSelect {
+  width: 50%;
+  margin: auto;
+  border-radius: 10px;
+  padding: 7px 10px; 
+  border: 3px solid #B1AFAF;
+  background-color: #464646;
+  cursor: pointer;
+  font-family: 'Roboto';
+  color: #fff;
+  text-align: center;
+}
+
 
 /* DAR DE ALTA PAGINA */
 main{
@@ -248,6 +261,7 @@ main .lineaR {
     overflow: hidden;
     transition: ease-out 120ms background-color;
     margin-top: 20px;
+    cursor: pointer;
 }
 .contenedor-btn-file label {
     display: block;
@@ -286,7 +300,7 @@ form {
     padding: 7px 10px;  
     border-color: #5e3a3a;
     outline: 0 none;
-    border-radius: 30px;
+    border-radius: 10px;
     border: 3px solid #B1AFAF;
     color: #fff;
     font-family: 'Roboto';
