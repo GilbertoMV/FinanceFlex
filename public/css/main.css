@@ -549,6 +549,113 @@ main .transacciones h2{
   text-align: center;
   color: black;
 }
+.deti{
+  position: absolute;
+  width: 1160px;
+  height: 189px;
+  left: 103px;
+  top: 120px;
+
+  background: linear-gradient(90deg, rgba(32, 35, 109, 0.67) 0%, rgba(252, 0, 60, 0.67) 100%);
+  border-radius: 49px;
+}
+.det-rec h2{
+  position: absolute;
+  color: #fff;
+  left: 40px;
+  font-size:larger;
+  top: 15px;
+}
+.dline{
+  position: absolute;
+  left: 40px;
+  top: 40px;
+  width:70px;
+  
+  border: 1px solid #ffe087;
+}
+.detalles1 table{
+  width: 1010px;
+  text-align: center;
+  margin-top: 290px;
+  margin-left: 180px;
+  overflow:hidden;
+  margin-bottom: 0px;
+  border-radius: 35px;
+  background: linear-gradient(175.91deg, #FFE087 3.33%, rgba(255, 224, 135, 0.25) 115.43%);
+  border-radius: 35px;
+}
+.detalles1 thead{
+  font-weight: bold;
+  height: 25px;
+  background: linear-gradient(90.8deg, rgba(250, 72, 72, 0.37) -77.36%, #FFE087 97.02%);
+  border-radius: 10px;
+}
+.detalles1 tr{
+  height: 2rem;
+  padding: 10px;
+  margin-left: 10px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.detalles1 a{
+  margin-top: 10px;
+  text-align: center;
+  color: black;
+}
+/*AYUDA*/
+.frecuente{
+  position: absolute;
+  width: 1200px;
+  height: 75px;
+  left: 77px;
+  top: 120px;
+
+  background: linear-gradient(90.85deg, rgba(32, 35, 109, 0.63) 3.56%, rgba(252, 0, 60, 0.62) 96.97%);
+  border-radius: 35px;
+}
+.frecuente h2{
+  color: white;
+  font-family: var(--tipo-principal);
+  margin-left: 50px;
+  margin-top:15px;
+}
+.fline{
+  position: absolute;
+  width: 1100px;
+  height: 0px;
+  left: 40px;
+  top: 55px;
+
+  border: 2px solid white;
+}
+.pregunt{
+  position:static;
+  width: 1202px;
+  height: 343px;
+  margin-left: 75px;
+  margin-top: 8px;
+
+  background: linear-gradient(174deg, rgba(32, 35, 109, 0.76) -2.21%, rgba(252, 0, 60, 0.49) 113.49%);
+  border-radius: 35px;
+}
+.pregunt p{
+  position:relative;
+  color:white;
+  font-family: var(--tipo-principal);
+  font-size:x-large;
+  top:100px;
+  left:40px;
+}
+.quest{
+  position: absolute;
+  width: 564px;
+  height: 442px;
+  left: 700px;
+  top: 200px;
+
+  background-image: url("../img/question.png");
+}
 @media screen and (max-width:768px){
 
     .header .button{
