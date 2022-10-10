@@ -126,23 +126,24 @@ nav a{
 nav a:hover{
     color:#ececec;
 }
-ul li{
-    list-style-type: none;
-    display: inline-block;
-    padding: 4px 3px;
-    position: relative;
+.container ul li{
+  list-style-type: none;
+  display: inline-block;
+  left: 180px;
+  padding: 8px 12px;
+  position: relative;
 }
-.li::after{
-    content: '';
-    width: 0%;
-    height: 2px;
-    background:#FA4848;
-    display:block;
-    margin: auto;
-    transition: 0.5s;
+.container ul li::after{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background:#FA4848;
+  display:block;
+  margin: auto;
+  transition: 0.5s;
 }
-ul li:hover::after{
-    width: 30%;
+.container ul li:hover::after{
+  width: 100%;
 }
 .check {
   color: #ffff;

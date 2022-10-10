@@ -23,10 +23,8 @@ if(isset($_SESSION["id_ejecutivo"])){
     <div class="container">
         <div class="forms-container">
             <div class="singin-singup">
-                <form action="./includes/functions.php" method="POST" class="sign-in-form">
+                <form id="loginclient" class="sign-in-form">
                     <h2 class="title">Inicia Sesión</h2>
-                
-                    <?php error_log("LOGIN") ?>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
                         <input type="text" name="email" id="email" placeholder="Usuario" autocomplete="off">

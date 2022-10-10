@@ -1,11 +1,12 @@
 /* Cuando hago CLICK .button, .nav TOGGLE 'activo' */
 const button = document.querySelector('.button')
 const nav    = document.querySelector('.nav')
-
+if(button){
 button.addEventListener('click',()=>{
     nav.classList.toggle('activo')
 })
 
+}
 
 /* jQuery : Enlazar jQuery*/
 /* $('.button').on('click',()=>{
