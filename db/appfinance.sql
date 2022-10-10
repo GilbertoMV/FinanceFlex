@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-10-2022 a las 01:01:18
+-- Tiempo de generación: 10-10-2022 a las 22:31:17
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -24,16 +24,53 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `clientes`
+--
+
+CREATE TABLE `clientes` (
+  `id_cliente` int(11) NOT NULL,
+  `rfc` varchar(14) COLLATE utf8_spanish_ci NOT NULL,
+  `nom` varchar(128) COLLATE utf8_spanish_ci NOT NULL,
+  `apellidoP` varchar(64) COLLATE utf8_spanish_ci NOT NULL,
+  `apellidoM` varchar(64) COLLATE utf8_spanish_ci NOT NULL,
+  `curp` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
+  `telefono` varchar(10) COLLATE utf8_spanish_ci NOT NULL,
+  `email` varchar(64) COLLATE utf8_spanish_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `fechaNac` date NOT NULL,
+  `foto` varchar(300) COLLATE utf8_spanish_ci DEFAULT NULL,
+  `id_genero` tinyint(3) NOT NULL,
+  `id_ejecutivo` int(8) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `clientes`
+--
+
+INSERT INTO `clientes` (`id_cliente`, `rfc`, `nom`, `apellidoP`, `apellidoM`, `curp`, `telefono`, `email`, `password`, `fechaNac`, `foto`, `id_genero`, `id_ejecutivo`) VALUES
+(28, 'HAYDNRUTI3728', 'juan', 'pablo', 'chipres', 'CIAJ020917HCMHRNA7', '3143524724', 'juanpablochipresarteaga@gmail.com', '$2y$10$LRsiwTJL5Mz5EFWQ1TNI5OTwHOK70WRO31VQxvd9Dm/FuSPQ5jfKO', '2002-09-17', NULL, 1, 2018963),
+(31, 'HAYDNRUTI3720', 'juan', 'pablo', 'chipres', 'DIME030120HCMZNMA8', '3143524724', 'prueba@gmail.com', '$2y$10$eUVs7Ms11RaCd4CY8Nwxruwrp2a2L.2M4aSNDBf1htkIOT5WhtRYa', '2022-10-05', NULL, 1, 2018963);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `cuenta`
 --
 
 CREATE TABLE `cuenta` (
   `id_cuenta` int(11) NOT NULL,
-  `numCta` int(11) NOT NULL,
-  `saldo` float(10,2) NOT NULL,
-  `date` date NOT NULL,
+  `numCta` int(16) NOT NULL,
+  `saldo` float(10,2) DEFAULT NULL,
   `id_cliente` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `cuenta`
+--
+
+INSERT INTO `cuenta` (`id_cuenta`, `numCta`, `saldo`, `id_cliente`) VALUES
+(14, 2147483647, NULL, 28),
+(17, 1523144724, NULL, 31);
 
 -- --------------------------------------------------------
 
@@ -56,7 +93,7 @@ CREATE TABLE `depositos` (
 
 CREATE TABLE `ejecutivos` (
   `id_ejecutivo` int(11) NOT NULL,
-  `nombre` varchar(32) COLLATE utf8_spanish_ci NOT NULL,
+  `nom` varchar(32) COLLATE utf8_spanish_ci NOT NULL,
   `num_ejecutivo` int(8) NOT NULL,
   `email` varchar(64) COLLATE utf8_spanish_ci NOT NULL,
   `password` varchar(255) COLLATE utf8_spanish_ci NOT NULL
@@ -66,7 +103,7 @@ CREATE TABLE `ejecutivos` (
 -- Volcado de datos para la tabla `ejecutivos`
 --
 
-INSERT INTO `ejecutivos` (`id_ejecutivo`, `nombre`, `num_ejecutivo`, `email`, `password`) VALUES
+INSERT INTO `ejecutivos` (`id_ejecutivo`, `nom`, `num_ejecutivo`, `email`, `password`) VALUES
 (2018963, 'Juan Pablo Chipres', 20180961, 'jchipres@ucol.mx', '$2y$10$zCDr9y5zS9TpYKgNuVAdJ.KF4/oi7yuD9m9v7IyuytG6VO5ZXCuX2');
 
 -- --------------------------------------------------------
@@ -77,14 +114,14 @@ INSERT INTO `ejecutivos` (`id_ejecutivo`, `nombre`, `num_ejecutivo`, `email`, `p
 
 CREATE TABLE `genero` (
   `id_genero` tinyint(3) NOT NULL,
-  `nombre` varchar(16) COLLATE utf8_spanish_ci NOT NULL
+  `tipo` varchar(16) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `genero`
 --
 
-INSERT INTO `genero` (`id_genero`, `nombre`) VALUES
+INSERT INTO `genero` (`id_genero`, `tipo`) VALUES
 (1, 'masculino'),
 (2, 'femenino');
 
@@ -116,38 +153,17 @@ CREATE TABLE `retiros` (
   `fecha_hora` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `usuarios`
---
-
-CREATE TABLE `usuarios` (
-  `id_cliente` int(11) NOT NULL,
-  `rfc` varchar(14) COLLATE utf8_spanish_ci NOT NULL,
-  `nombres` varchar(128) COLLATE utf8_spanish_ci NOT NULL,
-  `apellidoP` varchar(64) COLLATE utf8_spanish_ci NOT NULL,
-  `apellidoM` varchar(64) COLLATE utf8_spanish_ci NOT NULL,
-  `curp` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
-  `telefono` varchar(10) COLLATE utf8_spanish_ci NOT NULL,
-  `email` varchar(64) COLLATE utf8_spanish_ci NOT NULL,
-  `password` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
-  `fechaNac` date NOT NULL,
-  `foto` varchar(300) COLLATE utf8_spanish_ci DEFAULT NULL,
-  `id_genero` tinyint(3) NOT NULL,
-  `id_ejecutivo` int(8) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
-
---
--- Volcado de datos para la tabla `usuarios`
---
-
-INSERT INTO `usuarios` (`id_cliente`, `rfc`, `nombres`, `apellidoP`, `apellidoM`, `curp`, `telefono`, `email`, `password`, `fechaNac`, `foto`, `id_genero`, `id_ejecutivo`) VALUES
-(5, 'HAYDNRUTI3728', 'Juan Pablo', 'Chipres', 'Arteaga', 'CIAJ020917HCMHRNA7', '3143524724', 'juanpablochipresarteaga@gmail.com', '$2y$10$duE35vRkfmkCDuMeM/hmFubYEEe0uZ0Dt5clisVNC/aGupgnRbtJC', '2002-09-17', NULL, 1, 2018963);
-
 --
 -- Índices para tablas volcadas
 --
+
+--
+-- Indices de la tabla `clientes`
+--
+ALTER TABLE `clientes`
+  ADD PRIMARY KEY (`id_cliente`),
+  ADD KEY `id_genero` (`id_genero`,`id_ejecutivo`),
+  ADD KEY `id_ejecutivo` (`id_ejecutivo`);
 
 --
 -- Indices de la tabla `cuenta`
@@ -191,22 +207,20 @@ ALTER TABLE `retiros`
   ADD KEY `id_cuenta` (`id_cuenta`);
 
 --
--- Indices de la tabla `usuarios`
---
-ALTER TABLE `usuarios`
-  ADD PRIMARY KEY (`id_cliente`),
-  ADD KEY `id_genero` (`id_genero`,`id_ejecutivo`),
-  ADD KEY `id_ejecutivo` (`id_ejecutivo`);
-
---
 -- AUTO_INCREMENT de las tablas volcadas
 --
+
+--
+-- AUTO_INCREMENT de la tabla `clientes`
+--
+ALTER TABLE `clientes`
+  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT de la tabla `cuenta`
 --
 ALTER TABLE `cuenta`
-  MODIFY `id_cuenta` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_cuenta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de la tabla `depositos`
@@ -239,20 +253,21 @@ ALTER TABLE `retiros`
   MODIFY `id_retiro` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `usuarios`
---
-ALTER TABLE `usuarios`
-  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
 -- Restricciones para tablas volcadas
 --
+
+--
+-- Filtros para la tabla `clientes`
+--
+ALTER TABLE `clientes`
+  ADD CONSTRAINT `clientes_ibfk_1` FOREIGN KEY (`id_genero`) REFERENCES `genero` (`id_genero`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `clientes_ibfk_2` FOREIGN KEY (`id_ejecutivo`) REFERENCES `ejecutivos` (`id_ejecutivo`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `cuenta`
 --
 ALTER TABLE `cuenta`
-  ADD CONSTRAINT `cuenta_ibfk_1` FOREIGN KEY (`id_cliente`) REFERENCES `usuarios` (`id_cliente`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `cuenta_ibfk_1` FOREIGN KEY (`id_cliente`) REFERENCES `clientes` (`id_cliente`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `depositos`
@@ -271,13 +286,6 @@ ALTER TABLE `prestamos`
 --
 ALTER TABLE `retiros`
   ADD CONSTRAINT `retiros_ibfk_1` FOREIGN KEY (`id_cuenta`) REFERENCES `cuenta` (`id_cuenta`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Filtros para la tabla `usuarios`
---
-ALTER TABLE `usuarios`
-  ADD CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`id_genero`) REFERENCES `genero` (`id_genero`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `usuarios_ibfk_2` FOREIGN KEY (`id_ejecutivo`) REFERENCES `ejecutivos` (`id_ejecutivo`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
