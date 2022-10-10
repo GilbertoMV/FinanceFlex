@@ -656,6 +656,30 @@ main .transacciones h2{
 
   background-image: url("../img/question.png");
 }
+.dettxt{
+  position: absolute;
+  flex-direction: row;
+  color:white;
+  font-family: var(--tipo-principal);
+  margin-left: 200px;
+  margin-top:60px;
+}
+.dettxt1{
+  position: absolute;
+  flex-direction: row;
+  color:white;
+  font-family: var(--tipo-principal);
+  margin-left: 800px;
+  margin-top:60px;
+}
+.det2{
+  font-family: var(--tipo-principal);
+  color: white;
+  position: absolute;
+  text-align: center;
+  margin-top:80px;
+  margin-left: 550px;
+}
 @media screen and (max-width:768px){
 
     .header .button{
