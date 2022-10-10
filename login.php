@@ -1,5 +1,10 @@
 <?php
 include 'error-log.php';
+session_start();
+if(isset($_SESSION["id_ejecutivo"])){
+    require_once './includes/db.php';
+    header('Location: ./ejecutivo/index.php');
+}else{
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -32,24 +37,35 @@ include 'error-log.php';
                     </div>
                     <input type="submit" value="Iniciar Sesión" class="btn solid">
                 </form>
-                <form action="" method="POST" class="sign-up-form">
+                <form id="loginadmin" class="sign-up-form">
                 <h2 class="title">ADMINISTRADOR</h2>
-                <?php 
-                        include __DIR__ . "\controllers\loginadmin.php";
-                        ?>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-                        <input type="text" name="email" id="email" placeholder="Usuario" autocomplete="off">
+                        <input type="text" name="emailAdmin" id="emailAdmin" placeholder="Usuario" autocomplete="off">
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
-                        <input type="password" name="password" id="password" placeholder="Contraseña" autocomplete="off">
+                        <input type="password" name="passwordAdmin" id="passwordAdmin" placeholder="Contraseña" autocomplete="off">
+                    </div>
+                    <div id="InfoBanner" style="">
+
                     </div>
                     <input type="submit" name="ini-admin" id="ini-admin" value="Iniciar Sesión" class="btn solid">
                 </form>
             </div>
         </div>
-
+        <div class="contenedor-loader">
+            <div class="ids-roller">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
         <div class="panels-container">
             <div class="panel left-panel">
                 <div class="content">
@@ -73,3 +89,6 @@ include 'error-log.php';
     <script src="./public/js/app.js"></script>
 </body>
 </html>
+<?php
+}
+?>

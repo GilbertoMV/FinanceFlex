@@ -1,6 +1,7 @@
 <?php
 session_start();
 include __DIR__ .'\..\error-log.php';
+
 error_log($_SESSION['id_ejecutivo']);
 
 if(isset($_SESSION["id_ejecutivo"])){
@@ -8,7 +9,6 @@ if(isset($_SESSION["id_ejecutivo"])){
     $records = $conn->query('SELECT * FROM genero');
     $records->execute();
     $results = $records->fetchAll(PDO::FETCH_ASSOC);
-
 
 ?>
 
@@ -50,51 +50,54 @@ if(isset($_SESSION["id_ejecutivo"])){
         <h1>Datos</h1>
         <div class="lineaR"></div>
         <div class="contenedor-formulario">
-            <form action="../controllers/registrocontroller.php" method="POST">
+        <div id="InfoBanner" style="">
+
+        </div>
+            <form id="registroclients">
                 <div class="bloque">
                     <label for="nombres" class="labels">Nombre(s)</label>
                     <p class="lineaF"></p>
-                    <input type="text" name="nombres" id="nombres" class="inputs center" required>
+                    <input type="text" name="nombres" id="nombres" class="inputs center" >
                 </div>
                 <div class="bloque">
                     <label for="apellidoM" class="labels">Apellido Paterno</label>
                     <p class="lineaF"></p>
-                    <input type="text" name="apellidoP" id="apeP" class="inputs center" required>
+                    <input type="text" name="apellidoP" id="apeP" class="inputs center" >
                 </div>
                 <div class="bloque">
                     <label for="apellidoP" class="labels">Apellido Materno</label>
                     <p class="lineaF"></p>
-                    <input type="text" name="apellidoM" id="apeM" class="inputs center" required>
+                    <input type="text" name="apellidoM" id="apeM" class="inputs center" >
                 </div>
                 <div class="bloque">
                     <label for="email" class="labels">Correo</label>
                     <p class="lineaF"></p>
-                    <input type="email" name="correo" id="email" class="inputs center" required>
+                    <input type="email" name="correo" id="email" class="inputs center" >
                 </div>
                 <div class="bloque">
                     <label for="telefono" class="labels">Numero de teléfono</label>
                     <p class="lineaF"></p>
-                    <input type="text" name="telefono" id="Ntelefono" class="inputs center" required>
+                    <input type="text" name="telefono" id="Ntelefono" class="inputs center" >
                 </div>
                 <div class="bloque">
                     <label for="CURP" class="labels ">CURP</label>
                     <p class="lineaF"></p>
-                    <input type="text" name="curp" id="curp" class="inputs center" required>
+                    <input type="text" name="curp" id="curp" class="inputs center" >
                 </div>
                 <div class="bloque">
                     <label for="echaN" class="labels">Fecha de Nacimiento</label>
                     <p class="lineaF"></p>
-                    <input type="date" name="fechaN" id="fechaN" class="inputs center" required>
+                    <input type="date" name="fechaN" id="fechaN" class="inputs center" >
                 </div class="bloque">
                 <div class="di bloque">
                     <label for="password" class="labels">Password</label>
                     <p class="lineaF"></p>
-                    <input type="password" name="password" id="password" class="inputs" autocomplete="off" required>
+                    <input type="password" name="password" id="password" class="inputs" autocomplete="off" >
                 </div>
                 <div class="bloque">
                     <label for="rfc" class="labels">RFC</label>
                     <p class="lineaF"></p>
-                    <input type="text" name="rfc" id="rfc" class="inputs" required>
+                    <input type="text" name="rfc" id="rfc" class="inputs" >
                 </div>
                 <div class="bloque">
                     <label for="genero" class="labels">GENERO</label>
@@ -103,7 +106,7 @@ if(isset($_SESSION["id_ejecutivo"])){
                         <?php 
                         foreach ($results as $cat) {
                             ?>
-                        <option value="<?php echo $cat['id_genero']?>"><?php echo $cat['nombre']?></option>
+                        <option value="<?php echo $cat['id_genero']?>"><?php echo $cat['tipo']?></option>
                         <?php
                         }
                         ?>
@@ -114,7 +117,21 @@ if(isset($_SESSION["id_ejecutivo"])){
                 </div>
             </form>
         </div>
+        <div class="contenedor-loader">
+            <div class="ids-roller">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
     </main>
+    
+    <script src="../public/js/app.js"></script>
 </body>
 </html>
 <?php

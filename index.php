@@ -1,5 +1,6 @@
 <?php
 include 'error-log.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="es">

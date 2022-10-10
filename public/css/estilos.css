@@ -498,6 +498,140 @@ form.sign-up-form{
     z-index: 2;
     opacity: 1;
 }
+
+@keyframes slide {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: -120px 60px;
+    }
+  }
+  
+  /*MENSAJES DE ERROR O SUCCESS*/
+  #InfoBanner{
+
+    display: grid;
+    grid-template-columns: 15% 85%;
+    padding: 0 .4rem;
+    text-align: center;
+  }
+  
+  .error {
+    display: inline-block;
+    width: 250px;
+    padding: 0.3em;
+    padding-left: 0.3em;
+    margin-left: 0.8em;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1;
+    color: #fff;
+    font-size: 15px;
+    background-color:#ef5350;
+    border-radius: 55px;
+  }
+
+
+/* LOADER*/
+.contenedor-loader.visible{
+    display: block;
+}
+.contenedor-loader{
+    display:none;
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    margin-top: -70px;
+}
+.ids-roller{
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+.ids-roller div{
+    animation: ids-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    transform-origin: 40px 40px;
+}
+.ids-roller div:after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #20236D;
+    margin: -4px 0 0 -4px;
+}
+.ids-roller div:nth-child(1){
+    animation-delay: -0.036s;
+}
+.ids-roller div:nth-child(1):after{
+    top: 63px;
+    left: 63px;
+}
+.ids-roller div:nth-child(2){
+    animation-delay: -0.072s;
+}
+.ids-roller div:nth-child(2):after{
+    top: 68px;
+    left: 56px;
+}
+.ids-roller div:nth-child(3){
+    animation-delay: -0.108s;
+}
+.ids-roller div:nth-child(3):after{
+    top: 71px;
+    left: 48px;
+}
+.ids-roller div:nth-child(4){
+    animation-delay: -0.144s;
+}
+.ids-roller div:nth-child(4):after{
+    top: 72px;
+    left: 40px;
+}
+.ids-roller div:nth-child(5){
+    animation-delay: -0.18s;
+}
+.ids-roller div:nth-child(5):after{
+    top: 71px;
+    left: 32px;
+}
+.ids-roller div:nth-child(6){
+    animation-delay: -0.216s;
+}
+.ids-roller div:nth-child(6):after{
+    top: 68px;
+    left: 24px;
+}
+.ids-roller div:nth-child(7){
+    animation-delay: -0.252s;
+}
+.ids-roller div:nth-child(7):after{
+    top: 63px;
+    left: 17px;
+}
+.ids-roller div:nth-child(8){
+    animation-delay: -0.288s;
+}
+.ids-roller div:nth-child(8):after{
+    top: 56px;
+    left: 12px;
+}
+@keyframes ids-roller {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+    
+}
+
 @media (max-width: 870px){
     .container{
         min-height: 800px;

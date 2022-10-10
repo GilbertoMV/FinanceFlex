@@ -5,7 +5,7 @@ error_log($_SESSION['id_ejecutivo']);
 
 if(isset($_SESSION["id_ejecutivo"])){
     require_once __DIR__ .'\..\includes\db.php';
-    $records = $conn->prepare('SELECT id_cliente, nombres, apellidoP, apellidoM FROM usuarios WHERE id_ejecutivo = :id_ejecutivo');
+    $records = $conn->prepare('SELECT id_cliente, nom, apellidoP, apellidoM FROM clientes WHERE id_ejecutivo = :id_ejecutivo');
     $records->bindParam(':id_ejecutivo', $_SESSION['id_ejecutivo']);
     $records->execute();    
     $results = $records->fetchAll(PDO::FETCH_ASSOC);
@@ -48,7 +48,7 @@ if(isset($_SESSION["id_ejecutivo"])){
                 <?php foreach ($results as $result){?>
                 <tr class="cuerpoTablaMod">
                     <td><?php echo $result['id_cliente'];?></td>
-                    <td><?php echo $result['nombres'];?></td>
+                    <td><?php echo $result['nom'];?></td>
                     <td><?php echo $result['apellidoP'] . ' ' . $result['apellidoM'];?></td>
                     <td><input type="button" value="Modificar" class="btn-tabla"></input></td>
                 </tr>
