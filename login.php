@@ -1,10 +1,15 @@
 <?php
 include 'error-log.php';
 session_start();
-if(isset($_SESSION["id_ejecutivo"])){
+if(isset($_SESSION['id_ejecutivo'])){
     require_once './includes/db.php';
     header('Location: ./ejecutivo/index.php');
-}else{
+}
+else if(isset($_SESSION['id_cliente'])){
+    require_once './includes/db.php';
+    header('Location: ./usuario/index.php');
+}
+else{
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -27,11 +32,14 @@ if(isset($_SESSION["id_ejecutivo"])){
                     <h2 class="title">Inicia Sesión</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-                        <input type="text" name="email" id="email" placeholder="Usuario" autocomplete="off">
+                        <input type="text" name="email" id="email" placeholder="Correo" autocomplete="off">
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
                         <input type="password" name="password" id="password" placeholder="Contraseña" autocomplete="off">
+                    </div>
+                    <div id="InfoBannerClient" style="">
+                        
                     </div>
                     <input type="submit" value="Iniciar Sesión" class="btn solid">
                 </form>
@@ -39,7 +47,7 @@ if(isset($_SESSION["id_ejecutivo"])){
                 <h2 class="title">ADMINISTRADOR</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-                        <input type="text" name="emailAdmin" id="emailAdmin" placeholder="Usuario" autocomplete="off">
+                        <input type="text" name="emailAdmin" id="emailAdmin" placeholder="Correo" autocomplete="off">
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>

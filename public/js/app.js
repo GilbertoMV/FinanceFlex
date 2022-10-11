@@ -3,6 +3,7 @@ const sign_in_btn = document.querySelector("#sign-in-btn");
 const sign_up_btn = document.querySelector("#sign-up-btn");
 const container = document.querySelector(".container");
 var respuesta = document.getElementById('InfoBanner');
+var respuesta_client = document.getElementById('InfoBannerClient');
 var __DIR__ = window.location.pathname.match('(.*\/).*')[1] + '';
 
 //REDIRECT LOGINS
@@ -21,7 +22,7 @@ if(sign_in_btn)
 
 
 
-//AUTENTICACION
+//AUTENTICACION ADMIN
 var loginadmin = document.getElementById('loginadmin');
 if(loginadmin)
 {
@@ -67,7 +68,52 @@ if(loginadmin)
         })
     })
 }
-
+//AUTENTICACION CLIENTES
+var loginclient = document.getElementById('loginclient');
+if(loginclient)
+{
+    loginclient.addEventListener('submit', function(e) {
+        e.preventDefault();
+        console.log('boton oprimido');
+    
+        var datos = new FormData(loginclient);
+        document.querySelector('.contenedor-loader').classList.add('visible');
+    
+        console.log(datos);
+        console.log(datos.get('email'));
+        console.log(datos.get('password'));
+    
+        fetch(__DIR__+'controllers/loginclient.php',{
+            method: 'POST',
+            body: datos
+        })
+        .then(res=>res.json())
+        .then(data =>{
+            console.log(data)
+            document.querySelector('.contenedor-loader').classList.remove('visible');
+            if(data === 'Datos incorrectos o vacio'){
+                respuesta_client.innerHTML = `
+    
+                    <span class="error">
+                        Datos incorrectos o vacío
+                    </span> 
+     
+                `
+            }else if(data === 'Datos vacios'){
+                respuesta_client.innerHTML = `
+                <span class="error">
+                    Campos vacíos
+                </span> 
+                `
+            }
+            else if(data === 'ok'){
+                window.location.replace(
+                    __DIR__+'usuario/index.php'
+                  );
+            }
+        })
+    })
+}
 //REGISTRO clientes
 var registroclients = document.getElementById('registroclients');
 if(registroclients){

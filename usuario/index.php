@@ -1,3 +1,12 @@
+<?php
+session_start();
+include __DIR__ .'\..\error-log.php';
+
+
+error_log($_SESSION['id_cliente']);
+if(isset($_SESSION['id_cliente'])){
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -109,3 +118,10 @@
     </section>
 </body>
 </html>
+<?php
+}else{
+    header('Location:../login.php');
+
+
+}
+?>

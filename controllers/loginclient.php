@@ -7,7 +7,7 @@ require __DIR__ . '\..\includes\db.php';
     if(!empty($email) || !empty($pass))
     {
         $records = $conn->prepare('SELECT id_cliente, rfc, nom, apellidoP,
-        apellidoM, curp, telefono, email, password, fechaNac, foto, id_ejecutivo FROM clientes where email=:email');
+        apellidoM, curp, telefono, email, password, fechaNac, foto FROM clientes where email=:email');
         $records->bindParam(':email', $email);
         $records->execute();
         $results = $records->fetch(PDO::FETCH_ASSOC);
@@ -22,7 +22,6 @@ require __DIR__ . '\..\includes\db.php';
             $_SESSION['email']=$results["email"];
             $_SESSION['fechaNac']=$results["fechaNac"];
             $_SESSION['foto']=$results["foto"];
-            $_SESSION['id_ejecutivo']=$results["id_ejecutivo"];
             echo json_encode('ok');
         }
         else{

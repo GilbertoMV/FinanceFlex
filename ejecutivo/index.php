@@ -4,12 +4,11 @@ include __DIR__ .'\..\error-log.php';
 
 error_log($_SESSION['id_ejecutivo']);
 
-if(isset($_SESSION["id_ejecutivo"])){
+if(isset($_SESSION['id_ejecutivo'])){
     require_once __DIR__ .'\..\includes\db.php';
     $records = $conn->query('SELECT * FROM genero');
     $records->execute();
     $results = $records->fetchAll(PDO::FETCH_ASSOC);
-
 ?>
 
 <!DOCTYPE html>
@@ -135,8 +134,7 @@ if(isset($_SESSION["id_ejecutivo"])){
 </body>
 </html>
 <?php
-}else
-{
+}else{
     header('Location:../login.php');
 
 
