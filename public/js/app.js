@@ -3,6 +3,7 @@ const sign_in_btn = document.querySelector("#sign-in-btn");
 const sign_up_btn = document.querySelector("#sign-up-btn");
 const container = document.querySelector(".container");
 var respuesta = document.getElementById('InfoBanner');
+var saldo = document.getElementById('saldo');
 var respuesta_client = document.getElementById('InfoBannerClient');
 var __DIR__ = window.location.pathname.match('(.*\/).*')[1] + '';
 
@@ -182,3 +183,25 @@ if(registroclients){
         })
     })
 }
+//OBTENER SALDO
+fetch(__DIR__+'../controllers/checkbalance.php').then((res)=>res.json())
+.then(response =>{
+    console.log(response)
+    if(response === 'null'){
+        saldo.innerHTML = `
+        <div class="txt">
+            <h6>$0.00</h6>
+            <p>Saldo Actual</p>
+        </div> 
+
+        `
+    }else{
+        saldo.innerHTML = `
+        <div class="txt">
+            <h6>$${response[0].saldo}</h6>
+            <p>Saldo Actual</p>
+        </div> 
+
+        `
+    }
+}).catch(error => console.log(error));

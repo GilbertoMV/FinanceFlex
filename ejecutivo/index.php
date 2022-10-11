@@ -128,8 +128,7 @@ if(isset($_SESSION['id_ejecutivo'])){
                 <div></div>
             </div>
         </div>
-    </main>
-    
+    </main> 
     <script src="../public/js/app.js"></script>
 </body>
 </html>

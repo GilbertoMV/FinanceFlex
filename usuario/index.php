@@ -60,11 +60,7 @@ if(isset($_SESSION['id_cliente'])){
                     <div class="vectores">
                         <img src="../public/img/vectores.png" alt="">
                     </div>
-                    <div class="elipse">
-                        <div class="txt">
-                            <h6>$500.00</h6>
-                            <p>Saldo Actual</p>
-                        </div>  
+                    <div class="elipse" id="saldo"> 
                     </div>
                 </div>
                 <div class="ingreso">
@@ -116,6 +112,7 @@ if(isset($_SESSION['id_cliente'])){
             <a href="#"><i class="fa-solid fa-chevron-down"></i></a>
         </div>
     </section>
+    <script src="../public/js/app.js"></script>
 </body>
 </html>
 <?php
