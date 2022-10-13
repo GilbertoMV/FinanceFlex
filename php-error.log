@@ -103,3 +103,21 @@
 [12-Oct-2022 00:12:21 Europe/Berlin] 2018963
 [12-Oct-2022 00:12:21 Europe/Berlin] Connected successfully
 [12-Oct-2022 00:12:25 Europe/Berlin] inicio de aplicacion web
+[13-Oct-2022 15:09:28 Europe/Berlin] inicio de aplicacion web
+[13-Oct-2022 15:09:41 Europe/Berlin] inicio de aplicacion web
+[13-Oct-2022 15:09:52 Europe/Berlin] inicio de aplicacion web
+[13-Oct-2022 15:09:52 Europe/Berlin] 2018963
+[13-Oct-2022 15:09:52 Europe/Berlin] Connected successfully
+[13-Oct-2022 15:09:52 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'appfinance.genero' doesn't exist in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php:9
+Stack trace:
+#0 C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php(9): PDO->query('SELECT * FROM g...')
+#1 {main}
+  thrown in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 9
+[13-Oct-2022 15:09:57 Europe/Berlin] inicio de aplicacion web
+[13-Oct-2022 15:09:57 Europe/Berlin] 2018963
+[13-Oct-2022 15:09:57 Europe/Berlin] Connected successfully
+[13-Oct-2022 15:09:57 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'appfinance.genero' doesn't exist in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php:9
+Stack trace:
+#0 C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php(9): PDO->query('SELECT * FROM g...')
+#1 {main}
+  thrown in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\index.php on line 9

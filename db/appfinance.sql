@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-10-2022 a las 16:49:24
+-- Tiempo de generación: 14-10-2022 a las 00:24:41
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -39,7 +39,7 @@ CREATE TABLE `clientes` (
   `password` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
   `fechaNac` date NOT NULL,
   `foto` varchar(300) COLLATE utf8_spanish_ci DEFAULT NULL,
-  `id_genero` tinyint(3) NOT NULL,
+  `genero` enum('Masculino','Femenino') COLLATE utf8_spanish_ci NOT NULL,
   `id_ejecutivo` int(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
@@ -47,8 +47,8 @@ CREATE TABLE `clientes` (
 -- Volcado de datos para la tabla `clientes`
 --
 
-INSERT INTO `clientes` (`id_cliente`, `rfc`, `nom`, `apellidoP`, `apellidoM`, `curp`, `telefono`, `email`, `password`, `fechaNac`, `foto`, `id_genero`, `id_ejecutivo`) VALUES
-(1, 'HAYDNRUTI3728', 'Juan Pablo', 'Chipres', 'Arteaga', 'CIAJ020917HCMHRNA7', '3143524724', 'juanpablochipresarteaga@gmail.com', '$2y$10$o.RJZ8MytjnYgeCiZCgF3.GeNOZr4S3D8.2Zin2p6ei40VewZRsxW', '2002-09-17', NULL, 1, 2018963);
+INSERT INTO `clientes` (`id_cliente`, `rfc`, `nom`, `apellidoP`, `apellidoM`, `curp`, `telefono`, `email`, `password`, `fechaNac`, `foto`, `genero`, `id_ejecutivo`) VALUES
+(1, 'HAYDNRUTI3728', 'Juan Pablo', 'Chipres', 'Arteaga', 'CIAJ020917HCMHRNA7', '3143524724', 'juanpablochipresarteaga@gmail.com', '$2y$10$o.RJZ8MytjnYgeCiZCgF3.GeNOZr4S3D8.2Zin2p6ei40VewZRsxW', '2002-09-17', NULL, 'Femenino', 2018963);
 
 -- --------------------------------------------------------
 
@@ -113,25 +113,6 @@ INSERT INTO `ejecutivos` (`id_ejecutivo`, `nom`, `num_ejecutivo`, `email`, `pass
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `genero`
---
-
-CREATE TABLE `genero` (
-  `id_genero` tinyint(3) NOT NULL,
-  `tipo` varchar(16) COLLATE utf8_spanish_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
-
---
--- Volcado de datos para la tabla `genero`
---
-
-INSERT INTO `genero` (`id_genero`, `tipo`) VALUES
-(1, 'masculino'),
-(2, 'femenino');
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `prestamos`
 --
 
@@ -173,7 +154,6 @@ INSERT INTO `retiros` (`id_retiro`, `numCta`, `monto`, `fecha_hora`) VALUES
 --
 ALTER TABLE `clientes`
   ADD PRIMARY KEY (`id_cliente`),
-  ADD KEY `id_genero` (`id_genero`,`id_ejecutivo`),
   ADD KEY `id_ejecutivo` (`id_ejecutivo`);
 
 --
@@ -195,12 +175,6 @@ ALTER TABLE `depositos`
 --
 ALTER TABLE `ejecutivos`
   ADD PRIMARY KEY (`id_ejecutivo`);
-
---
--- Indices de la tabla `genero`
---
-ALTER TABLE `genero`
-  ADD PRIMARY KEY (`id_genero`);
 
 --
 -- Indices de la tabla `prestamos`
@@ -233,12 +207,6 @@ ALTER TABLE `depositos`
   MODIFY `id_deposito` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT de la tabla `ejecutivos`
---
-ALTER TABLE `ejecutivos`
-  MODIFY `id_ejecutivo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2018964;
-
---
 -- AUTO_INCREMENT de la tabla `prestamos`
 --
 ALTER TABLE `prestamos`
@@ -258,8 +226,7 @@ ALTER TABLE `retiros`
 -- Filtros para la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  ADD CONSTRAINT `clientes_ibfk_1` FOREIGN KEY (`id_genero`) REFERENCES `genero` (`id_genero`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `clientes_ibfk_2` FOREIGN KEY (`id_ejecutivo`) REFERENCES `ejecutivos` (`id_ejecutivo`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `clientes_ibfk_1` FOREIGN KEY (`id_ejecutivo`) REFERENCES `ejecutivos` (`id_ejecutivo`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `cuenta`
