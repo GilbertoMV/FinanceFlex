@@ -128,10 +128,9 @@ nav a:hover{
 }
 .container ul li{
   list-style-type: none;
-  display: inline-block;
-  left: 180px;
-  padding: 8px 12px;
-  position: relative;
+
+
+
 }
 .container ul li::after{
   content: '';
@@ -165,7 +164,7 @@ nav a:hover{
     color:#9A9A9A;
     justify-content: center;
 }
-.header .h1{
+.header .red{
     font-family:  'Rajdhani', sans-serif;
     text-align: left;
     font-size: 25px;
@@ -184,7 +183,7 @@ nav a:hover{
 
 .header .ul{
     display: grid;
-    grid-template-columns: auto auto auto auto auto auto auto auto;
+    grid-template-columns: repeat(11,1fr);
     gap: 1rem;
     align-items: center;
     text-align: center;
@@ -497,10 +496,10 @@ tr {
 .contenedor-loader{
   display:none;
   position: absolute;
-  top: 20%;
-  left: 25%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  margin-top: -70px;
+  margin-top: 120px;
 }
 .ids-roller{
   display: inline-block;
@@ -519,7 +518,7 @@ tr {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background-color: #20236D;
+  background-color: #ffffff;
   margin: -4px 0 0 -4px;
 }
 .ids-roller div:nth-child(1){

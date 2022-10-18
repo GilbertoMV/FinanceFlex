@@ -13,7 +13,7 @@ require __DIR__ .'\..\includes\db.php';
     $curp = $_POST['curp'];
     $fechan = $_POST['fechaN'];
     $rfc = $_POST['rfc'];
-    $idgenero = $_POST['genero'];
+    $genero = $_POST['genero'];
     $email = $_POST['correo'];
     $pass = $_POST['password'];
     //VERIFICAR EXISTENCIA DE EMAIL EN DB
@@ -39,10 +39,10 @@ require __DIR__ .'\..\includes\db.php';
     }else{   
         $password=password_hash($pass, PASSWORD_DEFAULT, ['cost' => 10]);
         try{
-            $registrar=$conn->prepare('INSERT INTO clientes(rfc, nom, apellidoP, apellidoM, curp, telefono, email, password, fechaNac, id_genero, id_ejecutivo) VALUES(:rfc, :nombres, :apellidoP, :apellidoM, :curp, :telefono, :email, :password, :fechaNac, :id_genero, :id_ejecutivo)');
+            $registrar=$conn->prepare('INSERT INTO clientes(rfc, nom, apellidoP, apellidoM, curp, telefono, email, password, fechaNac, genero, id_ejecutivo) VALUES(:rfc, :nom, :apellidoP, :apellidoM, :curp, :telefono, :email, :password, :fechaNac, :genero, :id_ejecutivo)');
             $registrar->execute([
                 'rfc' => $rfc,
-                'nombres' => $nombres,
+                'nom' => $nombres,
                 'apellidoP' => $apellidop,
                 'apellidoM' => $apellidom,
                 'curp' => $curp,
@@ -50,7 +50,7 @@ require __DIR__ .'\..\includes\db.php';
                 'email' => $email,
                 'password' => $password,
                 'fechaNac' => $fechan,
-                'id_genero'=> $idgenero,
+                'genero'=> $genero,
                 'id_ejecutivo' => $id_ejecutivo
             ]);
             $records = $conn->prepare('SELECT id_cliente FROM clientes WHERE rfc = :rfc');

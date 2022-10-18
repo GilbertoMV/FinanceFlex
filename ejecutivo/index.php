@@ -5,10 +5,7 @@ include __DIR__ .'\..\error-log.php';
 error_log($_SESSION['id_ejecutivo']);
 
 if(isset($_SESSION['id_ejecutivo'])){
-    require_once __DIR__ .'\..\includes\db.php';
-    $records = $conn->query('SELECT * FROM genero');
-    $records->execute();
-    $results = $records->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 
 <!DOCTYPE html>
@@ -27,11 +24,6 @@ if(isset($_SESSION['id_ejecutivo'])){
 </head>
 <body>
     <header class="header">
-        <img class="logo" src="../public/img/logito.png" alt="">
-        <h1 class="h1">
-            <a href="#" class="a">EJECUTIVOS<br><span>FinanceFlex</span></a>
-
-        </h1>
         <?php require 'nav.php' ?>
     <div class="linea"></div>
     </header>
@@ -102,13 +94,8 @@ if(isset($_SESSION['id_ejecutivo'])){
                     <label for="genero" class="labels">GENERO</label>
                     <p class="lineaF"></p>
                     <select name="genero" id="" class="inputSelect">
-                        <?php 
-                        foreach ($results as $cat) {
-                            ?>
-                        <option value="<?php echo $cat['id_genero']?>"><?php echo $cat['tipo']?></option>
-                        <?php
-                        }
-                        ?>
+                        <option value="Masculino">Masculino</option>
+                        <option value="Femenino">Femenino</option>
                     </select>
                 </div>
                 <div class="bloque">
@@ -118,6 +105,7 @@ if(isset($_SESSION['id_ejecutivo'])){
         </div>
         <div class="contenedor-loader">
             <div class="ids-roller">
+
                 <div></div>
                 <div></div>
                 <div></div>
@@ -126,6 +114,8 @@ if(isset($_SESSION['id_ejecutivo'])){
                 <div></div>
                 <div></div>
                 <div></div>
+                <img class="logo" src="../public/img/logito.png" alt="">
+
             </div>
         </div>
     </main> 
