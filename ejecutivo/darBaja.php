@@ -28,10 +28,6 @@ if(isset($_SESSION["id_ejecutivo"])){
 </head>
 <body>
     <header class="header">
-        <img class="logo" src="../public/img/logito.png" alt="">
-        <h1 class="h1">
-            <a href="#" class="a">EJECUTIVOS<br><span>FinanceFlex</span></a>
-        </h1>
         <?php require 'nav.php' ?>
         <div class="linea"></div>
     </header>
@@ -61,5 +57,7 @@ if(isset($_SESSION["id_ejecutivo"])){
 </body>
 </html>
 <?php
+}else{
+    header('Location:../login.php');
 }
 ?>
