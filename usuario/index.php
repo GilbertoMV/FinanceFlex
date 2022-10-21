@@ -113,6 +113,30 @@ if(isset($_SESSION['id_cliente'])){
         </div>
     </section>
     <script src="../public/js/app.js"></script>
+    <script>
+        var saldo = document.getElementById('saldo');
+        fetch(__DIR__+'../controllers/checkbalance.php').then((res)=>res.json())
+        .then(response =>{
+    console.log(response)
+    if(response === 'null'){
+        saldo.innerHTML = `
+        <div class="txt">
+            <h6>$0.00</h6>
+            <p>Saldo Actual</p>
+        </div> 
+
+        `
+    }else{
+        saldo.innerHTML = `
+        <div class="txt">
+            <h6>$${response[0].saldo}</h6>
+            <p>Saldo Actual</p>
+        </div> 
+
+        `
+    }
+}).catch(error => console.log(error)); 
+    </script>
 </body>
 </html>
 <?php

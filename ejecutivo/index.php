@@ -48,47 +48,47 @@ if(isset($_SESSION['id_ejecutivo'])){
                 <div class="bloque">
                     <label for="nombres" class="labels">Nombre(s)</label>
                     <p class="lineaF"></p>
-                    <input type="text" name="nombres" id="nombres" class="inputs center" >
+                    <input type="text" name="nombres" id="nombres" class="inputs center" required>
                 </div>
                 <div class="bloque">
                     <label for="apellidoM" class="labels">Apellido Paterno</label>
                     <p class="lineaF"></p>
-                    <input type="text" name="apellidoP" id="apeP" class="inputs center" >
+                    <input type="text" name="apellidoP" id="apeP" class="inputs center" required>
                 </div>
                 <div class="bloque">
                     <label for="apellidoP" class="labels">Apellido Materno</label>
                     <p class="lineaF"></p>
-                    <input type="text" name="apellidoM" id="apeM" class="inputs center" >
+                    <input type="text" name="apellidoM" id="apeM" class="inputs center" required>
                 </div>
                 <div class="bloque">
                     <label for="email" class="labels">Correo</label>
                     <p class="lineaF"></p>
-                    <input type="email" name="correo" id="email" class="inputs center" >
+                    <input type="email" name="correo" id="email" class="inputs center" required>
                 </div>
                 <div class="bloque">
                     <label for="telefono" class="labels">Numero de teléfono</label>
                     <p class="lineaF"></p>
-                    <input type="text" name="telefono" id="Ntelefono" class="inputs center" >
+                    <input type="text" name="telefono" id="Ntelefono" class="inputs center" required>
                 </div>
                 <div class="bloque">
                     <label for="CURP" class="labels ">CURP</label>
                     <p class="lineaF"></p>
-                    <input type="text" name="curp" id="curp" class="inputs center" >
+                    <input type="text" name="curp" id="curp" class="inputs center" required>
                 </div>
                 <div class="bloque">
                     <label for="echaN" class="labels">Fecha de Nacimiento</label>
                     <p class="lineaF"></p>
-                    <input type="date" name="fechaN" id="fechaN" class="inputs center" >
+                    <input type="date" name="fechaN" id="fechaN" class="inputs center" required>
                 </div class="bloque">
                 <div class="di bloque">
                     <label for="password" class="labels">Password</label>
                     <p class="lineaF"></p>
-                    <input type="password" name="password" id="password" class="inputs" autocomplete="off" >
+                    <input type="password" name="password" id="password" class="inputs" autocomplete="off" required>
                 </div>
                 <div class="bloque">
                     <label for="rfc" class="labels">RFC</label>
                     <p class="lineaF"></p>
-                    <input type="text" name="rfc" id="rfc" class="inputs" >
+                    <input type="text" name="rfc" id="rfc" class="inputs" required>
                 </div>
                 <div class="bloque">
                     <label for="genero" class="labels">GENERO</label>

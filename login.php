@@ -17,7 +17,7 @@ else{
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FiannceFlex</title>
+    <title>FianceFlex</title>
     <link rel="shortcut icon" href="./public/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./public/css/estilos.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -27,16 +27,18 @@ else{
 <body>
     <div class="container">
         <div class="forms-container">
-            <div class="singin-singup">
+            <div class="singin-singup" id="sing-in">
                 <form id="loginclient" class="sign-in-form">
                     <h2 class="title">Inicia Sesión</h2>
-                    <div class="input-field">
+                    <p class="formulario-input-error" id="formulario-input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+                    <p class="formulario-mensaje" id="formulario-mensaje"><b>Error:</b> Por favor rellena el formulario correctamente. </p>
+                    <div class="input-field-email" id="input-email">
                         <i class="fas fa-user"></i>
-                        <input type="text" name="email" id="email" placeholder="Correo" autocomplete="off">
+                        <input type="email" name="email" id="email" placeholder="Correo" autocomplete="off" required>
                     </div>
-                    <div class="input-field">
+                    <div class="input-field-password" id="input-password">
                         <i class="fas fa-lock"></i>
-                        <input type="password" name="password" id="password" placeholder="Contraseña" autocomplete="off">
+                        <input type="password" name="password" id="password" placeholder="Contraseña" autocomplete="off" required>
                     </div>
                     <div id="InfoBannerClient" style="">
                         
@@ -45,13 +47,13 @@ else{
                 </form>
                 <form id="loginadmin" class="sign-up-form">
                 <h2 class="title">ADMINISTRADOR</h2>
-                    <div class="input-field">
+                    <div class="input-field-email">
                         <i class="fas fa-user"></i>
-                        <input type="text" name="emailAdmin" id="emailAdmin" placeholder="Correo" autocomplete="off">
+                        <input type="email" name="emailAdmin" id="emailAdmin" placeholder="Correo" autocomplete="off" required>
                     </div>
-                    <div class="input-field">
+                    <div class="input-field-password">
                         <i class="fas fa-lock"></i>
-                        <input type="password" name="passwordAdmin" id="passwordAdmin" placeholder="Contraseña" autocomplete="off">
+                        <input type="password" name="passwordAdmin" id="passwordAdmin" placeholder="Contraseña" autocomplete="off" required>
                     </div>
                     <div id="InfoBanner" style="">
 
@@ -91,7 +93,6 @@ else{
             </div>
         </div>
     </div>
-
     <script src="./public/js/app.js"></script>
 </body>
 </html>
