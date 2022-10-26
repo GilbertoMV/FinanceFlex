@@ -62,10 +62,10 @@ if(isset($_SESSION['id_ejecutivo'])){
                         <td class="lista_clientes"><?php echo $resultado['rfc'];?></td>
                         <td class="lista_clientes"><?php echo $resultado['telefono'];?></td>
                         <td class="lista_clientes buttons_clientes">
-                            <a href="" class="info" id=""><i class="bi bi-info-circle"> Más</i></a>
-                            <a href="" class="editar" id=""><i class="bi bi-pencil-square"> Editar</i></a>
+                            <button class="info"><i class="bi bi-info-circle"> Más</i></button>
+                            <button class="editar"><i class="bi bi-pencil-square"> Editar</i></button>
                             <button class="eliminar"><i class="bi bi-person-x"> Eliminar</i></button>
-                        </td>
+                        </td> 
                     </tr>
                     <?php } ?>
                 </tbody>
