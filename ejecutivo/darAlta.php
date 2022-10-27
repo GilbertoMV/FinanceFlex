@@ -23,9 +23,7 @@ if(isset($_SESSION['id_ejecutivo'])){
     <script defer src="../public/js/navbar.js"></script>
 </head>
 <body>
-    <header class="header">
         <?php require 'nav.php'?>
-    </header>
     <main>
         <h1>Foto</h1>
         <div class="lineaR"></div>

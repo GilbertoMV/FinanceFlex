@@ -10,21 +10,17 @@ if(isset($_SESSION["id_ejecutivo"])){
     $records->execute();    
     $results = $records->fetchAll(PDO::FETCH_ASSOC);
 ?>
-    <a href="index.php"><img class="logo" src="../public/img/logito.png" alt=""></a>
-    <a href="index.php" class="red a">EJECUTIVOS<br><span>FinanceFlex</span></a>
     <nav>
-        <div class="container">
-            <ul>
-                <li><a href="darAlta.php" class="a">Dar de alta</a></li>
-                <li><a href="modificaciones.php" class="a">Modificaciones</a></li>
-                <li><a href="darBaja.php" class="a">Dar de Baja</a></li>
-                <li><a href="pagos.php" class="a">Pagos</a></li>
-                <li><a href="depositosRetiros.php" class="a">Depositos y Retiros</a></li>
-            </ul>
-        </div>
+        <div class="nav__container">
+            <a href="index.php"><img class="logo" src="../public/img/logoEjecutivo.png" alt="home"></a>
+            
+            <div class="nav__menu">
+                <a href="index.php" class="a">Lista de Clientes</a>
+                <a href="darAlta.php" class="a">Dar de alta</a>
+                <a href="../controllers/logoutcontroller.php" class="logout">Cerrar Sesion <i class="bi bi-door-closed"></i></a>
+            </div>
+        </div>   
     </nav>
-    <a href="../controllers/logoutcontroller.php"><img class="logout" src="../public/img/switch.png" alt="cerrar"></a>
-    <div class="linea"></div>
 <?php
 }else{
     header('Location:../login.php');
