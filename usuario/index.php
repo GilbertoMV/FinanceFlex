@@ -79,40 +79,19 @@ if(isset($_SESSION['id_cliente'])){
             <table>
                 <thead>
                     <tr>
-                        <th>Servicio</th>
+                        <th>Transaccion</th>
                         <th>Fecha</th>
                         <th>Hora</th>
-                        <th>Pago</th>
+                        <th>Cantidad</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>Nombre</td>
-                        <td>30 Agosto</td>
-                        <td>9:00</td>
-                        <td class="warning">$1000.00</td>
-                        <td><input type="button" value="Recibo" class="btn-tabla"></input></td>
-                    </tr>
-                    <tr>
-                        <td>Nombre</td>
-                        <td>30 Agosto</td>
-                        <td>9:00</td>
-                        <td class="safe">$500.00</td>
-                        <td><input type="button" value="Recibo" class="btn-tabla"></input></a>
-                    </tr>
-                    <tr>
-                        <td>Nombre</td>
-                        <td>30 Agosto</td>
-                        <td>9:00</td>
-                        <td class="warning">$609.00</td>
-                        <td><input type="button" value="Recibo" class="btn-tabla"></input></td>
-                    </tr>
+                <tbody id="transaccion">
                 </tbody>
             </table>
             <a href="#"><i class="fa-solid fa-chevron-down"></i></a>
         </div>
     </section>
-    <script src="../public/js/app.js"></script>
+    <script src="../public/js/functions-cliente.js"></script>
     <script>
         var saldo = document.getElementById('saldo');
         fetch(__DIR__+'../controllers/checkbalance.php').then((res)=>res.json())

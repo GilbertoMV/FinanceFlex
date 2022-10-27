@@ -6744,3 +6744,29 @@ Stack trace:
 [26-Oct-2022 21:20:42 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\FinanceFlex\ejecutivo\nav.php on line 2
 [26-Oct-2022 21:20:42 Europe/Berlin] inicio de aplicacion web
 [26-Oct-2022 21:20:42 Europe/Berlin] 2
+[27-Oct-2022 02:34:16 Europe/Berlin] inicio de aplicacion web
+[27-Oct-2022 02:34:20 Europe/Berlin] inicio de aplicacion web
+[27-Oct-2022 02:34:46 Europe/Berlin] inicio de aplicacion web
+[27-Oct-2022 02:34:46 Europe/Berlin] 2018963
+[27-Oct-2022 02:34:46 Europe/Berlin] Connected successfully
+[27-Oct-2022 02:34:46 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\nav.php on line 2
+[27-Oct-2022 02:34:46 Europe/Berlin] inicio de aplicacion web
+[27-Oct-2022 02:34:46 Europe/Berlin] 2018963
+[27-Oct-2022 02:39:24 Europe/Berlin] inicio de aplicacion web
+[27-Oct-2022 02:39:24 Europe/Berlin] 2018963
+[27-Oct-2022 02:39:24 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\nav.php on line 2
+[27-Oct-2022 02:39:24 Europe/Berlin] inicio de aplicacion web
+[27-Oct-2022 02:39:24 Europe/Berlin] 2018963
+[27-Oct-2022 02:39:24 Europe/Berlin] Connected successfully
+[27-Oct-2022 02:39:27 Europe/Berlin] inicio de aplicacion web
+[27-Oct-2022 02:39:27 Europe/Berlin] 2018963
+[27-Oct-2022 02:39:27 Europe/Berlin] Connected successfully
+[27-Oct-2022 02:39:27 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\nav.php on line 2
+[27-Oct-2022 02:39:27 Europe/Berlin] inicio de aplicacion web
+[27-Oct-2022 02:39:27 Europe/Berlin] 2018963
+[27-Oct-2022 02:52:18 Europe/Berlin] inicio de aplicacion web
+[27-Oct-2022 02:52:20 Europe/Berlin] inicio de aplicacion web
+[27-Oct-2022 02:52:29 Europe/Berlin] inicio de aplicacion web
+[27-Oct-2022 02:52:29 Europe/Berlin] 1
+[27-Oct-2022 02:53:06 Europe/Berlin] inicio de aplicacion web
+[27-Oct-2022 02:53:06 Europe/Berlin] 1
