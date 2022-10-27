@@ -6772,3 +6772,13 @@ Stack trace:
 [27-Oct-2022 02:53:06 Europe/Berlin] 1
 [27-Oct-2022 02:56:33 Europe/Berlin] inicio de aplicacion web
 [27-Oct-2022 02:56:33 Europe/Berlin] 1
+[27-Oct-2022 02:58:00 Europe/Berlin] inicio de aplicacion web
+[27-Oct-2022 02:58:00 Europe/Berlin] 1
+[27-Oct-2022 02:58:03 Europe/Berlin] inicio de aplicacion web
+[27-Oct-2022 02:58:05 Europe/Berlin] inicio de aplicacion web
+[27-Oct-2022 02:58:13 Europe/Berlin] inicio de aplicacion web
+[27-Oct-2022 02:58:13 Europe/Berlin] 2018963
+[27-Oct-2022 02:58:13 Europe/Berlin] Connected successfully
+[27-Oct-2022 02:58:13 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\nav.php on line 2
+[27-Oct-2022 02:58:13 Europe/Berlin] inicio de aplicacion web
+[27-Oct-2022 02:58:13 Europe/Berlin] 2018963

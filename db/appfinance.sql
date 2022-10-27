@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-10-2022 a las 00:24:41
+-- Tiempo de generación: 27-10-2022 a las 02:59:46
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -48,7 +48,7 @@ CREATE TABLE `clientes` (
 --
 
 INSERT INTO `clientes` (`id_cliente`, `rfc`, `nom`, `apellidoP`, `apellidoM`, `curp`, `telefono`, `email`, `password`, `fechaNac`, `foto`, `genero`, `id_ejecutivo`) VALUES
-(1, 'HAYDNRUTI3728', 'Juan Pablo', 'Chipres', 'Arteaga', 'CIAJ020917HCMHRNA7', '3143524724', 'juanpablochipresarteaga@gmail.com', '$2y$10$o.RJZ8MytjnYgeCiZCgF3.GeNOZr4S3D8.2Zin2p6ei40VewZRsxW', '2002-09-17', NULL, 'Femenino', 2018963);
+(1, 'HAYDNRUTI3728', 'Juan Pablo', 'Chipres', 'Arteaga', 'CIAJ020917HCMHRNA7', '3143524724', 'juanpablochipresarteaga@gmail.com', '$2y$10$o.RJZ8MytjnYgeCiZCgF3.GeNOZr4S3D8.2Zin2p6ei40VewZRsxW', '2002-09-17', NULL, 'Masculino', 2018963);
 
 -- --------------------------------------------------------
 
@@ -67,27 +67,7 @@ CREATE TABLE `cuenta` (
 --
 
 INSERT INTO `cuenta` (`numCta`, `saldo`, `id_cliente`) VALUES
-(843424724, NULL, 1);
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `depositos`
---
-
-CREATE TABLE `depositos` (
-  `id_deposito` int(11) NOT NULL,
-  `numCta` int(16) NOT NULL,
-  `monto` float(10,2) NOT NULL,
-  `fecha_hora` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `depositos`
---
-
-INSERT INTO `depositos` (`id_deposito`, `numCta`, `monto`, `fecha_hora`) VALUES
-(1, 843424724, 500.00, '2022-10-11 15:50:49');
+(843424724, 2000.00, 1);
 
 -- --------------------------------------------------------
 
@@ -113,6 +93,39 @@ INSERT INTO `ejecutivos` (`id_ejecutivo`, `nom`, `num_ejecutivo`, `email`, `pass
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `movimientos`
+--
+
+CREATE TABLE `movimientos` (
+  `id_movimiento` int(11) NOT NULL,
+  `numCta` int(16) NOT NULL,
+  `tipo` enum('Deposito','Retiro') NOT NULL,
+  `monto` float(10,2) NOT NULL,
+  `fecha_hora` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `movimientos`
+--
+
+INSERT INTO `movimientos` (`id_movimiento`, `numCta`, `tipo`, `monto`, `fecha_hora`) VALUES
+(1, 843424724, 'Deposito', 2500.00, '2022-10-25 21:26:57'),
+(2, 843424724, 'Retiro', 700.00, '2022-10-25 21:27:41'),
+(3, 843424724, 'Retiro', 700.00, '2022-10-25 21:27:41');
+
+--
+-- Disparadores `movimientos`
+--
+DELIMITER $$
+CREATE TRIGGER `tr_saldo` AFTER INSERT ON `movimientos` FOR EACH ROW IF(movimientos.tipo) = 'Deposito' THEN
+UPDATE cuenta SET cuenta.saldo = (movimientos.monto) WHERE cuenta.numCta=(movimientos.numCta);
+END IF
+$$
+DELIMITER ;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `prestamos`
 --
 
@@ -124,26 +137,6 @@ CREATE TABLE `prestamos` (
   `fechaInicial` date NOT NULL,
   `fechaTermino` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `retiros`
---
-
-CREATE TABLE `retiros` (
-  `id_retiro` int(11) NOT NULL,
-  `numCta` int(16) NOT NULL,
-  `monto` float(10,2) NOT NULL,
-  `fecha_hora` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `retiros`
---
-
-INSERT INTO `retiros` (`id_retiro`, `numCta`, `monto`, `fecha_hora`) VALUES
-(1, 843424724, 700.00, '2022-10-11 15:51:12');
 
 --
 -- Índices para tablas volcadas
@@ -164,30 +157,23 @@ ALTER TABLE `cuenta`
   ADD KEY `id_cliente` (`id_cliente`);
 
 --
--- Indices de la tabla `depositos`
---
-ALTER TABLE `depositos`
-  ADD PRIMARY KEY (`id_deposito`),
-  ADD KEY `numCta` (`numCta`);
-
---
 -- Indices de la tabla `ejecutivos`
 --
 ALTER TABLE `ejecutivos`
   ADD PRIMARY KEY (`id_ejecutivo`);
 
 --
+-- Indices de la tabla `movimientos`
+--
+ALTER TABLE `movimientos`
+  ADD PRIMARY KEY (`id_movimiento`),
+  ADD KEY `numCta` (`numCta`);
+
+--
 -- Indices de la tabla `prestamos`
 --
 ALTER TABLE `prestamos`
   ADD PRIMARY KEY (`id_prestamo`),
-  ADD KEY `numCta` (`numCta`);
-
---
--- Indices de la tabla `retiros`
---
-ALTER TABLE `retiros`
-  ADD PRIMARY KEY (`id_retiro`),
   ADD KEY `numCta` (`numCta`);
 
 --
@@ -201,22 +187,16 @@ ALTER TABLE `clientes`
   MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT de la tabla `depositos`
+-- AUTO_INCREMENT de la tabla `movimientos`
 --
-ALTER TABLE `depositos`
-  MODIFY `id_deposito` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `movimientos`
+  MODIFY `id_movimiento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `prestamos`
 --
 ALTER TABLE `prestamos`
   MODIFY `id_prestamo` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT de la tabla `retiros`
---
-ALTER TABLE `retiros`
-  MODIFY `id_retiro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Restricciones para tablas volcadas
@@ -235,22 +215,16 @@ ALTER TABLE `cuenta`
   ADD CONSTRAINT `cuenta_ibfk_1` FOREIGN KEY (`id_cliente`) REFERENCES `clientes` (`id_cliente`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
--- Filtros para la tabla `depositos`
+-- Filtros para la tabla `movimientos`
 --
-ALTER TABLE `depositos`
-  ADD CONSTRAINT `depositos_ibfk_1` FOREIGN KEY (`numCta`) REFERENCES `cuenta` (`numCta`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `movimientos`
+  ADD CONSTRAINT `movimientos_ibfk_1` FOREIGN KEY (`numCta`) REFERENCES `cuenta` (`numCta`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `prestamos`
 --
 ALTER TABLE `prestamos`
   ADD CONSTRAINT `prestamos_ibfk_1` FOREIGN KEY (`numCta`) REFERENCES `cuenta` (`numCta`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Filtros para la tabla `retiros`
---
-ALTER TABLE `retiros`
-  ADD CONSTRAINT `retiros_ibfk_1` FOREIGN KEY (`numCta`) REFERENCES `cuenta` (`numCta`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
