@@ -2,7 +2,7 @@
 include 'error-log.php';
 
 ?>
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -20,9 +20,9 @@ include 'error-log.php';
             <img src="./public/img/logo_transparent-white.png" class="logo">
             <nav>
                 <ul id="menuList">
-                    <li><a href="">INICIO</a></li>
-                    <li><a href="#">NOSOTROS</a></li>
-                    <li><a href="">ACERCA DE</a></li>
+                    <li><a href="#">INICIO</a></li>
+                    <li><a href="#nosotros">NOSOTROS</a></li>
+                    <li><a href="#acerca">ACERCA DE</a></li>
                 </ul>
             </nav>
             <img src="./public/img/menu.png" class="menu" onClick="togglemenu()">
@@ -55,7 +55,7 @@ include 'error-log.php';
         }
     </script>
     <div class="container-n">
-        <section class="nosotros">
+        <section class="nosotros" id="acerca">
             <h1> FinanceFlex </h1>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores hic dicta facilis maiores alias corporis reiciendis, consequuntur facere suscipit omnis.</p>
             <h2>Contamos con:</h2>
@@ -95,7 +95,7 @@ include 'error-log.php';
 
     
      <footer>
-        <div class="footer-content">
+        <div class="footer-content" id="nosotros">
             <h3>FinanceFlex</h3>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio quam molestias fugit nesciunt explicabo nisi.</p>
             <ul class="social">
