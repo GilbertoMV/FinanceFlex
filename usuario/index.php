@@ -76,22 +76,67 @@ if(isset($_SESSION['id_cliente'])){
         <div class="transacciones">
             <h2>Transacciones</h2>
             <div class="linne"></div>
-            <table id="transacciones">
+            <table>
                 <thead>
                     <tr>
-                        <th>Transaccion</th>
+                        <th>Servicio</th>
                         <th>Fecha</th>
                         <th>Hora</th>
-                        <th>Cantidad</th>
+                        <th>Pago</th>
                     </tr>
                 </thead>
-                <tbody id="transaccion">
+                <tbody>
+                    <tr>
+                        <td>Nombre</td>
+                        <td>30 Agosto</td>
+                        <td>9:00</td>
+                        <td class="warning">$1000.00</td>
+                        <td><input type="button" value="Recibo" class="btn-tabla"></input></td>
+                    </tr>
+                    <tr>
+                        <td>Nombre</td>
+                        <td>30 Agosto</td>
+                        <td>9:00</td>
+                        <td class="safe">$500.00</td>
+                        <td><input type="button" value="Recibo" class="btn-tabla"></input></a>
+                    </tr>
+                    <tr>
+                        <td>Nombre</td>
+                        <td>30 Agosto</td>
+                        <td>9:00</td>
+                        <td class="warning">$609.00</td>
+                        <td><input type="button" value="Recibo" class="btn-tabla"></input></td>
+                    </tr>
                 </tbody>
             </table>
             <a href="#"><i class="fa-solid fa-chevron-down"></i></a>
         </div>
     </section>
-    <script src="../public/js/functions-cliente.js"></script>
+    <script src="../public/js/app.js"></script>
+    <script>
+        var saldo = document.getElementById('saldo');
+        fetch(__DIR__+'../controllers/checkbalance.php').then((res)=>res.json())
+        .then(response =>{
+    console.log(response)
+    if(response === 'null'){
+        saldo.innerHTML = `
+        <div class="txt">
+            <h6>$0.00</h6>
+            <p>Saldo Actual</p>
+        </div> 
+
+        `
+    }else{
+        saldo.innerHTML = `
+        <div class="txt">
+            <h6>$${response[0].saldo}</h6>
+            <p>Saldo Actual</p>
+        </div> 
+
+        `
+    }
+}).catch(error => console.log(error)); 
+    </script>
 </body>
 </html>
 <?php

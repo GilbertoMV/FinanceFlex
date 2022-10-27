@@ -8,7 +8,7 @@ if(isset($_SESSION['id_ejecutivo'])){
     $records = $conn->prepare('SELECT * FROM cuenta');
     $records->bindParam(':id_ejecutivo', $_SESSION['id_ejecutivo']);
     $records->execute();    
-    $clientes = $records->fetchAll(PDO::FETCH_ASSOC);
+    $results = $records->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -45,8 +45,8 @@ if(isset($_SESSION['id_ejecutivo'])){
         </div>
         <div class="contenedor__lista">
             <ol class="lista">
-                <?php foreach ($clientes as $cliente) {?>
-                <li><?php print_r($cliente);?></li>
+                <?php foreach ($results as $result) {?>
+                <li><?php print_r($results);?></li>
                 <?php }?>
                 <br><br><br><br><br><br><br>
                 <br><br><br><br><br><br><br>
