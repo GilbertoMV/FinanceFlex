@@ -24,6 +24,8 @@ if(isset($_SESSION['id_ejecutivo'])){
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@300;400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script src="https://kit.fontawesome.com/6dc1722754.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
     <script defer src="../public/js/navbar.js"></script>
 </head>
 <body>
@@ -35,7 +37,7 @@ if(isset($_SESSION['id_ejecutivo'])){
             </div>
             <div class="colum2">
                 <div class="buscar">
-                    <input type="text" placeholder="Buscar" required>
+                    <input type="text" name="buscador" id="buscador" placeholder="Buscar">
                     <div class="btn1">
                         <i class="fas fa-search icon"></i>
                     </div>
@@ -44,38 +46,37 @@ if(isset($_SESSION['id_ejecutivo'])){
         </div>
 
         <section class="container__table-clients">
-            <table class="clients__table" border="0" cellspacing="0">
-                <tbody>
+            <table class="clients__table" id=tabla border="0" cellspacing="0">
+                <thead>
                     <tr class="encabezado_clientes">
-                        <td>id</td>
-                        <td width="25%">Nombre Cliente</td>
-                        <td width="10%">Genero</td>
-                        <td width="20%">RFC</td>
-                        <td>Teléfono</td>
-                        <td width="30%">Acciones</td>
+                        <th>id</th>
+                        <th width="25%">Nombre Cliente</th>
+                        <th width="10%">Genero</th>
+                        <th width="20%">RFC</th>
+                        <th>Teléfono</th>
+                        <th width="30%">Acciones</th>
                     </tr>
+                </thead>
                     <?php foreach ($resultado as $resultado){?>
-                    <tr>
-                        <td class="lista_clientes"><?php echo $resultado['id_cliente'];?></td>
-                        <td class="lista_clientes"><?php echo $resultado['nom'].' '. $resultado['apellidoP'].' '. $resultado['apellidoM'];?></td>
-                        <td class="lista_clientes"><?php echo $resultado['genero']; ?></td>
-                        <td class="lista_clientes"><?php echo $resultado['rfc'];?></td>
-                        <td class="lista_clientes"><?php echo $resultado['telefono'];?></td>
-                        <td class="lista_clientes buttons_clientes">
-                            <button class="info"><i class="bi bi-info-circle"> Más</i></button>
-                            <button class="editar"><i class="bi bi-pencil-square"> Editar</i></button>
-                            <button class="eliminar"><i class="bi bi-person-x"> Eliminar</i></button>
-                        </td> 
-                    </tr>
-                    <?php } ?>
-                </tbody>
+                        <tbody>
+                            <tr>
+                                <td class="lista_clientes"><?php echo $resultado['id_cliente'];?></td>
+                                <td class="lista_clientes"><?php echo $resultado['nom'].' '. $resultado['apellidoP'].' '. $resultado['apellidoM'];?></td>
+                                <td class="lista_clientes"><?php echo $resultado['genero']; ?></td>
+                                <td class="lista_clientes"><?php echo $resultado['rfc'];?></td>
+                                <td class="lista_clientes"><?php echo $resultado['telefono'];?></td>
+                                <td class="lista_clientes buttons_clientes">
+                                <button class="info"><i class="bi bi-info-circle"> Más</i></button>
+                                <button onclick="edit(<?php echo $resultado['id_cliente']; ?>)"class="editar"><i class="bi bi-pencil-square"> Editar</i></button>
+                                <button class="eliminar"><i class="bi bi-person-x"> Eliminar</i></button>
+                            </td> 
+                        </tr>
+                        <?php } ?>
+                    </tbody>
             </table>
         </section>
-
-    
     </main>
-
-    <script src="../public/js/jquery-3.6.1.min.js"></script>
+       <script type="text/javascript" src="../public/js/datatable.js"></script>
     <script src="../public/js/app.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../public/js/alertas.js"></script>

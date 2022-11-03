@@ -16,7 +16,9 @@ body {
   --tipo-principal: Helvetica, Arial, sans-serif;
   --tipo-secundaria: Verdana;
 }
-
+input[type="search" i] {
+  display: none;
+}
 @media (prefers-color-scheme: dark) {
   :root {
     --negro: #ececec;
@@ -284,7 +286,7 @@ main .lineaR {
     margin: auto;
     margin-top: 20px;
 }
-form {
+.contenedor-formulario form{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 50px;
