@@ -57,8 +57,8 @@ if(isset($_SESSION['id_ejecutivo'])){
                         <th width="30%">Acciones</th>
                     </tr>
                 </thead>
-                    <?php foreach ($resultado as $resultado){?>
                         <tbody>
+                        <?php foreach ($resultado as $resultado){?>
                             <tr>
                                 <td class="lista_clientes"><?php echo $resultado['id_cliente'];?></td>
                                 <td class="lista_clientes"><?php echo $resultado['nom'].' '. $resultado['apellidoP'].' '. $resultado['apellidoM'];?></td>
