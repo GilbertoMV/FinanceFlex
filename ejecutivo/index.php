@@ -57,7 +57,7 @@ if(isset($_SESSION['id_ejecutivo'])){
                         <th width="30%">Acciones</th>
                     </tr>
                 </thead>
-                        <tbody>
+                        <tbody id="datos_cliente">
                         <?php foreach ($resultado as $resultado){?>
                             <tr>
                                 <td class="lista_clientes"><?php echo $resultado['id_cliente'];?></td>
@@ -68,7 +68,7 @@ if(isset($_SESSION['id_ejecutivo'])){
                                 <td class="lista_clientes buttons_clientes">
                                 <button class="info"><i class="bi bi-info-circle"> Más</i></button>
                                 <button onclick="edit(<?php echo $resultado['id_cliente']; ?>)"class="editar"><i class="bi bi-pencil-square"> Editar</i></button>
-                                <button class="eliminar"><i class="bi bi-person-x"> Eliminar</i></button>
+                                <button onclick="delet(<?php echo $resultado['id_cliente']; ?>)"class="eliminar"><i class="bi bi-person-x"> Eliminar</i></button>
                             </td> 
                         </tr>
                         <?php } ?>

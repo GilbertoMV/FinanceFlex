@@ -1,5 +1,6 @@
+
 // MODAL DE ELIMINACIÓN DE PERSONA
-$('.eliminar').click(function() {
+function delet(id) {
   const swalWithBootstrapButtons = Swal.mixin({
     color:'#fff',
     background: '#2f2f2f'
@@ -17,34 +18,43 @@ $('.eliminar').click(function() {
     cancelButtonColor:'#d8514b',
     reverseButtons: true
   }).then((result) => {
-    if (result.isConfirmed) {
-      swalWithBootstrapButtons.fire({
-        title:'¡Dado de Baja!',
-        text:'El cliente ha sido dado de baja con exito',
-        icon:'success',
-        showConfirmButton:false,
-        timerProgressBar:true,
-        timer:2000,
-        allowOutsideClick: false,
-        allowEscapeKey: false,
+    if (result.value) {
+      fetch('../controllers/delcliente.php?num_cliente='+id,{
+        method: 'POST'
       })
-    } else if (
-      result.dismiss === Swal.DismissReason.cancel
-    ) {
-      swalWithBootstrapButtons.fire({
-        title:'¡Cancelado!',
-        text:'Los datos están a salvo :)',
-        icon:'error',
-        showConfirmButton:false,
-        timerProgressBar:true,
-        timer:2000,
-        allowOutsideClick: false,
-        allowEscapeKey: false,       
+      .then(res=>res.json())
+      .then(data =>{
+        if(data == 'success'){
+          swalWithBootstrapButtons.fire({
+            title:'¡Dado de Baja!',
+            text:'El cliente ha sido dado de baja con exito',
+            icon:'success',
+            showConfirmButton:false,
+            timerProgressBar:true,
+            timer:2000,
+            allowOutsideClick: false,
+            allowEscapeKey: false,
+          }).then(function() {
+            location.reload();
+          });
+        }
+        else if (result.dismiss === Swal.DismissReason.cancel) 
+        {
+          swalWithBootstrapButtons.fire({
+            title:'¡Cancelado!',
+            text:'Los datos están a salvo :)',
+            icon:'error',
+            showConfirmButton:false,
+            timerProgressBar:true,
+            timer:2000,
+            allowOutsideClick: false,
+            allowEscapeKey: false,     
+          })
+        }
       })
     }
   })
-});
-
+}
 // MODAL DE MODIFICACIÓN DE PERSONA
 function edit(id) {
   console.log(id);
@@ -105,7 +115,7 @@ function edit(id) {
           })
           .then(data => data.json())
           .then(data =>{
-            console.log('Success:', data);
+            console.log(data);
             Swal.fire({
               icon: 'success',
               title: '¡Actualzado!',
@@ -117,7 +127,9 @@ function edit(id) {
               timerProgressBar:true,
               allowOutsideClick: false,
               allowEscapeKey: false,
-            })
+            }).then(function() {
+              location.reload();
+            });
           })
           .catch(function(error) {
             Swal.fire({

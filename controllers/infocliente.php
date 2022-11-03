@@ -6,5 +6,5 @@
     $records->bindParam(':id_cliente', $id);
     $records->execute();    
     $info = $records->fetchAll(PDO::FETCH_ASSOC);
-    exit(json_encode($info));
+    echo json_encode($info);
 ?>
