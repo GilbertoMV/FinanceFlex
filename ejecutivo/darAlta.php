@@ -25,7 +25,7 @@ if(isset($_SESSION['id_ejecutivo'])){
 <body>
         <?php require 'nav.php'?>
     <main>
-        <h1>Foto</h1>
+        <!-- <h1>Foto</h1>
         <div class="lineaR"></div>
         <div class="loadphoto">
             <img src="../public/img/profile.png" alt="foto de perfil">
@@ -34,12 +34,12 @@ if(isset($_SESSION['id_ejecutivo'])){
                 <label for="btn-file"></label>
                 <input type="file" id="btn-file">
             </button>
-        </div>
-        <h1>Datos</h1>
+        </div> -->
+        <h1>Nuevo Cliente</h1>
         <div class="lineaR"></div>
         <div class="contenedor-formulario">
         <div id="InfoBanner" style="">
-
+            
         </div>
             <form id="registroclients">
                 <div class="bloque">
@@ -87,7 +87,7 @@ if(isset($_SESSION['id_ejecutivo'])){
                     <p class="lineaF"></p>
                     <input type="text" name="rfc" id="rfc" class="inputs" >
                 </div>
-                <div class="bloque">
+                <div class="bloque">    
                     <label for="genero" class="labels">GENERO</label>
                     <p class="lineaF"></p>
                     <select name="genero" id="" class="inputSelect">

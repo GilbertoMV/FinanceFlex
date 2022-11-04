@@ -473,10 +473,6 @@ form.sign-up-form{
 	display: block;
 }
 
-
-
-
-
 .btn{
     width: 150px;
     height: 49px;
@@ -612,6 +608,7 @@ form.sign-up-form{
     background-color:#ef5350;
     border-radius: 55px;
   }
+
 
 
 /* LOADER*/

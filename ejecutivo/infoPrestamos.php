@@ -5,10 +5,10 @@ error_log($_SESSION['id_ejecutivo']);
 
 if(isset($_SESSION['id_ejecutivo'])){
     require_once __DIR__ .'\..\includes\db.php';
-    $records = $conn->prepare('SELECT id_cliente, nom, apellidoP, apellidoM, rfc, telefono, genero FROM clientes WHERE id_ejecutivo = :id_ejecutivo');
+    $records = $conn->prepare('SELECT * FROM prestamos');
     $records->bindParam(':id_ejecutivo', $_SESSION['id_ejecutivo']);
     $records->execute();    
-    $resultado = $records->fetchAll(PDO::FETCH_ASSOC);
+    $resultado2 = $records->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -33,7 +33,7 @@ if(isset($_SESSION['id_ejecutivo'])){
     <main>
         <div class="main">
             <div>
-                <h1 class="title">Lista de clientes</h1>
+                <h1 class="title">Lista de Prestamos</h1>
             </div>
             <div class="colum2">
                 <div class="buscar">
@@ -49,26 +49,28 @@ if(isset($_SESSION['id_ejecutivo'])){
             <table class="clients__table" id=tabla border="0" cellspacing="0">
                 <thead>
                     <tr class="encabezado_clientes">
-                        <th>id</th>
-                        <th width="25%">Nombre Cliente</th>
-                        <th width="10%">Genero</th>
-                        <th width="20%">RFC</th>
-                        <th>Teléfono</th>
-                        <th width="30%">Acciones</th>
+                        <th width="10%">Id Prestamo</th>
+                        <th width="20%">Monto Prestamo</th>
+                        <th width="10%">Interés Anual</th>
+                        <th width="20%">Fecha de Inicio</th>
+                        <th width="20%">Fecha de Termino</th>
+                        <th width="20%">Tabla de Amortización</th>
                     </tr>
                 </thead>
                         <tbody id="datos_cliente">
-                        <?php foreach ($resultado as $resultado){?>
+                        <?php foreach ($resultado2 as $resultado2){?>
+
                             <tr>
-                                <td class="lista_clientes"><?php echo $resultado['id_cliente'];?></td>
-                                <td class="lista_clientes"><?php echo $resultado['nom'].' '. $resultado['apellidoP'].' '. $resultado['apellidoM'];?></td>
-                                <td class="lista_clientes"><?php echo $resultado['genero']; ?></td>
-                                <td class="lista_clientes"><?php echo $resultado['rfc'];?></td>
-                                <td class="lista_clientes"><?php echo $resultado['telefono'];?></td>
+                                <td class="lista_clientes"><?php echo['id_prestamo']; ?></td>
+                                <td class="lista_clientes"><?php echo['monto']; ?></td>
+                                <td class="lista_clientes"><?php echo['interes']; ?></td>
+                                <td class="lista_clientes"><?php echo['fechaInicio']; ?></td>
+                                <td class="lista_clientes"><?php echo['fechaTermino']; ?></td>
                                 <td class="lista_clientes buttons_clientes">
-                                <button class="info"><i class="bi bi-info-circle"> Más</i></button>
-                                <button onclick="edit(<?php echo $resultado['id_cliente']; ?>)"class="editar"><i class="bi bi-pencil-square"> Editar</i></button>
-                                <button onclick="delet(<?php echo $resultado['id_cliente']; ?>)"class="eliminar"><i class="bi bi-person-x"> Eliminar</i></button>
+                                    <button class="pdf"><i class="bi bi-filetype-pdf"> Descargar PDF</i></button>
+                                <!-- <button class="info"><i class="bi bi-info-circle"> Más</i></button> -->
+                                <!-- <button onclick="edit(<?php // echo $resultado['id_cliente']; ?>)"class="editar"><i class="bi bi-pencil-square"> Editar</i></button>
+                                <button onclick="delet(<?php // echo $resultado['id_cliente']; ?>)"class="eliminar"><i class="bi bi-person-x"> Eliminar</i></button> -->
                             </td> 
                         </tr>
                         <?php } ?>

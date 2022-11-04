@@ -118,7 +118,7 @@ function edit(id) {
             console.log(data);
             Swal.fire({
               icon: 'success',
-              title: '¡Actualzado!',
+              title: '¡Actualización exitosa!',
               text: 'Los datos han sido actualizado con exito.',
               color:'#fff',
               background:'#2f2f2f',
@@ -163,3 +163,27 @@ function edit(id) {
       })
   })
 }
+
+// MAS FUNCIONES
+$(".info").click(function() {
+  Swal.fire({
+    background:'#2f2f2f',
+    color:'#fff',
+    allowOutsideClick: false,
+    allowEscapeKey: false,
+    width:'60%',
+    
+    icon: 'info',
+    title:'Más Acciones:',
+    html: `
+    <div class="bloque_másInfo">
+      <div class="L"><a href="GenerarDepositosRetiros.php" class="info_modal"> Generar Deposito y/o Retiro </a></div>
+      
+      <div><a href="infoPrestamos.php" class="info_modal"> Información de Prestamos</a></div>
+      <div><a href="infoPagos.php" class="info_modal"> Información de Pagos </a></div>
+    </div>
+    
+    `
+    
+  })
+})
