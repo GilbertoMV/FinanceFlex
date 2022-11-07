@@ -1,3 +1,6 @@
+<?php
+$id=$_POST['id'];
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -15,7 +18,7 @@
 <body>
     <?php require 'nav.php' ?>
     <main>
-        
+        <?php echo($id)?>
     </main>
         
     <script type="text/javascript" src="../public/js/datatable.js"></script>

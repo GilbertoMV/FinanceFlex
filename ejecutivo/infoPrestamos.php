@@ -4,11 +4,18 @@ include __DIR__ .'\..\error-log.php';
 error_log($_SESSION['id_ejecutivo']);
 
 if(isset($_SESSION['id_ejecutivo'])){
+    $id=$_POST['id'];
     require_once __DIR__ .'\..\includes\db.php';
-    $records = $conn->prepare('SELECT * FROM prestamos');
-    $records->bindParam(':id_ejecutivo', $_SESSION['id_ejecutivo']);
-    $records->execute();    
-    $resultado2 = $records->fetchAll(PDO::FETCH_ASSOC);
+    $consulta1 = $conn->prepare('SELECT numCta FROM cuenta WHERE id_cliente = :id_cliente');
+    $consulta1->bindParam(':id_cliente', $id);
+    $consulta1->execute();  
+    $res=$consulta1->fetch(PDO::FETCH_ASSOC);
+    
+    $numcta=$res['numCta'];
+    $consulta2 = $conn->prepare('SELECT * FROM prestamos WHERE numCta = :numCta');
+    $consulta2->bindParam(':numCta', $numcta);
+    $consulta2->execute();
+    $prestamos = $consulta2->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -58,14 +65,14 @@ if(isset($_SESSION['id_ejecutivo'])){
                     </tr>
                 </thead>
                         <tbody id="datos_cliente">
-                        <?php foreach ($resultado2 as $resultado2){?>
+                        <?php foreach ($prestamos as $prestamo){?>
 
                             <tr>
-                                <td class="lista_clientes"><?php echo['id_prestamo']; ?></td>
-                                <td class="lista_clientes"><?php echo['monto']; ?></td>
-                                <td class="lista_clientes"><?php echo['interes']; ?></td>
-                                <td class="lista_clientes"><?php echo['fechaInicio']; ?></td>
-                                <td class="lista_clientes"><?php echo['fechaTermino']; ?></td>
+                                <td class="lista_clientes"><?php echo $prestamo['id_prestamo']; ?></td>
+                                <td class="lista_clientes"><?php echo $prestamo['monto']; ?></td>
+                                <td class="lista_clientes"><?php echo $prestamo['interes']; ?></td>
+                                <td class="lista_clientes"><?php echo $prestamo['fechaInicial']; ?></td>
+                                <td class="lista_clientes"><?php echo $prestamo['fechaTermino']; ?></td>
                                 <td class="lista_clientes buttons_clientes">
                                     <button class="pdf"><i class="bi bi-filetype-pdf"> Descargar PDF</i></button>
                                 <!-- <button class="info"><i class="bi bi-info-circle"> Más</i></button> -->

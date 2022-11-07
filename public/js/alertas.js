@@ -1,4 +1,3 @@
-
 // MODAL DE ELIMINACIÓN DE PERSONA
 function delet(id) {
   const swalWithBootstrapButtons = Swal.mixin({
@@ -165,7 +164,8 @@ function edit(id) {
 }
 
 // MAS FUNCIONES
-$(".info").click(function() {
+function options(id) {
+  console.log(id);
   Swal.fire({
     background:'#2f2f2f',
     color:'#fff',
@@ -176,14 +176,21 @@ $(".info").click(function() {
     icon: 'info',
     title:'Más Acciones:',
     html: `
-    <div class="bloque_másInfo">
-      <div class="L"><a href="GenerarDepositosRetiros.php" class="info_modal"> Generar Deposito y/o Retiro </a></div>
-      
-      <div><a href="infoPrestamos.php" class="info_modal"> Información de Prestamos</a></div>
-      <div><a href="infoPagos.php" class="info_modal"> Información de Pagos </a></div>
+    <form id="op1" action="GenerarDepositosRetiros.php" method="post">
+      <div class="bloque_másInfo">      
+        <div class="L"><a onclick="document.getElementById('op1').submit(); "class="info_modal"> Generar Deposito y/o Retiro </a></div>
+        <input type="hidden" name="id" value="${id}"/>
+    </form>
+    <form id="op2" action="infoPrestamos.php" method="post">
+        <div><a onclick="document.getElementById('op2').submit(); "class="info_modal"> Información de Prestamos</a></div>
+        <input type="hidden" name="id" value="${id}"/>
+    </form>
+    <form id="op3" action="infoPagos.php" method="post">
+        <div><a onclick="document.getElementById('op3').submit(); "class="info_modal"> Información de Pagos </a></div>
+        <input type="hidden" name="id" value="${id}"/>
+    </form>
     </div>
-    
     `
     
   })
-})
+}
