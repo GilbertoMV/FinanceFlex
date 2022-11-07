@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-10-2022 a las 02:59:46
+-- Tiempo de generación: 07-11-2022 a las 16:52:35
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -48,7 +48,7 @@ CREATE TABLE `clientes` (
 --
 
 INSERT INTO `clientes` (`id_cliente`, `rfc`, `nom`, `apellidoP`, `apellidoM`, `curp`, `telefono`, `email`, `password`, `fechaNac`, `foto`, `genero`, `id_ejecutivo`) VALUES
-(1, 'HAYDNRUTI3728', 'Juan Pablo', 'Chipres', 'Arteaga', 'CIAJ020917HCMHRNA7', '3143524724', 'juanpablochipresarteaga@gmail.com', '$2y$10$o.RJZ8MytjnYgeCiZCgF3.GeNOZr4S3D8.2Zin2p6ei40VewZRsxW', '2002-09-17', NULL, 'Masculino', 2018963);
+(5, 'KASDKASM', 'JUAN PABLO', 'CHIPRES', 'ARTEAGA', 'CIAJ020917HANCJRN8', '3141111111', 'prueba@gmail.com', '$2y$10$K6cOK/A8CF6wjJhg7PGMB.RjUu1fdAu7ii4AyxIyBU5kPjCNCdk76', '2002-09-17', NULL, 'Masculino', 2018963);
 
 -- --------------------------------------------------------
 
@@ -67,7 +67,7 @@ CREATE TABLE `cuenta` (
 --
 
 INSERT INTO `cuenta` (`numCta`, `saldo`, `id_cliente`) VALUES
-(843424724, 2000.00, 1);
+(2036024724, NULL, 5);
 
 -- --------------------------------------------------------
 
@@ -99,19 +99,10 @@ INSERT INTO `ejecutivos` (`id_ejecutivo`, `nom`, `num_ejecutivo`, `email`, `pass
 CREATE TABLE `movimientos` (
   `id_movimiento` int(11) NOT NULL,
   `numCta` int(16) NOT NULL,
-  `tipo` enum('Deposito','Retiro') NOT NULL,
+  `tipo` enum('Deposito','Retiro','Pago') NOT NULL,
   `monto` float(10,2) NOT NULL,
   `fecha_hora` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `movimientos`
---
-
-INSERT INTO `movimientos` (`id_movimiento`, `numCta`, `tipo`, `monto`, `fecha_hora`) VALUES
-(1, 843424724, 'Deposito', 2500.00, '2022-10-25 21:26:57'),
-(2, 843424724, 'Retiro', 700.00, '2022-10-25 21:27:41'),
-(3, 843424724, 'Retiro', 700.00, '2022-10-25 21:27:41');
 
 --
 -- Disparadores `movimientos`
@@ -137,6 +128,13 @@ CREATE TABLE `prestamos` (
   `fechaInicial` date NOT NULL,
   `fechaTermino` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `prestamos`
+--
+
+INSERT INTO `prestamos` (`id_prestamo`, `numCta`, `monto`, `interes`, `fechaInicial`, `fechaTermino`) VALUES
+(1, 2036024724, 4000.00, 4.00, '2022-11-07', '2023-01-07');
 
 --
 -- Índices para tablas volcadas
@@ -184,7 +182,7 @@ ALTER TABLE `prestamos`
 -- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `movimientos`
@@ -196,7 +194,7 @@ ALTER TABLE `movimientos`
 -- AUTO_INCREMENT de la tabla `prestamos`
 --
 ALTER TABLE `prestamos`
-  MODIFY `id_prestamo` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_prestamo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Restricciones para tablas volcadas
