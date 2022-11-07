@@ -382,6 +382,11 @@ main .lineaR {
   text-align: left;
   margin-left: 4rem;
 }
+.infocliente {
+  text-align: left;
+  margin-left: 4rem;
+  color: #fff;
+}
 .buscar {
   position: absolute;
   padding: 7px;
