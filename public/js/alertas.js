@@ -162,7 +162,6 @@ function edit(id) {
       })
   })
 }
-
 // MAS FUNCIONES
 function options(id) {
   console.log(id);
@@ -194,3 +193,55 @@ function options(id) {
     
   })
 }
+// DEPOSITAR
+$("#depositar").click(function() {
+  Swal.fire({
+    title: '¿Estas Seguro?',
+    text: "El monto a Depositar es: *MONTO*",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#28a745',
+    cancelButtonColor: '#d8514b',
+    confirmButtonText: 'Sí, Depositar',
+    background:'#2f2f2f',
+    color:'#fff'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire({
+        title:'¡El deposito se realizó con exito!',
+        icon:'success',
+        background:"#2f2f2f",
+        color:"#fff",
+        timer:1500,
+        showConfirmButton:false,
+        timerProgressBar:true
+      })
+    }
+  })
+});
+// DEPOSITAR
+$("#retirar").click(function() {
+  Swal.fire({
+    title: '¿Estas Seguro?',
+    text: "El monto a retirar es: *MONTO*",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#28a745',
+    cancelButtonColor: '#d8514b',
+    confirmButtonText: 'Sí, Retirar',
+    background:'#2f2f2f',
+    color:'#fff'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire({
+        title:'¡El Retiro se realizó con exito!',
+        icon:'success',
+        background:"#2f2f2f",
+        color:"#fff",
+        timer:1500,
+        showConfirmButton:false,
+        timerProgressBar:true
+      })
+    }
+  })
+});

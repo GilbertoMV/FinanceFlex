@@ -1,5 +1,5 @@
 <?php
-$id=$_POST['id'];
+// $id=$_POST['id'];
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -18,10 +18,40 @@ $id=$_POST['id'];
 <body>
     <?php require 'nav.php' ?>
     <main>
-        <?php echo($id)?>
+        <div class="movimientos">
+            <div class="depositos">
+                <h1 class="titulo">DEPÓSITO</h1>
+                <label for="numeroCuenta">Ingrese la cuenta:</label>
+                <input id="numeroCuenta" type="text" placeholder="920344233"> <!-- Aquí se traerá la cuenta del cliente de la base de datos y se mostrará-->
+                <h3>Cliente:</h3>
+                <p>~Nombre del cliente~</p>
+                <h3>RFC:</h3>
+                <p>~RFC del cliente~</p>
+                <h3>Ejecutivo:</h3>
+                <p>~Nombre del ejecutivo~</p>
+                <label for="montoDeposito">Ingrese el monto a depositar:</label>
+                <input id="montoDeposito" type="text" placeholder="$0.00">
+                <button id="depositar">Depositar</button>
+                
+            </div>
+            <div class="retiros">
+                <h1 class="titulo">RETIRO</h1>
+                <label for="numeroCuenta">Ingrese la cuenta:</label>
+                <input id="numeroCuenta" type="text" placeholder="920344233"> <!-- Aquí se traerá la cuenta del cliente de la base de datos y se mostrará-->
+                <h3>Dinero Disponible:</h3>
+                <p>~Cantidad Disponible~</p>
+                <h3>Cliente:</h3>
+                <p>~Nombre del cliente~</p>
+                <h3>RFC:</h3>
+                <p>~RFC del cliente~</p>
+                <label for="montoRetiro">Ingrese el monto a retirar:</label>
+                <input id="montoRetiro" type="text" placeholder="$0.00">
+                <button id="retirar">Retirar</button>
+            </div>
+        </div>
     </main>
         
-    <script type="text/javascript" src="../public/js/datatable.js"></script>
+    <script src="../public/js/jquery-3.6.1.min.js"></script>
     <script src="../public/js/app.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../public/js/alertas.js"></script>
