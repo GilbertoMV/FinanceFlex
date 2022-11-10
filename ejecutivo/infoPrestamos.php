@@ -44,7 +44,7 @@ if(isset($_SESSION['id_ejecutivo'])){
     <?php require 'nav.php'?>
     <main>
         <div class="main">
-            <div>
+            <div class="colum1">
                 <h1 class="title">Lista de Prestamos</h1>
                 <h2 class="infocliente">CLIENTE: <?php echo $res[0]['nom']; ?></h2>
                 <h2 class="infocliente">NUMERO DE CUENTA: <?php echo $prestamos[0]['numCta']; ?></h2>
@@ -77,7 +77,7 @@ if(isset($_SESSION['id_ejecutivo'])){
                             <tr>
                                 <td class="lista_clientes"><?php echo $prestamo['id_prestamo']; ?></td>
                                 <td class="lista_clientes"><?php echo $prestamo['monto']; ?></td>
-                                <td class="lista_clientes"><?php echo $prestamo['interes']; ?></td>
+                                <td class="lista_clientes"><?php echo '%'. $prestamo['interes']; ?></td>
                                 <td class="lista_clientes"><?php echo $prestamo['fechaInicial']; ?></td>
                                 <td class="lista_clientes"><?php echo $prestamo['fechaTermino']; ?></td>
                                 <td class="lista_clientes buttons_clientes">
@@ -88,6 +88,7 @@ if(isset($_SESSION['id_ejecutivo'])){
                             </td> 
                         </tr>
                         <?php } ?>
+                        
                     </tbody>
             </table>
         </section>

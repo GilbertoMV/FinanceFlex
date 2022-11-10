@@ -38,9 +38,7 @@ if(isset($_SESSION['id_ejecutivo'])){
         <h1>Nuevo Cliente</h1>
         <div class="lineaR"></div>
         <div class="contenedor-formulario">
-        <div id="InfoBanner" style="">
-            
-        </div>
+        
             <form id="registroclients">
                 <div class="bloque">
                     <label for="nombres" class="labels">Nombre(s)</label>
@@ -48,12 +46,12 @@ if(isset($_SESSION['id_ejecutivo'])){
                     <input type="text" name="nombres" id="nombres" class="inputs center" >
                 </div>
                 <div class="bloque">
-                    <label for="apellidoM" class="labels">Apellido Paterno</label>
+                    <label for="apeP" class="labels">Apellido Paterno</label>
                     <p class="lineaF"></p>
                     <input type="text" name="apellidoP" id="apeP" class="inputs center" >
                 </div>
                 <div class="bloque">
-                    <label for="apellidoP" class="labels">Apellido Materno</label>
+                    <label for="apeM" class="labels">Apellido Materno</label>
                     <p class="lineaF"></p>
                     <input type="text" name="apellidoM" id="apeM" class="inputs center" >
                 </div>
@@ -63,46 +61,47 @@ if(isset($_SESSION['id_ejecutivo'])){
                     <input type="email" name="correo" id="email" class="inputs center" >
                 </div>
                 <div class="bloque">
-                    <label for="telefono" class="labels">Numero de teléfono</label>
+                    <label for="Ntelefono" class="labels">Número de teléfono</label>
                     <p class="lineaF"></p>
                     <input type="text" name="telefono" id="Ntelefono" class="inputs center" >
                 </div>
                 <div class="bloque">
-                    <label for="CURP" class="labels ">CURP</label>
+                    <label for="curp" class="labels">CURP</label>
                     <p class="lineaF"></p>
                     <input type="text" name="curp" id="curp" class="inputs center" >
                 </div>
                 <div class="bloque">
-                    <label for="echaN" class="labels">Fecha de Nacimiento</label>
+                    <label for="fechaN" class="labels">Fecha de Nacimiento</label>
                     <p class="lineaF"></p>
                     <input type="date" name="fechaN" id="fechaN" class="inputs center" >
                 </div class="bloque">
                 <div class="di bloque">
-                    <label for="password" class="labels">Password</label>
+                    <label for="password" class="labels">Contraseña</label>
                     <p class="lineaF"></p>
-                    <input type="password" name="password" id="password" class="inputs" autocomplete="off" >
+                    <input type="password" name="password" id="password" class="inputs center" autocomplete="off">
                 </div>
                 <div class="bloque">
                     <label for="rfc" class="labels">RFC</label>
                     <p class="lineaF"></p>
-                    <input type="text" name="rfc" id="rfc" class="inputs" >
+                    <input type="text" name="rfc" id="rfc" class="inputs center" >
                 </div>
                 <div class="bloque">    
-                    <label for="genero" class="labels">GENERO</label>
+                    <label for="genero" class="labels">Genero</label>
                     <p class="lineaF"></p>
-                    <select name="genero" id="" class="inputSelect">
+                    <select name="genero" id="genero" class="inputSelect">
                         <option value="Masculino">Masculino</option>
                         <option value="Femenino">Femenino</option>
                     </select>
                 </div>
                 <div class="bloque">
+                    <div id="InfoBanner" style="">
+                    </div>
                     <input type="submit" nombre="registrar" id="registrar" value="Dar de Alta" class="contenedor-btn-file">
                 </div>
             </form>
         </div>
         <div class="contenedor-loader">
             <div class="ids-roller">
-
                 <div></div>
                 <div></div>
                 <div></div>
@@ -111,8 +110,7 @@ if(isset($_SESSION['id_ejecutivo'])){
                 <div></div>
                 <div></div>
                 <div></div>
-                <img class="logo" src="../public/img/logito.png" alt="">
-
+                <!-- <img class="logo" src="../public/img/logito.png" alt=""> -->
             </div>
         </div>
     </main> 

@@ -212,12 +212,14 @@ main{
     display: flex;
     flex-direction: column;
     width: 95%;
-    height: auto;
+    height: 500px;
     margin: 90px auto 0px;
     padding: 1%;
     background-color: #212121;
     border-radius: 26px;
     text-align: center;
+    overflow-y: scroll;
+    align-items: center;
 }
 main h1 {
     font-family: 'Roboto', sans-serif;
@@ -330,8 +332,8 @@ main .lineaR {
 
   /*MENSAJES DE ERROR O SUCCESS*/
   #InfoBanner{
-    max-width:100%;
-    height: 40%;
+    max-width: 100%;
+    height: 25px;
     display: grid;
     padding: 0 .2rem;
     padding-bottom:  0.8em;
@@ -343,24 +345,34 @@ main .lineaR {
     text-align: center;
     color: #fff;
     font-size: 15px;
+    font-family: 'Rajdhani';
+    font-weight: bold;
     background-color:#ef5350;
-    border-radius: 55px;
+    border-radius: 10px;
+    padding: 7px;
   }
   .success {
     outline: 0 none;
     text-align: center;
     color: #fff;
     font-size: 15px;
-    background-color:#50ef70;
-    border-radius: 55px;
+    font-family: 'Rajdhani';
+    font-weight: bold;
+    background-color:#27a644;
+    border-radius: 10px;
+    border-radius: 10px;
+    padding: 7px;
   }
-
 .main {
   display: grid;
   grid-template-columns: 70% 30%;
   grid-template-rows: 70px;
   align-items: center;
   justify-content: center;
+  position: fixed;
+  background-color: #212121;
+  width: 95%;
+  margin-top: 10px;
 }
 .contenedor__lista {
   width: 100%;
@@ -369,7 +381,6 @@ main .lineaR {
   padding: 1rem;
   overflow-y: scroll;
 }
-
 .colum2 {
   display: grid;
   justify-items: center;
@@ -377,8 +388,8 @@ main .lineaR {
   width: 100%;
 }
 .title {
-  text-align: left;
   margin-left: 4rem;
+  text-align: left;
 }
 .infocliente {
   text-align: left;
@@ -434,8 +445,9 @@ main .lineaR {
 
 .container__table-clients {
   width: 100%;
-  margin-top: 10px;
+  margin-top: 90px;
   background-color: #2F2F2F;
+  
 }
 
 .clients__table {
@@ -527,6 +539,7 @@ main .lineaR {
   color: #fff;
   padding: 15px;
   border-radius: 5px;
+  cursor: pointer;
 }
 .L {
   grid-column: 1/3;
