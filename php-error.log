@@ -9107,3 +9107,240 @@ Stack trace:
 [07-Nov-2022 19:03:26 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xampp\htdocs\FinanceFlex\ejecutivo\nav.php on line 2
 [07-Nov-2022 19:03:26 Europe/Berlin] inicio de aplicacion web
 [07-Nov-2022 19:03:26 Europe/Berlin] 2018963
+[07-Nov-2022 22:34:33 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 22:34:33 Europe/Berlin] 2018963
+[07-Nov-2022 22:34:33 Europe/Berlin] Connected successfully
+[07-Nov-2022 22:34:34 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\nav.php on line 2
+[07-Nov-2022 22:34:34 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 22:34:34 Europe/Berlin] 2018963
+[07-Nov-2022 22:34:35 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 22:34:35 Europe/Berlin] 2018963
+[07-Nov-2022 22:34:35 Europe/Berlin] Connected successfully
+[07-Nov-2022 22:34:35 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\nav.php on line 2
+[07-Nov-2022 22:34:35 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 22:34:35 Europe/Berlin] 2018963
+[07-Nov-2022 22:34:45 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 22:34:45 Europe/Berlin] 2018963
+[07-Nov-2022 22:34:45 Europe/Berlin] Connected successfully
+[07-Nov-2022 22:34:45 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\nav.php on line 2
+[07-Nov-2022 22:34:45 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 22:34:45 Europe/Berlin] 2018963
+[07-Nov-2022 22:34:47 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 22:34:47 Europe/Berlin] 2018963
+[07-Nov-2022 22:34:47 Europe/Berlin] Connected successfully
+[07-Nov-2022 22:34:47 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\nav.php on line 2
+[07-Nov-2022 22:34:47 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 22:34:47 Europe/Berlin] 2018963
+[07-Nov-2022 22:34:50 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 22:34:50 Europe/Berlin] 2018963
+[07-Nov-2022 22:34:50 Europe/Berlin] Connected successfully
+[07-Nov-2022 22:35:13 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 22:35:13 Europe/Berlin] 2018963
+[07-Nov-2022 22:35:13 Europe/Berlin] Connected successfully
+[07-Nov-2022 22:35:13 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\nav.php on line 2
+[07-Nov-2022 22:35:13 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 22:35:13 Europe/Berlin] 2018963
+[07-Nov-2022 22:35:18 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 22:35:18 Europe/Berlin] 2018963
+[07-Nov-2022 22:35:18 Europe/Berlin] Connected successfully
+[07-Nov-2022 22:35:27 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 22:35:27 Europe/Berlin] 2018963
+[07-Nov-2022 22:35:27 Europe/Berlin] Connected successfully
+[07-Nov-2022 22:35:27 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\nav.php on line 2
+[07-Nov-2022 22:35:27 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 22:35:27 Europe/Berlin] 2018963
+[07-Nov-2022 22:36:59 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 22:36:59 Europe/Berlin] 2018963
+[07-Nov-2022 22:36:59 Europe/Berlin] Connected successfully
+[07-Nov-2022 22:36:59 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\nav.php on line 2
+[07-Nov-2022 22:36:59 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 22:36:59 Europe/Berlin] 2018963
+[07-Nov-2022 22:41:33 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 22:41:33 Europe/Berlin] 2018963
+[07-Nov-2022 22:41:33 Europe/Berlin] Connected successfully
+[07-Nov-2022 22:41:33 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\nav.php on line 2
+[07-Nov-2022 22:41:33 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 22:41:33 Europe/Berlin] 2018963
+[07-Nov-2022 22:58:58 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 22:58:58 Europe/Berlin] 2018963
+[07-Nov-2022 22:58:58 Europe/Berlin] Connected successfully
+[07-Nov-2022 22:58:58 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\nav.php on line 2
+[07-Nov-2022 22:58:58 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 22:58:58 Europe/Berlin] 2018963
+[07-Nov-2022 22:58:58 Europe/Berlin] PHP Notice:  Undefined index: numCta in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\generarDepositosRetiros.php on line 36
+[07-Nov-2022 23:00:25 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:00:25 Europe/Berlin] 2018963
+[07-Nov-2022 23:00:25 Europe/Berlin] Connected successfully
+[07-Nov-2022 23:00:25 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\nav.php on line 2
+[07-Nov-2022 23:00:25 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:00:25 Europe/Berlin] 2018963
+[07-Nov-2022 23:00:25 Europe/Berlin] PHP Notice:  Undefined index: numCta in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\generarDepositosRetiros.php on line 36
+[07-Nov-2022 23:01:20 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:01:20 Europe/Berlin] 2018963
+[07-Nov-2022 23:01:20 Europe/Berlin] Connected successfully
+[07-Nov-2022 23:01:20 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\nav.php on line 2
+[07-Nov-2022 23:01:20 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:01:20 Europe/Berlin] 2018963
+[07-Nov-2022 23:01:20 Europe/Berlin] PHP Notice:  Undefined index: numCta in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\generarDepositosRetiros.php on line 36
+[07-Nov-2022 23:01:32 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:01:32 Europe/Berlin] 2018963
+[07-Nov-2022 23:01:32 Europe/Berlin] Connected successfully
+[07-Nov-2022 23:01:32 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\nav.php on line 2
+[07-Nov-2022 23:01:32 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:01:32 Europe/Berlin] 2018963
+[07-Nov-2022 23:01:53 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:01:53 Europe/Berlin] 2018963
+[07-Nov-2022 23:01:53 Europe/Berlin] Connected successfully
+[07-Nov-2022 23:01:53 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\nav.php on line 2
+[07-Nov-2022 23:01:53 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:01:53 Europe/Berlin] 2018963
+[07-Nov-2022 23:01:53 Europe/Berlin] PHP Notice:  Undefined index: nom in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\generarDepositosRetiros.php on line 36
+[07-Nov-2022 23:02:41 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:02:41 Europe/Berlin] 2018963
+[07-Nov-2022 23:02:41 Europe/Berlin] Connected successfully
+[07-Nov-2022 23:02:41 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\nav.php on line 2
+[07-Nov-2022 23:02:41 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:02:41 Europe/Berlin] 2018963
+[07-Nov-2022 23:02:41 Europe/Berlin] PHP Notice:  Undefined index: nom in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\generarDepositosRetiros.php on line 36
+[07-Nov-2022 23:02:41 Europe/Berlin] PHP Notice:  Undefined index: nom in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\generarDepositosRetiros.php on line 38
+[07-Nov-2022 23:02:56 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:02:56 Europe/Berlin] 2018963
+[07-Nov-2022 23:02:56 Europe/Berlin] Connected successfully
+[07-Nov-2022 23:02:56 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\nav.php on line 2
+[07-Nov-2022 23:02:56 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:02:56 Europe/Berlin] 2018963
+[07-Nov-2022 23:03:09 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:03:09 Europe/Berlin] 2018963
+[07-Nov-2022 23:03:09 Europe/Berlin] Connected successfully
+[07-Nov-2022 23:03:09 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\nav.php on line 2
+[07-Nov-2022 23:03:09 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:03:09 Europe/Berlin] 2018963
+[07-Nov-2022 23:04:35 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:04:35 Europe/Berlin] 2018963
+[07-Nov-2022 23:04:35 Europe/Berlin] Connected successfully
+[07-Nov-2022 23:04:35 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\nav.php on line 2
+[07-Nov-2022 23:04:35 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:04:35 Europe/Berlin] 2018963
+[07-Nov-2022 23:04:35 Europe/Berlin] PHP Notice:  Undefined index: nom in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\generarDepositosRetiros.php on line 42
+[07-Nov-2022 23:05:13 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:05:13 Europe/Berlin] 2018963
+[07-Nov-2022 23:05:13 Europe/Berlin] Connected successfully
+[07-Nov-2022 23:05:13 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\nav.php on line 2
+[07-Nov-2022 23:05:13 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:05:13 Europe/Berlin] 2018963
+[07-Nov-2022 23:08:34 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:08:34 Europe/Berlin] 2018963
+[07-Nov-2022 23:08:34 Europe/Berlin] Connected successfully
+[07-Nov-2022 23:08:34 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\nav.php on line 2
+[07-Nov-2022 23:08:34 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:08:34 Europe/Berlin] 2018963
+[07-Nov-2022 23:08:34 Europe/Berlin] PHP Warning:  Illegal string offset 'apellidoP' in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\generarDepositosRetiros.php on line 38
+[07-Nov-2022 23:08:43 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:08:43 Europe/Berlin] 2018963
+[07-Nov-2022 23:08:43 Europe/Berlin] Connected successfully
+[07-Nov-2022 23:08:43 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\nav.php on line 2
+[07-Nov-2022 23:08:43 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:08:43 Europe/Berlin] 2018963
+[07-Nov-2022 23:08:43 Europe/Berlin] PHP Notice:  Array to string conversion in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\generarDepositosRetiros.php on line 38
+[07-Nov-2022 23:08:55 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:08:55 Europe/Berlin] 2018963
+[07-Nov-2022 23:08:55 Europe/Berlin] Connected successfully
+[07-Nov-2022 23:08:55 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\nav.php on line 2
+[07-Nov-2022 23:08:55 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:08:55 Europe/Berlin] 2018963
+[07-Nov-2022 23:09:04 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:09:04 Europe/Berlin] 2018963
+[07-Nov-2022 23:09:04 Europe/Berlin] Connected successfully
+[07-Nov-2022 23:09:04 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\nav.php on line 2
+[07-Nov-2022 23:09:04 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:09:04 Europe/Berlin] 2018963
+[07-Nov-2022 23:09:09 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:09:09 Europe/Berlin] 2018963
+[07-Nov-2022 23:09:09 Europe/Berlin] Connected successfully
+[07-Nov-2022 23:09:09 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\nav.php on line 2
+[07-Nov-2022 23:09:09 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:09:09 Europe/Berlin] 2018963
+[07-Nov-2022 23:09:19 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:09:19 Europe/Berlin] 2018963
+[07-Nov-2022 23:09:19 Europe/Berlin] Connected successfully
+[07-Nov-2022 23:09:19 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\nav.php on line 2
+[07-Nov-2022 23:09:19 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:09:19 Europe/Berlin] 2018963
+[07-Nov-2022 23:09:45 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:09:45 Europe/Berlin] 2018963
+[07-Nov-2022 23:09:45 Europe/Berlin] Connected successfully
+[07-Nov-2022 23:09:45 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\nav.php on line 2
+[07-Nov-2022 23:09:45 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:09:45 Europe/Berlin] 2018963
+[07-Nov-2022 23:11:07 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:11:07 Europe/Berlin] 2018963
+[07-Nov-2022 23:11:07 Europe/Berlin] Connected successfully
+[07-Nov-2022 23:11:07 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\nav.php on line 2
+[07-Nov-2022 23:11:07 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:11:07 Europe/Berlin] 2018963
+[07-Nov-2022 23:11:22 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:11:22 Europe/Berlin] 2018963
+[07-Nov-2022 23:11:22 Europe/Berlin] Connected successfully
+[07-Nov-2022 23:11:22 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\nav.php on line 2
+[07-Nov-2022 23:11:22 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:11:22 Europe/Berlin] 2018963
+[07-Nov-2022 23:11:40 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:11:40 Europe/Berlin] 2018963
+[07-Nov-2022 23:11:40 Europe/Berlin] Connected successfully
+[07-Nov-2022 23:11:40 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\nav.php on line 2
+[07-Nov-2022 23:11:40 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:11:40 Europe/Berlin] 2018963
+[07-Nov-2022 23:17:44 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:17:44 Europe/Berlin] 2018963
+[07-Nov-2022 23:17:44 Europe/Berlin] Connected successfully
+[07-Nov-2022 23:17:44 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\nav.php on line 2
+[07-Nov-2022 23:17:44 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:17:44 Europe/Berlin] 2018963
+[07-Nov-2022 23:18:11 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:18:11 Europe/Berlin] 2018963
+[07-Nov-2022 23:18:11 Europe/Berlin] Connected successfully
+[07-Nov-2022 23:18:11 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\nav.php on line 2
+[07-Nov-2022 23:18:11 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:18:11 Europe/Berlin] 2018963
+[07-Nov-2022 23:18:25 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:18:25 Europe/Berlin] 2018963
+[07-Nov-2022 23:18:25 Europe/Berlin] Connected successfully
+[07-Nov-2022 23:18:25 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\nav.php on line 2
+[07-Nov-2022 23:18:25 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:18:25 Europe/Berlin] 2018963
+[07-Nov-2022 23:18:31 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:18:31 Europe/Berlin] 2018963
+[07-Nov-2022 23:18:31 Europe/Berlin] Connected successfully
+[07-Nov-2022 23:18:31 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\nav.php on line 2
+[07-Nov-2022 23:18:31 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:18:31 Europe/Berlin] 2018963
+[07-Nov-2022 23:18:37 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:18:37 Europe/Berlin] 2018963
+[07-Nov-2022 23:18:37 Europe/Berlin] Connected successfully
+[07-Nov-2022 23:18:37 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\nav.php on line 2
+[07-Nov-2022 23:18:37 Europe/Berlin] inicio de aplicacion web
+[07-Nov-2022 23:18:37 Europe/Berlin] 2018963
+[08-Nov-2022 22:48:51 Europe/Berlin] inicio de aplicacion web
+[08-Nov-2022 22:48:51 Europe/Berlin] 2018963
+[08-Nov-2022 22:48:51 Europe/Berlin] Connected successfully
+[08-Nov-2022 22:48:51 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\nav.php on line 2
+[08-Nov-2022 22:48:51 Europe/Berlin] inicio de aplicacion web
+[08-Nov-2022 22:48:51 Europe/Berlin] 2018963
+[08-Nov-2022 22:49:00 Europe/Berlin] inicio de aplicacion web
+[08-Nov-2022 22:49:00 Europe/Berlin] 2018963
+[08-Nov-2022 22:49:00 Europe/Berlin] Connected successfully
+[08-Nov-2022 22:49:00 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\nav.php on line 2
+[08-Nov-2022 22:49:00 Europe/Berlin] inicio de aplicacion web
+[08-Nov-2022 22:49:00 Europe/Berlin] 2018963
+[09-Nov-2022 00:44:19 Europe/Berlin] inicio de aplicacion web
+[09-Nov-2022 00:44:19 Europe/Berlin] 2018963
+[09-Nov-2022 00:44:19 Europe/Berlin] Connected successfully
+[09-Nov-2022 00:44:19 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\nav.php on line 2
+[09-Nov-2022 00:44:19 Europe/Berlin] inicio de aplicacion web
+[09-Nov-2022 00:44:19 Europe/Berlin] 2018963
+[09-Nov-2022 00:44:23 Europe/Berlin] inicio de aplicacion web
+[09-Nov-2022 00:44:23 Europe/Berlin] 2018963
+[09-Nov-2022 00:44:23 Europe/Berlin] Connected successfully
+[09-Nov-2022 00:44:24 Europe/Berlin] PHP Notice:  session_start(): A session had already been started - ignoring in C:\xamppp\htdocs\php-financeflex\FinanceFlex\ejecutivo\nav.php on line 2
+[09-Nov-2022 00:44:24 Europe/Berlin] inicio de aplicacion web
+[09-Nov-2022 00:44:24 Europe/Berlin] 2018963
