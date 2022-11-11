@@ -77,7 +77,7 @@ $pdf->setX(10);
 $pdf->Cell(140,8,'Plazo: '.$totalMonths['total'].' meses','B',0,'L',0);
 $pdf->SetY(150); 
 $pdf->setX(10);
-$pdf->Cell(140,8,'Capital: '.$prestamos['monto'],'B',0,'L',0);
+$pdf->Cell(140,8,'Capital: $'.$prestamos['monto'],'B',0,'L',0);
 $pdf->SetDrawColor(68,114,196);
 $pdf->SetTextColor(68,114,196);
 $pdf->Ln(7.8);
@@ -101,7 +101,12 @@ $finFe=$prestamos['fechaTermino'];
 $partesIni = explode('-', $iniFe);
 $y=$partesIni[0];
 $m=$partesIni[1]+1;
-$m='0'.$m;
+if ($m<10){
+    $m='0'.$m;
+}
+else{
+        $m;
+    }
 $d=$partesIni[2];
 for($i=0; $i< $totalMonths['total']; $i++){
     $interes=$monto*0.04;
