@@ -1,8 +1,8 @@
 <?php
 session_start();
-include __DIR__ .'\..\error-log.php';
+//include __DIR__ .'\..\error-log.php';
 
-error_log($_SESSION['id_ejecutivo']);
+//error_log($_SESSION['id_ejecutivo']);
 
 if(isset($_SESSION['id_ejecutivo'])){
 

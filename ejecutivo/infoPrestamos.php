@@ -1,7 +1,7 @@
 <?php
 session_start();
-include __DIR__ .'\..\error-log.php';
-error_log($_SESSION['id_ejecutivo']);
+//include __DIR__ .'\..\error-log.php';
+//error_log($_SESSION['id_ejecutivo']);
 
 if(isset($_SESSION['id_ejecutivo'])){
     $id=$_POST['id'];
@@ -14,7 +14,7 @@ if(isset($_SESSION['id_ejecutivo'])){
     $consulta1 = $conn->prepare('SELECT nom FROM clientes WHERE id_cliente = :id_cliente');
     $consulta1->bindParam(':id_cliente', $id);
     $consulta1->execute();  
-    $res=$consulta1->fetchAll(PDO::FETCH_ASSOC);
+    $res=$consulta1->fetch(PDO::FETCH_ASSOC);
     /*
     $numcta=$res['numCta'];
     $consulta2 = $conn->prepare('SELECT * FROM prestamos WHERE numCta = :numCta');
@@ -46,7 +46,7 @@ if(isset($_SESSION['id_ejecutivo'])){
         <div class="main">
             <div>
                 <h1 class="title">Lista de Prestamos</h1>
-                <h2 class="infocliente">CLIENTE: <?php echo $res[0]['nom']; ?></h2>
+                <h2 class="infocliente">CLIENTE: <?php echo $res['nom']; ?></h2>
                 <h2 class="infocliente">NUMERO DE CUENTA: <?php echo $prestamos[0]['numCta']; ?></h2>
             </div>
             <div class="colum2">
@@ -75,16 +75,18 @@ if(isset($_SESSION['id_ejecutivo'])){
                         <?php foreach ($prestamos as $prestamo){?>
 
                             <tr>
+
                                 <td class="lista_clientes"><?php echo $prestamo['id_prestamo']; ?></td>
                                 <td class="lista_clientes"><?php echo $prestamo['monto']; ?></td>
                                 <td class="lista_clientes"><?php echo $prestamo['interes']; ?></td>
                                 <td class="lista_clientes"><?php echo $prestamo['fechaInicial']; ?></td>
                                 <td class="lista_clientes"><?php echo $prestamo['fechaTermino']; ?></td>
                                 <td class="lista_clientes buttons_clientes">
-                                    <button class="pdf"><i class="bi bi-filetype-pdf"> Descargar PDF</i></button>
-                                <!-- <button class="info"><i class="bi bi-info-circle"> Más</i></button> -->
-                                <!-- <button onclick="edit(<?php // echo $resultado['id_cliente']; ?>)"class="editar"><i class="bi bi-pencil-square"> Editar</i></button>
-                                <button onclick="delet(<?php // echo $resultado['id_cliente']; ?>)"class="eliminar"><i class="bi bi-person-x"> Eliminar</i></button> -->
+                                    <form method="post" action="../controllers/pdf.php">
+                                        <input type="hidden" name="id" value="<?php echo $id;?>"/>
+                                        <input type="hidden" name="idPrestamo" value="<?php echo $prestamo['id_prestamo'];?>"/>
+                                        <button class="pdf"><i class="bi bi-filetype-pdf"> Descargar PDF</i></button>
+                                    </form>
                             </td> 
                         </tr>
                         <?php } ?>
