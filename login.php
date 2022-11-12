@@ -1,5 +1,5 @@
 <?php
-include 'error-log.php';
+//include 'error-log.php';
 session_start();
 if(isset($_SESSION['id_ejecutivo'])){
     require_once './includes/db.php';

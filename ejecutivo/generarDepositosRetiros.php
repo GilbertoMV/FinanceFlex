@@ -32,31 +32,35 @@ if(isset($_SESSION['id_ejecutivo'])){
         <div class="movimientos">
             <div class="depositos">
                 <h1 class="titulo">DEPÓSITO</h1>
-                <label for="numeroCuenta">Ingrese la cuenta:</label>
-                <input id="numeroCuenta" type="text" placeholder="920344233" value="<?php echo $infocl['numCta'];?>">
-                <h3>Cliente:</h3>
-                <p><?php echo $infocl['nom'].' '.$infocl['apellidoP'].' '.$infocl['apellidoM'] ?></p>
-                <h3>RFC:</h3>
-                <p><?php echo $infocl['rfc'];?></p>
-                <h3>Ejecutivo:</h3>
-                <p><?php echo $_SESSION['nombre']?></p>
-                <label for="montoDeposito">Ingrese el monto a depositar:</label>
-                <input id="montoDeposito" type="text" placeholder="$0.00">
-                <button id="depositar">Depositar</button>
+                    <label for="numeroCuenta">Ingrese la cuenta:</label>
+                    <form id="datos_Deposito">
+                        <input id="numeroCuenta" type="text" placeholder="920344233" name="numcta" value="<?php echo $infocl['numCta'];?>">
+                        <h3>Cliente:</h3>
+                        <p><?php echo $infocl['nom'].' '.$infocl['apellidoP'].' '.$infocl['apellidoM'] ?></p>
+                        <h3>RFC:</h3>
+                        <p><?php echo $infocl['rfc'];?></p>
+                        <h3>Ejecutivo:</h3>
+                        <p><?php echo $_SESSION['nombre']?></p>
+                        <label for="montoDeposito">Ingrese el monto a depositar:</label>
+                        <input id="montoDeposito" name="monto" type="text" placeholder="$0.00">
+                    </form>
+                    <button id="depositar">Depositar</button>
                 
             </div>
             <div class="retiros">
                 <h1 class="titulo">RETIRO</h1>
                 <label for="numeroCuenta">Ingrese la cuenta:</label>
-                <input id="numeroCuenta" type="text" placeholder="920344233" value="<?php echo $infocl['numCta'];?>"> <!-- Aquí se traerá la cuenta del cliente de la base de datos y se mostrará-->
-                <h3>Dinero Disponible:</h3>
-                <p><?php echo '$'.$infocl['saldo'];?></p>
-                <h3>Cliente:</h3>
-                <p><?php echo $infocl['nom'].' '.$infocl['apellidoP'].' '.$infocl['apellidoM'] ?></p>
-                <h3>RFC:</h3>
-                <p><?php echo $infocl['rfc'];?></p>
-                <label for="montoRetiro">Ingrese el monto a retirar:</label>
-                <input id="montoRetiro" type="text" placeholder="$0.00">
+                <form id="datos_Retiro">
+                    <input id="numeroCuenta_Retiro" name="numcta" type="text" placeholder="920344233" value="<?php echo $infocl['numCta'];?>"> <!-- Aquí se traerá la cuenta del cliente de la base de datos y se mostrará-->
+                    <h3>Dinero Disponible:</h3>
+                    <p><?php echo '$'.$infocl['saldo'];?></p>
+                    <h3>Cliente:</h3>
+                    <p><?php echo $infocl['nom'].' '.$infocl['apellidoP'].' '.$infocl['apellidoM'] ?></p>
+                    <h3>RFC:</h3>
+                    <p><?php echo $infocl['rfc'];?></p>
+                    <label for="montoRetiro">Ingrese el monto a retirar:</label>
+                    <input id="montoRetiro" name="monto" type="text" placeholder="$0.00">
+                </form>
                 <button id="retirar">Retirar</button>
             </div>
         </div>
