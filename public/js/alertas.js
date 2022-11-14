@@ -96,12 +96,65 @@ function edit(id) {
           <div><label for="curp" class="labels">CURP</label>
           <input id="curp" name="curp" class="inputs center" value="${data[0].curp}"></div>
           <div><label for="email" class="labels">Email</label>
-          <input id="email" name="email" class="inputs center" value="${data[0].email}"></div> 
+          <input type="email" id="email" name="email" class="inputs center" value="${data[0].email}"></div> 
           <div><label for="fechaN" class="labels">Fecha de Nacimiento</label>
           <input id="fechaN" name="fena" type="date" class="inputs center" value="${data[0].fechaNac}"></div>
           </div>
           </form>`,
+        preConfirm: () => {
+          const email= document.getElementById('email'); 
+          var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
+          if (document.getElementById('nombre').value) {
+          }
+          else{
+            Swal.showValidationMessage('Campos vacios')
+
+          }
+          if(document.getElementById('apellidoP').value){
+
+          }
+          else {
+            Swal.showValidationMessage('Campos vacios')   
+          }
+          if (document.getElementById('apellidoM').value) {
+          }
+          else{
+            Swal.showValidationMessage('Campos vacios')
+
+          }
+          if(document.getElementById('telefono').value){
+
+          }
+          else {
+            Swal.showValidationMessage('Campos vacios')   
+          }
+          if (document.getElementById('rfc').value) {
+          }
+          else{
+            Swal.showValidationMessage('Campos vacios')
+
+          }
+          if(document.getElementById('curp').value){
+
+          }
+          else {
+            Swal.showValidationMessage('Campos vacios')   
+          }
+          if (email.value.match(validRegex)) {
+        
+          } else {
+            Swal.showValidationMessage('Email con formato incorrecto') 
+        
+          }
+          if(document.getElementById('fechaN').value){
+
+          }
+          else {
+            Swal.showValidationMessage('Campos vacios')   
+          }
+                    
+        },
         focusConfirm: true,
       }).then((result) => {
         if (result.value) {
