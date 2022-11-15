@@ -14,7 +14,7 @@ require __DIR__ . '\..\includes\db.php';
             $_SESSION['id_ejecutivo']=$results["id_ejecutivo"];
             $_SESSION['nombre']=$results["nom"];
             $_SESSION['num_ejecutivo']=$results["num_ejecutivo"];
-            error_log($_SESSION['num_ejecutivo']);
+            //error_log($_SESSION['num_ejecutivo']);
             echo json_encode('ok');
         }
         else{

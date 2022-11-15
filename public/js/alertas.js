@@ -96,12 +96,65 @@ function edit(id) {
           <div><label for="curp" class="labels">CURP</label>
           <input id="curp" name="curp" class="inputs center" value="${data[0].curp}"></div>
           <div><label for="email" class="labels">Email</label>
-          <input id="email" name="email" class="inputs center" value="${data[0].email}"></div> 
+          <input type="email" id="email" name="email" class="inputs center" value="${data[0].email}"></div> 
           <div><label for="fechaN" class="labels">Fecha de Nacimiento</label>
           <input id="fechaN" name="fena" type="date" class="inputs center" value="${data[0].fechaNac}"></div>
           </div>
           </form>`,
+        preConfirm: () => {
+          const email= document.getElementById('email'); 
+          var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
+          if (document.getElementById('nombre').value) {
+          }
+          else{
+            Swal.showValidationMessage('Campos vacios')
+
+          }
+          if(document.getElementById('apellidoP').value){
+
+          }
+          else {
+            Swal.showValidationMessage('Campos vacios')   
+          }
+          if (document.getElementById('apellidoM').value) {
+          }
+          else{
+            Swal.showValidationMessage('Campos vacios')
+
+          }
+          if(document.getElementById('telefono').value){
+
+          }
+          else {
+            Swal.showValidationMessage('Campos vacios')   
+          }
+          if (document.getElementById('rfc').value) {
+          }
+          else{
+            Swal.showValidationMessage('Campos vacios')
+
+          }
+          if(document.getElementById('curp').value){
+
+          }
+          else {
+            Swal.showValidationMessage('Campos vacios')   
+          }
+          if (email.value.match(validRegex)) {
+        
+          } else {
+            Swal.showValidationMessage('Email con formato incorrecto') 
+        
+          }
+          if(document.getElementById('fechaN').value){
+
+          }
+          else {
+            Swal.showValidationMessage('Campos vacios')   
+          }
+                    
+        },
         focusConfirm: true,
       }).then((result) => {
         if (result.value) {
@@ -195,9 +248,12 @@ function options(id) {
 }
 // DEPOSITAR
 $("#depositar").click(function() {
+  const monto = document.getElementById("montoDeposito").value;
+  const numcta = document.getElementById("numeroCuenta").value;
+  console.log(monto);
   Swal.fire({
     title: '¿Estas Seguro?',
-    text: "El monto a Depositar es: *MONTO*",
+    text: `El monto a Depositar es: ${monto}`,
     icon: 'warning',
     showCancelButton: true,
     confirmButtonColor: '#28a745',
@@ -206,24 +262,59 @@ $("#depositar").click(function() {
     background:'#2f2f2f',
     color:'#fff'
   }).then((result) => {
-    if (result.isConfirmed) {
+    const datos = document.querySelector("#datos_Deposito");
+    console.log(datos);
+    const datos_actualizar = new FormData(datos);
+    var url = "../controllers/deposito.php";
+    fetch(url, {
+        method: 'post',
+        body: datos_actualizar
+    })
+    .then(data => data.json())
+    .then(data =>{
+      console.log(data);
+      if (data == 'ok') {
+        Swal.fire({
+          title:'¡El deposito se realizó con exito!',
+          icon:'success',
+          background:"#2f2f2f",
+          color:"#fff",
+          timer:1500,
+          showConfirmButton:false,
+          timerProgressBar:true
+        })
+     }else if(data == 'not_exist'){
       Swal.fire({
-        title:'¡El deposito se realizó con exito!',
-        icon:'success',
+        title:'¡Numero de cuenta no existe!',
+        icon:'error',
         background:"#2f2f2f",
         color:"#fff",
         timer:1500,
         showConfirmButton:false,
         timerProgressBar:true
       })
-    }
+     }else{
+      Swal.fire({
+        title:'¡Ha ocurrido un error!',
+        icon:'error',
+        background:"#2f2f2f",
+        color:"#fff",
+        timer:1500,
+        showConfirmButton:false,
+        timerProgressBar:true
+      })
+     }
+    })
   })
 });
-// DEPOSITAR
+// RETIRAR
 $("#retirar").click(function() {
+  const monto = document.getElementById("montoRetiro").value;
+  const numcta = document.getElementById("numeroCuenta_Retiro").value;
+  console.log(monto);
   Swal.fire({
     title: '¿Estas Seguro?',
-    text: "El monto a retirar es: *MONTO*",
+    text: `El monto a retirar es: ${monto}`,
     icon: 'warning',
     showCancelButton: true,
     confirmButtonColor: '#28a745',
@@ -232,17 +323,59 @@ $("#retirar").click(function() {
     background:'#2f2f2f',
     color:'#fff'
   }).then((result) => {
-    if (result.isConfirmed) {
+    const datos = document.querySelector("#datos_Retiro");
+    console.log(datos);
+    const datos_actualizar = new FormData(datos);
+    var url = "../controllers/retiro.php";
+    fetch(url, {
+        method: 'post',
+        body: datos_actualizar
+    })
+    .then(data => data.json())
+    .then(data =>{
+      console.log(data);
+      if (data == 'ok') {
+        Swal.fire({
+          title:'¡El deposito se realizó con exito!',
+          icon:'success',
+          background:"#2f2f2f",
+          color:"#fff",
+          timer:1500,
+          showConfirmButton:false,
+          timerProgressBar:true
+        })
+     }else if(data == 'not_exist'){
       Swal.fire({
-        title:'¡El Retiro se realizó con exito!',
-        icon:'success',
+        title:'¡Numero de cuenta no existe!',
+        icon:'error',
         background:"#2f2f2f",
         color:"#fff",
         timer:1500,
         showConfirmButton:false,
         timerProgressBar:true
       })
-    }
+    }else if(data == 'not_money'){
+      Swal.fire({
+        title:'¡Fondos insuficientes!',
+        icon:'error',
+        background:"#2f2f2f",
+        color:"#fff",
+        timer:1500,
+        showConfirmButton:false,
+        timerProgressBar:true
+      })
+     }else{
+      Swal.fire({
+        title:'¡Ha ocurrido un error!',
+        icon:'error',
+        background:"#2f2f2f",
+        color:"#fff",
+        timer:1500,
+        showConfirmButton:false,
+        timerProgressBar:true
+      })
+     }
+    })
   })
 });
 

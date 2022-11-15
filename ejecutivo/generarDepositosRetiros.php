@@ -1,5 +1,16 @@
 <?php
-// $id=$_POST['id'];
+session_start();
+//include __DIR__ .'\..\error-log.php';
+//error_log($_SESSION['id_ejecutivo']);
+
+if(isset($_SESSION['id_ejecutivo'])){
+    $id=$_POST['id'];
+    require_once __DIR__ .'\..\includes\db.php';
+    $sql = $conn->prepare('SELECT cuenta.numCta, clientes.nom, clientes.apellidoP, clientes.apellidoM, clientes.rfc, cuenta.saldo FROM clientes INNER JOIN cuenta ON clientes.id_cliente = cuenta.id_cliente WHERE cuenta.id_cliente = :id_cliente');
+    $sql->bindParam(':id_cliente', $id);
+    $sql->execute();
+    $infocl = $sql->fetch(PDO::FETCH_ASSOC);
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -21,31 +32,35 @@
         <div class="movimientos">
             <div class="depositos">
                 <h1 class="titulo">DEPÓSITO</h1>
-                <label for="numeroCuenta">Ingrese la cuenta:</label>
-                <input id="numeroCuenta" type="text" placeholder="920344233"> <!-- Aquí se traerá la cuenta del cliente de la base de datos y se mostrará-->
-                <h3>Cliente:</h3>
-                <p>~Nombre del cliente~</p>
-                <h3>RFC:</h3>
-                <p>~RFC del cliente~</p>
-                <h3>Ejecutivo:</h3>
-                <p>~Nombre del ejecutivo~</p>
-                <label for="montoDeposito">Ingrese el monto a depositar:</label>
-                <input id="montoDeposito" type="text" placeholder="$0.00">
-                <button id="depositar">Depositar</button>
+                    <label for="numeroCuenta">Ingrese la cuenta:</label>
+                    <form id="datos_Deposito">
+                        <input id="numeroCuenta" type="text" placeholder="920344233" name="numcta" value="<?php echo $infocl['numCta'];?>">
+                        <h3>Cliente:</h3>
+                        <p><?php echo $infocl['nom'].' '.$infocl['apellidoP'].' '.$infocl['apellidoM'] ?></p>
+                        <h3>RFC:</h3>
+                        <p><?php echo $infocl['rfc'];?></p>
+                        <h3>Ejecutivo:</h3>
+                        <p><?php echo $_SESSION['nombre']?></p>
+                        <label for="montoDeposito">Ingrese el monto a depositar:</label>
+                        <input id="montoDeposito" name="monto" type="text" placeholder="$0.00">
+                    </form>
+                    <button id="depositar">Depositar</button>
                 
             </div>
             <div class="retiros">
                 <h1 class="titulo">RETIRO</h1>
                 <label for="numeroCuenta">Ingrese la cuenta:</label>
-                <input id="numeroCuenta" type="text" placeholder="920344233"> <!-- Aquí se traerá la cuenta del cliente de la base de datos y se mostrará-->
-                <h3>Dinero Disponible:</h3>
-                <p>~Cantidad Disponible~</p>
-                <h3>Cliente:</h3>
-                <p>~Nombre del cliente~</p>
-                <h3>RFC:</h3>
-                <p>~RFC del cliente~</p>
-                <label for="montoRetiro">Ingrese el monto a retirar:</label>
-                <input id="montoRetiro" type="text" placeholder="$0.00">
+                <form id="datos_Retiro">
+                    <input id="numeroCuenta_Retiro" name="numcta" type="text" placeholder="920344233" value="<?php echo $infocl['numCta'];?>"> <!-- Aquí se traerá la cuenta del cliente de la base de datos y se mostrará-->
+                    <h3>Dinero Disponible:</h3>
+                    <p><?php echo '$'.$infocl['saldo'];?></p>
+                    <h3>Cliente:</h3>
+                    <p><?php echo $infocl['nom'].' '.$infocl['apellidoP'].' '.$infocl['apellidoM'] ?></p>
+                    <h3>RFC:</h3>
+                    <p><?php echo $infocl['rfc'];?></p>
+                    <label for="montoRetiro">Ingrese el monto a retirar:</label>
+                    <input id="montoRetiro" name="monto" type="text" placeholder="$0.00">
+                </form>
                 <button id="retirar">Retirar</button>
             </div>
         </div>
@@ -57,3 +72,8 @@
     <script src="../public/js/alertas.js"></script>
 </body>
 </html>
+<?php
+}else{
+    header('Location:../login.php');
+}
+?>

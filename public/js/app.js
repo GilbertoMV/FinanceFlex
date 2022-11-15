@@ -204,14 +204,14 @@ if(registroclients){
             else if(data === 'ok'){
                 respuesta.innerHTML = `
                 <span class="success">
-                    Registro realizado con exito.
+                    Cliente registrado correctamente.
                 </span> 
                 `
             }
             else if(data === 'error'){
                 respuesta.innerHTML = `
                 <span class="error">
-                    Error al realizar el registro.
+                    Ha ocurrido un error registrando el cliente.
                 </span> 
                 `
             }

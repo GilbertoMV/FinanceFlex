@@ -4,6 +4,7 @@ require __DIR__ .'\..\includes\db.php';
 
     session_start();
     error_log("REGISTROCONTROLLER");
+
     $id_ejecutivo=$_SESSION['id_ejecutivo'];
     $nombres = $_POST['nombres'];
     $apellidop = $_POST['apellidoP'];
@@ -16,6 +17,9 @@ require __DIR__ .'\..\includes\db.php';
     $genero = $_POST['genero'];
     $email = $_POST['correo'];
     $pass = $_POST['password'];
+    if($nombres == '' or $correo == '' or $pass == ''){
+        echo json_encode('error');
+    }
     //VERIFICAR EXISTENCIA DE EMAIL EN DB
     $getEmail = $conn->prepare("SELECT email FROM clientes WHERE email = :email");
     $getEmail->bindParam(':email', $correo);

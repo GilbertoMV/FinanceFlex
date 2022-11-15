@@ -1,9 +1,28 @@
 <?php
 require __DIR__ .'\..\includes\db.php';
 session_start();
-$id_cliente=$_SESSION['id_cliente'];
-$records = $conn->prepare('INSERT INTO WHERE id_cliente = :id_cliente');
-$records->bindParam(':id_cliente', $id_cliente);
-$records->execute();
-$saldo = $records->fetchAll(PDO::FETCH_ASSOC);
-exit(json_encode($saldo));
+$cta=$_POST['numcta'];
+$monto=$_POST['monto'];
+try{
+    $records = $conn->prepare('SELECT saldo FROM cuenta WHERE numCta = :numCta');
+    $records->bindParam(':numCta', $cta);
+    $records->execute();
+    if($records->rowCount() > 0){
+        $saldo = $records->fetch(PDO::FETCH_ASSOC);
+        $saldo_new = $saldo['saldo'] + $monto;
+        $update = $conn->prepare('UPDATE cuenta SET saldo = :saldo WHERE numCta = :numCta');
+        $update->bindParam(':saldo', $saldo_new);
+        $update->bindParam(':numCta', $cta);
+        $update->execute();
+        if($update->rowCount() > 0){
+            echo json_encode('ok');
+        }   
+        else{
+            echo json_encode('error');
+        }
+    }else{
+        echo json_encode('not_exist');
+    }
+}catch(PDOException $e){
+    echo json_encode('error');
+}
