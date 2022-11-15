@@ -56,7 +56,7 @@ if(isset($_SESSION['id_ejecutivo'])){
                         <th>Teléfono</th>
                         <th width="30%">Acciones</th>
                     </tr>
-                </thead>
+                </thead> 
                         <tbody id="datos_cliente">
                         <?php foreach ($resultado as $resultado){?>
                             <tr>

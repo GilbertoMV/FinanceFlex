@@ -1,13 +1,12 @@
-<nav class="nav">
-            <div class="container">
-                <ul class="ul">
-                    <li class="li"><a href="index.php" class="a">Mi apartado</a></li>
-                    <li class="li"><a href="prestamos.php" class="a">Prestamos</a></li>
-                    <li class="li"><a href="ayuda.php" class="a">Ayuda</a></li>
-                    <li class="li"><a href="perfil.php" class="a">Configuración</a></li>
-                    <li><a href="#" ><img src="../public/img/profile.png" alt="perfil" class="logo"></a></li>
-                    <li><a href="../controllers/logoutcontroller.php"><img src="../public/img/switch.png" alt="cerrar" class="logo"></a></li>
-                </ul>
-            </div>
-            <div class="linea"></div>
-        </nav>
+<nav>
+    <div class="nav__container">
+        <a href="index.php" class="home"><img class="logo" src="../public/img/logito.png" alt="home"> FinanceFlex</a>           
+        <div class="nav__menu">
+            <a href="" class="a">Mi Apartado</a>
+            <a href="" class="a">Prestamos</a>
+            <a href="" class="a">Ayuda</a>
+            <a href="" class="a">Configuración</a>
+            <a href="../controllers/logoutcontroller.php" class="logout">Cerrar Sesion <i class="bi bi-door-closed"></i></a>
+        </div>
+    </div>   
+</nav>

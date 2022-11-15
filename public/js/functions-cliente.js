@@ -41,9 +41,10 @@ async function getTransactions(){
             transacciones.innerHTML = `
                     <tr>
                         <td>No cuentas con transacciones</td>
-                        <td>NULL</td>
-                        <td>NULL</td>
-                        <td class="warning">NULL</td>
+                        <td class="lista_transacciones">NULL</td>
+                        <td class="lista_transacciones">NULL</td>
+                        <td class="lista_transacciones">NULL</td>
+                        <td class="lista_transacciones"><button class="recibo">Recibo</button></td>
                     </tr>
             `
         }else{

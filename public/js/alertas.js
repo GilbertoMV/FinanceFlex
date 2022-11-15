@@ -245,3 +245,68 @@ $("#retirar").click(function() {
     }
   })
 });
+
+// ALERTAS DEL USUARIO
+
+// ALERTA DE INFORMACION SALDO A PAGAR
+$("#infoPago").click(function() {
+  Swal.fire({
+    icon:'info',
+    title:'¿Qué veo?',
+    text:'En este apartado se encuentra una preview de su prestamo más relevante, la cantidad que debe, los plazos que han sido pagados, así como también los plazos restantes para concluir el prestamo.',
+    background:'#d9d9d9',
+    showCancelButton: false,
+    showConfirmButton:false,
+    showCloseButton:true,
+    allowEscapeKey:false,
+    allowOutsideClick:false,
+  })
+})
+
+$("#pagar").click(function() {
+  Swal.fire ({
+    title:'Abonar A Mi Prestamo',
+    grow:'column',
+    html:`
+      <div>
+        <p>Saldo en la cuenta: "SALDO".</p>
+        <input class="input_pagar" type="text" placeholder="Monto a abonar" disabled>
+        <br>Detalles Del Pago:
+        <div class="detallesPago">
+          <li>✘ Mensualidad a pagar: "Enero - Febrero".</li>
+          <li>✘ Mensualidades del Prestamo: "12 Meses".</li>
+          <li>✘ Mensualidades Pagadas: "9 Mensualidades".</ñ>
+          <li>✘ Mensualidades Restantes: "3 Mensualidades".</li>
+        </div>
+      </div>`,
+    background:'#d9d9d9',
+    showCancelButton: true,
+    showConfirmButton: true,
+    showCloseButton:true,
+    allowEscapeKey:false,
+    allowOutsideClick:false,
+    confirmButtonColor: '#28a745',
+    cancelButtonColor: '#d8514b',
+    confirmButtonText: 'Sí, Pagar',
+    cancelButtonText: 'No, Cancelar',
+  }).then((result) => {
+    if(result.isConfirmed) {
+      Swal.fire({
+        background:'#d9d9d9',
+        icon: 'success',
+        title: '¡El Deposito fue realizado con exito!',
+        showConfirmButton: false,
+        timer: 1500
+      })
+    } else if(result.dismiss === Swal.DismissReason.cancel) {
+    Swal.fire({
+        background:'#d9d9d9',
+        icon:'error',
+        title:'¡Cancelado!',
+        text:'!La operación fue cancelada con exito!',
+        showConfirmButton: false,
+        timer: 1500
+      })
+    }
+  })
+})
