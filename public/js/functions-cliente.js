@@ -44,7 +44,9 @@ async function getTransactions(){
                         <td class="lista_transacciones">NULL</td>
                         <td class="lista_transacciones">NULL</td>
                         <td class="lista_transacciones">NULL</td>
-                        <td class="lista_transacciones"><button class="recibo">Recibo</button></td>
+                        <td class="lista_transacciones">
+                        <button class="recibo">Recibo</button>
+                        <button class="reciboResponsive"><i class="bi bi-receipt-cutoff"></i></button></td>
                     </tr>
             `
         }else{

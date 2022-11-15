@@ -171,12 +171,38 @@ nav .home:hover {
   justify-content: space-between;
   align-items: center; 
 }
+.nav__label, .nav__input {
+  display: none;
+}
 .nav__menu {
   display: grid;
   grid-auto-flow: column;
   gap: 3em;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 700px) {
+  .nav__label {
+      display: block;
+      cursor: pointer;
+  }
+  .nav__menu {
+      position: fixed;
+      top: 80px;
+      bottom: 0;
+      background-color: #fff;
+      width: 100%;
+      left: 0;
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: column;
+      align-items: center;
+      clip-path: circle(0 at 90% 0);
+      transition: clip-path 1s ease-in-out;
+  }
+  .nav__input:checked + .nav__menu {
+      clip-path: circle(145% at 90% 0);
+  }
 }
 .logout {
   background-color: #c8cdc4;
@@ -206,6 +232,11 @@ main {
     width: 100%;
     height: 30rem;
 }
+@media (max-width: 700px) {
+  .paneles{
+    grid-template-columns: 1fr;
+  }
+}
 .panel1 {
     display: grid;
     grid-template-rows: 1fr 1fr;
@@ -229,6 +260,11 @@ main {
     background:#FA4848;
     display:block;
     margin: auto;
+}
+@media (max-width:700px) {
+  .panel1 .contenedorh1 {
+    width: 60%;
+  }
 }
 /* PANEL 1 */
 .row1 {
@@ -308,6 +344,7 @@ main {
     font-size: 12px;
     margin: 0;
 }
+
 /* FIN PANEL 1 */
 
 
@@ -365,6 +402,14 @@ main {
     line-height: 20px;
 }
 
+@media (max-width:700px) {
+  .head .titulo {
+    width: 60%;
+  }
+  .pagar {
+    font-size: 13px;
+  }
+}
 /* FIN PANELES */
 
 /* TRANSACCIONES  */
@@ -408,6 +453,20 @@ main {
     padding: 5px 20px;
     border: solid 1px #000;
     border-radius: 10px;
+}
+.reciboResponsive {
+  display: none;
+  padding: 5px 10px;
+  border: solid 1px #000;
+  border-radius: 10px;
+}
+@media (max-width: 700px) {
+  .recibo {
+    display: none;
+  }
+  .reciboResponsive {
+    display: inline-block;
+  }
 }
 /* FIN DE TRANSACCIONES  */
 
