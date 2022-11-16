@@ -40,13 +40,13 @@ async function getTransactions(){
         {
             transacciones.innerHTML = `
                     <tr>
-                        <td>No cuentas con transacciones</td>
-                        <td class="lista_transacciones">NULL</td>
-                        <td class="lista_transacciones">NULL</td>
-                        <td class="lista_transacciones">NULL</td>
-                        <td class="lista_transacciones">
+                        <td>Deposito</td>
+                        <td>NULL</tdclass=>
+                        <td>NULL</tdlass=>
+                        <td>NULL</tdclass=>
+                        <td>
                         <button class="recibo">Recibo</button>
-                        <button class="reciboResponsive"><i class="bi bi-receipt-cutoff"></i></button></td>
+                        <button class="reciboResponsive"><i class="bi bi-receipt-cutoff"></i></button></tdclass=>
                     </tr>
             `
         }else{

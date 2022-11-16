@@ -154,6 +154,12 @@ nav .a:hover{
 .nav__menu a:hover::after{
   width: 100%;
 }
+.nav__menu ul li:hover ul {
+  display: block;
+  position: absolute;
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+}
 .linea {
   position: fixed;
   width: 85%;

@@ -9,9 +9,17 @@
         <div class="nav__menu">
             <a href="" class="a">Mi Apartado</a>
             <a href="" class="a">Prestamos</a>
+            <a href="perfil.php" class="a config">Configuración</a>
             <a href="" class="a">Ayuda</a>
-            <a href="" class="a">Configuración</a>
-            <a href="../controllers/logoutcontroller.php" class="logout">Cerrar Sesion <i class="bi bi-door-closed"></i></a></li>
-        </ul>
+            <a href="../controllers/logoutcontroller.php" class="a logout"><i class="bi bi-door-closed"></i> Cerrar Sesion </a>
+            <ul class="ul a">
+                <li><a href="#"><img src="../public/img/stockProfile.png" alt=""  class="profilePhoto"> ${Nombre de Usuario} <i class="bi bi-caret-down"></i></a>
+                    <ul>
+                        <li><a href="#" class="a"><i class="bi bi-sliders"></i> Configuración</a></li>
+                        <li><a href="../controllers/logoutcontroller.php" class="a"><i class="bi bi-door-closed"></i> Cerrar Sesion </a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </div>
 </nav>

@@ -87,7 +87,7 @@ if(isset($_SESSION['id_cliente'])){
             <table>
                 <thead>
                     <tr>
-                        <td width="35%">Tipo</td>
+                        <td width="10%">Tipo</td>
                         <td width="15%">Fecha</td>
                         <td width="15%">Hora</td>
                         <td width="15%">Total</td>

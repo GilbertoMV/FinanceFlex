@@ -153,6 +153,69 @@ nav .home:hover {
 .nav__menu a:hover::after{
   width: 100%;
 }
+.ul{
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.config {
+  display: none;
+}
+@media (max-width: 700px) {
+  .ul {
+    display: none;
+  }
+  .config {
+    display: block;
+  }
+}
+.ul li {
+  float: left;
+  list-style: none;
+  position: relative;
+}
+ul li a {
+  color:#4D4B4B;
+  line-height: 2rem;
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  text-align: left; 
+}
+ul li a:hover {
+  color:#4D4B4B;
+}
+
+ul li ul {
+  display: none;
+}
+
+ul li:hover ul {
+  display: inline-block;
+  position: absolute;
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 0;
+  margin: auto;
+}
+ul li ul li a {
+  padding: 10px 20px;
+  line-height: unset;
+  margin-left: .5rem;
+  white-space: nowrap;
+  width: 100%;
+}
+ul li ul li i {
+  margin-right: .5rem;
+}
+
+.profilePhoto {
+  width: 30px;
+  border-radius: 100%;
+}
 .linea {
   position: fixed;
   width: 85%;
@@ -165,7 +228,7 @@ nav .home:hover {
 .nav__container {
   display: flex;
   height: 100%;
-  width: 80%;
+  width: 90%;
   margin: auto;
   padding: 10px;
   justify-content: space-between;
@@ -213,10 +276,12 @@ nav .home:hover {
   font-family: 'Roboto', sans-serif;
   transition: all .5s;
   text-decoration: none;
+  display: none;
 }
-.logout:hover {
-  background-color: #62767f;
-  color: #fff;
+@media (max-width: 700px) {
+  .logout{
+    display: block;
+  }
 }
 
 /* MAIN */
@@ -263,7 +328,7 @@ main {
 }
 @media (max-width:700px) {
   .panel1 .contenedorh1 {
-    width: 60%;
+    width: 50%;
   }
 }
 /* PANEL 1 */
@@ -404,7 +469,7 @@ main {
 
 @media (max-width:700px) {
   .head .titulo {
-    width: 60%;
+    width: 50%;
   }
   .pagar {
     font-size: 13px;
@@ -453,6 +518,7 @@ main {
     padding: 5px 20px;
     border: solid 1px #000;
     border-radius: 10px;
+    margin: 10px 0;
 }
 .reciboResponsive {
   display: none;
@@ -466,6 +532,12 @@ main {
   }
   .reciboResponsive {
     display: inline-block;
+  }
+  .panel2 .contenedorh1 {
+    width: 50%;
+  }
+  .panel2 table {
+    width: 100%;
   }
 }
 /* FIN DE TRANSACCIONES  */
