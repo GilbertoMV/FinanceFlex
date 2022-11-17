@@ -45,17 +45,17 @@ if(isset($_SESSION['id_ejecutivo'])){
                 <div class="bloque">
                     <label for="nombres" class="labels">Nombre(s)</label>
                     <p class="lineaF"></p>
-                    <input type="text" name="nombres" id="nombres" class="inputs center" pattern="[A-Za-z]"  title="Solo se permiten letras." required>
+                    <input type="text" name="nombres" id="nombres" class="inputs center" pattern="[A-Za-z ]{1,32}"  title="Solo se permiten letras." required>
                 </div>
                 <div class="bloque">
                     <label for="apellidoM" class="labels">Apellido Paterno</label>
                     <p class="lineaF"></p>
-                    <input type="text" name="apellidoP" id="apeP" class="inputs center" pattern="[A-Za-z]"title="Solo se permiten letras." required>
+                    <input type="text" name="apellidoP" id="apeP" class="inputs center" pattern="[A-Za-z ]{1,32}"title="Solo se permiten letras." required>
                 </div>
                 <div class="bloque">
                     <label for="apellidoP" class="labels">Apellido Materno</label>
                     <p class="lineaF"></p>
-                    <input type="text" name="apellidoM" id="apeM" class="inputs center" pattern="[A-Za-z]" title="Solo se permiten letras." required>
+                    <input type="text" name="apellidoM" id="apeM" class="inputs center" pattern="[A-Za-z ]{1,32}" title="Solo se permiten letras." required>
                 </div>
                 <div class="bloque">
                     <label for="email" class="labels">Correo</label>
