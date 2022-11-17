@@ -13,7 +13,7 @@
             <a href="" class="a">Ayuda</a>
             <a href="../controllers/logoutcontroller.php" class="a logout"><i class="bi bi-door-closed"></i> Cerrar Sesion </a>
             <ul class="ul a">
-                <li><a href="#"><img src="../public/img/stockProfile.png" alt=""  class="profilePhoto"> ${Nombre de Usuario} <i class="bi bi-caret-down"></i></a>
+                <li><a href="#"><img src="../public/img/stockProfile.png" alt=""  class="profilePhoto"> <?= $_SESSION['nom'] ?><i class="bi bi-caret-down"></i></a>
                     <ul>
                         <li><a href="#" class="a"><i class="bi bi-sliders"></i> Configuración</a></li>
                         <li><a href="../controllers/logoutcontroller.php" class="a"><i class="bi bi-door-closed"></i> Cerrar Sesion </a></li>
