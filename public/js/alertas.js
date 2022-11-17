@@ -103,45 +103,59 @@ function edit(id) {
           </form>`,
         preConfirm: () => {
           const email= document.getElementById('email'); 
-          var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+          const nombres= document.getElementById('nombre');
+          const apellidoP= document.getElementById('apellidoP');
+          const apellidoM= document.getElementById('apellidoM');
+          const telefono= document.getElementById('telefono');
+          const rfc= document.getElementById('rfc');
+          const curp= document.getElementById('curp');
+          var validRegexEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+          var validRegexName = /^[a-zA-Z ]+$/;
+          var validRegexapeP = /^[a-zA-Z ]+$/;
+          var validRegexapeM = /^[a-zA-Z ]+$/;
+          var validRegexTel = /^[0-9]{10}$/;
+          var validRegexRFC = /^[A-Za-z0-9]{12,13}$/;
+          var validRegexCURP = /^[A-Za-z0-9]{18}$/;
 
-          if (document.getElementById('nombre').value) {
+
+
+          if (nombres.value.match(validRegexName)) {
           }
           else{
-            Swal.showValidationMessage('Campos vacios')
+            Swal.showValidationMessage('Solo se permiten letras en el campo nombre.')
 
           }
-          if(document.getElementById('apellidoP').value){
+          if(apellidoP.value.match(validRegexapeP)){
 
           }
           else {
-            Swal.showValidationMessage('Campos vacios')   
+            Swal.showValidationMessage('Solo se permiten letras en el campo apellido paterno.')   
           }
-          if (document.getElementById('apellidoM').value) {
+          if (apellidoM.value.match(validRegexapeM)) {
           }
           else{
-            Swal.showValidationMessage('Campos vacios')
+            Swal.showValidationMessage('Solo se permiten letras en el campo apellido materno.')
 
           }
-          if(document.getElementById('telefono').value){
+          if(telefono.value.match(validRegexTel)){
 
           }
           else {
-            Swal.showValidationMessage('Campos vacios')   
+            Swal.showValidationMessage('Solo se permiten numeros. Verifica tu numero a 10 digitos.')   
           }
-          if (document.getElementById('rfc').value) {
+          if (rfc.value.match(validRegexRFC)) {
           }
           else{
-            Swal.showValidationMessage('Campos vacios')
+            Swal.showValidationMessage('Verifica que tu RFC este escrito correctamente.')
 
           }
-          if(document.getElementById('curp').value){
+          if(curp.value.match(validRegexCURP)){
 
           }
           else {
-            Swal.showValidationMessage('Campos vacios')   
+            Swal.showValidationMessage('Verifica que tu CURP este escrita correctamente.')   
           }
-          if (email.value.match(validRegex)) {
+          if (email.value.match(validRegexEmail)) {
         
           } else {
             Swal.showValidationMessage('Email con formato incorrecto') 

@@ -82,7 +82,7 @@ if(isset($_SESSION['id_ejecutivo'])){
                                 <td class="lista_clientes"><?php echo $prestamo['fechaInicial']; ?></td>
                                 <td class="lista_clientes"><?php echo $prestamo['fechaTermino']; ?></td>
                                 <td class="lista_clientes buttons_clientes">
-                                    <form method="post" action="../controllers/pdf.php">
+                                    <form method="post" target="_blank" action="../controllers/pdf.php">
                                         <input type="hidden" name="id" value="<?php echo $id;?>"/>
                                         <input type="hidden" name="idPrestamo" value="<?php echo $prestamo['id_prestamo'];?>"/>
                                         <button class="pdf"><i class="bi bi-filetype-pdf"> Descargar PDF</i></button>
