@@ -398,10 +398,24 @@ $("#retirar").click(function() {
 // ALERTA DE INFORMACION SALDO A PAGAR
 $("#infoPago").click(function() {
   Swal.fire({
-    icon:'info',
+    icon:'question',
     title:'¿Qué veo?',
     text:'En este apartado se encuentra una preview de su prestamo más relevante, la cantidad que debe, los plazos que han sido pagados, así como también los plazos restantes para concluir el prestamo.',
-    background:'#d9d9d9',
+    // background:'#d9d9d9',
+    showCancelButton: false,
+    showConfirmButton:false,
+    showCloseButton:true,
+    allowEscapeKey:false,
+    allowOutsideClick:false,
+  })
+})
+// ALERTA DE INFORMACION SOLICITAR PRESTAMO
+$("#infoSolicitar").click(function() {
+  Swal.fire({
+    icon:'question',
+    title:'¿Qué Es Este Apartado?',
+    text:'En este apartado podrás establecer los detalles de un prestamo, puedes ingresar el monto y el número de plazos en lo que deseas pagarlo y te mostrará la tabla de amortización, si así lo decides puedes solicitar ahí mismo tu prestamo!!!',
+    // background:'#d9d9d9',
     showCancelButton: false,
     showConfirmButton:false,
     showCloseButton:true,
@@ -412,21 +426,19 @@ $("#infoPago").click(function() {
 
 $("#pagar").click(function() {
   Swal.fire ({
-    title:'Abonar A Mi Prestamo',
-    grow:'column',
-    html:`
-      <div>
-        <p>Saldo en la cuenta: "SALDO".</p>
-        <input class="input_pagar" type="text" placeholder="Monto a abonar" disabled>
-        <br>Detalles Del Pago:
-        <div class="detallesPago">
-          <li>✘ Mensualidad a pagar: "Enero - Febrero".</li>
-          <li>✘ Mensualidades del Prestamo: "12 Meses".</li>
-          <li>✘ Mensualidades Pagadas: "9 Mensualidades".</ñ>
-          <li>✘ Mensualidades Restantes: "3 Mensualidades".</li>
-        </div>
-      </div>`,
-    background:'#d9d9d9',
+    icon:'question',
+    title:'¿Desea Pagar la Mensualidad?',
+    text:'${Mensualidad}',
+    inputLabel:'Saldo de la cuenta: ${Saldo}',
+    input:'text',
+    inputValue:'${Monto A Pagar}',
+    inputPlaceholder:'${Monto a Pagar}',
+    inputAttributes:{
+      value:'10000',
+      autocapitalize: 'off',
+      autocorrect: 'off',
+      disabled:'on',
+    },
     showCancelButton: true,
     showConfirmButton: true,
     showCloseButton:true,
@@ -434,26 +446,85 @@ $("#pagar").click(function() {
     allowOutsideClick:false,
     confirmButtonColor: '#28a745',
     cancelButtonColor: '#d8514b',
-    confirmButtonText: 'Sí, Pagar',
-    cancelButtonText: 'No, Cancelar',
+    confirmButtonText: 'Sí, Pagar.',
+    cancelButtonText: 'No, Cancelar.',
   }).then((result) => {
     if(result.isConfirmed) {
-      Swal.fire({
-        background:'#d9d9d9',
-        icon: 'success',
-        title: '¡El Deposito fue realizado con exito!',
-        showConfirmButton: false,
-        timer: 1500
-      })
+      (async () => {
+
+        const { value: password } = await Swal.fire({
+          title: 'Ingresa tu Contraseña',
+          input: 'password',
+          inputPlaceholder: 'Ingresa tu Contraseña:',
+          inputAttributes: {
+            autocapitalize: 'off',
+            autocorrect: 'off'
+          },
+          confirmButtonColor: '#28a745',
+          cancelButtonColor: '#d8514b',
+          confirmButtonText: 'Pagar.',
+          cancelButtonText: 'No, Cancelar.',
+          showCancelButton: true,
+          allowEscapeKey:false,
+          allowOutsideClick:false,
+        })
+        if (password == "password") {
+          Swal.fire({
+            title:'¡Pago Autorizado y Realizado!',
+            text:'Gracias por mantenerte al día en tus mensualidades.',
+            icon:'success',
+            showConfirmButton: false,
+            timer:3000
+          })
+        }else if(password != "password"){
+          Swal.fire({
+            title:'¡Contraseña Incorrecta!',
+            text:'Su contraseña no coincide, intentelo de nuevo.',
+            icon:'error',
+            showConfirmButton: false,
+            timer:3000
+          })
+        }
+        })()
     } else if(result.dismiss === Swal.DismissReason.cancel) {
     Swal.fire({
-        background:'#d9d9d9',
         icon:'error',
         title:'¡Cancelado!',
-        text:'!La operación fue cancelada con exito!',
+        text:'La operación fue cancelada con exito.',
         showConfirmButton: false,
-        timer: 1500
+        timer:2000
       })
     }
   })
+})
+
+$("#solicitarPrestamo").click(function() {
+  (async () => {
+
+    const { value: password } = await Swal.fire({
+      title: 'Ingresa tu Contraseña',
+      input: 'password',
+      inputLabel: 'Contraseña',
+      inputPlaceholder: 'Ingresa tu Contraseña:',
+      inputAttributes: {
+        autocapitalize: 'off',
+        autocorrect: 'off'
+      }
+    })
+    
+    if (password) {
+      Swal.fire(
+        'Prestamo Otorgado',
+        'Ya dispones de tu prestamo en tu cuenta!',
+        'success'
+      )
+    }else {
+      Swal.fire(
+        '¡Algo Salió Mal! :(',
+        'Posiblemente no sea culpa tuya, intenta de nuevo. Si el problema persiste acude con tu ejecutivo.',
+        'error'
+      )
+    }
+    
+    })()
 })

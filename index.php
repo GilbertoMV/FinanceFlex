@@ -32,7 +32,7 @@
                 <h2>COMIENZA</h2>
                 <h3>A ADMINISTRAR TU DINERO</h3>
                 <p>con FinanceFlex</p>
-                <button type="button"><a href="login.php">Empieza Ya</button></a>
+                <a href="login.php" class="button">Empieza Ya</a>
             </div>
             <div class="col-2">
                 <img src="./public/img/Character 1.png" class="person">

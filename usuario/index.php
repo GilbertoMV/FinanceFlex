@@ -87,22 +87,28 @@ if(isset($_SESSION['id_cliente'])){
             <table>
                 <thead>
                     <tr>
-                        <td width="10%">Tipo</td>
-                        <td width="15%">Fecha</td>
-                        <td width="15%">Hora</td>
-                        <td width="15%">Total</td>
-                        <td width="15%">Recibo</td>
+                        <td class="tr" width="10%">Tipo</td>
+                        <td class="tr" width="15%">Fecha</td>
+                        <td class="tr" width="15%">Hora</td>
+                        <td class="tr" width="15%">Total</td>
+                        <td class="tr" width="15%">Recibo</td>
                     </tr>
                 </thead>
                 <tbody id="transaccion">
-                    </tbody>
+                </tbody>
             </table>
         </div>
     </section>
+
+
+
+
 <script src="../public/js/functions-cliente.js"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="../public/js/jquery-3.6.1.min.js"></script>
 <script src="../public/js/alertas.js"></script>
+
+
 </body>
 </html>
 <?php
