@@ -29,7 +29,7 @@ else{
         <div class="forms-container">
             <div class="singin-singup" id="sing-in">
                 <form id="loginclient" class="sign-in-form">
-                    <h2 class="title">Inicia Sesión</h2>
+                    <h2 class="title">- Inicia Sesión -</h2>
                     <p class="formulario-input-error" id="formulario-input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
                     <p class="formulario-mensaje" id="formulario-mensaje"><b>Error:</b> Por favor rellena el formulario correctamente. </p>
                     <div class="input-field-email" id="input-email">
@@ -45,13 +45,16 @@ else{
                     </div>
                     <input type="submit" value="Iniciar Sesión" class="btn solid">
                 </form>
+    
                 <form id="loginadmin" class="sign-up-form">
-                <h2 class="title">ADMINISTRADOR</h2>
-                    <div class="input-field-email">
+                <h2 class="title">- Ejecutivo -</h2>
+                <p class="formulario-input-error" id="formulario-input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
+                <p class="formulario-mensaje" id="formulario-mensaje"><b>Error:</b> Por favor rellena el formulario correctamente. </p>
+                    <div class="input-field-email" id="input-email">
                         <i class="fas fa-user"></i>
                         <input type="email" name="emailAdmin" id="emailAdmin" placeholder="Correo" autocomplete="off" required>
                     </div>
-                    <div class="input-field-password">
+                    <div class="input-field-password" id="input-password">
                         <i class="fas fa-lock"></i>
                         <input type="password" name="passwordAdmin" id="passwordAdmin" placeholder="Contraseña" autocomplete="off" required>
                     </div>
@@ -77,7 +80,7 @@ else{
         <div class="panels-container">
             <div class="panel left-panel">
                 <div class="content">
-                    <h3>Nuevo por aquí?</h3>
+                    <h3>¿Nuevo por aquí?</h3>
                     <p>Para poder registrate en FinanceFlex es necesario acudir con uno de nuestros ejecutivos.</p>
                     <button class="btn transparent" id="sign-up-btn">Soy ejecutivo</button>
                 </div>
@@ -85,8 +88,8 @@ else{
             </div>
             <div class="panel right-panel">
                 <div class="content">
-                    <h3>Bienvenido</h3>
-                    <p>Ya te encuentras registrado en Finance Flex?</p>
+                    <h3>¡Bienvenido!</h3>
+                    <p>Ya te encuentras registrado en FinanceFlex?</p>
                     <button class="btn transparent" id="sign-in-btn">Inicia sesión</button>
                 </div>
                 <img src="./public/img/mobile_pay.svg" class="image" alt="">

@@ -507,11 +507,22 @@ main {
     font-family: 'Roboto';
 }
 .panel2 thead{
-    border-bottom: solid 2px #c8cdc4;
+    border-bottom: solid 3px #b4b6b3;
     border-collapse: collapse;
+}
+.panel2 #transaccion {
+  
+  border-bottom: solid 2px #c8cdc4;
+  border-collapse: collapse;
 }
 .lista_transacciones {
     padding: 10px 0px;
+}
+.tr{
+  padding: 10px 0;
+}
+.td {
+  padding: 7px 0;
 }
 .recibo {
     display: inline-block;
@@ -543,3 +554,98 @@ main {
 /* FIN DE TRANSACCIONES  */
 
 /* FIN MAIN */
+
+/* PRESTAMOS  */
+
+/* MODAL SIMULADOR  */
+
+.hero__cta{
+  text-decoration: none;
+  color: rgb(71, 51, 51);
+  padding: 15px 60px;
+  border: 1px solid;
+  border-radius: 6px;
+  display: inline-block;
+  font-weight: 500;
+  transition: background-color .3s;
+}
+
+.hero__cta:hover{
+  background-color: #fff;
+  color: #1e3c72;
+}
+
+ .modal1{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #111111bd;
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .6s .9s;
+  --transform: translateY(-100vh);
+  --transition: transform .8s;
+}
+
+.modal--show{
+  opacity: 1;
+  pointer-events: unset;
+  transition: opacity .6s;
+  --transform: translateY(0);
+  --transition: transform .8s .8s;
+}
+
+.modal__container{
+  margin: auto;
+  width: 80%;
+  height: auto;
+  max-width: 95%;
+  max-height: 95%;
+  background-color: #fff;
+  border-radius: 6px;
+  display: grid;
+  gap: 1em;
+  grid-auto-columns: 100%;
+  transform: var(--transform);
+  transition:var(--transition);
+  overflow: scroll;
+}
+
+
+.modal__close{
+  text-decoration: none;
+  color: #fff;
+  background-color: #F26250;
+  padding: 1em 3em;
+  border: 1px solid ;
+  border-radius: 6px;
+  display: inline-block;
+  font-weight: 300;
+  transition: background-color .3s;
+}
+
+.modal__close:hover{
+  color: #F26250;
+  background-color: #fff;
+}
+.thT {
+  text-align: center;
+}
+.table tbody td{
+  text-align: center;
+
+}
+.h2 {
+  text-align: center;
+}
+.row {
+  height: 100%;
+  padding: 2rem;
+}
+
+/* FIN MODAL SIMULADOR  */
+
+/* FIN DE PRESTAMOS */

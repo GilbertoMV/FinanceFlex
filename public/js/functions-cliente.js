@@ -40,13 +40,11 @@ async function getTransactions(){
         {
             transacciones.innerHTML = `
                     <tr>
-                        <td>Deposito</td>
-                        <td>NULL</tdclass=>
-                        <td>NULL</tdlass=>
-                        <td>NULL</tdclass=>
-                        <td>
-                        <button class="recibo">Recibo</button>
-                        <button class="reciboResponsive"><i class="bi bi-receipt-cutoff"></i></button></tdclass=>
+                        <td class="td">Deposito</td>
+                        <td class="td">NULL</tdclass=>
+                        <td class="td">NULL</tdlass=>
+                        <td class="td">NULL</tdclass=>
+                        <td class="td">NULL</td>
                     </tr>
             `
         }else{
@@ -56,10 +54,13 @@ async function getTransactions(){
                 let newtr = document.createElement("tr");
                 newtr.innerHTML = `
                 <tr>
-                    <td>${item.tipo}</td>
-                    <td>${item.fecha_hora}</td>
-                    <td>${item.fecha_hora}</td>
-                    <td class="warning">${item.monto}</td>`;
+                    <td class="td">${item.tipo}</td>
+                    <td class="td">${item.fecha_hora}</td>
+                    <td class="td">${item.fecha_hora}</td>
+                    <td class="warning td">${item.monto}</td>
+                    <td class="td">
+                    <button class="recibo">Recibo</button>
+                    <button class="reciboResponsive"><i class="bi bi-receipt-cutoff"></i></button></td>`;
                     document.querySelector("#transaccion").appendChild(newtr);
             });
 
