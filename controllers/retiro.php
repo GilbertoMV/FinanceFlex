@@ -12,10 +12,11 @@ try{
         if($monto > $saldo['saldo']){
             echo json_encode('not_money');
         }else{
-            $saldo_new = $saldo['saldo'] - $monto;
-            $update = $conn->prepare('UPDATE cuenta SET saldo = :saldo WHERE numCta = :numCta');
-            $update->bindParam(':saldo', $saldo_new);
+            $tipo = "Retiro";
+            $update = $conn->prepare('INSERT INTO movimientos(numCta, tipo, monto) VALUES (:numCta, :tipo, :monto)');
             $update->bindParam(':numCta', $cta);
+            $update->bindParam(':tipo', $tipo);
+            $update->bindParam(':monto', $monto);
             $update->execute();
             if($update->rowCount() > 0){
                 echo json_encode('ok');

@@ -7,7 +7,7 @@ async function getBalance(){
         let resp= await fetch(__DIR__+'../controllers/checkbalance.php');
         response = await resp.json();
         console.log(response);
-        if(response === 'null'){
+        if(response === 0.00){
             saldo.innerHTML = `
             <p>$0.00</p>
     

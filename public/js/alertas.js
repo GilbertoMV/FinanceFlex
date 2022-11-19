@@ -350,14 +350,16 @@ $("#retirar").click(function() {
       console.log(data);
       if (data == 'ok') {
         Swal.fire({
-          title:'¡El deposito se realizó con exito!',
+          title:'¡El retiro se realizó con exito!',
           icon:'success',
           background:"#2f2f2f",
           color:"#fff",
           timer:1500,
           showConfirmButton:false,
           timerProgressBar:true
-        })
+        }).then(function() {
+          location.reload();
+        });
      }else if(data == 'not_exist'){
       Swal.fire({
         title:'¡Numero de cuenta no existe!',
