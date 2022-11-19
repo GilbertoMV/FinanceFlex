@@ -4,6 +4,7 @@ session_start();
 
 //error_log($_SESSION['id_cliente']);
 if(isset($_SESSION['id_cliente'])){
+    date_default_timezone_set('America/Mexico_City');
 
 ?><!DOCTYPE html>
 <html lang="es">
@@ -38,7 +39,7 @@ if(isset($_SESSION['id_cliente'])){
                         <div class="extras_row1">
                             <div class="contenedorh1">
                                 <p>Proximo Pago:</p>
-                                <h5>$1,200.00</h5>
+                                <h5><?php echo $fechaActual = date('y-m-d');?></h5>
                             </div>
                         </div>
                         <div class="extras_row2">
@@ -66,13 +67,14 @@ if(isset($_SESSION['id_cliente'])){
                                 <div class="row">
                                     <div class="col-12 col-sm-12 col-lg-4 ab">
                                         <h2 class="h2">Simulador de Prestamos</h2>
+                                        <form id="datos_prestamo" target="_blank" method="post">
                                         <div class="form-group mt-2 mb-3">
                                             <label for="monto">Monto</label>
-                                            <input type="text" class="form-control" id="monto" placeholder="Ingresar monto">
+                                            <input name="monto" type="text" class="form-control" id="monto" placeholder="Ingresar monto">
                                         </div>
                                         <div class="input-group mb-3">
                                             <label class="input-group-text" for="tiempo">Elige los Plazos</label>
-                                            <select class="form-select" id="tiempo">
+                                            <select class="form-select" id="tiempo" name="tiempo">
                                                 <option value="6" selected>6 Meses</option>
                                                 <option value="9">9 Meses</option>
                                                 <option value="12">12 Meses</option>
@@ -88,9 +90,9 @@ if(isset($_SESSION['id_cliente'])){
                                         </div>
                                         <div class="mb-3">
                                             <button type="button" class="btn btn-primary" id="btnCalcular">Calcular</button>
-                                            <button type="button" class="btn btn-danger">PDF</button>
+                                            <button formaction="../controllers/pdfClient.php" class="btn btn-danger">PDF</button>
                                             <button type="button" class="btn btn-primary" id="solicitarPrestamo">Solicitar</button>
-
+                                        </form>
                                         </div>
                                         <div>
                                             <button type="button" class="btn btn-danger modal__close">Cerrar</button>
