@@ -1,4 +1,4 @@
-var saldo = document.getElementById('saldo');
+var saldo = document.getElementById('saldo_actual');
 var transacciones = document.getElementById('transaccion');
 var __DIR__ = window.location.pathname.match('(.*\/).*')[1] + '';
 async function getBalance(){
@@ -9,17 +9,38 @@ async function getBalance(){
         console.log(response);
         if(response === 'null'){
             saldo.innerHTML = `
-            <div class="txt">
-                <h6>$0.00</h6>
-                <p>Saldo Actual</p>
+            <p>$0.00</p>
+    
+            `
+        }else{
+            saldo.innerHTML = `
+            <p>$${response[0].saldo}</p>
+    
+            `
+        }
+        console.log(json);
+    }catch(err){
+
+    }
+}
+getBalance();/*
+async function getUltimoDeposito(){
+
+    try{
+        let resp= await fetch(__DIR__+'../controllers/checkbalance.php');
+        response = await resp.json();
+        console.log(response);
+        if(response === 'null'){
+            saldo.innerHTML = `
+            <div class="saldo">
+                <p>$0.00</p>
             </div> 
     
             `
         }else{
             saldo.innerHTML = `
-            <div class="txt">
-                <h6>$${response[0].saldo}</h6>
-                <p>Saldo Actual</p>
+            <div class="saldo">
+                <p>$${response[0].saldo}</p>
             </div> 
     
             `
@@ -29,7 +50,7 @@ async function getBalance(){
 
     }
 }
-getBalance();
+getUltimoDeposito();*/
 async function getTransactions(){
 
     try{

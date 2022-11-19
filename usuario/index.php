@@ -32,9 +32,8 @@ if(isset($_SESSION['id_cliente'])){
                     <h1>Detalles de Saldo</h1>
                 </div>
                 <div class="detalles">
-                    <div class="saldo">
-                        <p>$2,000.00</p>
-                    </div>
+                <div id="saldo_actual"class="saldo">
+            </div> 
                     <div class="extras">
                         <div class="extras_row1">
                             <div class="contenedorh1">

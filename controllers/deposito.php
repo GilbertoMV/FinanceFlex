@@ -8,11 +8,13 @@ try{
     $records->bindParam(':numCta', $cta);
     $records->execute();
     if($records->rowCount() > 0){
-        $saldo = $records->fetch(PDO::FETCH_ASSOC);
-        $saldo_new = $saldo['saldo'] + $monto;
-        $update = $conn->prepare('UPDATE cuenta SET saldo = :saldo WHERE numCta = :numCta');
-        $update->bindParam(':saldo', $saldo_new);
+        $tipo = "Deposito";
+        $update = $conn->prepare('INSERT INTO movimientos(numCta, tipo, monto) VALUES (:numCta, :tipo, :monto)');
         $update->bindParam(':numCta', $cta);
+        $update->bindParam(':tipo', $tipo);
+        $update->bindParam(':monto', $monto);
+
+        //$update->bindParam(':fecha_hora', );
         $update->execute();
         if($update->rowCount() > 0){
             echo json_encode('ok');
