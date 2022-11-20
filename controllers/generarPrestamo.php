@@ -46,9 +46,10 @@ for($i=0; $i< $plazo; $i++){
     $fechaTermino= $y.'-'.$m.'-'.$d;
 }
 //INSERTAR PRESTAMO
-$insert = $conn->prepare('INSERT INTO prestamos(numCta, monto, interes, fechaInicial, fechaTermino) VALUES (:numCta, :monto, :interes, :fechaInicial, :fechaTermino)');
+$insert = $conn->prepare('INSERT INTO prestamos(numCta, monto, restante, interes, fechaInicial, fechaTermino) VALUES (:numCta, :monto, :restante,:interes, :fechaInicial, :fechaTermino)');
 $insert->bindParam(':numCta', $numcta);
 $insert->bindParam(':monto', $monto);
+$insert->bindParam(':restante', $monto);
 $insert->bindParam(':interes', $interes);
 $insert->bindParam(':fechaInicial', $fechaActual);
 $insert->bindParam(':fechaTermino', $fechaTermino);
