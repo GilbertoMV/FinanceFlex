@@ -6,7 +6,7 @@ function delet(id) {
   })  
   swalWithBootstrapButtons.fire({
     title: '¿Está seguro?',
-    text: "¡Esta acción no se podrá revertir!",
+    text: "¡Asegurate de que el cliente sea el correcto!",
     icon: 'warning',
     showCancelButton: true,
     confirmButtonText: 'Sí, dar de baja.',
@@ -42,6 +42,62 @@ function delet(id) {
           swalWithBootstrapButtons.fire({
             title:'¡Cancelado!',
             text:'Los datos están a salvo :)',
+            icon:'error',
+            showConfirmButton:false,
+            timerProgressBar:true,
+            timer:2000,
+            allowOutsideClick: false,
+            allowEscapeKey: false,     
+          })
+        }
+      })
+    }
+  })
+}
+//REACTIVACION DE CLIENTE
+function reactivar(id) {
+  const swalWithBootstrapButtons = Swal.mixin({
+    color:'#fff',
+    background: '#2f2f2f'
+  })  
+  swalWithBootstrapButtons.fire({
+    title: '¿Está seguro?',
+    text: "¡Asegurate de que el cliente sea el correcto!",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonText: 'Sí, reactivar.',
+    confirmButtonColor:'#28a745',
+    background: '#2f2f2f',
+    color:'#fff',
+    cancelButtonText: 'No, cancelar.',
+    cancelButtonColor:'#d8514b',
+    reverseButtons: true
+  }).then((result) => {
+    if (result.value) {
+      fetch('../controllers/reacliente.php?num_cliente='+id,{
+        method: 'POST'
+      })
+      .then(res=>res.json())
+      .then(data =>{
+        if(data == 'success'){
+          swalWithBootstrapButtons.fire({
+            title:'¡Reactivado!',
+            text:'El cliente ha sido reactivado con exito',
+            icon:'success',
+            showConfirmButton:false,
+            timerProgressBar:true,
+            timer:2000,
+            allowOutsideClick: false,
+            allowEscapeKey: false,
+          }).then(function() {
+            location.reload();
+          });
+        }
+        else if (result.dismiss === Swal.DismissReason.cancel) 
+        {
+          swalWithBootstrapButtons.fire({
+            title:'¡Cancelado!',
+            text:'Operacion cancelada :)',
             icon:'error',
             showConfirmButton:false,
             timerProgressBar:true,

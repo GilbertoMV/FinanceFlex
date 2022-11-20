@@ -474,13 +474,24 @@ main .lineaR {
 }
 
 .editar {
+  border: solid 2px #ffd969;
+  padding: 5px;
+  border-radius: 5px;
+  color: #ffd969;
+  transition: all .5s;
+}
+.editar:hover {
+  background-color: #ffd969;
+  color: #fff;
+}
+.reactivar {
   border: solid 2px #27a644;
   padding: 5px;
   border-radius: 5px;
   color: #27a644;
   transition: all .5s;
 }
-.editar:hover {
+.reactivar:hover {
   background-color: #27a644;
   color: #fff;
 }

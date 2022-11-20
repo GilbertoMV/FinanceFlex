@@ -5,7 +5,7 @@ session_start();
 
 if(isset($_SESSION['id_ejecutivo'])){
     require_once __DIR__ .'\..\includes\db.php';
-    $records = $conn->prepare('SELECT id_cliente, nom, apellidoP, apellidoM, rfc, telefono, genero FROM clientes WHERE id_ejecutivo = :id_ejecutivo');
+    $records = $conn->prepare('SELECT id_cliente, nom, apellidoP, apellidoM, rfc, telefono, genero, status FROM clientes WHERE id_ejecutivo = :id_ejecutivo');
     $records->bindParam(':id_ejecutivo', $_SESSION['id_ejecutivo']);
     $records->execute();    
     $resultado = $records->fetchAll(PDO::FETCH_ASSOC);
@@ -68,7 +68,11 @@ if(isset($_SESSION['id_ejecutivo'])){
                                 <td class="lista_clientes buttons_clientes">
                                 <button onclick="options(<?php echo $resultado['id_cliente']; ?>)"class="info"><i class="bi bi-info-circle"> Más</i></button>
                                 <button onclick="edit(<?php echo $resultado['id_cliente']; ?>)"class="editar"><i class="bi bi-pencil-square"> Editar</i></button>
-                                <button onclick="delet(<?php echo $resultado['id_cliente']; ?>)"class="eliminar"><i class="bi bi-person-x"> Eliminar</i></button>
+                                <?php if($resultado['status'] === '1'){ ?>
+                                    <button onclick="delet(<?php echo $resultado['id_cliente']; ?>)"class="eliminar"><i class="bi bi-person-x"> Dar baja</i></button>
+                                <?php }else{ ?>
+                                    <button onclick="reactivar(<?php echo $resultado['id_cliente']; ?>)"class="reactivar"><i class="bi bi-person-x"> Reactivar</i></button>
+                                <?php } ?>
                             </td> 
                         </tr>
                         <?php } ?>
