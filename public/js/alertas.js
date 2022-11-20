@@ -452,9 +452,7 @@ $("#pagar").click(function() {
     cancelButtonText: 'No, Cancelar.',
   }).then((result) => {
     if(result.isConfirmed) {
-      (async () => {
-
-        const { value: password } = await Swal.fire({
+        Swal.fire({
           title: 'Ingresa tu Contraseña',
           input: 'password',
           inputPlaceholder: 'Ingresa tu Contraseña:',
@@ -487,7 +485,6 @@ $("#pagar").click(function() {
             timer:3000
           })
         }
-        })()
     } else if(result.dismiss === Swal.DismissReason.cancel) {
     Swal.fire({
         icon:'error',
@@ -501,32 +498,94 @@ $("#pagar").click(function() {
 })
 
 $("#solicitarPrestamo").click(function() {
-  (async () => {
-
-    const { value: password } = await Swal.fire({
+    Swal.fire({
       title: 'Ingresa tu Contraseña',
       input: 'password',
-      inputLabel: 'Contraseña',
       inputPlaceholder: 'Ingresa tu Contraseña:',
       inputAttributes: {
         autocapitalize: 'off',
         autocorrect: 'off'
-      }
+      },
+      showCancelButton: true,
+      confirmButtonColor: '#198754',
+      cancelButtonColor: '#dc3545',
+      confirmButtonText: 'Confirmar',
+      cancelButtonText: 'Cancelar'
+    }).then((result)=>{ 
+      if(result.isConfirmed) {
+    const email= document.getElementById("email").value
+    const form = new FormData();
+    form.append("email", email);
+    form.append("password", result.value);
+    var url = "../controllers/loginclient.php";
+    fetch(url, {
+        method: 'post',
+        body: form
     })
-    
-    if (password) {
-      Swal.fire(
-        'Prestamo Otorgado',
-        'Ya dispones de tu prestamo en tu cuenta!',
-        'success'
-      )
-    }else {
-      Swal.fire(
-        '¡Algo Salió Mal! :(',
-        'Posiblemente no sea culpa tuya, intenta de nuevo. Si el problema persiste acude con tu ejecutivo.',
-        'error'
-      )
+    .then(data => data.json())
+    .then(data =>{
+      console.log(data);
+      if (data === 'ok') {
+        const monto= document.getElementById("monto").value
+        if(monto === ''){
+          Swal.fire({
+            title:'¡Ha ocurrido un error!',
+            text:'Debes indicar el monto del prestamo.',
+            icon:'error',
+            showConfirmButton: false,
+            timer:3000
+          })
+        }
+        else{
+          const plazo= document.getElementById("tiempo").value
+          const form = new FormData();
+          form.append("monto", monto);
+          form.append("plazo", plazo);
+          var url = "../controllers/generarPrestamo.php";
+          fetch(url, {
+              method: 'post',
+              body: form
+          }).then(data => data.json())
+          .then(data_prestamo =>{
+            console.log(data_prestamo);
+            if(data_prestamo === 'ok_generado'){
+              Swal.fire({
+                title:'¡Prestamo confirmado!',
+                text:'Recuerda pagar a tiempo tus pagos.',
+                icon:'success',
+                showConfirmButton: false,
+                timer:3000
+              })
+            } 
+            else if(data_prestamo === 'error'){
+              Swal.fire({
+                title:'¡Ha ocurrido un error!',
+                text:'Contacta a soporte tecnico.',
+                icon:'error',
+                showConfirmButton: false,
+                timer:3000
+              })
+            }
+          })
+        }
+        }else{
+          Swal.fire({
+            title:'¡Oops, parece que no eres tú!',
+            text:'Revisa que la informacion ingresada sea correcta.',
+            icon:'error',
+            showConfirmButton: false,
+            timer:3000
+          })
+        }
+  })
+}else if(result.dismiss === Swal.DismissReason.cancel) {
+    Swal.fire({
+        icon:'error',
+        title:'¡Cancelado!',
+        text:'La operación fue cancelada con exito.',
+        showConfirmButton: false,
+        timer:2000
+      })
     }
-    
-    })()
+})
 })

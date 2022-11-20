@@ -129,6 +129,28 @@ $pdf->Cell(31,10,'Pago total','B',0,'C',0);
 $pdf->Cell(31,10,'Saldo restante','B',0,'C',0);
 $pdf->SetY(200);
 
+$fechaActual= date('y-m-d');
+$partesInicio = explode('-', $fechaActual);
+$year=$partesInicio[0];
+$month=$partesInicio[1]+1;
+if ($month<10){
+    $month='0'.$month;
+}
+else{
+    $month;
+}
+$day=$partesInicio[2];
+for($i=0; $i< $totalMonths; $i++){
+    $month=$month+1;
+    if($month >12){
+        $month='1';
+        $year=$year+1;
+    }
+    if ($month<10 and $month>0){
+        $month = '0'.$month;
+    }
+
+}
 for($i=0; $i< $totalMonths; $i++){
     $interes_cal=$monto*$interes;
     $total=$interes_cal+$cuota;

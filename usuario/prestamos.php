@@ -67,10 +67,10 @@ if(isset($_SESSION['id_cliente'])){
                                 <div class="row">
                                     <div class="col-12 col-sm-12 col-lg-4 ab">
                                         <h2 class="h2">Simulador de Prestamos</h2>
-                                        <form id="datos_prestamo" target="_blank" method="post">
+                                        <form id="datos_prestamo" name="datos" target="_blank" method="post">
                                         <div class="form-group mt-2 mb-3">
                                             <label for="monto">Monto</label>
-                                            <input name="monto" type="text" class="form-control" id="monto" placeholder="Ingresar monto">
+                                            <input name="monto" type="text" class="form-control" id="monto" placeholder="Ingresar monto" required>
                                         </div>
                                         <div class="input-group mb-3">
                                             <label class="input-group-text" for="tiempo">Elige los Plazos</label>
@@ -89,13 +89,14 @@ if(isset($_SESSION['id_cliente'])){
                                             El interés para 12 meses es de 7%. <br>
                                         </div>
                                         <div class="mb-3">
-                                            <button type="button" class="btn btn-primary" id="btnCalcular">Calcular</button>
+                                        <input type="hidden" id="email" value="<?php echo $_SESSION['email'];?>"/>
+                                            <button type="button" class="btn btn-warning" id="btnCalcular">Calcular</button>
                                             <button formaction="../controllers/pdfClient.php" class="btn btn-danger">PDF</button>
-                                            <button type="button" class="btn btn-primary" id="solicitarPrestamo">Solicitar</button>
+                                            <button type="button" class="btn btn-success" id="solicitarPrestamo">Solicitar</button>
                                         </form>
                                         </div>
                                         <div>
-                                            <button type="button" class="btn btn-danger modal__close">Cerrar</button>
+                                            <button type="button" class="btn btn-primary modal__close">Cerrar</button>
                                         </div>
 
                                     </div>
