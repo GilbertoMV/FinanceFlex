@@ -75,7 +75,7 @@ $mensualidad = $infopr['monto'] / $meses;
                             </div>
                         </div>
                         <div class="extras_row2">
-                            <button onclick='pagar("<?php echo $mensualidad;?>" , "<?php echo $infocl["saldo"];?>")' class="pagar" id="pagar">Abonar Ahora</button>
+                            <button onclick='pagar("<?php echo $mensualidad;?>" , "<?php echo $infocl["saldo"];?>" , "<?php echo $infopr["id_prestamo"];?>" , "<?php echo $infocl["numCta"];?>")' class="pagar" id="pagar">Abonar Ahora</button>
                         </div>
                     </div>
                     <div class="saldo">

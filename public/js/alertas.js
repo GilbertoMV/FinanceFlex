@@ -482,60 +482,113 @@ $("#infoSolicitar").click(function() {
   })
 })
 
-function pagar(mensualidad, saldo) {
+function pagar(mensualidad, saldo, id, numcta) {
   console.log(mensualidad);
   console.log(saldo);
+  console.log(id);
+  console.log(numcta);
   pago = parseFloat(mensualidad).toFixed(2);
-  Swal.fire ({
-    icon:'question',
-    title:'¿Desea Pagar la Mensualidad?',
-    text:'Mensualidad: $'+ pago,
-    inputLabel:'Saldo de la cuenta: '+ saldo,
-    input:'text',
-    inputValue:pago,
-    inputPlaceholder:'${Monto a Pagar}',
-    inputAttributes:{
-      value:'10000',
+  Swal.fire({
+    title: 'Ingresa tu Contraseña',
+    input: 'password',
+    inputPlaceholder: 'Ingresa tu Contraseña:',
+    inputAttributes: {
       autocapitalize: 'off',
-      autocorrect: 'off',
-      disabled:'on',
+      autocorrect: 'off'
     },
-    showCancelButton: true,
-    showConfirmButton: true,
-    showCloseButton:true,
-    allowEscapeKey:false,
-    allowOutsideClick:false,
     confirmButtonColor: '#28a745',
     cancelButtonColor: '#d8514b',
-    confirmButtonText: 'Sí, Pagar.',
-    cancelButtonText: 'No, Cancelar.',
+    confirmButtonText: 'Confirmar',
+    cancelButtonText: 'No, Cancelar',
+    showCancelButton: true,
+    allowEscapeKey:false,
+    allowOutsideClick:false,
+
   }).then((result) => {
     if(result.isConfirmed) {
-        Swal.fire({
-          title: 'Ingresa tu Contraseña',
-          input: 'password',
-          inputPlaceholder: 'Ingresa tu Contraseña:',
-          inputAttributes: {
-            autocapitalize: 'off',
-            autocorrect: 'off'
-          },
-          confirmButtonColor: '#28a745',
-          cancelButtonColor: '#d8514b',
-          confirmButtonText: 'Pagar.',
-          cancelButtonText: 'No, Cancelar.',
-          showCancelButton: true,
-          allowEscapeKey:false,
-          allowOutsideClick:false,
-        })
-        if (password == "password") {
-          Swal.fire({
-            title:'¡Pago Autorizado y Realizado!',
-            text:'Gracias por mantenerte al día en tus mensualidades.',
-            icon:'success',
-            showConfirmButton: false,
-            timer:3000
+      const email= document.getElementById("email").value
+      const form = new FormData();
+      form.append("email", email);
+      form.append("password", result.value);
+      var url = "../controllers/loginclient.php";
+      fetch(url, {
+        method: 'post',
+        body: form
+      })
+      .then(data => data.json())
+      .then(data =>{
+        console.log(data);
+        if (data === 'ok'){
+          Swal.fire ({
+            icon:'question',
+            title:'¿Desea Pagar la Mensualidad?',
+            text:'Mensualidad: $'+ pago,
+            inputLabel:'Saldo de la cuenta: '+ saldo,
+            input:'text',
+            inputValue:pago,
+            inputPlaceholder:'${Monto a Pagar}',
+            inputAttributes:{
+              value:'10000',
+              autocapitalize: 'off',
+              autocorrect: 'off',
+              disabled:'on',
+            },
+            showCancelButton: true,
+            showConfirmButton: true,
+            showCloseButton:true,
+            allowEscapeKey:false,
+            allowOutsideClick:false,
+            confirmButtonColor: '#28a745',
+            cancelButtonColor: '#d8514b',
+            confirmButtonText: 'Sí, Pagar.',
+            cancelButtonText: 'No, Cancelar.',
+          }).then((result)=>{
+            if(result.isConfirmed){
+              const form = new FormData();
+              form.append("id",id);
+              form.append("mensualidad", mensualidad);
+              form.append("numCta", numcta);
+              var url = "../controllers/pagar.php";
+              fetch(url, {
+                method: 'post',
+                body: form
+              })
+              .then(data => data.json())
+              .then(data =>{
+                console.log(data);
+                if(data === 'ok'){
+                  Swal.fire({
+                    title:'¡Pago Autorizado y Realizado!',
+                    text:'Gracias por mantenerte al día en tus mensualidades.',
+                    icon:'success',
+                    showConfirmButton: false,
+                    timer:3000
+                  })
+                }else{
+                  Swal.fire({
+                    icon:'error',
+                    title:'¡Cancelado!',
+                    text:'Ha ocurrido un error.',
+                    showConfirmButton: false,
+                    timer:2000
+                  })
+
+                }
+              
+              })
+
+
+            }else if(result.dismiss === Swal.DismissReason.cancel){
+              Swal.fire({
+                icon:'error',
+                title:'¡Cancelado!',
+                text:'La operación fue cancelada con exito.',
+                showConfirmButton: false,
+                timer:2000
+              })
+            }
           })
-        }else if(password != "password"){
+        }else{
           Swal.fire({
             title:'¡Contraseña Incorrecta!',
             text:'Su contraseña no coincide, intentelo de nuevo.',
@@ -544,8 +597,9 @@ function pagar(mensualidad, saldo) {
             timer:3000
           })
         }
-    } else if(result.dismiss === Swal.DismissReason.cancel) {
-    Swal.fire({
+      })
+    }else if(result.dismiss === Swal.DismissReason.cancel){
+      Swal.fire({
         icon:'error',
         title:'¡Cancelado!',
         text:'La operación fue cancelada con exito.',
@@ -555,7 +609,6 @@ function pagar(mensualidad, saldo) {
     }
   })
 }
-
 $("#solicitarPrestamo").click(function() {
     Swal.fire({
       title: 'Ingresa tu Contraseña',
