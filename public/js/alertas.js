@@ -482,14 +482,17 @@ $("#infoSolicitar").click(function() {
   })
 })
 
-$("#pagar").click(function() {
+function pagar(mensualidad, saldo) {
+  console.log(mensualidad);
+  console.log(saldo);
+  pago = parseFloat(mensualidad).toFixed(2);
   Swal.fire ({
     icon:'question',
     title:'¿Desea Pagar la Mensualidad?',
-    text:'${Mensualidad}',
-    inputLabel:'Saldo de la cuenta: ${Saldo}',
+    text:'Mensualidad: $'+ pago,
+    inputLabel:'Saldo de la cuenta: '+ saldo,
     input:'text',
-    inputValue:'${Monto A Pagar}',
+    inputValue:pago,
     inputPlaceholder:'${Monto a Pagar}',
     inputAttributes:{
       value:'10000',
@@ -551,7 +554,7 @@ $("#pagar").click(function() {
       })
     }
   })
-})
+}
 
 $("#solicitarPrestamo").click(function() {
     Swal.fire({

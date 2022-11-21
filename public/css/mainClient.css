@@ -404,6 +404,14 @@ main {
     margin: 3px 10px;
     text-align: left;
 }
+.extras_row3 {
+  background: rgb(255, 166, 93);
+  width: 70%;
+  height: 30%;
+  margin: auto;
+  border-radius: 10px;
+  text-align: center;
+}
 .extras_row2 p{
     font-family: 'Roboto';
     font-size: 12px;

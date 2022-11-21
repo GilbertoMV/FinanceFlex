@@ -5,7 +5,35 @@ session_start();
 //error_log($_SESSION['id_cliente']);
 if(isset($_SESSION['id_cliente'])){
     date_default_timezone_set('America/Mexico_City');
+require __DIR__ .'\..\includes\db.php';
+$sql = $conn->prepare('SELECT cuenta.numCta, cuenta.saldo FROM clientes INNER JOIN cuenta ON clientes.id_cliente = cuenta.id_cliente WHERE cuenta.id_cliente = :id_cliente');
+$sql->bindParam(':id_cliente', $_SESSION['id_cliente']);
+$sql->execute();
+$infocl = $sql->fetch(PDO::FETCH_ASSOC);
 
+//VALIDAR PRESTAMOS ACTIVOS
+$status = 1;
+$valida = $conn->prepare('SELECT * FROM prestamos WHERE numCta = :numCta AND status = :status');
+$valida->bindParam(':numCta', $infocl['numCta']);
+$valida->bindParam(':status', $status);
+$valida->execute();
+$infopr = $valida->fetch(PDO::FETCH_ASSOC);
+//DETERMINAR MESES
+if($valida->rowCount() > 0){
+if($infopr['interes'] == 3.00){
+    $meses=6;
+}
+if($infopr['interes'] == 5.00){
+    $meses=9;
+}
+if($infopr['interes'] == 7.00){
+    $meses=12;
+}
+//CALCULAR MENSUALIDAD
+
+$mensualidad = $infopr['monto'] / $meses;
+
+}
 ?><!DOCTYPE html>
 <html lang="es">
 <head>
@@ -32,22 +60,30 @@ if(isset($_SESSION['id_cliente'])){
         <div class="panel1">
         <div class="row1">
                 <div class="contenedorh1">
-                    <h1>Mi Prestamo</h1>
+                    <h1>Prestamo</h1>
                 </div>
                 <div class="detalles">
                     <div class="extras">
                         <div class="extras_row1">
                             <div class="contenedorh1">
-                                <p>Proximo Pago:</p>
-                                <h5><?php echo $fechaActual = date('y-m-d');?></h5>
+                                <p>Deuda original</p>
+                                <?php if($valida->rowCount() > 0){?>
+                                <h5>$<?php echo $infopr['monto'];?></h5>
+                                <?php }else{?>
+                                    <h5>$0.00</h5>
+                                    <?php }?>
                             </div>
                         </div>
                         <div class="extras_row2">
-                            <button class="pagar" id="pagar">Abonar Ahora</button>
+                            <button onclick='pagar("<?php echo $mensualidad;?>" , "<?php echo $infocl["saldo"];?>")' class="pagar" id="pagar">Abonar Ahora</button>
                         </div>
                     </div>
                     <div class="saldo">
-                        <p>$12,000.00</p>
+                    <?php if($valida->rowCount() > 0){?>
+                        <p>$<?php echo $infopr['restante']?></p>
+                        <?php }else{?>
+                            <p>$0.00</p>
+                                    <?php }?>
                     </div>
                 </div>
             </div>
@@ -60,7 +96,11 @@ if(isset($_SESSION['id_cliente'])){
                         <button id="infoSolicitar"><i class="bi bi-info-circle"></i></button>
                     </div>
                 </div>
-                <a href="#" class="hero__cta">Join us!</a>
+                <?php if($valida->rowCount() > 0){?>
+                    <div class="extras_row3"><h5>¡Ya cuentas con un prestamo activo!</h5></div>
+                <?php }else{?>
+                    <a href="#" class="hero__cta">¡Solicitalo ahora!</a>
+                <?php }?>
                     <section class="modal1">
                         <div class="modal__container">
                             <div class="container">
@@ -92,8 +132,9 @@ if(isset($_SESSION['id_cliente'])){
                                         <input type="hidden" id="email" value="<?php echo $_SESSION['email'];?>"/>
                                             <button type="button" class="btn btn-warning" id="btnCalcular">Calcular</button>
                                             <button formaction="../controllers/pdfClient.php" class="btn btn-danger">PDF</button>
-                                            <button type="button" class="btn btn-success" id="solicitarPrestamo">Solicitar</button>
+                                            
                                         </form>
+                                        <button type="button" class="btn btn-success" id="solicitarPrestamo">Solicitar</button>
                                         </div>
                                         <div>
                                             <button type="button" class="btn btn-primary modal__close">Cerrar</button>
