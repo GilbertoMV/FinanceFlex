@@ -219,3 +219,40 @@ if(registroclients){
     })
 }
 
+//CAPITALICACIÓN DE INPUTS DE REGISTRO
+//Mayusculas y minusculas
+
+// //instanciamos el elemento input
+// var input = document.querySelector('.capitalizar');
+// //función que capitaliza la primera letra
+// function capitalizarPrimeraLetra() {
+//   //almacenamos el valor del input
+//   var palabra = input.value;
+//   //Si el valor es nulo o undefined salimos
+//   if(!input.value) return;
+//   // almacenamos la mayuscula
+//   var mayuscula = palabra.substring(0,1).toUpperCase();
+//   //si la palabra tiene más de una letra almacenamos las minúsculas
+//   if (palabra.length > 0) {
+//     var minuscula = palabra.substring(1).toLowerCase();
+//   }
+//   //escribimos la palabra con la primera letra mayuscula
+//   input.value = mayuscula.concat(minuscula);
+// }
+
+function mostrarPalabra() {
+    //cuando vas a declarar variables que el valor va permencer sobre esa misma función, utilizas let en vez de var  -->
+    var dato1 = document.getElementById('nombres').value;
+    var dato2 = document.getElementById('apeP').value;
+    var dato3 = document.getElementById('apeM').value;
+    // Acá estás enviado caja_busqueda (así está nombrado en html no en javascript) -->
+    //Datos es quién contiene el valor de caja búsqueda -->
+    document.getElementById('nombres').value = convertir(dato1.toLowerCase());
+    document.getElementById('apeP').value = convertir(dato2.toLowerCase());
+    document.getElementById('apeM').value = convertir(dato3.toLowerCase());
+    // Cuando realizas este console te dará por resultado undifined porque en efecto no existe -->
+}
+
+function convertir(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}

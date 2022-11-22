@@ -63,7 +63,7 @@ if(isset($_SESSION['id_ejecutivo'])){
                                 <td class="lista_clientes"><?php echo $resultado['id_cliente'];?></td>
                                 <td class="lista_clientes"><?php echo $resultado['nom'].' '. $resultado['apellidoP'].' '. $resultado['apellidoM'];?></td>
                                 <td class="lista_clientes"><?php echo $resultado['genero']; ?></td>
-                                <td class="lista_clientes"><?php echo $resultado['rfc'];?></td>
+                                <td class="lista_clientes rfc"><?php echo $resultado['rfc'];?></td>
                                 <td class="lista_clientes"><?php echo $resultado['telefono'];?></td>
                                 <td class="lista_clientes buttons_clientes">
                                 <button onclick="options(<?php echo $resultado['id_cliente']; ?>)"class="info"><i class="bi bi-info-circle"> Más</i></button>
