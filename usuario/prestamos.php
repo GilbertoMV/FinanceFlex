@@ -60,7 +60,7 @@ $mensualidad = $infopr['monto'] / $meses;
         <div class="panel1">
         <div class="row1">
                 <div class="contenedorh1">
-                    <h1>Prestamo</h1>
+                    <h1>Mi Prestamo</h1>
                 </div>
                 <div class="detalles">
                     <div class="extras">
@@ -87,27 +87,40 @@ $mensualidad = $infopr['monto'] / $meses;
                     </div>
                 </div>
             </div>
-            <div class="row1">
-                <div class="head">
-                    <div class="titulo">
-                        <h1>Solicitar</h1>
-                    </div>
-                    <div class="info">
-                        <button id="infoSolicitar"><i class="bi bi-info-circle"></i></button>
-                    </div>
+            <?php if($valida-> rowCount()>0){?>
+                <div class="row1 disabled"></div>
+            <?php }else{?>
+        <div class="row1">
+            <div class="head">
+                <div class="titulo">
+                    <h1>Solicitar</h1>
                 </div>
-                <?php if($valida->rowCount() > 0){?>
-                    <div class="extras_row3"><h5>¡Ya cuentas con un prestamo activo!</h5></div>
-                <?php }else{?>
-                    <a href="#" class="hero__cta">¡Solicitalo ahora!</a>
-                <?php }?>
-                    <section class="modal1">
-                        <div class="modal__container">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-12 col-sm-12 col-lg-4 ab">
-                                        <h2 class="h2">Simulador de Prestamos</h2>
-                                        <form id="datos_prestamo" name="datos" target="_blank" method="post">
+                <div class="info">
+                    <button id="infoSolicitar"><i class="bi bi-info-circle"></i></button>
+                </div>
+            </div>
+            <div class="bannerPrestamo">
+                <div>
+                    <p class="pText">Aún no cuentas con un prestamo FinanceFlex, ¡¿Qué esperas?!</p> 
+                </div>
+                <div>
+                    <button class="hero__cta">¡SOLICITALO AHORA!</button>
+                </div>
+            </div>
+                
+                
+                
+                
+                
+                
+                
+                <section class="modal1">
+                    <div class="modal__container">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12 col-sm-12 col-lg-4 ab">
+                                    <h2 class="h2">Simulador de Prestamos</h2>
+                                    <form id="datos_prestamo" name="datos" target="_blank" method="post">
                                         <div class="form-group mt-2 mb-3">
                                             <label for="monto">Monto</label>
                                             <input name="monto" type="text" class="form-control" id="monto" placeholder="Ingresar monto" required>
@@ -129,38 +142,38 @@ $mensualidad = $infopr['monto'] / $meses;
                                             El interés para 12 meses es de 7%. <br>
                                         </div>
                                         <div class="mb-3">
-                                        <input type="hidden" id="email" value="<?php echo $_SESSION['email'];?>"/>
+                                            <input type="hidden" id="email" value="<?php echo $_SESSION['email'];?>"/>
                                             <button type="button" class="btn btn-warning" id="btnCalcular">Calcular</button>
-                                            <button formaction="../controllers/pdfClient.php" class="btn btn-danger">PDF</button>
-                                            
-                                        </form>
-                                        <button type="button" class="btn btn-success" id="solicitarPrestamo">Solicitar</button>
-                                        </div>
-                                        <div>
-                                            <button type="button" class="btn btn-primary modal__close">Cerrar</button>
-                                        </div>
-
-                                    </div>
-                                    <div class="col-12 col-sm-12 col-lg-8">
-                                        <table id="lista-tabla" class="table">
-                                            <thead>
-                                                <tr>
-                                                    <th  class="thT">Fecha</th>
-                                                    <th  class="thT">Amortización</th>
-                                                    <th  class="thT">Interés</th>
-                                                    <th  class="thT">Cuota</th>
-                                                    <th  class="thT">Saldo</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody></tbody>
-                                        </table>
-                                    </div>
+                                            <button formaction="../controllers/pdfClient.php" class="btn btn-danger">PDF</button>        
+                                    </form>
+                                    <button type="button" class="btn btn-success" id="solicitarPrestamo">Solicitar</button>
+                                </div>
+                                <div>
+                                    <button type="button" class="btn btn-primary modal__close">Cerrar</button>
+                                </div>
+                            </div>
+                                <div class="col-12 col-sm-12 col-lg-8">
+                                    <table id="lista-tabla" class="table">
+                                        <thead>
+                                            <tr>
+                                                <th  class="thT">Fecha</th>
+                                                <th  class="thT">Amortización</th>
+                                                <th  class="thT">Interés</th>
+                                                <th  class="thT">Cuota</th>
+                                                <th  class="thT">Saldo</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
-                    </section>
+                    </div>
+                </section>
             </div>
+            <?php }?>
         </div>
+        
         <div class="panel2">
             <div class="contenedorh1">
                 <h1>Detalles</h1>

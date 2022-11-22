@@ -118,6 +118,7 @@ nav {
   width: 100%;
   background-color: #2f2f2f;
   padding: 5px;
+  z-index: 1;
 }
 nav:after{
   content: '';
@@ -159,6 +160,59 @@ nav .a:hover{
   position: absolute;
   border: 1px solid #cccccc;
   background-color: #ffffff;
+}
+.ul{
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.ul li {
+  float: left;
+  list-style: none;
+  position: relative;
+  z-index: 0;
+}
+ul li a {
+  color:#4D4B4B;
+  line-height: 2rem;
+  display: flex;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  text-align: left; 
+}
+ul li a:hover {
+  color:#4D4B4B;
+}
+
+ul li ul {
+  display: none;
+}
+
+ul li:hover ul {
+  display: inline-block;
+  position: absolute;
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 0;
+  margin: auto;
+}
+ul li ul li a {
+  padding: 10px 20px;
+  line-height: unset;
+  margin-left: .5rem;
+  white-space: nowrap;
+  width: 100%;
+}
+ul li ul li i {
+  margin-right: .5rem;
+}
+
+.profilePhoto {
+  width: 30px;
+  border-radius: 100%;
 }
 .linea {
   position: fixed;
@@ -464,6 +518,9 @@ main .lineaR {
 .lista_clientes {
   color: #868AF1;
   padding:8px 0px 8px 0px;
+}
+.rfc {
+  text-transform: uppercase;
 }
 .buttons_clientes {
   display: flex;

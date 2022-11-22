@@ -16,7 +16,7 @@
             
             
             <ul class="ul a">
-                <li><a href="#"><img src="../public/img/stockProfile.png" alt=""  class="profilePhoto"> <?= $_SESSION['nom'] ?><i class="bi bi-caret-down"></i></a>
+                <li><a href="#"><img src="../public/img/stockProfile.png" alt=""  class="profilePhoto"> <?= $_SESSION['nom']?><i class="bi bi-caret-down"></i></a>
                     <ul>
                         <li><a href="configuracion.php" class="a"><i class="bi bi-sliders"></i> Configuración</a></li>
                         <li><a href="../controllers/logoutcontroller.php" class="a"><i class="bi bi-door-closed"></i> Cerrar Sesion </a></li>

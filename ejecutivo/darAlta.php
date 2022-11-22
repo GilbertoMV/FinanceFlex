@@ -23,18 +23,8 @@ if(isset($_SESSION['id_ejecutivo'])){
     <script defer src="../public/js/navbar.js"></script>
 </head>
 <body>
-        <?php require 'nav.php'?>
+    <?php require 'nav.php'?>
     <main>
-        <!-- <h1>Foto</h1>
-        <div class="lineaR"></div>
-        <div class="loadphoto">
-            <img src="../public/img/profile.png" alt="foto de perfil">
-            <button class="contenedor-btn-file">
-                Subir foto <?php     //print_r($results);?>
-                <label for="btn-file"></label>
-                <input type="file" id="btn-file">
-            </button>
-        </div> -->
         <h1>Nuevo Cliente</h1>
         <div class="lineaR"></div>
         <div class="contenedor-formulario">
@@ -45,17 +35,17 @@ if(isset($_SESSION['id_ejecutivo'])){
                 <div class="bloque">
                     <label for="nombres" class="labels">Nombre(s)</label>
                     <p class="lineaF"></p>
-                    <input type="text" name="nombres" id="nombres" class="inputs center" pattern="[A-Za-z ]{1,32}"  title="Solo se permiten letras." required>
+                    <input type="text" name="nombres" id="nombres" class="inputs center capitalizar" pattern="[A-Za-z ]{1,32}"  title="Solo se permiten letras." onchange="mostrarPalabra();" required>
                 </div>
                 <div class="bloque">
                     <label for="apellidoM" class="labels">Apellido Paterno</label>
                     <p class="lineaF"></p>
-                    <input type="text" name="apellidoP" id="apeP" class="inputs center" pattern="[A-Za-z ]{1,32}"title="Solo se permiten letras." required>
+                    <input type="text" name="apellidoP" id="apeP" class="inputs center capitalizar" pattern="[A-Za-z ]{1,32}" title="Solo se permiten letras." onchange="mostrarPalabra();" required>
                 </div>
                 <div class="bloque">
                     <label for="apellidoP" class="labels">Apellido Materno</label>
                     <p class="lineaF"></p>
-                    <input type="text" name="apellidoM" id="apeM" class="inputs center" pattern="[A-Za-z ]{1,32}" title="Solo se permiten letras." required>
+                    <input type="text" name="apellidoM" id="apeM" class="inputs center capitalizar" pattern="[A-Za-z ]{1,32}" title="Solo se permiten letras." onchange="mostrarPalabra();" required>
                 </div>
                 <div class="bloque">
                     <label for="email" class="labels">Correo</label>
@@ -68,7 +58,7 @@ if(isset($_SESSION['id_ejecutivo'])){
                     <input type="text" name="telefono" id="Ntelefono" class="inputs center" pattern="[0-9]{10}" title="Solo se permiten numeros. Verifica tu numero a 10 digitos." required>
                 </div>
                 <div class="bloque">
-                    <label for="CURP" class="labels ">CURP</label>
+                    <label for="CURP" class="labels">CURP</label>
                     <p class="lineaF"></p>
                     <input type="text" name="curp" id="curp" class="inputs center" pattern="[A-Za-z0-9]{18}" title="Verifica que tu CURP este correcta." required>
                 </div>
@@ -96,7 +86,7 @@ if(isset($_SESSION['id_ejecutivo'])){
                     </select>
                 </div>
                 <div class="bloque">
-                    <input type="submit" nombre="registrar" id="registrar" value="Dar de Alta" class="contenedor-btn-file">
+                    <input type="submit" nombre="registrar" id="registrar" value="Dar de Alta" class="contenedor-btn-file" reset>
                 </div>
             </form>
         </div>
