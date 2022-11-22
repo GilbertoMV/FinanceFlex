@@ -296,7 +296,7 @@ main {
     grid-template-columns: 1fr 2fr;
     gap: 1rem;
     width: 100%;
-    height: 30rem;
+    /* height: 30rem; */
 }
 @media (max-width: 700px) {
   .paneles{
@@ -308,6 +308,7 @@ main {
     grid-template-rows: 1fr 1fr;
     gap: 2rem;
     border-radius: 30px;
+    height: 500px;
 }
 .panel1 .contenedorh1 {
     width: 40%;
@@ -422,7 +423,9 @@ main {
 /* FIN PANEL 1 */
 
 
-
+.dataTables_filter {
+  display: none;
+}
 .row2 {    
     background: rgb(255,224,135);
     background: linear-gradient(180deg, rgba(255,224,135,0.16988793808539038) 0%, rgba(255,224,135,0.8813725319229254) 100%);
@@ -664,7 +667,6 @@ main {
 }
 
 
-
 .thT {
   text-align: center;
 }
@@ -692,5 +694,3 @@ main {
 }
 
 /* FIN MODAL SIMULADOR  */
-
-/* FIN DE PRESTAMOS */

@@ -60,7 +60,7 @@ $mensualidad = $infopr['monto'] / $meses;
         <div class="panel1">
         <div class="row1">
                 <div class="contenedorh1">
-                    <h1>Prestamo</h1>
+                    <h1>Mi Prestamo</h1>
                 </div>
                 <div class="detalles">
                     <div class="extras">
@@ -90,23 +90,23 @@ $mensualidad = $infopr['monto'] / $meses;
             <?php if($valida-> rowCount()>0){?>
                 <div class="row1 disabled"></div>
             <?php }else{?>
-            <div class="row1">
-                <div class="head">
-                    <div class="titulo">
-                        <h1>Solicitar</h1>
-                    </div>
-                    <div class="info">
-                        <button id="infoSolicitar"><i class="bi bi-info-circle"></i></button>
-                    </div>
+        <div class="row1">
+            <div class="head">
+                <div class="titulo">
+                    <h1>Solicitar</h1>
                 </div>
-                <div class="bannerPrestamo">
-                    <div>
-                        <p class="pText">Aún no cuentas con un prestamo FinanceFlex, ¡¿Qué esperas?!</p> 
-                    </div>
-                    <div>
-                        <button class="hero__cta">¡SOLICITALO AHORA!</button>
-                    </div>
+                <div class="info">
+                    <button id="infoSolicitar"><i class="bi bi-info-circle"></i></button>
                 </div>
+            </div>
+            <div class="bannerPrestamo">
+                <div>
+                    <p class="pText">Aún no cuentas con un prestamo FinanceFlex, ¡¿Qué esperas?!</p> 
+                </div>
+                <div>
+                    <button class="hero__cta">¡SOLICITALO AHORA!</button>
+                </div>
+            </div>
                 
                 
                 
@@ -173,6 +173,7 @@ $mensualidad = $infopr['monto'] / $meses;
             </div>
             <?php }?>
         </div>
+        
         <div class="panel2">
             <div class="contenedorh1">
                 <h1>Detalles</h1>
