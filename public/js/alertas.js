@@ -701,3 +701,35 @@ $("#solicitarPrestamo").click(function() {
     }
 })
 })
+
+
+// CONFIGURACION ALERTAS 
+// ALERTA GUARDAR DATOS GENERALES 
+$('#ActualizarDatosCliente').click(function() {
+  Swal.fire({
+    icon: 'success',
+    title: 'Tus cambios han sido realizados con exito.',
+    showConfirmButton: false,
+    timer: 2500
+  })
+})
+// ALERTA GUARDAR NUEVA CONTRASEÑA 
+$('#ActualizarCredencialesCliente').click(function() {
+  Swal.fire({
+    icon: 'success',
+    title: 'Tus cambios han sido realizados con exito.',
+    showConfirmButton: false,
+    timer: 2500
+  })
+})
+
+// ALERTA CERRAR CUENTA DESDE CLIENTE 
+$('#cerrarCuenta').click(function() {
+  Swal.fire({
+    icon: 'warning',
+    title: 'Oops...',
+    text: 'Para cerrar tu cuenta es necesario contactar con tu ejecutivo',
+    confirmButtonText: 'Entendido',
+    confirmButtonColor:'#198754'
+  })
+})
