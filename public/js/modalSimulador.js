@@ -1,16 +1,16 @@
 const openModal = document.querySelector('.hero__cta');
 const modal = document.querySelector('.modal1');
 const closeModal = document.querySelector('.modal__close');
-
-openModal.addEventListener('click', (e)=>{
+if(openModal){
+    openModal.addEventListener('click', (e)=>{
     e.preventDefault();
     modal.classList.add('modal--show');
 });
-
 closeModal.addEventListener('click', (e)=>{
     e.preventDefault();
     modal.classList.remove('modal--show');
 });
+ }
 function pdf() {
     const datos = document.querySelector("#datos_prestamo");
     console.log(datos);

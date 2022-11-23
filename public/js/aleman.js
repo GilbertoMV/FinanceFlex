@@ -4,7 +4,7 @@ const btnCalcular = document.getElementById('btnCalcular');
 const alerta = document.getElementById('alert-error');
 const llenarTabla = document.querySelector('#lista-tabla tbody')
 
-
+if(btnCalcular){
 btnCalcular.addEventListener('click', () => {
 
     if (monto.value === '' || tiempo.value === '') {
@@ -16,7 +16,7 @@ btnCalcular.addEventListener('click', () => {
         calcularCronograma(monto.value, tiempo.value);
     }
 })
-
+}
 function calcularCronograma(monto, tiempo) {
 
     while(llenarTabla.firstChild) {

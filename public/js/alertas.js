@@ -482,11 +482,12 @@ $("#infoSolicitar").click(function() {
   })
 })
 
-function pagar(mensualidad, saldo, id, numcta) {
+function pagar(mensualidad, saldo, id, numcta, correo) {
   console.log(mensualidad);
   console.log(saldo);
   console.log(id);
   console.log(numcta);
+  console.log(correo);
   pago = parseFloat(mensualidad).toFixed(2);
   Swal.fire({
     title: 'Ingresa tu Contraseña',
@@ -506,7 +507,7 @@ function pagar(mensualidad, saldo, id, numcta) {
 
   }).then((result) => {
     if(result.isConfirmed) {
-      const email= document.getElementById("email").value
+      const email= correo
       const form = new FormData();
       form.append("email", email);
       form.append("password", result.value);
@@ -561,6 +562,14 @@ function pagar(mensualidad, saldo, id, numcta) {
                     title:'¡Pago Autorizado y Realizado!',
                     text:'Gracias por mantenerte al día en tus mensualidades.',
                     icon:'success',
+                    showConfirmButton: false,
+                    timer:3000
+                  })
+                }else if(data === 'not_money'){
+                  Swal.fire({
+                    icon:'error',
+                    title:'¡Cancelado!',
+                    text:'Tu cuenta no cuenta con el saldo suficiente.',
                     showConfirmButton: false,
                     timer:3000
                   })
