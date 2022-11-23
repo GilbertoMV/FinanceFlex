@@ -5,7 +5,31 @@ session_start();
 
 //error_log($_SESSION['id_cliente']);
 if(isset($_SESSION['id_cliente'])){
-
+    require __DIR__ .'\..\includes\db.php';
+$sql = $conn->prepare('SELECT cuenta.numCta FROM clientes INNER JOIN cuenta ON clientes.id_cliente = cuenta.id_cliente WHERE cuenta.id_cliente = :id_cliente');
+$sql->bindParam(':id_cliente', $_SESSION['id_cliente']);
+$sql->execute();
+$infocl = $sql->fetch(PDO::FETCH_ASSOC);
+//VALIDAR PRESTAMOS ACTIVOS
+$status = 1;
+$valida = $conn->prepare('SELECT * FROM prestamos WHERE numCta = :numCta AND status = :status');
+$valida->bindParam(':numCta', $infocl['numCta']);
+$valida->bindParam(':status', $status);
+$valida->execute();
+$infopr = $valida->fetch(PDO::FETCH_ASSOC);
+//PROXIMO PAGO
+if($valida->rowCount() > 0){
+if($infopr['interes'] == 3.00){
+    $meses=6;
+}
+if($infopr['interes'] == 5.00){
+    $meses=9;
+}
+if($infopr['interes'] == 7.00){
+    $meses=12;
+}
+$pago = $infopr['monto'] / $meses;
+}
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -38,15 +62,11 @@ if(isset($_SESSION['id_cliente'])){
             </div> 
                     <div class="extras">
                         <div class="extras_row1">
-                            <div class="contenedorh1">
-                                <p>Ultimo Ingreso:</p>
-                                <h5>$1,000.00</h5>
+                            <div id="deposito" class="contenedorh1">
                             </div>
                         </div>
                         <div class="extras_row2">
-                            <div class="contenedorh1">
-                                <p>Ultimo Retiro:</p>
-                                <h5>$1,000.00</h5>
+                            <div id="retiro" class="contenedorh1">
                             </div>
                         </div>
                     </div>
@@ -62,12 +82,13 @@ if(isset($_SESSION['id_cliente'])){
                         <button id="infoPago"><i class="bi bi-info-circle"></i></button>
                     </div>
                 </div>
+                <?php if($valida-> rowCount()>0){?>
                 <div class="detalles">
                     <div class="extras">
                         <div class="extras_row1">
                             <div class="contenedorh1">
                                 <p>Proximo Pago:</p>
-                                <h5>$1,200.00</h5>
+                                <h5>$<?php echo round($pago, 2)?></h5>
                             </div>
                         </div>
                         <div class="extras_row2">
@@ -75,9 +96,11 @@ if(isset($_SESSION['id_cliente'])){
                         </div>
                     </div>
                     <div class="saldo">
-                        <p>$12,000.00</p>
+                        <p>$<?php echo $infopr['restante']?></p>
                     </div>
                 </div>
+                <?php }else{?>
+                    <?php }?>
             </div>
         </div>
             

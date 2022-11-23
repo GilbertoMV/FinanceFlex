@@ -564,7 +564,9 @@ function pagar(mensualidad, saldo, id, numcta, correo) {
                     icon:'success',
                     showConfirmButton: false,
                     timer:3000
-                  })
+                  }).then(function() {
+                    location.reload();
+                  });
                 }else if(data === 'not_money'){
                   Swal.fire({
                     icon:'error',
@@ -634,7 +636,9 @@ $("#solicitarPrestamo").click(function() {
       cancelButtonText: 'Cancelar'
     }).then((result)=>{ 
       if(result.isConfirmed) {
+        
     const email= document.getElementById("email").value
+    console.log(email);
     const form = new FormData();
     form.append("email", email);
     form.append("password", result.value);
@@ -676,7 +680,9 @@ $("#solicitarPrestamo").click(function() {
                 icon:'success',
                 showConfirmButton: false,
                 timer:3000
-              })
+              }).then(function() {
+                location.reload();
+              });
             } 
             else if(data_prestamo === 'error'){
               Swal.fire({

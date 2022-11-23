@@ -6,7 +6,7 @@ $sql->bindParam(':id_cliente', $_SESSION['id_cliente']);
 $sql->execute();
 $infocl = $sql->fetch(PDO::FETCH_ASSOC);
 
-$records = $conn->prepare('SELECT monto FROM movimientos WHERE numCta = :numCta AND tipo = "Deposito" ORDER BY fecha_hora ASC LIMIT 0,1');
+$records = $conn->prepare('SELECT monto FROM movimientos WHERE numCta = :numCta AND tipo = "Retiro" ORDER BY fecha_hora ASC LIMIT 0,1');
 $records->bindParam(':numCta', $infocl['numCta']);
 $records->execute();
 $saldo = $records->fetchAll(PDO::FETCH_ASSOC);

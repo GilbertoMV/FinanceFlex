@@ -107,6 +107,7 @@ $mensualidad = $infopr['monto'] / $meses;
                     <p class="pText">Aún no cuentas con un prestamo FinanceFlex, ¡¿Qué esperas?!</p> 
                 </div>
                 <div>
+                    <input type="hidden" id="email" value="<?php echo $_SESSION["email"];?>"</input>
                     <button class="hero__cta">¡SOLICITALO AHORA!</button>
                 </div>
             </div>
@@ -183,11 +184,11 @@ $mensualidad = $infopr['monto'] / $meses;
             <table>
                 <thead>
                     <tr>
-                        <td class="tr" width="10%">Tipo</td>
-                        <td class="tr" width="15%">Fecha</td>
-                        <td class="tr" width="15%">Hora</td>
-                        <td class="tr" width="15%">Total</td>
-                        <td class="tr" width="15%">Recibo</td>
+                        <th class="tr" width="10%">Id prestamo</th>
+                        <th class="tr" width="15%">Fecha</th>
+                        <th class="tr" width="15%">Hora</th>
+                        <th class="tr" width="15%">Total</th>
+                        <th class="tr" width="15%">Recibo</th>
                     </tr>
                 </thead>
                 <tbody id="pagos">
@@ -196,7 +197,7 @@ $mensualidad = $infopr['monto'] / $meses;
         </div>
     </div>
 </main>
-<!-- <script src="../public/js/functions-cliente.js"></script> -->
+<script src="../public/js/functions-cliente.js"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="../public/js/jquery-3.6.1.min.js"></script>
 <script src="../public/js/alertas.js"></script>

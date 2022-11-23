@@ -6,7 +6,7 @@ session_start();
 if(isset($_SESSION['id_ejecutivo'])){
     $id=$_POST['id'];
     require_once __DIR__ .'\..\includes\db.php';
-    $consulta2 = $conn->prepare('SELECT prestamos.id_prestamo, prestamos.numCta, prestamos.monto, prestamos.interes, prestamos.fechaInicial, prestamos.fechaTermino FROM prestamos INNER JOIN cuenta ON prestamos.numCta = cuenta.numCta WHERE cuenta.id_cliente = :id_cliente');
+    $consulta2 = $conn->prepare('SELECT prestamos.id_prestamo, prestamos.numCta, prestamos.monto, prestamos.interes, prestamos.status, prestamos.fechaInicial, prestamos.fechaTermino FROM prestamos INNER JOIN cuenta ON prestamos.numCta = cuenta.numCta WHERE cuenta.id_cliente = :id_cliente');
     $consulta2->bindParam(':id_cliente', $id);
     $consulta2->execute();
     $prestamos = $consulta2->fetchAll(PDO::FETCH_ASSOC);
@@ -15,12 +15,11 @@ if(isset($_SESSION['id_ejecutivo'])){
     $consulta1->bindParam(':id_cliente', $id);
     $consulta1->execute();  
     $res=$consulta1->fetch(PDO::FETCH_ASSOC);
-    /*
-    $numcta=$res['numCta'];
-    $consulta2 = $conn->prepare('SELECT * FROM prestamos WHERE numCta = :numCta');
-    $consulta2->bindParam(':numCta', $numcta);
-    $consulta2->execute();
-    $prestamos = $consulta2->fetchAll(PDO::FETCH_ASSOC);*/
+    //NUMCUENTA
+    $consulta3 = $conn->prepare('SELECT cuenta.numCta FROM cuenta INNER JOIN clientes ON cuenta.id_cliente = clientes.id_cliente WHERE clientes.id_cliente = :id_cliente');
+    $consulta3->bindParam(':id_cliente', $id);
+    $consulta3->execute();
+    $num = $consulta3->fetch(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -47,7 +46,7 @@ if(isset($_SESSION['id_ejecutivo'])){
             <div>
                 <h1 class="title">Lista de Prestamos</h1>
                 <h2 class="infocliente">CLIENTE: <?php echo $res['nom']; ?></h2>
-                <h2 class="infocliente">NUMERO DE CUENTA: <?php echo $prestamos[0]['numCta']; ?></h2>
+                <h2 class="infocliente">NUMERO DE CUENTA: <?php echo $num['numCta']; ?></h2>
             </div>
             <div class="colum2">
                 <div class="buscar">
@@ -85,7 +84,11 @@ if(isset($_SESSION['id_ejecutivo'])){
                                     <form method="post" target="_blank" action="../controllers/pdf.php">
                                         <input type="hidden" name="id" value="<?php echo $id;?>"/>
                                         <input type="hidden" name="idPrestamo" value="<?php echo $prestamo['id_prestamo'];?>"/>
+                                        <?php if ($prestamo['status'] === '1'){ ?>
                                         <button class="pdf"><i class="bi bi-filetype-pdf"> Descargar PDF</i></button>
+                                        <?php }else{?>
+                                            <button class="pagado"><i class="bi bi-filetype-pdf">Prestamo pagado</i></button>
+                                        <?php }?>
                                     </form>
                             </td> 
                         </tr>

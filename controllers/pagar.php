@@ -1,6 +1,8 @@
 <?php
 require __DIR__ .'\..\includes\db.php';
 session_start();
+date_default_timezone_set('America/Mexico_City');
+$fechaActual = date('Y-m-d H:i:s');
 $cta=$_POST['numCta'];
 $monto=$_POST['mensualidad'];
 $id_prestamo=$_POST['id'];
@@ -25,13 +27,16 @@ if($records->rowCount() > 0){
             $res->bindParam(':id_prestamo', $id_prestamo);
             $res->execute();
             if($res->rowCount() > 0){
-                $upd = $conn->prepare('UPDATE cuenta SET saldo = :saldo WHERE numCta= :numCta');
-                $upd->bindParam(':saldo', $new_saldo);
-                $upd->bindParam(':numCta', $cta);
-                $upd->execute();
-                if($upd->rowCount() > 0){
+                $update = $conn->prepare('INSERT INTO pagos(numCta, fecha_hora, monto, id_prestamo) VALUES (:numCta, :fecha_hora, :monto, :id_prestamo)');
+                $update->bindParam(':numCta', $cta);
+                $update->bindParam(':fecha_hora', $fechaActual);
+                $update->bindParam(':monto', $monto);
+                $update->bindParam(':id_prestamo', $id_prestamo);
+                $update->execute();
+                if($update->rowCount() > 0){
                     echo json_encode('ok');
-                }else{
+                }   
+                else{
                     echo json_encode('error');
                 }
             }   
@@ -47,14 +52,16 @@ if($records->rowCount() > 0){
             $res->bindParam(':id_prestamo', $id_prestamo);
             $res->execute();
             if($res->rowCount() > 0){
-                $new_saldo = $saldo['saldo'] - $monto;
-                $upd = $conn->prepare('UPDATE cuenta SET saldo = :saldo WHERE numCta= :numCta');
-                $upd->bindParam(':saldo', $new_saldo);
-                $upd->bindParam(':numCta', $cta);
-                $upd->execute();
-                if($upd->rowCount() > 0){
+                $update = $conn->prepare('INSERT INTO pagos(numCta, fecha_hora, monto, id_prestamo) VALUES (:numCta, :fecha_hora, :monto, :id_prestamo)');
+                $update->bindParam(':numCta', $cta);
+                $update->bindParam(':fecha_hora', $fechaActual);
+                $update->bindParam(':monto', $monto);
+                $update->bindParam(':id_prestamo', $id_prestamo);
+                $update->execute();
+                if($update->rowCount() > 0){
                     echo json_encode('ok');
-                }else{
+                }   
+                else{
                     echo json_encode('error');
                 }
             }   
