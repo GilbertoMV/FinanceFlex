@@ -17,11 +17,10 @@ else{
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FianceFlex</title>
-    <link rel="shortcut icon" href="./public/img/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./public/css/estilos.css">
+    <title>FinanceFlex</title>
+    <link rel="shortcut icon" href="./public/img/logito.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./public/css/main.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
     <script src="https://kit.fontawesome.com/6dc1722754.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -80,19 +79,19 @@ else{
         <div class="panels-container">
             <div class="panel left-panel">
                 <div class="content">
-                    <h3>¿Nuevo por aquí?</h3>
+                    <h3>¿Nuevo Por Aquí?</h3>
                     <p>Para poder registrate en FinanceFlex es necesario acudir con uno de nuestros ejecutivos.</p>
-                    <button class="btn transparent" id="sign-up-btn">Soy ejecutivo</button>
+                    <button class="btn transparent x" id="sign-up-btn">Soy ejecutivo</button>
                 </div>
-                <img src="./public/img/Character_2.png" class="image" alt="Imagen de ladaz3d en Freepik">
+                <img src="./public/img/Character_2.png" class="image" alt="imagen aluciva">
             </div>
             <div class="panel right-panel">
                 <div class="content">
                     <h3>¡Bienvenido!</h3>
-                    <p>Ya te encuentras registrado en FinanceFlex?</p>
-                    <button class="btn transparent" id="sign-in-btn">Inicia sesión</button>
+                    <p>¿Ya te encuentras registrado en FinanceFlex?</p>
+                    <button class="btn transparent x" id="sign-in-btn">Inicia sesión</button>
                 </div>
-                <img src="./public/img/mobile_pay.svg" class="image" alt="">
+                <img src="./public/img/mobile_pay.svg" class="image" alt=" imagen aluciva">
             </div>
         </div>
     </div>
