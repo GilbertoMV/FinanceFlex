@@ -381,54 +381,66 @@ $("#depositar").click(function() {
     confirmButtonColor: '#28a745',
     cancelButtonColor: '#d8514b',
     confirmButtonText: 'Sí, Depositar',
+    cancelButtonText: 'Cancelar',
     background:'#2f2f2f',
     color:'#fff'
   }).then((result) => {
-    const datos = document.querySelector("#datos_Deposito");
-    console.log(datos);
-    const datos_actualizar = new FormData(datos);
-    var url = "../controllers/deposito.php";
-    fetch(url, {
-        method: 'post',
-        body: datos_actualizar
-    })
-    .then(data => data.json())
-    .then(data =>{
-      console.log(data);
-      if (data == 'ok') {
+    if(result.isConfirmed){
+      const datos = document.querySelector("#datos_Deposito");
+      console.log(datos);
+      const datos_actualizar = new FormData(datos);
+      var url = "../controllers/deposito.php";
+      fetch(url, {
+          method: 'post',
+          body: datos_actualizar
+      })
+      .then(data => data.json())
+      .then(data =>{
+        console.log(data);
+        if (data == 'ok') {
+          Swal.fire({
+            title:'¡El deposito se realizó con exito!',
+            icon:'success',
+            background:"#2f2f2f",
+            color:"#fff",
+            timer:1500,
+            showConfirmButton:false,
+            timerProgressBar:true
+          }).then(function() {
+            location.reload();
+          });
+       }else if(data == 'not_exist'){
         Swal.fire({
-          title:'¡El deposito se realizó con exito!',
-          icon:'success',
+          title:'¡Numero de cuenta no existe!',
+          icon:'error',
           background:"#2f2f2f",
           color:"#fff",
           timer:1500,
           showConfirmButton:false,
           timerProgressBar:true
-        }).then(function() {
-          location.reload();
-        });
-     }else if(data == 'not_exist'){
-      Swal.fire({
-        title:'¡Numero de cuenta no existe!',
-        icon:'error',
-        background:"#2f2f2f",
-        color:"#fff",
-        timer:1500,
-        showConfirmButton:false,
-        timerProgressBar:true
+        })
+       }else{
+        Swal.fire({
+          title:'¡Ha ocurrido un error!',
+          icon:'error',
+          background:"#2f2f2f",
+          color:"#fff",
+          timer:1500,
+          showConfirmButton:false,
+          timerProgressBar:true
+        })
+       }
       })
-     }else{
+    }else if(result.dismiss === Swal.DismissReason.cancel){
       Swal.fire({
-        title:'¡Ha ocurrido un error!',
         icon:'error',
-        background:"#2f2f2f",
-        color:"#fff",
-        timer:1500,
-        showConfirmButton:false,
-        timerProgressBar:true
+        title:'¡Cancelado!',
+        text:'La operación fue cancelada con exito.',
+        showConfirmButton: false,
+        timer:2000
       })
-     }
-    })
+    }
+
   })
 });
 // RETIRAR
@@ -444,64 +456,75 @@ $("#retirar").click(function() {
     confirmButtonColor: '#28a745',
     cancelButtonColor: '#d8514b',
     confirmButtonText: 'Sí, Retirar',
+    cancelButtonText: 'Cancelar',
     background:'#2f2f2f',
     color:'#fff'
   }).then((result) => {
-    const datos = document.querySelector("#datos_Retiro");
-    console.log(datos);
-    const datos_actualizar = new FormData(datos);
-    var url = "../controllers/retiro.php";
-    fetch(url, {
-        method: 'post',
-        body: datos_actualizar
-    })
-    .then(data => data.json())
-    .then(data =>{
-      console.log(data);
-      if (data == 'ok') {
+    if(result.isConfirmed) {
+      const datos = document.querySelector("#datos_Retiro");
+      console.log(datos);
+      const datos_actualizar = new FormData(datos);
+      var url = "../controllers/retiro.php";
+      fetch(url, {
+          method: 'post',
+          body: datos_actualizar
+      })
+      .then(data => data.json())
+      .then(data =>{
+        console.log(data);
+        if (data == 'ok') {
+          Swal.fire({
+            title:'¡El retiro se realizó con exito!',
+            icon:'success',
+            background:"#2f2f2f",
+            color:"#fff",
+            timer:1500,
+            showConfirmButton:false,
+            timerProgressBar:true
+          }).then(function() {
+            location.reload();
+          });
+       }else if(data == 'not_exist'){
         Swal.fire({
-          title:'¡El retiro se realizó con exito!',
-          icon:'success',
+          title:'¡Numero de cuenta no existe!',
+          icon:'error',
           background:"#2f2f2f",
           color:"#fff",
           timer:1500,
           showConfirmButton:false,
           timerProgressBar:true
-        }).then(function() {
-          location.reload();
-        });
-     }else if(data == 'not_exist'){
-      Swal.fire({
-        title:'¡Numero de cuenta no existe!',
-        icon:'error',
-        background:"#2f2f2f",
-        color:"#fff",
-        timer:1500,
-        showConfirmButton:false,
-        timerProgressBar:true
+        })
+      }else if(data == 'not_money'){
+        Swal.fire({
+          title:'¡Fondos insuficientes!',
+          icon:'error',
+          background:"#2f2f2f",
+          color:"#fff",
+          timer:1500,
+          showConfirmButton:false,
+          timerProgressBar:true
+        })
+       }else{
+        Swal.fire({
+          title:'¡Ha ocurrido un error!',
+          icon:'error',
+          background:"#2f2f2f",
+          color:"#fff",
+          timer:1500,
+          showConfirmButton:false,
+          timerProgressBar:true
+        })
+       }
       })
-    }else if(data == 'not_money'){
+    }else if(result.dismiss === Swal.DismissReason.cancel){
       Swal.fire({
-        title:'¡Fondos insuficientes!',
         icon:'error',
-        background:"#2f2f2f",
-        color:"#fff",
-        timer:1500,
-        showConfirmButton:false,
-        timerProgressBar:true
+        title:'¡Cancelado!',
+        text:'La operación fue cancelada con exito.',
+        showConfirmButton: false,
+        timer:2000
       })
-     }else{
-      Swal.fire({
-        title:'¡Ha ocurrido un error!',
-        icon:'error',
-        background:"#2f2f2f",
-        color:"#fff",
-        timer:1500,
-        showConfirmButton:false,
-        timerProgressBar:true
-      })
-     }
-    })
+    }
   })
 });
 
