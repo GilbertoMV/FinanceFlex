@@ -206,18 +206,18 @@ if(cliente){
                 <p>Información de Mi cuenta</p>
                 <form action="">
                 <label for="nCuenta">Número de Cuenta:</label>
-                <input class="editInfo" name="nCuenta" type="text" value="${info_usuario.numCta}" disabled>
+                <p class="editInfo">${info_usuario.numCta}</p>
                 <label for="rfc">RFC:</label>
-                <input class="editInfo" name="rfc" type="text" value="${info_usuario.rfc}" disabled>
+                <p class="editInfo">${info_usuario.rfc}</p>
 
                 <div class="colums1">
                     <div>
                         <label for="ejecutivoName">Ejecutivo Asignado:</label>
-                        <input class="editInfo" name="ejecutivoName" type="text" value="${info_usuario.id_ejecutivo}" disabled>
+                        <p class="editInfo">${info_usuario.id_ejecutivo}</p>
                     </div>
                     <div>
                         <label for="ejecutivoName">Saldo de la Cuenta:</label>
-                        <p class="editInfo">${info_usuario.saldo}</p>
+                        <p class="editInfo">$ ${info_usuario.saldo}</p>
                     </div>
                 </div>
                 </form>

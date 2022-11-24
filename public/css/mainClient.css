@@ -107,7 +107,6 @@ nav {
   width: 100%;
   background-color: #fff;
   padding: 5px;
-  z-index: 1;
 }
 nav:after{
   content: '';

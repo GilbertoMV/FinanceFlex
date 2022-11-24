@@ -71,6 +71,7 @@ $mensualidad = $infopr['monto'] / $meses;
                     </div>
                 </div>
             </div>
+            <?php if($valida-> rowCount()>0){?>
             <div class="row2">
                 <div class="head">
                     <div class="titulo">
@@ -80,7 +81,6 @@ $mensualidad = $infopr['monto'] / $meses;
                         <button id="infoPago"><i class="bi bi-info-circle"></i></button>
                     </div>
                 </div>
-                <?php if($valida-> rowCount()>0){?>
                 <div class="detalles">
                     <div class="extras">
                         <div class="extras_row1">

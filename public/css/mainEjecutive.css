@@ -181,6 +181,7 @@ ul li a {
   align-items: center;
   gap: 5px;
   text-align: left; 
+  text-transform: capitalize;
 }
 ul li a:hover {
   color:#4D4B4B;
