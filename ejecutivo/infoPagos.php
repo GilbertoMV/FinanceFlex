@@ -12,7 +12,7 @@ if(isset($_SESSION['id_ejecutivo'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FinanceFlex</title>
-    <link rel="shortcut icon" href="../public/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../public/img/logito.ico" type="image/x-icon">
     <link rel="stylesheet" href="../public/css/mainEjecutive.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +21,6 @@ if(isset($_SESSION['id_ejecutivo'])){
     <script src="https://kit.fontawesome.com/6dc1722754.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
-    <script defer src="../public/js/navbar.js"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </head>
 <body>
@@ -29,6 +28,7 @@ if(isset($_SESSION['id_ejecutivo'])){
     <main>
         <div class="main">
             <div>
+                <input type="hidden" id="id_cl" value="<?php echo $_POST['id']?>">
                 <h1 class="title">Lista de Pagos</h1>
                 <h1 class="title">
                     Prestamo: 
@@ -52,21 +52,11 @@ if(isset($_SESSION['id_ejecutivo'])){
                         <th width="20%">Monto de Pago</th>
                         <th width="10%">Fecha de Pago</th>
                         <th width="20%">Hora de Pago</th>
-                        <th width="20%">Monto restante</th>
+                        <th width="20%">Prestamo</th>
                         <th width="20%">Estado</th>
                     </tr>
                 </thead>
                         <tbody id="datos_cliente">
-                            <tr>
-                                <td class="lista_clientes"></td>
-                                <td class="lista_clientes"></td>
-                                <td class="lista_clientes"></td>
-                                <td class="lista_clientes">3 Meses</td>
-                                <td class="lista_clientes">9 Meses</td>
-                                <td class="lista_clientes buttons_clientes">
-                                    <div class="aprobado"><i class="bi bi-shield-check"> Aprobado</i></div>
-                                </td> 
-                        </tr>
                     </tbody>
             </table>
         </section>
