@@ -4,11 +4,6 @@ session_start();
 //error_log($_SESSION['id_ejecutivo']);
 
 if(isset($_SESSION['id_ejecutivo'])){
-    require_once __DIR__ .'\..\includes\db.php';
-    $records = $conn->prepare('SELECT * FROM movimientos ');
-    $records->bindParam(':id_ejecutivo', $_SESSION['id_ejecutivo']);
-    $records->execute();    
-    $resultado1 = $records->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -35,6 +30,9 @@ if(isset($_SESSION['id_ejecutivo'])){
         <div class="main">
             <div>
                 <h1 class="title">Lista de Pagos</h1>
+                <h1 class="title">
+                    Prestamo: 
+                </h1>
             </div>
             <div class="colum2">
                 <div class="buscar">
@@ -46,33 +44,29 @@ if(isset($_SESSION['id_ejecutivo'])){
             </div>
         </div>
 
-        <section class="container__table-clients">
+        <section id="tabla-pagos" class="container__table-clients">
             <table class="clients__table" id=tabla border="0" cellspacing="0">
                 <thead>
                     <tr class="encabezado_clientes">
                         <th width="10%">Id Pago</th>
                         <th width="20%">Monto de Pago</th>
                         <th width="10%">Fecha de Pago</th>
-                        <th width="20%">Mensualidades Pagadas</th>
-                        <th width="20%">Mensualidades restantes</th>
+                        <th width="20%">Hora de Pago</th>
+                        <th width="20%">Monto restante</th>
                         <th width="20%">Estado</th>
                     </tr>
                 </thead>
                         <tbody id="datos_cliente">
-                        <?php foreach ($resultado1 as $resultado1){?>
                             <tr>
-                                <td class="lista_clientes"><?php echo $resultado1['id_movimiento']; ?></td>
-                                <td class="lista_clientes"><?php echo $resultado1['monto']; ?></td>
-                                <td class="lista_clientes"><?php echo $resultado1['fecha_hora']; ?></td>
-                                <td class="lista_clientes verde">3 Meses</td>
-                                <td class="lista_clientes rojo">9 Meses</td>
+                                <td class="lista_clientes"></td>
+                                <td class="lista_clientes"></td>
+                                <td class="lista_clientes"></td>
+                                <td class="lista_clientes">3 Meses</td>
+                                <td class="lista_clientes">9 Meses</td>
                                 <td class="lista_clientes buttons_clientes">
-                                    <!-- <box-icon name='badge-check' color='#27a644'></box-icon> -->
                                     <div class="aprobado"><i class="bi bi-shield-check"> Aprobado</i></div>
                                 </td> 
                         </tr>
-                        <?php } ?>
-
                     </tbody>
             </table>
         </section>
@@ -81,6 +75,8 @@ if(isset($_SESSION['id_ejecutivo'])){
     <script src="../public/js/app.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../public/js/alertas.js"></script>
+    <script src="../public/js/functions-ejecutivo.js"></script>
+
 </body>
 </html>
 <?php

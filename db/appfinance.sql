@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-11-2022 a las 14:18:06
+-- Tiempo de generación: 24-11-2022 a las 14:51:53
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 7.4.29
 
@@ -49,10 +49,10 @@ CREATE TABLE `clientes` (
 --
 
 INSERT INTO `clientes` (`id_cliente`, `rfc`, `nom`, `apellidoP`, `apellidoM`, `curp`, `telefono`, `email`, `password`, `fechaNac`, `foto`, `genero`, `status`, `id_ejecutivo`) VALUES
-(5, 'KASDKASMJASK', 'JUAN', 'SADAS', 'ARTEAGA', 'CIAJ020917HANCJRN8', '3141113999', 'asda@gmail.com', '$2y$10$K6cOK/A8CF6wjJhg7PGMB.RjUu1fdAu7ii4AyxIyBU5kPjCNCdk76', '2002-09-17', '', 'Masculino', '1', 2018963),
-(10, 'HAYDNRUTI2sdd', 'adnkasndk', 'ansndaknsd', 'kndanksdnk', 'CIAJ020917HCMHRN23', 'sdfnksdf', 'cknanksc@gmail.com', '$2y$10$n9ZTpZVTtDwFCiXgV.2taOyk3kW6aRHS.VUcujsXsmh80aNAaZ9ou', '2002-09-17', NULL, 'Masculino', '2', 2018963),
-(11, 'DASD', 'juan', 'pablo', 'chipres', 'CIAJ020917HCMHRNA2', '3143524724', 'max@gmail.com', '$2y$10$WzKPsKtcwkPiDO7tSHNZoe7Lg30484DDa5l6lvsE8VM.O9KUJkUVm', '2002-09-18', NULL, 'Masculino', '1', 2018963),
-(12, 'HAYDNRUTI122', 'juan', 'pablo', 'chipres', 'CIAJ020917HCMHRNA7', '3145738904', 'pruebaemaik@gmail.com', '$2y$10$3QYBs.rADcvy7198/Fnp6OongBLUyrFgNogTTDT7g4iWbaDWUwfM2', '2006-07-04', NULL, 'Masculino', '1', 2018963);
+(10, 'HAYDNRUTI2sdd', 'Gilberto', 'Valenzuela', 'Martinez', 'CIAJ020917HCMHRN23', '3141438337', 'cknanksc@gmail.com', '$2y$10$n9ZTpZVTtDwFCiXgV.2taOyk3kW6aRHS.VUcujsXsmh80aNAaZ9ou', '2002-09-17', NULL, 'Masculino', '1', 2018963),
+(11, 'DASD', 'juan', 'pablo', 'chipres', 'CIAJ020917HCMHRNA2', '3143524724', 'max@gmail.com', '$2y$10$WzKPsKtcwkPiDO7tSHNZoe7Lg30484DDa5l6lvsE8VM.O9KUJkUVm', '2002-09-18', NULL, 'Masculino', '2', 2018963),
+(12, 'HAYDNRUTI122', 'juan', 'pablo', 'chipres', 'CIAJ020917HCMHRNA8', '3145738904', 'pruebaemaik@gmail.com', '$2y$10$3QYBs.rADcvy7198/Fnp6OongBLUyrFgNogTTDT7g4iWbaDWUwfM2', '2006-07-04', NULL, 'Masculino', '2', 2018963),
+(14, 'CIALMKAN7767', 'Juan pablo', 'Chipres', 'Arteaga', 'CIAJ020917HCMHRNA7', '3143524724', 'juanpablochipresarteaga@gmail.com', '$2y$10$Jouzp51oUpMa/LoEByURl.trDibNrQkP4f6k/hdI4mdvDlPSmz3e.', '2002-09-17', NULL, 'Masculino', '1', 2018963);
 
 -- --------------------------------------------------------
 
@@ -71,10 +71,10 @@ CREATE TABLE `cuenta` (
 --
 
 INSERT INTO `cuenta` (`numCta`, `saldo`, `id_cliente`) VALUES
-(191909, 0.00, 10),
-(1922144724, 200.00, 11),
-(1952208904, 14044.00, 12),
-(2036024724, 0.00, 5);
+(191909, 4900.00, 10),
+(730544724, 0.00, 14),
+(1922144724, 0.00, 11),
+(1952208904, 0.00, 12);
 
 -- --------------------------------------------------------
 
@@ -116,35 +116,9 @@ CREATE TABLE `movimientos` (
 --
 
 INSERT INTO `movimientos` (`id_movimiento`, `numCta`, `tipo`, `monto`, `fecha_hora`) VALUES
-(9, 2036024724, 'Deposito', 20.00, '2022-11-18 18:38:22'),
-(10, 2036024724, 'Deposito', 20.00, '2022-11-18 18:38:22'),
-(13, 2036024724, 'Deposito', 1000.00, '2022-11-18 18:47:08'),
-(16, 1952208904, 'Deposito', 700.00, '2022-11-18 19:00:08'),
-(17, 1952208904, 'Deposito', 1000.00, '2022-11-18 19:03:04'),
-(18, 2036024724, 'Deposito', 700.00, '2022-11-18 19:18:37'),
-(20, 2036024724, 'Deposito', 11.00, NULL),
-(21, 2036024724, 'Retiro', 11.00, NULL),
-(22, 2036024724, 'Retiro', 11.00, NULL),
-(23, 2036024724, 'Deposito', 500.00, '2022-11-18 19:44:51'),
-(24, 2036024724, 'Deposito', 700.00, NULL),
-(25, 2036024724, 'Deposito', 700.00, NULL),
-(26, 2036024724, 'Deposito', 500.00, NULL),
-(27, 2036024724, 'Deposito', 700.00, NULL),
-(28, 2036024724, 'Deposito', 700.00, NULL),
-(29, 1952208904, 'Deposito', 12344.00, NULL),
-(30, 2036024724, '', 700.00, NULL),
-(31, 2036024724, 'Deposito', 700.00, NULL),
-(32, 1922144724, 'Deposito', 200.00, NULL),
-(33, 2036024724, 'Deposito', 700.00, NULL),
-(34, 2036024724, 'Retiro', 200.00, NULL),
-(35, 2036024724, 'Deposito', 500.00, NULL),
-(36, 2036024724, 'Retiro', 22.00, NULL),
-(37, 2036024724, 'Retiro', 78.00, NULL),
-(38, 2036024724, 'Retiro', 20.00, NULL),
-(39, 2036024724, 'Retiro', 20.00, NULL),
-(40, 2036024724, 'Retiro', 20.00, NULL),
-(41, 2036024724, 'Retiro', 40.00, NULL),
-(42, 2036024724, 'Retiro', 800.00, NULL);
+(50, 191909, 'Deposito', 4000.00, '2022-11-23 20:17:36'),
+(51, 191909, 'Deposito', 1000.00, '2022-11-23 20:18:48'),
+(52, 191909, 'Retiro', 100.00, '2022-11-23 20:18:57');
 
 --
 -- Disparadores `movimientos`
@@ -157,6 +131,28 @@ ELSE
 UPDATE cuenta SET cuenta.saldo = @oldsaldo - new.monto WHERE cuenta.numCta=new.numCta;
 	END IF;
 END IF
+$$
+DELIMITER ;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `pagos`
+--
+
+CREATE TABLE `pagos` (
+  `id_pago` int(11) NOT NULL,
+  `numCta` int(16) NOT NULL,
+  `fecha_hora` datetime NOT NULL,
+  `monto` float(10,2) NOT NULL,
+  `id_prestamo` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Disparadores `pagos`
+--
+DELIMITER $$
+CREATE TRIGGER `movimientos_pagos` AFTER INSERT ON `pagos` FOR EACH ROW UPDATE cuenta SET cuenta.saldo = (SELECT saldo FROM cuenta WHERE numCta=new.numCta) - new.monto WHERE cuenta.numCta=new.numCta
 $$
 DELIMITER ;
 
@@ -176,13 +172,6 @@ CREATE TABLE `prestamos` (
   `fechaInicial` date NOT NULL,
   `fechaTermino` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `prestamos`
---
-
-INSERT INTO `prestamos` (`id_prestamo`, `numCta`, `monto`, `restante`, `interes`, `status`, `fechaInicial`, `fechaTermino`) VALUES
-(1, 2036024724, 4000.00, 4000.00, 3.00, '1', '2022-11-07', '2023-02-07');
 
 --
 -- Índices para tablas volcadas
@@ -219,6 +208,14 @@ ALTER TABLE `movimientos`
   ADD KEY `numCta` (`numCta`);
 
 --
+-- Indices de la tabla `pagos`
+--
+ALTER TABLE `pagos`
+  ADD PRIMARY KEY (`id_pago`),
+  ADD KEY `numCta` (`numCta`),
+  ADD KEY `id_prestamo` (`id_prestamo`) USING BTREE;
+
+--
 -- Indices de la tabla `prestamos`
 --
 ALTER TABLE `prestamos`
@@ -233,19 +230,25 @@ ALTER TABLE `prestamos`
 -- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `movimientos`
 --
 ALTER TABLE `movimientos`
-  MODIFY `id_movimiento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `id_movimiento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
+
+--
+-- AUTO_INCREMENT de la tabla `pagos`
+--
+ALTER TABLE `pagos`
+  MODIFY `id_pago` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `prestamos`
 --
 ALTER TABLE `prestamos`
-  MODIFY `id_prestamo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_prestamo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- Restricciones para tablas volcadas
@@ -268,6 +271,13 @@ ALTER TABLE `cuenta`
 --
 ALTER TABLE `movimientos`
   ADD CONSTRAINT `movimientos_ibfk_1` FOREIGN KEY (`numCta`) REFERENCES `cuenta` (`numCta`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `pagos`
+--
+ALTER TABLE `pagos`
+  ADD CONSTRAINT `pagos_ibfk_1` FOREIGN KEY (`id_prestamo`) REFERENCES `prestamos` (`id_prestamo`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `pagos_ibfk_2` FOREIGN KEY (`numCta`) REFERENCES `cuenta` (`numCta`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `prestamos`
