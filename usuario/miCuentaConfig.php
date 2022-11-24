@@ -49,25 +49,7 @@ if(isset($_SESSION['id_cliente'])){
                 <h6>Consulta información de tu cuenta.</h6>
             </div>
             <div class="c2-2">
-                <div class="informacionGeneral">
-                    <p>Información de Mi cuenta</p>
-                    <form action="">
-                    <label for="nCuenta">Número de Cuenta:</label>
-                    <input class="editInfo" name="nCuenta" type="text" value="${NUMERO DE CUENTA}" disabled>
-                    <label for="rfc">RFC:</label>
-                    <input class="editInfo" name="rfc" type="text" value="${RFC}" disabled>
-
-                    <div class="colums1">
-                        <div>
-                            <label for="ejecutivoName">Ejecutivo Asignado:</label>
-                            <input class="editInfo" name="ejecutivoName" type="text" value="${Ejecutivo}" disabled>
-                        </div>
-                        <div>
-                            <label for="ejecutivoName">Saldo de la Cuenta:</label>
-                            <p class="editInfo">${SALDO}</p>
-                        </div>
-                    </div>
-                    </form>
+                <div id="infoCliente" class="informacionGeneral">
                 </div>
             </div>
         </div>
@@ -77,6 +59,7 @@ if(isset($_SESSION['id_cliente'])){
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="../public/js/jquery-3.6.1.min.js"></script>
 <script src="../public/js/alertas.js"></script>
+<script src="../public/js/functions-cliente.js"></script>
 
 </body>
 </html>

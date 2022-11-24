@@ -3,6 +3,7 @@ var transacciones = document.getElementById('transaccion');
 var transacciones_pagos = document.getElementById('pagos');
 var deposito = document.getElementById('deposito');
 var retiro = document.getElementById('retiro');
+var cliente = document.getElementById('infoCliente');
 var __DIR__ = window.location.pathname.match('(.*\/).*')[1] + '';
 if(saldo){
     async function getBalance(){
@@ -167,6 +168,68 @@ if(transacciones_pagos){
         }
     }
     getPagos();
+
+
+}
+//OBTENER NUMCTA, RFC, EJECUTIVO, SALDO, FOTO
+if(cliente){
+    async function getInfo(){
+        try{
+            let trs_info= await fetch(__DIR__+'../controllers/getInfo.php');
+            info_usuario = await trs_info.json();
+            console.log(info_usuario);
+            if(info_usuario === 'null')
+            {
+                cliente.innerHTML = `
+                <p>Información de Mi cuenta</p>
+                <form action="">
+                <label for="nCuenta">Número de Cuenta:</label>
+                <input class="editInfo" name="nCuenta" type="text" value="" disabled>
+                <label for="rfc">RFC:</label>
+                <input class="editInfo" name="rfc" type="text" value="" disabled>
+
+                <div class="colums1">
+                    <div>
+                        <label for="ejecutivoName">Ejecutivo Asignado:</label>
+                        <input class="editInfo" name="ejecutivoName" type="text" value="" disabled>
+                    </div>
+                    <div>
+                        <label for="ejecutivoName">Saldo de la Cuenta:</label>
+                        <p class="editInfo"></p>
+                    </div>
+                </div>
+                </form>
+                `
+    
+            }else{
+                cliente.innerHTML = `
+                <p>Información de Mi cuenta</p>
+                <form action="">
+                <label for="nCuenta">Número de Cuenta:</label>
+                <input class="editInfo" name="nCuenta" type="text" value="${info_usuario.numCta}" disabled>
+                <label for="rfc">RFC:</label>
+                <input class="editInfo" name="rfc" type="text" value="${info_usuario.rfc}" disabled>
+
+                <div class="colums1">
+                    <div>
+                        <label for="ejecutivoName">Ejecutivo Asignado:</label>
+                        <input class="editInfo" name="ejecutivoName" type="text" value="${info_usuario.id_ejecutivo}" disabled>
+                    </div>
+                    <div>
+                        <label for="ejecutivoName">Saldo de la Cuenta:</label>
+                        <p class="editInfo">${info_usuario.saldo}</p>
+                    </div>
+                </div>
+                </form>
+                `
+        
+            }
+    
+        }catch(err){
+            console.error(err);
+        }
+    }
+    getInfo();
 
 
 }

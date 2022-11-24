@@ -53,18 +53,18 @@ if(isset($_SESSION['id_cliente'])){
                     <p>Información de Seguridad</p>
                     <form action="">
                     <label for="correo">Correo Electronico:</label>
-                    <input class="editInfo" name="correo" type="text" value="${Correo}" disabled>
+                    <input class="editInfo" id="email" name="correo" type="text" value="<?php echo $_SESSION['email'] ?>" disabled>
                     <label for="rfc">Contraseña Actual:</label>
-                    <input class="editInfo" name="rfc" type="password" placeholder="Ingrese su contraseña actual...">
+                    <input class="editInfo" id="passOld" name="rfc" type="password" placeholder="Ingrese su contraseña actual..." required>
 
                     <div class="colums">
                         <div>
                             <label for="nContra">Contraseña Nueva:</label>
-                            <input class="editInfo" name="nContra" type="password" placeholder="Ingrese la contraseña Nueva...">
+                            <input class="editInfo" id="passNew"name="nContra" type="password" placeholder="Ingrese la contraseña Nueva..." required>
                         </div>
                         <div>
                             <label for="nContra1">Repita la Contraseña:</label>
-                            <input class="editInfo" name="nContra1" type="password" placeholder="Repita la contraseña Nueva...">
+                            <input class="editInfo" id="passValid" name="nContra1" type="password" placeholder="Repita la contraseña Nueva..." required>
                         </div>
                     </div>
                     </form>

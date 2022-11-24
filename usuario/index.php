@@ -5,8 +5,8 @@ session_start();
 
 //error_log($_SESSION['id_cliente']);
 if(isset($_SESSION['id_cliente'])){
-    require __DIR__ .'\..\includes\db.php';
-$sql = $conn->prepare('SELECT cuenta.numCta FROM clientes INNER JOIN cuenta ON clientes.id_cliente = cuenta.id_cliente WHERE cuenta.id_cliente = :id_cliente');
+require __DIR__ .'\..\includes\db.php';
+$sql = $conn->prepare('SELECT cuenta.numCta, cuenta.saldo FROM clientes INNER JOIN cuenta ON clientes.id_cliente = cuenta.id_cliente WHERE cuenta.id_cliente = :id_cliente');
 $sql->bindParam(':id_cliente', $_SESSION['id_cliente']);
 $sql->execute();
 $infocl = $sql->fetch(PDO::FETCH_ASSOC);
@@ -28,7 +28,7 @@ if($infopr['interes'] == 5.00){
 if($infopr['interes'] == 7.00){
     $meses=12;
 }
-$pago = $infopr['monto'] / $meses;
+$mensualidad = $infopr['monto'] / $meses;
 }
 ?>
 <!DOCTYPE html>
@@ -86,11 +86,14 @@ $pago = $infopr['monto'] / $meses;
                         <div class="extras_row1">
                             <div class="contenedorh1">
                                 <p>Proximo Pago:</p>
-                                <h5>$<?php echo round($pago, 2)?></h5>
+                                <h5>$<?php echo round($mensualidad, 2)?></h5>
                             </div>
                         </div>
                         <div class="extras_row2">
-                            <button class="pagar" id="pagar">Abonar Ahora</button>
+                            <button onclick='pagar("<?php echo $mensualidad;?>" , "<?php echo $infocl["saldo"];?>" , 
+                            "<?php echo $infopr["id_prestamo"];?>" , 
+                            "<?php echo $infocl["numCta"];?>" , 
+                            "<?php echo $_SESSION["email"];?>")' class="pagar" id="pagar">Abonar Ahora</button>
                         </div>
                     </div>
                     <div class="saldo">
