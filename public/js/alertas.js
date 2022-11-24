@@ -1,3 +1,55 @@
+//ALERTAS DEL INDEX MAIN
+//ALERTA DE REGISTRO
+$("#registro").click(function() {
+  Swal.fire({
+    icon:'question',
+    title:'¿Deseas Registrarte en FinanceFlex?',
+    text:'Para registrarte en FinanceFlex es necesario acudir con un ejecutivo.'
+  })
+})
+$("#nosotros").click(function() {
+  Swal.fire({
+    // title: '¡Desarrolladores FinanceFlex!',
+    width:'70%',
+    html:`
+    <section class="hacer">
+      <div class="bloque">
+          <div class="item">
+              <img class="bloque__imagen" src="public/img/backend.png" alt="backend">
+              <h1>Juan Pablo Chipres</h1>
+              <p>Desarrollador principal del backend</p>
+          </div>
+      </div>
+      <div class="col-1-item">
+          <div class="item">
+              <img class="bloque__imagen" src="public/img/frontend.png" alt="frontend">
+              <h1>Gilberto Valenzuela</h1>
+              <p>Desarrollador principal de frontend</p>
+          </div>
+      </div>
+      <div class="col-1-item">
+          <div class="item">
+              <img class="bloque__imagen" src="public/img/documentador.png" alt="documentador">
+              <h1>Laura Adaia Castillo</h1>
+              <p>Documentadora y auxiliar de frontend</p>
+          </div>
+      </div>
+      <div class="col-1-item">
+          <div class="item">
+              <img class="bloque__imagen" src="public/img/documentador.png" alt="documentador">
+              <h1>Maximiliano Martinez</h1>
+              <p>Documentadora y auxiliar de frontend</p>
+          </div>
+      </div>
+    </section>`,
+    imageUrl: 'public/img/logo_transparent-white.png',
+    imageWidth: 200,
+    imageHeight: 200,
+    imageAlt: 'logo',
+    confirmButtonText:'Okey'
+  })
+})
+
 // MODAL DE ELIMINACIÓN DE PERSONA
 function delet(id) {
   const swalWithBootstrapButtons = Swal.mixin({
@@ -715,4 +767,36 @@ $("#solicitarPrestamo").click(function() {
       })
     }
 })
+})
+
+
+// CONFIGURACION ALERTAS 
+// ALERTA GUARDAR DATOS GENERALES 
+$('#ActualizarDatosCliente').click(function() {
+  Swal.fire({
+    icon: 'success',
+    title: 'Tus cambios han sido realizados con exito.',
+    showConfirmButton: false,
+    timer: 2500
+  })
+})
+// ALERTA GUARDAR NUEVA CONTRASEÑA 
+$('#ActualizarCredencialesCliente').click(function() {
+  Swal.fire({
+    icon: 'success',
+    title: 'Tus cambios han sido realizados con exito.',
+    showConfirmButton: false,
+    timer: 2500
+  })
+})
+
+// ALERTA CERRAR CUENTA DESDE CLIENTE 
+$('#cerrarCuenta').click(function() {
+  Swal.fire({
+    icon: 'warning',
+    title: 'Oops...',
+    text: 'Para cerrar tu cuenta es necesario contactar con tu ejecutivo',
+    confirmButtonText: 'Entendido',
+    confirmButtonColor:'#198754'
+  })
 })

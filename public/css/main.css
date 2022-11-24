@@ -21,9 +21,10 @@ body, input{
     width: 100%;
     display: flex;
     align-items: center;
+    height: 120px;
 }
 .logo{
-    width: 90px;
+    width: 130px;
     cursor: pointer;
     margin: 30px 0;
 }
@@ -196,7 +197,10 @@ button a {
 }
 
 
-
+.a {
+    cursor: pointer;
+    font-size: 15px;
+}
 footer{
     background-color: white;
     height: auto;
@@ -475,7 +479,9 @@ form.sign-up-form{
 .formulario-mensaje-activo {
 	display: block;
 }
-
+.x {
+    color: #fff;
+}
 .btn{
     width: 150px;
     height: 49px;
@@ -809,3 +815,7 @@ form.sign-up-form{
     }
 }
 
+.nosotros{
+    display: grid;
+    
+}

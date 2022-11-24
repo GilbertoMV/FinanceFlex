@@ -12,21 +12,15 @@
             <a href="perfil.php" class="a config">Configuración</a>
             <a href="ayuda.php" class="a">Ayuda</a>
             <a href="../controllers/logoutcontroller.php" class="a logout"><i class="bi bi-door-closed"></i> Cerrar Sesion </a>
-            
-            
-            
+
             <ul class="ul a">
-                <li><a href="#"><img src="../public/img/stockProfile.png" alt=""  class="profilePhoto"> <?= $_SESSION['nom']?><i class="bi bi-caret-down"></i></a>
-                    <ul>
+                <li><a href="#"><img src="../public/img/stockProfile.png" alt="PerfilFoto"  class="profilePhoto"> <?= $_SESSION['nom']?><i class="bi bi-caret-down"></i></a>
+                    <ul >
                         <li><a href="configuracion.php" class="a"><i class="bi bi-sliders"></i> Configuración</a></li>
                         <li><a href="../controllers/logoutcontroller.php" class="a"><i class="bi bi-door-closed"></i> Cerrar Sesion </a></li>
                     </ul>
                 </li>
             </ul>
-
-
-
-            
         </div>
     </div>
 </nav>

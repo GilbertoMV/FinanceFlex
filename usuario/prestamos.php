@@ -40,27 +40,24 @@ $mensualidad = $infopr['monto'] / $meses;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FinanceFlex</title>
-    <link rel="shortcut icon" href="../public/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../public/img/logito.ico" type="image/x-icon">
     <link rel="stylesheet" href="../public/css/mainClient.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@300;400&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/6dc1722754.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
-    <script defer src="../public/js/navbar.js"></script>
 </head>
 <body>
 <?php require 'nav.php'?>
 <main>
     <div class="paneles">
         <div class="panel1">
-        <div class="row1">
+            <div class="row1">
                 <div class="contenedorh1">
-                    <h1>Mi Prestamo</h1>
+                    <h1>Mi Préstamo</h1>
                 </div>
                 <div class="detalles">
                     <div class="extras">
@@ -176,6 +173,7 @@ $mensualidad = $infopr['monto'] / $meses;
             </div>
             <?php }?>
         </div>
+        
         
         <div class="panel2">
             <div class="contenedorh1">

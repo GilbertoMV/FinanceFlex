@@ -37,7 +37,7 @@ $pago = $infopr['monto'] / $meses;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FinanceFlex</title>
-    <link rel="shortcut icon" href="../public/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../public/img/logito.ico" type="image/x-icon">
     <link rel="stylesheet" href="../public/css/mainClient.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
@@ -46,7 +46,6 @@ $pago = $infopr['monto'] / $meses;
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
-    <script defer src="../public/js/navbar.js"></script>
 </head>
 <body>
 <?php require 'nav.php'?>
@@ -58,8 +57,8 @@ $pago = $infopr['monto'] / $meses;
                     <h1>Detalles de Saldo</h1>
                 </div>
                 <div class="detalles">
-                <div id="saldo_actual"class="saldo">
-            </div> 
+                    <div id="saldo_actual"class="saldo">
+                    </div> 
                     <div class="extras">
                         <div class="extras_row1">
                             <div id="deposito" class="contenedorh1">
@@ -72,11 +71,10 @@ $pago = $infopr['monto'] / $meses;
                     </div>
                 </div>
             </div>
-
             <div class="row2">
                 <div class="head">
                     <div class="titulo">
-                        <h1>Mi Prestamo</h1>
+                        <h1>Mi Préstamo</h1>
                     </div>
                     <div class="info">
                         <button id="infoPago"><i class="bi bi-info-circle"></i></button>
@@ -124,14 +122,10 @@ $pago = $infopr['monto'] / $meses;
         </div>
     </section>
 
-
-
-<script type="text/javascript" src="../public/js/tableclient.js"></script>
-<script src="../public/js/functions-cliente.js"></script>
-<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="../public/js/alertas.js"></script>
-
-
+    <script type="text/javascript" src="../public/js/tableclient.js"></script>
+    <script src="../public/js/functions-cliente.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../public/js/alertas.js"></script>
 </body>
 </html>
 <?php

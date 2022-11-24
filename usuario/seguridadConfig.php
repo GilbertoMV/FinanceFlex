@@ -26,7 +26,6 @@ if(isset($_SESSION['id_cliente'])){
 </head>
 <body>
     <?php require 'nav.php'?>
-
 <main>
     <section class="contenedores">
         <div class="c1">
@@ -38,37 +37,38 @@ if(isset($_SESSION['id_cliente'])){
             <div class="opciones">
                 <ul class="listaOpciones">
                     <li><a class="opc" href="miCuentaConfig.php"><i class="bi bi-person-vcard"></i> Mi Cuenta</a></li>
-                    <li><a class="opc check" href="configuracion.php"><i class="bi bi-person-badge"></i> Mi Perfil</a></li>
-                    <li><a class="opc" href="seguridadConfig.php"> <i class="bi bi-shield-check"></i> Seguridad</a></li>
+                    <li><a class="opc" href="configuracion.php"><i class="bi bi-person-badge"></i> Mi Perfil</a></li>
+                    <li><a class="opc check" href="seguridadConfig.php"> <i class="bi bi-shield-check"></i> Seguridad</a></li>
                     <li><a class="opc_CerrarCuenta" id="cerrarCuenta"> <i class="bi bi-exclamation-triangle"></i> Cerrar Cuenta</a></li>
                 </ul>
             </div>
         </div>
         <div class="c2">
             <div class="c2-1">
-                <h1 class="opcionTitulo"> Mi Perfil </h1>
-                <h6>Edita Tu Información Personal.</h6>
+                <h1 class="opcionTitulo"> Seguridad </h1>
+                <h6>Modifica tus Credenciales</h6>
             </div>
             <div class="c2-2">
                 <div class="informacionGeneral">
-                    <p>Información General</p>
+                    <p>Información de Seguridad</p>
                     <form action="">
-                    <input class="editInfo" type="text" placeholder="Nombres">
+                    <label for="correo">Correo Electronico:</label>
+                    <input class="editInfo" name="correo" type="text" value="${Correo}" disabled>
+                    <label for="rfc">Contraseña Actual:</label>
+                    <input class="editInfo" name="rfc" type="password" placeholder="Ingrese su contraseña actual...">
+
                     <div class="colums">
-                        <input class="editInfo" type="text" placeholder="Apellido Paterno">
-                        <input class="editInfo" type="text" placeholder="Apellido Materno">
-                    </div>  
-                    <input class="editInfo" type="text" placeholder="CURP">
-                    <div class="colums">
-                        <input class="editInfo" type="text" placeholder="Num. Telefónico">
-                        <input type="date" class="editInfo">
-                        <select class="editInfo">
-                            <option value="Masculino">Masculino</option>
-                            <option value="Femenino">Femenino</option> 
-                        </select>
+                        <div>
+                            <label for="nContra">Contraseña Nueva:</label>
+                            <input class="editInfo" name="nContra" type="password" placeholder="Ingrese la contraseña Nueva...">
+                        </div>
+                        <div>
+                            <label for="nContra1">Repita la Contraseña:</label>
+                            <input class="editInfo" name="nContra1" type="password" placeholder="Repita la contraseña Nueva...">
+                        </div>
                     </div>
                     </form>
-                    <button class="actuInfo" id="ActualizarDatosCliente">Guardar Datos</button>
+                    <button class="actuInfo" id="ActualizarCredencialesCliente">Guardar Datos</button>
                 </div>
             </div>
         </div>
@@ -76,7 +76,6 @@ if(isset($_SESSION['id_cliente'])){
 </main>
 
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script src="../public/js/jquery-3.6.1.min.js"></script>
 <script src="../public/js/alertas.js"></script>
 
 </body>
