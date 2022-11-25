@@ -521,7 +521,7 @@ main {
     border-bottom: solid 3px #b4b6b3;
     border-collapse: collapse;
 }
-.panel2 #transaccion {
+.panel2 tbody tr {
   
   border-bottom: solid 2px #c8cdc4;
   border-collapse: collapse;
@@ -581,6 +581,10 @@ main {
   align-items: center;
   justify-items: center;
   /* background-color: #000; */
+}
+.long {
+  grid-column: 1/3;
+  padding: 1rem;
 }
 .pText {
   background: linear-gradient(312deg, rgba(231,76,60,0.58) 0%, rgba(239,169,43,0.67) 100%);

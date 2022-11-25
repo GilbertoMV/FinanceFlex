@@ -111,7 +111,7 @@ if(transacciones){
                         <td class="td">${item.tipo}</td>
                         <td class="td">${item.fecha}</td>
                         <td class="td">${item.hora}</td>
-                        <td class="warning td">${item.monto}</td>
+                        <td class="warning td">$${item.monto}</td>
                         <td class="td">
                         <button class="recibo">Recibo</button>
                         <button class="reciboResponsive"><i class="bi bi-receipt-cutoff"></i></button></td>`;
@@ -154,7 +154,7 @@ if(transacciones_pagos){
                         <td class="td">${pagos.id_prestamo}</td>
                         <td class="td">${pagos.fecha}</td>
                         <td class="td">${pagos.hora}</td>
-                        <td class="warning td">${pagos.monto}</td>
+                        <td class="warning td">$${pagos.monto}</td>
                         <td class="td">
                         <button class="recibo">Recibo</button>
                         <button class="reciboResponsive"><i class="bi bi-receipt-cutoff"></i></button></td>`;
