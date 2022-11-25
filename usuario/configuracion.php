@@ -60,8 +60,8 @@ if(isset($_SESSION['id_cliente'])){
                     </div>  
                     <input class="editInfo" type="text" placeholder="CURP">
                     <div class="colums">
-                        <input class="editInfo" type="text" placeholder="Num. Telefónico">
-                        <input type="date" class="editInfo">
+                        <p class="editInfo">3141438338</p>
+                        <p class="editInfo">02/01/2000</p>
                         <select class="editInfo">
                             <option value="Masculino">Masculino</option>
                             <option value="Femenino">Femenino</option> 
