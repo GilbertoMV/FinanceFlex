@@ -180,6 +180,7 @@ $mensualidad = $infopr['monto'] / $meses;
         <div class="panel2">
             <div class="contenedorh1">
                 <h1>Detalles</h1>
+                <input type="hidden" id="idprestamo" value="<?php echo $infopr['id_prestamo'];?>">
             </div>
             <table id="tabla-pagos">
                 <thead>

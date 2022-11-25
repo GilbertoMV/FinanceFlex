@@ -799,10 +799,11 @@ $("#solicitarPrestamo").click(function() {
 // ALERTA GUARDAR DATOS GENERALES 
 $('#ActualizarDatosCliente').click(function() {
   Swal.fire({
-    icon: 'success',
-    title: 'Tus cambios han sido realizados con exito.',
-    showConfirmButton: false,
-    timer: 2500
+    icon: 'warning',
+    title: 'Oops...',
+    text: 'Para modificar tus datos personales es necesario contactar con tu ejecutivo',
+    confirmButtonText: 'Entendido',
+    confirmButtonColor:'#198754'
   })
 })
 // ALERTA GUARDAR NUEVA CONTRASEÑA 

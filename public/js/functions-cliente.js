@@ -6,6 +6,7 @@ var retiro = document.getElementById('retiro');
 var cliente = document.getElementById('infoCliente');
 var tabla_transacciones = document.getElementById('tabla-transacciones');
 var tabla_pagos = document.getElementById('tabla-pagos');
+var info_cliente = document.getElementById('change_genere')
 var __DIR__ = window.location.pathname.match('(.*\/).*')[1] + '';
 if(saldo){
     async function getBalance(){
@@ -126,11 +127,21 @@ if(tabla_pagos){
         TablaPagos();
     });
     TablaPagos = () => {
-    fetch(__DIR__+'../controllers/getPagos.php')
+        const id_pr = document.getElementById('idprestamo').value;
+        form = new FormData();
+        form.append("id_prestamo", id_pr);
+    fetch(__DIR__+'../controllers/getPagos.php',{
+        method: 'POST',
+        contentType: 'XMLHttpRequest',
+        body: form
+    })
     .then((res) => res.json())
         .then(response => {
           console.log(response);
-          let html = '';
+          if(response === 'null'){
+
+          }else{
+            let html = '';
           for (let i in response) {
             html += `<tr>
                 <td class="td">${response[i].id_prestamo}</td>
@@ -142,6 +153,7 @@ if(tabla_pagos){
                 <button class="reciboResponsive"><i class="bi bi-receipt-cutoff"></i></button></td>
             </tr>`;
           }
+        
           document.querySelector('#pagos-detalles').innerHTML = html;  
           $('#tabla-pagos').DataTable({
             paging: false,
@@ -151,6 +163,7 @@ if(tabla_pagos){
           $('#buscador').on( 'keyup', function () {
             table.search( this.value ).draw();
         });
+    }
         }).catch(error => console.log(error));
     }
 }
@@ -217,3 +230,55 @@ if(cliente){
 
 
 }
+
+if(info_cliente){
+    async function getInfoCliente(){
+        try{
+            let trs_info= await fetch(__DIR__+'../controllers/getInfoCliente.php');
+            info_usuario = await trs_info.json();
+            console.log(info_usuario);
+            if(info_usuario === 'null')
+            {
+                info_cliente.innerHTML = `
+                <input class="editInfo" type="text" placeholder="Nombres">
+                <div class="colums">
+                    <input class="editInfo" type="text" placeholder="Apellido Paterno">
+                    <input class="editInfo" type="text" placeholder="Apellido Materno">
+                </div>  
+                <p class="editInfo">Hola</p>
+                <div class="colums">
+                    <p class="editInfo"></p>
+                    <p class="editInfo"></p>
+                    <select class="editInfo">
+                        <option value="Masculino">Masculino</option>
+                        <option value="Femenino">Femenino</option> 
+                    </select>
+                </div>
+                `
+    
+            }else{
+                info_cliente.innerHTML = `
+                <p class="editInfo" >${info_usuario.nom}</p>
+                <div class="colums">
+                    <p class="editInfo" >${info_usuario.apellidoP}</p>
+                    <p class="editInfo" >${info_usuario.apellidoM}</p>
+                </div>  
+                <p class="editInfo">${info_usuario.curp}</p>
+                <div class="colums">
+                    <p class="editInfo">${info_usuario.telefono}</p>
+                    <p class="editInfo">${info_usuario.fechaNac}</p>
+                    <p class="editInfo">${info_usuario.genero}</p>
+                </div>
+                `
+        
+            }
+    
+        }catch(err){
+            console.error(err);
+        }
+    }
+    getInfoCliente();
+
+
+}
+
