@@ -31,7 +31,6 @@ if(isset($_SESSION['id_ejecutivo'])){
                 <input type="hidden" id="id_cl" value="<?php echo $_POST['id']?>">
                 <h1 class="title">Lista de Pagos</h1>
                 <h1 class="title">
-                    Prestamo: 
                 </h1>
             </div>
             <div class="colum2">
@@ -44,8 +43,8 @@ if(isset($_SESSION['id_ejecutivo'])){
             </div>
         </div>
 
-        <section id="tabla-pagos" class="container__table-clients">
-            <table class="clients__table" id=tabla border="0" cellspacing="0">
+        <section class="container__table-clients">
+            <table id="tabla-pagos" class="clients__table" id=tabla border="0" cellspacing="0">
                 <thead>
                     <tr class="encabezado_clientes">
                         <th width="10%">Id Pago</th>
@@ -61,11 +60,11 @@ if(isset($_SESSION['id_ejecutivo'])){
             </table>
         </section>
     </main>
-    <script type="text/javascript" src="../public/js/datatable.js"></script>
     <script src="../public/js/app.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../public/js/alertas.js"></script>
     <script src="../public/js/functions-ejecutivo.js"></script>
+    <!--<script type="text/javascript" src="../public/js/datatable.js"></script>-->
 
 </body>
 </html>

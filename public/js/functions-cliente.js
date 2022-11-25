@@ -4,6 +4,8 @@ var transacciones_pagos = document.getElementById('pagos');
 var deposito = document.getElementById('deposito');
 var retiro = document.getElementById('retiro');
 var cliente = document.getElementById('infoCliente');
+var tabla_transacciones = document.getElementById('tabla-transacciones');
+var tabla_pagos = document.getElementById('tabla-pagos');
 var __DIR__ = window.location.pathname.match('(.*\/).*')[1] + '';
 if(saldo){
     async function getBalance(){
@@ -83,94 +85,76 @@ if(saldo){
 
 
 }
-if(transacciones){
-    async function getTransactions(){
-
-        try{
-            let trs= await fetch(__DIR__+'../controllers/transactions.php');
-            transaction = await trs.json();
-            console.log(transaction);
-            if(transaction == 'null')
-            {
-                transacciones.innerHTML = `
-                        <tr>
-                            <td class="td">NULL</td>
-                            <td class="td">NULL</td>
-                            <td class="td">NULL</td>
-                            <td class="td">NULL</td>
-                            <td class="td">NULL</td>
-                        </tr>
-                `
-            }else{
-                let data = transaction;
-                console.log(data);
-                data.forEach((item) =>{
-                    let newtrm = document.createElement("tr");
-                    newtrm.innerHTML = `
-                    <tr>
-                        <td class="td">${item.tipo}</td>
-                        <td class="td">${item.fecha}</td>
-                        <td class="td">${item.hora}</td>
-                        <td class="warning td">${item.monto}</td>
-                        <td class="td">
-                        <button class="recibo">Recibo</button>
-                        <button class="reciboResponsive"><i class="bi bi-receipt-cutoff"></i></button></td>`;
-                        document.querySelector("#transaccion").appendChild(newtrm);
-                });
+//MOVIMIENTOS DE DEPOSITOS Y RETIROS
+if(tabla_transacciones){
+    $(document).ready(function(){
+        Tabla();
+    });
     
-            }
-    
-        }catch(err){
-            console.error(err);
-        }
+    Tabla = () => {
+    fetch(__DIR__+'../controllers/transactions.php')
+    .then((res) => res.json())
+        .then(response => {
+          console.log(response);
+          let html = '';
+          for (let i in response) {
+            html += `<tr>
+                <td class="td">${response[i].tipo}</td>
+                <td class="td">${response[i].fecha}</td>
+                <td class="td">${response[i].hora}</td>
+                <td class="warning td">${response[i].monto}</td>
+                <td class="td">
+                <button class="recibo">Recibo</button>
+                <button class="reciboResponsive"><i class="bi bi-receipt-cutoff"></i></button></td>
+            </tr>`;
+          }
+          document.querySelector('#transaccion').innerHTML = html;  
+          $('#tabla-transacciones').DataTable({
+            paging: false,
+            info:false,
+            language: { search: "" }
+          });
+          $('#buscador').on( 'keyup', function () {
+            table.search( this.value ).draw();
+        });
+        }).catch(error => console.log(error));
     }
-    getTransactions();
+}
+//PAGOS A PRESTAMO
+if(tabla_pagos){
+    $(document).ready(function(){
+        TablaPagos();
+    });
+    TablaPagos = () => {
+    fetch(__DIR__+'../controllers/getPagos.php')
+    .then((res) => res.json())
+        .then(response => {
+          console.log(response);
+          let html = '';
+          for (let i in response) {
+            html += `<tr>
+                <td class="td">${response[i].id_prestamo}</td>
+                <td class="td">${response[i].fecha}</td>
+                <td class="td">${response[i].hora}</td>
+                <td class="warning td">${response[i].monto}</td>
+                <td class="td">
+                <button class="recibo">Recibo</button>
+                <button class="reciboResponsive"><i class="bi bi-receipt-cutoff"></i></button></td>
+            </tr>`;
+          }
+          document.querySelector('#pagos-detalles').innerHTML = html;  
+          $('#tabla-pagos').DataTable({
+            paging: false,
+            info:false,
+            language: { search: "" }
+          });
+          $('#buscador').on( 'keyup', function () {
+            table.search( this.value ).draw();
+        });
+        }).catch(error => console.log(error));
+    }
 }
 
-if(transacciones_pagos){
-    async function getPagos(){
-        try{
-            let trs_pagos= await fetch(__DIR__+'../controllers/getPagos.php');
-            transaction_pagos = await trs_pagos.json();
-            console.log(transaction_pagos);
-            if(transaction_pagos == 'null')
-            {
-                transacciones_pagos.innerHTML = `
-                        <tr>
-                            <td class="td">NULL</td>
-                            <td class="td">NULL</td>
-                            <td class="td">NULL</td>
-                            <td class="td">NULL</td>
-                            <td class="td">NULL</td>
-                        </tr>
-                `
-            }else{
-                let data_pagos = transaction_pagos;
-                console.log(data_pagos);
-                data_pagos.forEach((pagos) =>{
-                    let newtr = document.createElement("tr");
-                    newtr.innerHTML = `
-                    <tr>
-                        <td class="td">${pagos.id_prestamo}</td>
-                        <td class="td">${pagos.fecha}</td>
-                        <td class="td">${pagos.hora}</td>
-                        <td class="warning td">${pagos.monto}</td>
-                        <td class="td">
-                        <button class="recibo">Recibo</button>
-                        <button class="reciboResponsive"><i class="bi bi-receipt-cutoff"></i></button></td>`;
-                        document.querySelector("#pagos").appendChild(newtr);
-                });
-    
-            }
-    
-        }catch(err){
-            console.error(err);
-        }
-    }
-    getPagos();
-
-
-}
 //OBTENER NUMCTA, RFC, EJECUTIVO, SALDO, FOTO
 if(cliente){
     async function getInfo(){
