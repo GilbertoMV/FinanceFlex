@@ -499,6 +499,43 @@ form.sign-up-form{
     background-color:#FA4848;
     color: white;
 }
+.btnR{
+    width: 150px;
+    height: 20px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: 10px 0;
+    transition: .5s;
+}
+  
+
+.btnRecover{
+    width: 150px;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: 10px 0;
+    transition: .5s;
+    font-family: 'M PLUS 1 Code', sans-serif;
+}
+
+.btnRecover:hover{
+    background-color:#FA4848;
+    color: white;
+}
+
+.btnR:hover{
+    background-color:#FA4848;
+    color: white;
+}
 .panels-container{
     position: absolute;
     width: 100%;
