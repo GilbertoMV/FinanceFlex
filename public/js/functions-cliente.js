@@ -4,6 +4,9 @@ var transacciones_pagos = document.getElementById('pagos');
 var deposito = document.getElementById('deposito');
 var retiro = document.getElementById('retiro');
 var cliente = document.getElementById('infoCliente');
+var tabla_transacciones = document.getElementById('tabla-transacciones');
+var tabla_pagos = document.getElementById('tabla-pagos');
+var info_cliente = document.getElementById('change_genere')
 var __DIR__ = window.location.pathname.match('(.*\/).*')[1] + '';
 if(saldo){
     async function getBalance(){
@@ -83,94 +86,88 @@ if(saldo){
 
 
 }
-if(transacciones){
-    async function getTransactions(){
-
-        try{
-            let trs= await fetch(__DIR__+'../controllers/transactions.php');
-            transaction = await trs.json();
-            console.log(transaction);
-            if(transaction == 'null')
-            {
-                transacciones.innerHTML = `
-                        <tr>
-                            <td class="td">NULL</td>
-                            <td class="td">NULL</td>
-                            <td class="td">NULL</td>
-                            <td class="td">NULL</td>
-                            <td class="td">NULL</td>
-                        </tr>
-                `
-            }else{
-                let data = transaction;
-                console.log(data);
-                data.forEach((item) =>{
-                    let newtrm = document.createElement("tr");
-                    newtrm.innerHTML = `
-                    <tr>
-                        <td class="td">${item.tipo}</td>
-                        <td class="td">${item.fecha}</td>
-                        <td class="td">${item.hora}</td>
-                        <td class="warning td">$${item.monto}</td>
-                        <td class="td">
-                        <button class="recibo">Recibo</button>
-                        <button class="reciboResponsive"><i class="bi bi-receipt-cutoff"></i></button></td>`;
-                        document.querySelector("#transaccion").appendChild(newtrm);
-                });
+//MOVIMIENTOS DE DEPOSITOS Y RETIROS
+if(tabla_transacciones){
+    $(document).ready(function(){
+        Tabla();
+    });
     
-            }
-    
-        }catch(err){
-            console.error(err);
-        }
+    Tabla = () => {
+    fetch(__DIR__+'../controllers/transactions.php')
+    .then((res) => res.json())
+        .then(response => {
+          console.log(response);
+          let html = '';
+          for (let i in response) {
+            html += `<tr>
+                <td class="td">${response[i].tipo}</td>
+                <td class="td">${response[i].fecha}</td>
+                <td class="td">${response[i].hora}</td>
+                <td class="warning td">${response[i].monto}</td>
+                <td class="td">
+                <button class="recibo">Recibo</button>
+                <button class="reciboResponsive"><i class="bi bi-receipt-cutoff"></i></button></td>
+            </tr>`;
+          }
+          document.querySelector('#transaccion').innerHTML = html;  
+          $('#tabla-transacciones').DataTable({
+            paging: false,
+            info:false,
+            language: { search: "" }
+          });
+          $('#buscador').on( 'keyup', function () {
+            table.search( this.value ).draw();
+        });
+        }).catch(error => console.log(error));
     }
-    getTransactions();
+}
+//PAGOS A PRESTAMO
+if(tabla_pagos){
+    $(document).ready(function(){
+        TablaPagos();
+    });
+    TablaPagos = () => {
+        const id_pr = document.getElementById('idprestamo').value;
+        form = new FormData();
+        form.append("id_prestamo", id_pr);
+    fetch(__DIR__+'../controllers/getPagos.php',{
+        method: 'POST',
+        contentType: 'XMLHttpRequest',
+        body: form
+    })
+    .then((res) => res.json())
+        .then(response => {
+          console.log(response);
+          if(response === 'null'){
+
+          }else{
+            let html = '';
+          for (let i in response) {
+            html += `<tr>
+                <td class="td">${response[i].id_prestamo}</td>
+                <td class="td">${response[i].fecha}</td>
+                <td class="td">${response[i].hora}</td>
+                <td class="warning td">${response[i].monto}</td>
+                <td class="td">
+                <button class="recibo">Recibo</button>
+                <button class="reciboResponsive"><i class="bi bi-receipt-cutoff"></i></button></td>
+            </tr>`;
+          }
+        
+          document.querySelector('#pagos-detalles').innerHTML = html;  
+          $('#tabla-pagos').DataTable({
+            paging: false,
+            info:false,
+            language: { search: "" }
+          });
+          $('#buscador').on( 'keyup', function () {
+            table.search( this.value ).draw();
+        });
+    }
+        }).catch(error => console.log(error));
+    }
 }
 
-if(transacciones_pagos){
-    async function getPagos(){
-        try{
-            let trs_pagos= await fetch(__DIR__+'../controllers/getPagos.php');
-            transaction_pagos = await trs_pagos.json();
-            console.log(transaction_pagos);
-            if(transaction_pagos == 'null')
-            {
-                transacciones_pagos.innerHTML = `
-                        <tr>
-                            <td class="td">NULL</td>
-                            <td class="td">NULL</td>
-                            <td class="td">NULL</td>
-                            <td class="td">NULL</td>
-                            <td class="td">NULL</td>
-                        </tr>
-                `
-            }else{
-                let data_pagos = transaction_pagos;
-                console.log(data_pagos);
-                data_pagos.forEach((pagos) =>{
-                    let newtr = document.createElement("tr");
-                    newtr.innerHTML = `
-                    <tr>
-                        <td class="td">${pagos.id_prestamo}</td>
-                        <td class="td">${pagos.fecha}</td>
-                        <td class="td">${pagos.hora}</td>
-                        <td class="warning td">$${pagos.monto}</td>
-                        <td class="td">
-                        <button class="recibo">Recibo</button>
-                        <button class="reciboResponsive"><i class="bi bi-receipt-cutoff"></i></button></td>`;
-                        document.querySelector("#pagos").appendChild(newtr);
-                });
-    
-            }
-    
-        }catch(err){
-            console.error(err);
-        }
-    }
-    getPagos();
-
-
-}
 //OBTENER NUMCTA, RFC, EJECUTIVO, SALDO, FOTO
 if(cliente){
     async function getInfo(){
@@ -233,3 +230,55 @@ if(cliente){
 
 
 }
+
+if(info_cliente){
+    async function getInfoCliente(){
+        try{
+            let trs_info= await fetch(__DIR__+'../controllers/getInfoCliente.php');
+            info_usuario = await trs_info.json();
+            console.log(info_usuario);
+            if(info_usuario === 'null')
+            {
+                info_cliente.innerHTML = `
+                <input class="editInfo" type="text" placeholder="Nombres">
+                <div class="colums">
+                    <input class="editInfo" type="text" placeholder="Apellido Paterno">
+                    <input class="editInfo" type="text" placeholder="Apellido Materno">
+                </div>  
+                <p class="editInfo">Hola</p>
+                <div class="colums">
+                    <p class="editInfo"></p>
+                    <p class="editInfo"></p>
+                    <select class="editInfo">
+                        <option value="Masculino">Masculino</option>
+                        <option value="Femenino">Femenino</option> 
+                    </select>
+                </div>
+                `
+    
+            }else{
+                info_cliente.innerHTML = `
+                <p class="editInfo" >${info_usuario.nom}</p>
+                <div class="colums">
+                    <p class="editInfo" >${info_usuario.apellidoP}</p>
+                    <p class="editInfo" >${info_usuario.apellidoM}</p>
+                </div>  
+                <p class="editInfo">${info_usuario.curp}</p>
+                <div class="colums">
+                    <p class="editInfo">${info_usuario.telefono}</p>
+                    <p class="editInfo">${info_usuario.fechaNac}</p>
+                    <p class="editInfo">${info_usuario.genero}</p>
+                </div>
+                `
+        
+            }
+    
+        }catch(err){
+            console.error(err);
+        }
+    }
+    getInfoCliente();
+
+
+}
+

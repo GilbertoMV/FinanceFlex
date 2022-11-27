@@ -52,32 +52,20 @@ if(isset($_SESSION['id_cliente'])){
             <div class="c2-2">
                 <div class="informacionGeneral">
                     <p>Información General</p>
-                    <form action="">
-                    <input class="editInfo" type="text" placeholder="Nombres">
-                    <div class="colums">
-                        <input class="editInfo" type="text" placeholder="Apellido Paterno">
-                        <input class="editInfo" type="text" placeholder="Apellido Materno">
-                    </div>  
-                    <input class="editInfo" type="text" placeholder="CURP">
-                    <div class="colums">
-                        <p class="editInfo">3141438338</p>
-                        <p class="editInfo">02/01/2000</p>
-                        <select class="editInfo">
-                            <option value="Masculino">Masculino</option>
-                            <option value="Femenino">Femenino</option> 
-                        </select>
-                    </div>
+                    <form id="change_genere"action="">
                     </form>
-                    <button class="actuInfo" id="ActualizarDatosCliente">Guardar Datos</button>
+                    <button class="actuInfo" id="ActualizarDatosCliente">Quiero cambiar mis datos!</button>
                 </div>
             </div>
         </div>
     </section>
 </main>
 
+<script src="../public/js/functions-cliente.js"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script src="../public/js/jquery-3.6.1.min.js"></script>
 <script src="../public/js/alertas.js"></script>
+
 
 </body>
 </html>

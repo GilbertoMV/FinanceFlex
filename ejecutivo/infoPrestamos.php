@@ -28,7 +28,7 @@ if(isset($_SESSION['id_ejecutivo'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FinanceFlex</title>
-    <link rel="shortcut icon" href="../public/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../public/img/logito.ico" type="image/x-icon">
     <link rel="stylesheet" href="../public/css/mainEjecutive.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">

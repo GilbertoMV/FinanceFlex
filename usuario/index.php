@@ -124,7 +124,7 @@ $mensualidad = $infopr['monto'] / $meses;
             <div class="contenedorh1">
                 <h1>Transacciones</h1>
             </div>
-            <table id=tabla>
+            <table id=tabla-transacciones>
                 <thead>
                     <tr>
                         <th class="tr" width="10%">Tipo</th>
