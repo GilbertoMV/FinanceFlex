@@ -27,8 +27,11 @@ else{
     <div class="container">
         <div class="forms-container">
             <div class="singin-singup" id="sing-in">
+            <div>
+            <button onclick="recovery()"class="btnRecover"><i>He olvidado mi contraseña</i></button>
+        </div>
                 <form id="loginclient" class="sign-in-form">
-                    <h2 class="title">- Inicia Sesión -</h2>
+                    <h2 class="title"> Inicia Sesión </h2>
                     <p class="formulario-input-error" id="formulario-input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
                     <p class="formulario-mensaje" id="formulario-mensaje"><b>Error:</b> Por favor rellena el formulario correctamente. </p>
                     <div class="input-field-email" id="input-email">
@@ -63,6 +66,7 @@ else{
                     <input type="submit" name="ini-admin" id="ini-admin" value="Iniciar Sesión" class="btn solid">
                 </form>
             </div>
+            
         </div>
         <div class="contenedor-loader">
             <div class="ids-roller">
@@ -95,6 +99,7 @@ else{
             </div>
         </div>
     </div>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./public/js/app.js"></script>
 </body>
 </html>

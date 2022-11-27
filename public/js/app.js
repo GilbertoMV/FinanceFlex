@@ -68,10 +68,94 @@ if(loginadmin)
         })
     })
 }
+
 //AUTENTICACION CLIENTES
 var loginclient = document.getElementById('loginclient');
 if(loginclient)
 {
+    //RECUPERAR CONTRASEÑA
+    function recovery(){
+        console.log('boton oprimido');
+        Swal.fire({
+            title: 'Confirma tus datos',
+            html:    '<input id="swal-input1" class="swal2-input" placeholder="Email">' +
+            '<input id="swal-input2" class="swal2-input" placeholder="Curp">',
+            confirmButtonColor: '#28a745',
+            cancelButtonColor: '#d8514b',
+            confirmButtonText: 'Confirmar',
+            cancelButtonText: 'Cancelar',
+            showCancelButton: true,
+            allowEscapeKey:false,
+            allowOutsideClick:false,
+        
+          }).then((result) => {
+            if(result.isConfirmed) {
+                var curp = $('#swal-input2').val();
+                var curp = curp.toUpperCase()
+                const form = new FormData();
+                form.append("email", $('#swal-input1').val());
+                fetch("./controllers/validarDatos.php",{
+                    method: 'post',
+                    body: form
+                }).then(data => data.json())
+                .then(data =>{
+                  console.log(data);
+                  console.log(data[0].curp);      
+                  if (data[0].curp === curp){
+                    console.log('curp coinciden');
+                    const formEmail = new FormData();
+                    formEmail.append("email", $('#swal-input1').val());
+                    fetch("./controllers/enviarCorreo.php",{
+                        method: 'post',
+                        body: formEmail
+                    }).then(data=> data.json)
+                    .then(data=>{
+                        if(data == 'ok'){
+                            Swal.fire({
+                                icon:'error',
+                                title:'¡Ha ocurrido un error!',
+                                text:'Contacta un ejecutivo.',
+                                showConfirmButton: false,
+                                timer:2000
+                              })
+                        }else{
+                            Swal.fire({
+                                icon: 'success',
+                                title: '¡Nueva contraseña enviada!',
+                                text: 'Revisa tu correo con tu nueva contraseña.',
+                                color:'#fff',
+                                background:'#2f2f2f',
+                                showConfirmButton:false,
+                                timer:1500,
+                                timerProgressBar:true,
+                                allowOutsideClick: false,
+                                allowEscapeKey: false,
+                              });
+
+                        }
+                    })
+                  }else{
+                    Swal.fire({
+                        icon:'error',
+                        title:'¡Datos incorrectos o no existen!',
+                        text:'Verifica la informacion ingresada.',
+                        showConfirmButton: false,
+                        timer:2000
+                      })
+                  }
+                });
+
+            }else if(result.dismiss === Swal.DismissReason.cancel){
+                Swal.fire({
+                    icon:'error',
+                    title:'¡Cancelado!',
+                    text:'La operación fue cancelada con exito.',
+                    showConfirmButton: false,
+                    timer:2000
+                  })
+            }
+        })
+    }
     //validacion de campos
     const inputs = document.querySelectorAll('#loginclient input')
     const expresiones = {
