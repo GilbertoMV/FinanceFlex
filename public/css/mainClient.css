@@ -561,6 +561,11 @@ main {
   .panel2 table {
     width: 100%;
   }
+  .panel2 tbody td {
+  
+    border: solid 2px #c8cdc4;
+    border-collapse: collapse;
+  }
 }
 /* FIN DE TRANSACCIONES  */
 
@@ -570,7 +575,10 @@ main {
 .disabled {
   display: none;
 }
+.prestamos:link, .prestamos:visited, .prestamos:active {
+  color: #fd5b5a;
 
+}
 .bannerPrestamo {
   display: grid;
   grid-template-columns: repeat(2,1fr);

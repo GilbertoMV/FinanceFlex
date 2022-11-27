@@ -113,12 +113,8 @@ $mensualidad = $infopr['monto'] / $meses;
                         </div>
                         <div class="bannerPrestamo">
                             <div class="long">
-                                <p class="pText">Aún no cuentas con un prestamo FinanceFlex, ¡¿Qué esperas?!</p> 
+                                <p class="pText">Aún no cuentas con un prestamo FinanceFlex, ¡¿Qué esperas?!, ve al apartado <a class="prestamos" href="prestamos.php">Prestamos</a></p> 
                             </div>
-                            <!-- <div>
-                                <input type="hidden" id="email" value="<?php echo $_SESSION["email"];?>"</input>
-                                <button class="hero__cta">¡SOLICITALO AHORA!</button>
-                            </div> -->
                         </div>
                     <?php }?>
             </div>
