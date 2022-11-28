@@ -98,6 +98,9 @@ if(tabla_transacciones){
     .then((res) => res.json())
         .then(response => {
           console.log(response);
+          if(response === 'null'){
+
+          }else{
           let html = '';
           for (let i in response) {
             html += `<tr>
@@ -116,6 +119,7 @@ if(tabla_transacciones){
           $('#buscador').on( 'keyup', function () {
             table.search( this.value ).draw();
         });
+    }
         }).catch(error => console.log(error));
     }
 }
