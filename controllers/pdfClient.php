@@ -4,16 +4,16 @@ session_start();
 //error_log($_SESSION['id_ejecutivo']);
 
 if(isset($_SESSION['id_cliente'])){
-    date_default_timezone_set('America/Mexico_City');    
+    date_default_timezone_set('America/Mexico_City');
     $idCliente=$_SESSION['id_cliente'];
     $monto = $_POST['monto'];
     $totalMonths = $_POST['tiempo'];
     //INTERES
-    if($totalMonths = 6)
+    if($totalMonths == 6)
     {
         $interes = 0.03;
     }
-    else if($totalMonths = 9){
+    else if($totalMonths == 9){
         $interes = 0.05;
     }
     else{
@@ -132,15 +132,15 @@ $pdf->SetY(200);
 $fechaActual= date('y-m-d');
 $partesInicio = explode('-', $fechaActual);
 $year=$partesInicio[0];
-$month=$partesInicio[1]+1;
-if ($month<10){
-    $month='0'.$month;
-}
-else{
-    $month;
-}
-$day=$partesInicio[2];
+$month=$partesInicio[1];
 for($i=0; $i< $totalMonths; $i++){
+    if ($month<10){
+        $month='0'.$month;
+    }
+    else{
+        $month;
+    }
+    $day=$partesInicio[2];
     $month=$month+1;
     if($month >12){
         $month='1';
@@ -150,12 +150,9 @@ for($i=0; $i< $totalMonths; $i++){
         $month = '0'.$month;
     }
 
-}
-for($i=0; $i< $totalMonths; $i++){
     $interes_cal=$monto*$interes;
     $total=$interes_cal+$cuota;
     $pdf->Cell(31,10,$year.'-'.$month.'-'.$day,'B',0,'C',0);
-    $month=$month+1;
     if($month >12){
         $month='1';
         $year=$year+1;
