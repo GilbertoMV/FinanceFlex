@@ -135,7 +135,6 @@ $mensualidad = $infopr['monto'] / $meses;
                         <th class="tr" width="15%">Fecha</th>
                         <th class="tr" width="15%">Hora</th>
                         <th class="tr" width="15%">Total</th>
-                        <th class="tr" width="15%">Recibo</th>
                     </tr>
                 </thead>
                 <tbody id="transaccion">

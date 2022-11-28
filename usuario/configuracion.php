@@ -31,7 +31,7 @@ if(isset($_SESSION['id_cliente'])){
     <section class="contenedores">
         <div class="c1">
             <div class="contenedor-foto">
-                <h1>Gilberto Martínez</h1>
+                <h1><?php echo $_SESSION['nom']; ?></h1>
                 <img src="../public/img/stockProfile.png" alt="perfil" class="editarFoto">
                 <button class="subirFoto">Elegir Foto</button>
             </div>

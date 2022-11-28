@@ -7,6 +7,7 @@ $sql->bindParam(':id_cliente', $_SESSION['id_cliente']);
 $sql->execute();
 $infocl = $sql->fetch(PDO::FETCH_ASSOC);
 $numcta = $infocl['numCta'];
+$saldoOld = $infocl['saldo'];
 $monto=$_POST['monto'];
 $plazo=$_POST['plazo'];
 //DETERMINAR INTERES
@@ -55,7 +56,16 @@ $insert->bindParam(':fechaInicial', $fechaActual);
 $insert->bindParam(':fechaTermino', $fechaTermino);
 $insert->execute();
 if($insert->rowCount() > 0){
-    echo json_encode('ok_generado');
+    $saldo_new = $saldoOld + $monto;
+    $insertsaldo = $conn->prepare('UPDATE cuenta SET saldo = :saldo WHERE numCta = :numCta');
+    $insertsaldo->bindParam(':saldo', $saldo_new);
+    $insertsaldo->bindParam(':numCta', $numcta);
+    $insertsaldo->execute();
+    if($insertsaldo->rowCount() > 0){
+        echo json_encode('ok_generado');
+    }else{
+        echo json_encode('error');
+    }
 }   
 else{
     echo json_encode('error');

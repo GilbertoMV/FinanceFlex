@@ -104,9 +104,6 @@ if(tabla_transacciones){
                 <td class="td">${response[i].fecha}</td>
                 <td class="td">${response[i].hora}</td>
                 <td class="warning td">${response[i].monto}</td>
-                <td class="td">
-                <button class="recibo">Recibo</button>
-                <button class="reciboResponsive"><i class="bi bi-receipt-cutoff"></i></button></td>
             </tr>`;
           }
           document.querySelector('#transaccion').innerHTML = html;  
@@ -148,9 +145,6 @@ if(tabla_pagos){
                 <td class="td">${response[i].fecha}</td>
                 <td class="td">${response[i].hora}</td>
                 <td class="warning td">${response[i].monto}</td>
-                <td class="td">
-                <button class="recibo">Recibo</button>
-                <button class="reciboResponsive"><i class="bi bi-receipt-cutoff"></i></button></td>
             </tr>`;
           }
         
