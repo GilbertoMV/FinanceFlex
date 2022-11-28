@@ -381,6 +381,18 @@ $("#depositar").click(function() {
   const monto = document.getElementById("montoDeposito").value;
   const numcta = document.getElementById("numeroCuenta").value;
   console.log(monto);
+  if(monto == '' || monto == '0'){
+    Swal.fire({
+      title:'¡Ha ocurrido un error!',
+      text:'¡Ingresa un monto válido!',
+      icon:'error',
+      background:"#2f2f2f",
+      color:"#fff",
+      timer:1500,
+      showConfirmButton:false,
+      timerProgressBar:true
+    })
+  }else{
   Swal.fire({
     title: '¿Estas Seguro?',
     text: `El monto a Depositar es: ${monto}`,
@@ -448,14 +460,26 @@ $("#depositar").click(function() {
         timer:2000
       })
     }
-
   })
+  }
 });
 // RETIRAR
 $("#retirar").click(function() {
   const monto = document.getElementById("montoRetiro").value;
   const numcta = document.getElementById("numeroCuenta_Retiro").value;
   console.log(monto);
+  if(monto == '' || monto <= '0'){
+    Swal.fire({
+      title:'¡Ha ocurrido un error!',
+      text:'¡Ingresa un monto válido!',
+      icon:'error',
+      background:"#2f2f2f",
+      color:"#fff",
+      timer:1500,
+      showConfirmButton:false,
+      timerProgressBar:true
+    })
+  }else{
   Swal.fire({
     title: '¿Estas Seguro?',
     text: `El monto a retirar es: ${monto}`,
@@ -534,6 +558,7 @@ $("#retirar").click(function() {
       })
     }
   })
+}
 });
 
 // ALERTAS DEL USUARIO
