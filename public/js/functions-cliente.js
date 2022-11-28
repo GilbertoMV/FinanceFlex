@@ -43,13 +43,13 @@ if(saldo){
             if(response_depo === 'null'){
                 deposito.innerHTML = `
                 <p>Ultimo Ingreso:</p>
-                <h5>$0.00</h5>
+                <h5 class="deposito">$0.00</h5>
         
                 `
             }else{
                 deposito.innerHTML = `
                 <p>Ultimo Ingreso:</p>
-                <h5>$${response_depo[0].monto}</h5>
+                <h5 class="deposito">$${response_depo[0].monto}</h5>
                 `
             }
             console.log(json);
@@ -68,13 +68,13 @@ if(saldo){
             if(response_retiro === 'null'){
                 retiro.innerHTML = `
                 <p>Ultimo Retiro</p>
-                <h5>$0.00</h5>
+                <h5 class="retiro">$0.00</h5>
         
                 `
             }else{
                 retiro.innerHTML = `
                 <p>Ultimo Retiro:</p>
-                <h5>$${response_retiro[0].monto}</h5>
+                <h5 class="retiro">$${response_retiro[0].monto}</h5>
                 `
             }
             console.log(json);
@@ -107,7 +107,7 @@ if(tabla_transacciones){
                 <td class="td">${response[i].tipo}</td>
                 <td class="td">${response[i].fecha}</td>
                 <td class="td">${response[i].hora}</td>
-                <td class="warning td">${response[i].monto}</td>
+                <td class="warning td">$${response[i].monto}</td>
             </tr>`;
           }
           document.querySelector('#transaccion').innerHTML = html;  
@@ -149,7 +149,7 @@ if(tabla_pagos){
                 <td class="td">${response[i].id_prestamo}</td>
                 <td class="td">${response[i].fecha}</td>
                 <td class="td">${response[i].hora}</td>
-                <td class="warning td">${response[i].monto}</td>
+                <td class="warning td">$${response[i].monto}</td>
             </tr>`;
           }
         

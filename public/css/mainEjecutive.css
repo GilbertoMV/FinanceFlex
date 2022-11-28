@@ -602,6 +602,7 @@ main .lineaR {
   color: #fff;
   padding: 15px;
   border-radius: 5px;
+  cursor: pointer;
 }
 .L {
   grid-column: 1/3;

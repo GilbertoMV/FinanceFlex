@@ -24,7 +24,6 @@ if(isset($_SESSION['id_ejecutivo'])){
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@300;400&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/6dc1722754.js" crossorigin="anonymous"></script>
-    <script defer src="../public/js/navbar.js"></script>
 </head>
 <body>
     <?php require 'nav.php' ?>

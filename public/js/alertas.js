@@ -214,7 +214,7 @@ function edit(id) {
           <div><label for="email" class="labels">Email</label>
           <input type="email" id="email" name="email" class="inputs center" value="${data[0].email}"></div> 
           <div><label for="fechaN" class="labels">Fecha de Nacimiento</label>
-          <input id="fechaN" name="fena" type="date" class="inputs center" value="${data[0].fechaNac}"></div>
+          <input id="fechaN" name="fena" type="date" class="inputs center" value="${data[0].fechaNac}" min="1951-01-01" max="2003-01-01"></div>
           </div>
           </form>`,
         preConfirm: () => {
