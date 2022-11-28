@@ -7,10 +7,14 @@ require __DIR__ . '\..\includes\db.php';
     if(!empty($email) || !empty($pass))
     {
         $records = $conn->prepare('SELECT id_cliente, rfc, nom, apellidoP,
-        apellidoM, curp, telefono, email, password, fechaNac, foto FROM clientes where email=:email');
+        apellidoM, curp, telefono, email, password, fechaNac, foto, status FROM clientes where email=:email');
         $records->bindParam(':email', $email);
         $records->execute();
         $results = $records->fetch(PDO::FETCH_ASSOC);
+        if($results['status'] == '2'){
+            echo json_encode('inactivo');
+        }
+        else{
         if(is_countable($results) > 0 && password_verify($pass, $results['password'])) {
             $_SESSION['id_cliente']=$results["id_cliente"];
             $_SESSION['rfc']=$results["rfc"];
@@ -27,6 +31,7 @@ require __DIR__ . '\..\includes\db.php';
         else{
             echo json_encode('Datos incorrectos o vacio');
         }
+    }
     }else{
         echo json_encode('Datos vacios');
     }

@@ -78,8 +78,11 @@ if(loginclient)
         console.log('boton oprimido');
         Swal.fire({
             title: 'Confirma tus datos',
-            html:    '<input id="swal-input1" class="swal2-input" placeholder="Email">' +
-            '<input id="swal-input2" class="swal2-input" placeholder="Curp">',
+            html:    `
+            <div class="formRecovery">
+            <input id="swal-input1" class="swal2-input" placeholder="Email">
+            <input id="swal-input2" class="swal2-input" placeholder="Curp">
+            </div>`,
             confirmButtonColor: '#28a745',
             cancelButtonColor: '#d8514b',
             confirmButtonText: 'Confirmar',
@@ -87,6 +90,7 @@ if(loginclient)
             showCancelButton: true,
             allowEscapeKey:false,
             allowOutsideClick:false,
+            width:'auto'
         
           }).then((result) => {
             if(result.isConfirmed) {
@@ -223,6 +227,13 @@ if(loginclient)
                     </span> 
                     `
                 }
+                else if(data === 'inactivo'){
+                    respuesta_client.innerHTML = `
+                    <span class="error">
+                        Esta cuenta esta inhabilitada
+                    </span> 
+                    `
+                }
                 else if(data === 'ok'){
                     window.location.replace(
                         __DIR__+'usuario/index.php'
@@ -303,26 +314,7 @@ if(registroclients){
     })
 }
 
-//CAPITALICACIÓN DE INPUTS DE REGISTRO
-//Mayusculas y minusculas
 
-// //instanciamos el elemento input
-// var input = document.querySelector('.capitalizar');
-// //función que capitaliza la primera letra
-// function capitalizarPrimeraLetra() {
-//   //almacenamos el valor del input
-//   var palabra = input.value;
-//   //Si el valor es nulo o undefined salimos
-//   if(!input.value) return;
-//   // almacenamos la mayuscula
-//   var mayuscula = palabra.substring(0,1).toUpperCase();
-//   //si la palabra tiene más de una letra almacenamos las minúsculas
-//   if (palabra.length > 0) {
-//     var minuscula = palabra.substring(1).toLowerCase();
-//   }
-//   //escribimos la palabra con la primera letra mayuscula
-//   input.value = mayuscula.concat(minuscula);
-// }
 
 function mostrarPalabra() {
     //cuando vas a declarar variables que el valor va permencer sobre esa misma función, utilizas let en vez de var  -->

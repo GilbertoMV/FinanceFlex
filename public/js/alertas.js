@@ -49,6 +49,14 @@ $("#nosotros").click(function() {
     confirmButtonText:'Okey'
   })
 })
+$("#politica").click(function() {
+  Swal.fire({
+    imageUrl: 'public/img/Politica.jpg',
+    imageAlt: 'politica de privacidad',
+    width:'70%',
+    confirmButtonColor:'Entendido',
+  })
+})
 
 // MODAL DE ELIMINACIÓN DE PERSONA
 function delet(id) {
@@ -812,64 +820,99 @@ $('#ActualizarCredencialesCliente').click(function() {
   const passOld = document.getElementById('passOld').value;
   const passNew = document.getElementById('passNew').value;
   const passValid = document.getElementById('passValid').value;
-  if(passNew != passValid){
-  Swal.fire({
-    icon: 'warning',
-    title: 'Las contraseñas no son iguales.',
-    showConfirmButton: false,
-    timer: 2500
-  })
-}
-else{
-  const form = new FormData();
-  form.append("email", email);
-  form.append("password", passOld);
-  var url = "../controllers/loginclient.php";
-  fetch(url, {
-      method: 'post',
-      body: form
-  })
-  .then(data => data.json())
-  .then(data =>{
-    if(data === 'ok'){
-      const form_pass = new FormData();
-      form_pass.append("passNew", passNew);
-      var url = "../controllers/changePassword.php";
-      fetch(url, {
-        method: 'post',
-        body: form_pass
-    })
-    .then(data_new => data_new.json())
-    .then(data_new =>{
-      if(data_new === 'ok'){
-        Swal.fire({
-          icon: 'success',
-          title: 'Tus cambios han sido realizados con exito.',
-          showConfirmButton: false,
-          timer: 2500
-        })
-      }else{
-        Swal.fire({
-          icon:'error',
-          title:'¡Cancelado!',
-          text:'Ha ocurrido un error.',
-          showConfirmButton: false,
-          timer:2000
-        })
-
-      }
-    })
-
-    }else{
+  if (passNew.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/)) {
+    if(passNew == ''){
       Swal.fire({
         icon: 'warning',
-        title: 'La contraseña actual no es correcta',
+        title: 'Campos vacios no permitidos.',
         showConfirmButton: false,
         timer: 2500
       })
     }
+    if(passOld == ''){
+      Swal.fire({
+        icon: 'warning',
+        title: 'Campos vacios no permitidos.',
+        showConfirmButton: false,
+        timer: 2500
+      })
+    }
+    if(passValid == ''){
+      Swal.fire({
+        icon: 'warning',
+        title: 'Campos vacios no permitidos.',
+        showConfirmButton: false,
+        timer: 2500
+      })
+    }
+    else if(passNew != passValid){
+    Swal.fire({
+      icon: 'warning',
+      title: 'Las contraseñas no son iguales.',
+      showConfirmButton: false,
+      timer: 2500
+    })
+  }
+  else{
+    const form = new FormData();
+    form.append("email", email);
+    form.append("password", passOld);
+    var url = "../controllers/loginclient.php";
+    fetch(url, {
+        method: 'post',
+        body: form
+    })
+    .then(data => data.json())
+    .then(data =>{
+      if(data === 'ok'){
+        const form_pass = new FormData();
+        form_pass.append("passNew", passNew);
+        var url = "../controllers/changePassword.php";
+        fetch(url, {
+          method: 'post',
+          body: form_pass
+      })
+      .then(data_new => data_new.json())
+      .then(data_new =>{
+        if(data_new === 'ok'){
+          Swal.fire({
+            icon: 'success',
+            title: 'Tus cambios han sido realizados con exito.',
+            showConfirmButton: false,
+            timer: 2500
+          })
+        }else{
+          Swal.fire({
+            icon:'error',
+            title:'¡Cancelado!',
+            text:'Ha ocurrido un error.',
+            showConfirmButton: false,
+            timer:2000
+          })
+  
+        }
+      })
+  
+      }else{
+        Swal.fire({
+          icon: 'warning',
+          title: 'La contraseña actual no es correcta',
+          showConfirmButton: false,
+          timer: 2500
+        })
+      }
+  
+    })
+  }
+  }
+  else{
+    Swal.fire({
+      icon: 'warning',
+      title: 'Debe contener al menos un número y una letra mayúscula y minúscula, y al menos 8 o más caracteres.',
+      showConfirmButton: false,
+      timer: 3000
+    })
 
-  })
 }
 })
 

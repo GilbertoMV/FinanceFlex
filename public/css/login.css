@@ -546,3 +546,26 @@ form.sign-in-form {
 .input-correct{
     background-color: rgba(152, 255, 35, 0.63);
 }
+
+.btnTerminos {
+  margin: 10px 0;
+  color: #696969;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: all .3s;
+  font-size: 14px;
+} 
+.btnRecover{
+  color: #696969;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: all .3s;
+  font-size: 11px;
+}
+.btnRecover:hover {
+  color: #333;
+}
+.formRecovery {
+  display: flex;
+  flex-direction: column;
+}

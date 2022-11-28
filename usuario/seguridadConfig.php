@@ -82,7 +82,7 @@ if(isset($_SESSION['id_cliente'])){
                     <div class="colums">
                         <div>
                             <label for="nContra">Contraseña Nueva:</label>
-                            <input class="editInfo" id="passNew"name="nContra" type="password" placeholder="Ingrese la contraseña Nueva..." required>
+                            <input class="editInfo" id="passNew"name="nContra" type="password" placeholder="Ingrese la contraseña Nueva..." pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Debe contener al menos un número y una letra mayúscula y minúscula, y al menos 8 o más caracteres." required>
                         </div>
                         <div>
                             <label for="nContra1">Repita la Contraseña:</label>
