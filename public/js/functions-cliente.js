@@ -7,6 +7,7 @@ var cliente = document.getElementById('infoCliente');
 var tabla_transacciones = document.getElementById('tabla-transacciones');
 var tabla_pagos = document.getElementById('tabla-pagos');
 var info_cliente = document.getElementById('change_genere')
+var file = document.getElementById('file-1')
 var __DIR__ = window.location.pathname.match('(.*\/).*')[1] + '';
 if(saldo){
     async function getBalance(){
@@ -275,4 +276,73 @@ if(info_cliente){
 
 
 }
+//INPUT IMAGENES
+if(file){
+    var inputs = document.querySelectorAll('.inputfile');
+    Array.prototype.forEach.call(inputs, (input) => {
+	var label = input.nextElementSibling, labelVal = label.innerHTML;
+	input.addEventListener('change', (e) => {
+		var fileName = '';
+		if (this.files && this.files.length > 1)
+			fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length);
+		else
+			fileName = e.target.value.split('\\').pop();
 
+		if (fileName)
+			label.querySelector('span').innerHTML = fileName;
+		else
+			label.innerHTML = labelVal;
+	});
+});
+let formulario = document.getElementById("form")
+formulario.addEventListener("submit", function name(ev) {
+    ev.preventDefault()
+    let fileN = document.getElementById('file-1')
+    var formData = new FormData();
+    formData.append("foto", fileN.files[0]);
+    fetch(__DIR__ + '../controllers/subirFoto.php',{
+        method: "POST",
+        body: formData,
+        }).then(response => response.json())
+        .then(response => {
+            console.log(response)
+            if(response =='ok'){
+                Swal.fire({
+                    title:'¡Foto subida!',
+                    text:'Cambia tu foto cuando quieras',
+                    icon:'success',
+                    showConfirmButton: false,
+                    timer:3000
+                  }).then(function() {
+                    location.reload();
+                  });
+            }else if(response == 'larga'){
+                Swal.fire({
+                    title:'¡Oops, ha ocurrido un error!',
+                    text:'La foto tiene medidas no permitidas :c.',
+                    icon:'error',
+                    showConfirmButton: false,
+                    timer:3000
+                  })
+            }
+            else if(response == 'formato'){
+                Swal.fire({
+                    title:'¡Oops, ha ocurrido un error!',
+                    text:'Formato de no permitido.',
+                    icon:'error',
+                    showConfirmButton: false,
+                    timer:3000
+                  })
+            }else{
+                Swal.fire({
+                    title:'¡Oops, ha ocurrido un error!',
+                    text:'Intenta mas tarde.',
+                    icon:'error',
+                    showConfirmButton: false,
+                    timer:3000
+                  })
+            }
+            
+        }).catch(error => console.log(error))
+    })
+}
