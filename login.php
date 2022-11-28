@@ -28,7 +28,6 @@ else{
       <div class="forms-container">
         <div class="signin-signup">
         <div>
-            <button onclick="recovery()"class="btnRecover"><i>He olvidado mi contraseña</i></button>
         </div>
           <form id="loginclient" class="sign-in-form">
             <h2 class="title">Inicia Sesión</h2>
@@ -45,6 +44,8 @@ else{
             </div>
             
             <input type="submit" value="Iniciar Sesión" class="btn solid" />
+            <a class="btnTerminos" id="politica">Política de Privacidad</a>
+                    <a onclick="recovery()" class="btnRecover">¿Haz olvidado tu contraseña?</a>
           </form>
           <form id="loginadmin" class="sign-up-form">
             <h2 class="title">Ejecutivo</h2>
