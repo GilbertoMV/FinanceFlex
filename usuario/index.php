@@ -6,6 +6,17 @@ session_start();
 //error_log($_SESSION['id_cliente']);
 if(isset($_SESSION['id_cliente'])){
 require __DIR__ .'\..\includes\db.php';
+
+$records = $conn->prepare('SELECT foto FROM clientes where id_cliente=:id_cliente');
+$records->bindParam(':id_cliente', $_SESSION['id_cliente']);
+$records->execute();
+$results = $records->fetch(PDO::FETCH_ASSOC);
+if($results['foto'] == '' or $results['foto'] == 'NULL'){
+    $results="null";
+}else{
+    $results;
+}
+
 $sql = $conn->prepare('SELECT cuenta.numCta, cuenta.saldo FROM clientes INNER JOIN cuenta ON clientes.id_cliente = cuenta.id_cliente WHERE cuenta.id_cliente = :id_cliente');
 $sql->bindParam(':id_cliente', $_SESSION['id_cliente']);
 $sql->execute();
@@ -135,7 +146,6 @@ $mensualidad = $infopr['monto'] / $meses;
                         <th class="tr" width="15%">Fecha</th>
                         <th class="tr" width="15%">Hora</th>
                         <th class="tr" width="15%">Total</th>
-                        <th class="tr" width="15%">Recibo</th>
                     </tr>
                 </thead>
                 <tbody id="transaccion">

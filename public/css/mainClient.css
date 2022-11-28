@@ -739,11 +739,39 @@ main {
 }
 .editarFoto {
   width: 60%;
+  margin-left: 2.5rem;
+}
+/*SUBIR IMAGEN*/
+.inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;   
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
 
+.inputfile + label {
+  max-width: 100%;
+  font-size: 0.1rem;    
+  font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  padding: 0.625rem 1.25rem;    
+}
+
+.inputfile:focus + label,
+.inputfile.has-focus + label {
+  outline: 1px dotted #000;
+  outline: -webkit-focus-ring-color auto 5px;
 }
 .subirFoto {
   border: solid 1px #1c1d1f;
   padding: .3rem 1.3rem;
+  margin-left: 2rem;
   transition: all .3s;
 }
 .subirFoto:hover {
