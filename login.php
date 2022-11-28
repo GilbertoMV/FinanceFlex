@@ -99,6 +99,8 @@ else{
     </div>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./public/js/app.js"></script>
+    <script src="./public/js/jquery-3.6.1.min.js"></script>
+    <script src="./public/js/alertas.js"></script>
 </body>
 </html>
 <?php

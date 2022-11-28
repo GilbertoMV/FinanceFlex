@@ -297,11 +297,6 @@ main {
     width: 100%;
     /* height: 30rem; */
 }
-@media (max-width: 700px) {
-  .paneles{
-    grid-template-columns: 1fr;
-  }
-}
 .panel1 {
     display: grid;
     grid-template-rows: 1fr 1fr;
@@ -492,6 +487,12 @@ main {
 
 .panel2 {
     border-radius: 30px;
+}
+
+@media (max-width: 700px) {
+  .paneles{
+    grid-template-columns: 1fr;
+  }
 }
 .panel2 .contenedorh1 {
     width: 20%;
@@ -715,9 +716,14 @@ main {
   grid-template-columns: 20% 80%;
 
   width: 80%;
-  height: 500px;
+  height: auto;
   margin: auto;
   border: solid 1px #d1d7dc; 
+}
+@media (max-width: 700px) {
+  .contenedores {
+    grid-template-columns: 100%;
+  }
 }
 .c1{
   border-right: solid 1px #d1d7dc;
@@ -851,12 +857,17 @@ main {
 .colums {
   display: flex;
   column-gap: 1rem;
+  justify-content: center;
+}
+.rRow {
+  width: 100%;
 }
 .colums1 {
   display: grid;
   column-gap: 1rem;
   grid-template-columns: repeat(2,auto);
 }
+
 .actuInfo {
   margin-top: 20px;
   border: solid 1px #1c1d1f;
@@ -869,4 +880,29 @@ main {
   background-color: #fff;
   border: solid 1px #1c1d1f;
   color: #000;
+}
+
+@media (max-width: 700px) {
+  .contenedores {
+    grid-template-columns: 100%;
+  }
+  .c2-1 {
+    border-bottom: solid 0px #1c1d1f;
+    border-top: solid 1px #d1d7dc;
+  }
+  .c1 {
+    border-right: solid 0px #d1d7dc;
+  }
+  .colums {
+    column-gap: 10px;
+  }
+  .contenedores label {
+    font-size: 12px;
+  }
+  .editInfo p{
+    font-size: 10px;
+  }
+  .informacionGeneral {
+    width: 95%;
+  }
 }

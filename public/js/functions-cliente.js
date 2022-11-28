@@ -246,8 +246,11 @@ if(info_cliente){
                 </div>  
                 <p class="editInfo">Hola</p>
                 <div class="colums">
+                <div> 
                     <p class="editInfo"></p>
+                </div> 
                     <p class="editInfo"></p>
+                </div>
                     <select class="editInfo">
                         <option value="Masculino">Masculino</option>
                         <option value="Femenino">Femenino</option> 
@@ -257,16 +260,35 @@ if(info_cliente){
     
             }else{
                 info_cliente.innerHTML = `
-                <p class="editInfo" >${info_usuario.nom}</p>
                 <div class="colums">
-                    <p class="editInfo" >${info_usuario.apellidoP}</p>
-                    <p class="editInfo" >${info_usuario.apellidoM}</p>
-                </div>  
+                    <div class="rRow">
+                        <label>Nombre:</label>
+                        <p class="editInfo" >${info_usuario.nom}</p>
+                    </div>
+                    <div class="rRow">
+                        <label>Primero Apellido:</label>
+                        <p class="editInfo">${info_usuario.apellidoP}</p>
+                    </div>
+                    <div class="rRow">
+                        <label>Segundo Apellido:</label>
+                        <p class="editInfo" >${info_usuario.apellidoM}</p>
+                    </div>
+                </div>
+                <label>CURP:</label>
                 <p class="editInfo">${info_usuario.curp}</p>
                 <div class="colums">
-                    <p class="editInfo">${info_usuario.telefono}</p>
-                    <p class="editInfo">${info_usuario.fechaNac}</p>
-                    <p class="editInfo">${info_usuario.genero}</p>
+                    <div class="rRow">
+                        <label>Télefono:</label>
+                        <p class="editInfo">${info_usuario.telefono}</p>
+                    </div>
+                    <div class="rRow">
+                        <label>Fecha Nacimiento:</label>
+                        <p class="editInfo">${info_usuario.fechaNac}</p>
+                    </div>
+                    <div class="rRow">
+                        <label>Género:</label>
+                        <p class="editInfo">${info_usuario.genero}</p>
+                    </div>
                 </div>
                 `
         
