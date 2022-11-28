@@ -9,7 +9,7 @@
         <div class="nav__menu">
             <a href="index.php" class="a">Mi Apartado</a>
             <a href="prestamos.php" class="a">Prestamos</a>
-            <a href="perfil.php" class="a config">Configuración</a>
+            <a href="configuracion.php" class="a config">Configuración</a>
             <a href="../controllers/logoutcontroller.php" class="a logout"><i class="bi bi-door-closed"></i> Cerrar Sesion </a>
 
             <ul class="ul a">

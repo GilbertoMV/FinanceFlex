@@ -511,25 +511,28 @@ form.sign-up-form{
     margin: 10px 0;
     transition: .5s;
 }
-  
+.btnTerminos {
+    margin: 10px 0;
+    color: #696969;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: all .3s;
+    font-size: 14px;
+} 
 
 .btnRecover{
-    width: 150px;
-    height: 40px;
-    border: none;
-    outline: none;
-    border-radius: 20px;
+    color: #696969;
     cursor: pointer;
-    text-transform: uppercase;
-    font-weight: 500;
-    margin: 10px 0;
-    transition: .5s;
-    font-family: 'M PLUS 1 Code', sans-serif;
+    text-decoration: underline;
+    transition: all .3s;
+    font-size: 11px;
 }
-
-.btnRecover:hover{
-    background-color:#FA4848;
-    color: white;
+.btnRecover:hover {
+    color: #333;
+}
+.formRecovery {
+    display: flex;
+    flex-direction: column;
 }
 
 .btnR:hover{

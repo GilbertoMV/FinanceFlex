@@ -28,7 +28,6 @@ else{
         <div class="forms-container">
             <div class="singin-singup" id="sing-in">
             <div>
-            <button onclick="recovery()"class="btnRecover"><i>He olvidado mi contraseña</i></button>
         </div>
                 <form id="loginclient" class="sign-in-form">
                     <h2 class="title"> Inicia Sesión </h2>
@@ -46,6 +45,9 @@ else{
                         
                     </div>
                     <input type="submit" value="Iniciar Sesión" class="btn solid">
+                    <a class="btnTerminos" id="politica">Política de Privacidad</a>
+                    <a onclick="recovery()" class="btnRecover">¿Haz olvidado tu contraseña?</a>
+
                 </form>
     
                 <form id="loginadmin" class="sign-up-form">
@@ -101,6 +103,8 @@ else{
     </div>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./public/js/app.js"></script>
+    <script src="./public/js/jquery-3.6.1.min.js"></script>
+    <script src="./public/js/alertas.js"></script>
 </body>
 </html>
 <?php

@@ -65,7 +65,7 @@ if(isset($_SESSION['id_ejecutivo'])){
                 <div class="bloque">
                     <label for="echaN" class="labels">Fecha de Nacimiento</label>
                     <p class="lineaF"></p>
-                    <input type="date" name="fechaN" id="fechaN" class="inputs center" required>
+                    <input type="date" name="fechaN" id="fechaN" class="inputs center" min="1951-01-01" max="2003-01-01" required>
                 </div class="bloque">
                 <div class="di bloque">
                     <label for="password" class="labels">Password</label>

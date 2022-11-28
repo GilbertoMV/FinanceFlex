@@ -49,6 +49,14 @@ $("#nosotros").click(function() {
     confirmButtonText:'Okey'
   })
 })
+$("#politica").click(function() {
+  Swal.fire({
+    imageUrl: 'public/img/Politica.jpg',
+    imageAlt: 'politica de privacidad',
+    width:'70%',
+    confirmButtonColor:'Entendido',
+  })
+})
 
 // MODAL DE ELIMINACIÓN DE PERSONA
 function delet(id) {
