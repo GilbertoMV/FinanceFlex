@@ -227,6 +227,13 @@ if(loginclient)
                     </span> 
                     `
                 }
+                else if(data === 'inactivo'){
+                    respuesta_client.innerHTML = `
+                    <span class="error">
+                        Esta cuenta esta inhabilitada
+                    </span> 
+                    `
+                }
                 else if(data === 'ok'){
                     window.location.replace(
                         __DIR__+'usuario/index.php'
