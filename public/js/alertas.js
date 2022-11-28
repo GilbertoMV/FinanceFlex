@@ -737,7 +737,7 @@ $("#solicitarPrestamo").click(function() {
       console.log(data);
       if (data === 'ok') {
         const monto= document.getElementById("monto").value
-        if(monto === ''){
+        if(monto === '' || monto === '0'){
           Swal.fire({
             title:'¡Ha ocurrido un error!',
             text:'Debes indicar el monto del prestamo.',
