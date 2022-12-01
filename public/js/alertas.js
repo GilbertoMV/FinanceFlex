@@ -17,28 +17,28 @@ $("#nosotros").click(function() {
           <div class="item">
               <img class="bloque__imagen" src="public/img/backend.png" alt="backend">
               <h1>Juan Pablo Chipres</h1>
-              <p>Desarrollador principal del backend</p>
+              <p>Desarrollador principal del back-end</p>
           </div>
       </div>
       <div class="col-1-item">
           <div class="item">
               <img class="bloque__imagen" src="public/img/frontend.png" alt="frontend">
               <h1>Gilberto Valenzuela</h1>
-              <p>Desarrollador principal de frontend</p>
+              <p>Desarrollador principal de front-end</p>
           </div>
       </div>
       <div class="col-1-item">
           <div class="item">
               <img class="bloque__imagen" src="public/img/documentador.png" alt="documentador">
               <h1>Laura Adaia Castillo</h1>
-              <p>Documentadora y auxiliar de frontend</p>
+              <p>Documentadora y auxiliar de front-end</p>
           </div>
       </div>
       <div class="col-1-item">
           <div class="item">
               <img class="bloque__imagen" src="public/img/documentador.png" alt="documentador">
-              <h1>Maximiliano Martinez</h1>
-              <p>Documentadora y auxiliar de frontend</p>
+              <h1>Maximiliano Martínez</h1>
+              <p>Documentadora y auxiliar de front-end</p>
           </div>
       </div>
     </section>`,
@@ -52,29 +52,30 @@ $("#nosotros").click(function() {
 $("#politica").click(function() {
   Swal.fire({
     imageUrl: 'public/img/Politica.jpg',
-    imageAlt: 'politica de privacidad',
+    imageAlt: 'Política de Privacidad',
     width:'70%',
     confirmButtonColor:'Entendido',
   })
 })
 
-// MODAL DE ELIMINACIÓN DE PERSONA
+// MODAL DE INHABILITAR DE CLIENTE
 function delet(id) {
   const swalWithBootstrapButtons = Swal.mixin({
     color:'#fff',
     background: '#2f2f2f'
   })  
   swalWithBootstrapButtons.fire({
-    title: '¿Está seguro?',
+    title: '¿Desea inhabilitar al cliente?',
     text: "¡Asegurate de que el cliente sea el correcto!",
     icon: 'warning',
     showCancelButton: true,
-    confirmButtonText: 'Sí, dar de baja.',
+    confirmButtonText: 'Sí, Inhabilitar',
     confirmButtonColor:'#28a745',
     background: '#2f2f2f',
     color:'#fff',
-    cancelButtonText: 'No, cancelar.',
+    cancelButtonText: 'No, Cancelar.',
     cancelButtonColor:'#d8514b',
+    focusConfirm:false,
     reverseButtons: true
   }).then((result) => {
     if (result.value) {
@@ -85,12 +86,12 @@ function delet(id) {
       .then(data =>{
         if(data == 'success'){
           swalWithBootstrapButtons.fire({
-            title:'¡Dado de Baja!',
-            text:'El cliente ha sido dado de baja con exito',
+            title:'¡Inhabilitación éxitosa!',
+            text:'El cliente ha sido dado de baja con éxito',
             icon:'success',
             showConfirmButton:false,
-            timerProgressBar:true,
-            timer:2000,
+            timerProgressBar:false,
+            timer:2500,
             allowOutsideClick: false,
             allowEscapeKey: false,
           }).then(function() {
@@ -101,11 +102,11 @@ function delet(id) {
         {
           swalWithBootstrapButtons.fire({
             title:'¡Cancelado!',
-            text:'Los datos están a salvo :)',
+            text:'Los datos están a salvo, buen día.',
             icon:'error',
             showConfirmButton:false,
-            timerProgressBar:true,
-            timer:2000,
+            timerProgressBar:false,
+            timer:2500,
             allowOutsideClick: false,
             allowEscapeKey: false,     
           })
@@ -114,22 +115,22 @@ function delet(id) {
     }
   })
 }
-//REACTIVACION DE CLIENTE
+// MODAL DE HABILITACIÓN DE CLIENTE
 function reactivar(id) {
   const swalWithBootstrapButtons = Swal.mixin({
     color:'#fff',
     background: '#2f2f2f'
   })  
   swalWithBootstrapButtons.fire({
-    title: '¿Está seguro?',
+    title: '¿Desea habilitar al cliente?',
     text: "¡Asegurate de que el cliente sea el correcto!",
     icon: 'warning',
     showCancelButton: true,
-    confirmButtonText: 'Sí, reactivar.',
+    confirmButtonText: 'Sí, Habilitar.',
     confirmButtonColor:'#28a745',
     background: '#2f2f2f',
     color:'#fff',
-    cancelButtonText: 'No, cancelar.',
+    cancelButtonText: 'No, Cancelar.',
     cancelButtonColor:'#d8514b',
     reverseButtons: true
   }).then((result) => {
@@ -141,12 +142,12 @@ function reactivar(id) {
       .then(data =>{
         if(data == 'success'){
           swalWithBootstrapButtons.fire({
-            title:'¡Reactivado!',
-            text:'El cliente ha sido reactivado con exito',
+            title:'¡Habilitado!',
+            text:'El cliente ha sido habilitado con éxito',
             icon:'success',
             showConfirmButton:false,
-            timerProgressBar:true,
-            timer:2000,
+            timerProgressBar:false,
+            timer:2500,
             allowOutsideClick: false,
             allowEscapeKey: false,
           }).then(function() {
@@ -160,8 +161,8 @@ function reactivar(id) {
             text:'Operacion cancelada :)',
             icon:'error',
             showConfirmButton:false,
-            timerProgressBar:true,
-            timer:2000,
+            timerProgressBar:false,
+            timer:2500,
             allowOutsideClick: false,
             allowEscapeKey: false,     
           })
@@ -189,16 +190,16 @@ function edit(id) {
         color:'#fff',
         allowOutsideClick: false,
         allowEscapeKey: false,
-        confirmButtonText:'Guardar',
+        confirmButtonText:'Actualizar',
         confirmButtonColor:'#28a745',
         showCancelButton: true,
-        cancelButtonText: 'No, cancelar.',
+        cancelButtonText: 'No, Cancelar.',
         cancelButtonColor:'#d8514b',
         width:'70%',
         html:
         `<form id="editarinfo">
           <div class="formulario-modal">
-          <div> <label for="nombre" class="labels">Nombre:</label>
+          <div><label for="nombre" class="labels">Nombre:</label>
           <input type="hidden" value="${id}" name="id">
           <input id="nombre" name="nom" class="inputs center" value="${data[0].nom}"></div>
           <div><label for="apellidoP" class="labels">Apellido Paterno</label>
@@ -257,7 +258,7 @@ function edit(id) {
 
           }
           else {
-            Swal.showValidationMessage('Solo se permiten numeros. Verifica tu numero a 10 digitos.')   
+            Swal.showValidationMessage('Solo se permiten números. Verifíca tu número a 10 dígitos.')   
           }
           if (rfc.value.match(validRegexRFC)) {
           }
@@ -281,7 +282,7 @@ function edit(id) {
 
           }
           else {
-            Swal.showValidationMessage('Campos vacios')   
+            Swal.showValidationMessage('Campos vacíos')   
           }
                     
         },
@@ -301,12 +302,12 @@ function edit(id) {
             Swal.fire({
               icon: 'success',
               title: '¡Actualización exitosa!',
-              text: 'Los datos han sido actualizado con exito.',
+              text: 'Los datos han sido actualizados con éxito.',
               color:'#fff',
               background:'#2f2f2f',
               showConfirmButton:false,
-              timer:1500,
-              timerProgressBar:true,
+              timer:2500,
+              timerProgressBar:false,
               allowOutsideClick: false,
               allowEscapeKey: false,
             }).then(function() {
@@ -316,13 +317,13 @@ function edit(id) {
           .catch(function(error) {
             Swal.fire({
               icon: 'error',
-              title: '¡Cancelado!',
-              text: 'Ha ocurrido un error.',
+              title: '¡Algo salió mal!',
+              text: 'Ha ocurrido un error :/',
               color:'#fff',
               background:'#2f2f2f',
               showConfirmButton:false,
-              timer:1500,
-              timerProgressBar:true,
+              timer:2500,
+              timerProgressBar:false,
               allowOutsideClick: false,
               allowEscapeKey: false,
             })
@@ -332,12 +333,12 @@ function edit(id) {
           Swal.fire({
             icon: 'error',
             title: '¡Cancelado!',
-            text: 'La operación ha sido cancelada con exito.',
+            text: 'La operación ha sido cancelada con éxito.',
             color:'#fff',
             background:'#2f2f2f',
             showConfirmButton:false,
-            timer:1500,
-            timerProgressBar:true,
+            timer:2500,
+            timerProgressBar:false,
             allowOutsideClick: false,
             allowEscapeKey: false,
           })
@@ -345,26 +346,25 @@ function edit(id) {
       })
   })
 }
-// MAS FUNCIONES
+// MODAL DE MÁS FUNCIONES
 function options(id) {
   console.log(id);
   Swal.fire({
     background:'#2f2f2f',
     color:'#fff',
-    allowOutsideClick: false,
-    allowEscapeKey: false,
-    width:'60%',
+    showConfirmButton:false,
+    width:'50%',
     
     icon: 'info',
     title:'Más Acciones:',
     html: `
     <form id="op1" action="GenerarDepositosRetiros.php" method="post">
       <div class="bloque_másInfo">      
-        <div class="L"><a onclick="document.getElementById('op1').submit(); "class="info_modal"> Generar Deposito y/o Retiro </a></div>
+        <div class="L"><a onclick="document.getElementById('op1').submit(); "class="info_modal"> Generar Depósito y/o Retiro </a></div>
         <input type="hidden" name="id" value="${id}"/>
     </form>
     <form id="op2" action="infoPrestamos.php" method="post">
-        <div><a onclick="document.getElementById('op2').submit(); "class="info_modal"> Información de Prestamos</a></div>
+        <div><a onclick="document.getElementById('op2').submit(); "class="info_modal"> Información de Préstamos</a></div>
         <input type="hidden" name="id" value="${id}"/>
     </form>
     <form id="op3" action="infoPagos.php" method="post">
@@ -376,7 +376,7 @@ function options(id) {
     
   })
 }
-// DEPOSITAR
+// MODAL DE DEPÓSITAR
 $("#depositar").click(function() {
   const monto = document.getElementById("montoDeposito").value;
   const numcta = document.getElementById("numeroCuenta").value;
@@ -388,14 +388,14 @@ $("#depositar").click(function() {
       icon:'error',
       background:"#2f2f2f",
       color:"#fff",
-      timer:1500,
+      timer:2500,
       showConfirmButton:false,
-      timerProgressBar:true
+      timerProgressBar:false
     })
   }else{
   Swal.fire({
-    title: '¿Estas Seguro?',
-    text: `El monto a Depositar es: ${monto}`,
+    title: '¿Estás Seguro?',
+    text: `El monto a Depositar es: $${monto}.00`,
     icon: 'warning',
     showCancelButton: true,
     confirmButtonColor: '#28a745',
@@ -419,25 +419,25 @@ $("#depositar").click(function() {
         console.log(data);
         if (data == 'ok') {
           Swal.fire({
-            title:'¡El deposito se realizó con exito!',
+            title:'¡El depósito fue realizado con éxito!',
             icon:'success',
             background:"#2f2f2f",
             color:"#fff",
-            timer:1500,
+            timer:2500,
             showConfirmButton:false,
-            timerProgressBar:true
+            timerProgressBar:false
           }).then(function() {
             location.reload();
           });
        }else if(data == 'not_exist'){
         Swal.fire({
-          title:'¡Numero de cuenta no existe!',
+          title:'¡Número de cuenta no existe!',
           icon:'error',
           background:"#2f2f2f",
           color:"#fff",
-          timer:1500,
+          timer:2500,
           showConfirmButton:false,
-          timerProgressBar:true
+          timerProgressBar:false
         })
        }else{
         Swal.fire({
@@ -445,9 +445,9 @@ $("#depositar").click(function() {
           icon:'error',
           background:"#2f2f2f",
           color:"#fff",
-          timer:1500,
+          timer:2500,
           showConfirmButton:false,
-          timerProgressBar:true
+          timerProgressBar:false
         })
        }
       })
@@ -455,15 +455,18 @@ $("#depositar").click(function() {
       Swal.fire({
         icon:'error',
         title:'¡Cancelado!',
-        text:'La operación fue cancelada con exito.',
+        text:'La operación fue cancelada con éxito.',
         showConfirmButton: false,
-        timer:2000
+        timer:2500,
+        background:'#2f2f2f',
+        color:'#fff',
+        timerProgressBar:false
       })
     }
   })
   }
 });
-// RETIRAR
+// MODAL DE RETIRAR
 $("#retirar").click(function() {
   const monto = document.getElementById("montoRetiro").value;
   const numcta = document.getElementById("numeroCuenta_Retiro").value;
@@ -475,14 +478,14 @@ $("#retirar").click(function() {
       icon:'error',
       background:"#2f2f2f",
       color:"#fff",
-      timer:1500,
+      timer:2500,
       showConfirmButton:false,
-      timerProgressBar:true
+      timerProgressBar:false
     })
   }else{
   Swal.fire({
-    title: '¿Estas Seguro?',
-    text: `El monto a retirar es: ${monto}`,
+    title: '¿Estás Seguro?',
+    text: `El monto a retirar es: $${monto}.00`,
     icon: 'warning',
     showCancelButton: true,
     confirmButtonColor: '#28a745',
@@ -506,25 +509,25 @@ $("#retirar").click(function() {
         console.log(data);
         if (data == 'ok') {
           Swal.fire({
-            title:'¡El retiro se realizó con exito!',
+            title:'¡El retiro se realizó con éxito!',
             icon:'success',
             background:"#2f2f2f",
             color:"#fff",
-            timer:1500,
+            timer:2500,
             showConfirmButton:false,
-            timerProgressBar:true
+            timerProgressBar:false
           }).then(function() {
             location.reload();
           });
        }else if(data == 'not_exist'){
         Swal.fire({
-          title:'¡Numero de cuenta no existe!',
+          title:'¡Número de cuenta no existe!',
           icon:'error',
           background:"#2f2f2f",
           color:"#fff",
-          timer:1500,
+          timer:2500,
           showConfirmButton:false,
-          timerProgressBar:true
+          timerProgressBar:false
         })
       }else if(data == 'not_money'){
         Swal.fire({
@@ -532,9 +535,9 @@ $("#retirar").click(function() {
           icon:'error',
           background:"#2f2f2f",
           color:"#fff",
-          timer:1500,
+          timer:2500,
           showConfirmButton:false,
-          timerProgressBar:true
+          timerProgressBar:false
         })
        }else{
         Swal.fire({
@@ -542,9 +545,9 @@ $("#retirar").click(function() {
           icon:'error',
           background:"#2f2f2f",
           color:"#fff",
-          timer:1500,
+          timer:2500,
           showConfirmButton:false,
-          timerProgressBar:true
+          timerProgressBar:false
         })
        }
       })
@@ -552,9 +555,12 @@ $("#retirar").click(function() {
       Swal.fire({
         icon:'error',
         title:'¡Cancelado!',
-        text:'La operación fue cancelada con exito.',
+        text:'La operación fue cancelada con éxito.',
         showConfirmButton: false,
-        timer:2000
+        timer:2500,
+        background:'#2f2f2f',
+        color:'#fff',
+        timerProgressBar:false
       })
     }
   })
@@ -673,7 +679,7 @@ function pagar(mensualidad, saldo, id, numcta, correo) {
                     text:'Gracias por mantenerte al día en tus mensualidades.',
                     icon:'success',
                     showConfirmButton: false,
-                    timer:3000
+                    timer:2500
                   }).then(function() {
                     location.reload();
                   });
@@ -683,7 +689,7 @@ function pagar(mensualidad, saldo, id, numcta, correo) {
                     title:'¡Cancelado!',
                     text:'Tu cuenta no cuenta con el saldo suficiente.',
                     showConfirmButton: false,
-                    timer:3000
+                    timer:2500
                   })
                 }else{
                   Swal.fire({
@@ -691,7 +697,7 @@ function pagar(mensualidad, saldo, id, numcta, correo) {
                     title:'¡Cancelado!',
                     text:'Ha ocurrido un error.',
                     showConfirmButton: false,
-                    timer:2000
+                    timer:2500
                   })
 
                 }
@@ -705,7 +711,7 @@ function pagar(mensualidad, saldo, id, numcta, correo) {
                 title:'¡Cancelado!',
                 text:'La operación fue cancelada con exito.',
                 showConfirmButton: false,
-                timer:2000
+                timer:2500
               })
             }
           })
@@ -715,7 +721,7 @@ function pagar(mensualidad, saldo, id, numcta, correo) {
             text:'Su contraseña no coincide, intentelo de nuevo.',
             icon:'error',
             showConfirmButton: false,
-            timer:3000
+            timer:2500
           })
         }
       })
@@ -725,7 +731,7 @@ function pagar(mensualidad, saldo, id, numcta, correo) {
         title:'¡Cancelado!',
         text:'La operación fue cancelada con exito.',
         showConfirmButton: false,
-        timer:2000
+        timer:2500
       })
     }
   })
@@ -768,7 +774,7 @@ $("#solicitarPrestamo").click(function() {
             text:'Debes indicar el monto del prestamo.',
             icon:'error',
             showConfirmButton: false,
-            timer:3000
+            timer:2500
           })
         }
         else{
@@ -789,7 +795,7 @@ $("#solicitarPrestamo").click(function() {
                 text:'Recuerda pagar a tiempo tus pagos.',
                 icon:'success',
                 showConfirmButton: false,
-                timer:3000
+                timer:2500
               }).then(function() {
                 location.reload();
               });
@@ -800,7 +806,7 @@ $("#solicitarPrestamo").click(function() {
                 text:'Contacta a soporte tecnico.',
                 icon:'error',
                 showConfirmButton: false,
-                timer:3000
+                timer:2500
               })
             }
           })
@@ -811,7 +817,7 @@ $("#solicitarPrestamo").click(function() {
             text:'Revisa que la informacion ingresada sea correcta.',
             icon:'error',
             showConfirmButton: false,
-            timer:3000
+            timer:2500
           })
         }
   })
@@ -821,7 +827,7 @@ $("#solicitarPrestamo").click(function() {
         title:'¡Cancelado!',
         text:'La operación fue cancelada con exito.',
         showConfirmButton: false,
-        timer:2000
+        timer:2500
       })
     }
 })
@@ -912,7 +918,7 @@ $('#ActualizarCredencialesCliente').click(function() {
             title:'¡Cancelado!',
             text:'Ha ocurrido un error.',
             showConfirmButton: false,
-            timer:2000
+            timer:2500
           })
   
         }
@@ -935,7 +941,7 @@ $('#ActualizarCredencialesCliente').click(function() {
       icon: 'warning',
       title: 'Debe contener al menos un número y una letra mayúscula y minúscula, y al menos 8 o más caracteres.',
       showConfirmButton: false,
-      timer: 3000
+      timer: 2500
     })
 
 }

@@ -42,13 +42,13 @@ if(saldo){
             console.log(response_depo);
             if(response_depo === 'null'){
                 deposito.innerHTML = `
-                <p>Ultimo Ingreso:</p>
+                <p>Último Ingreso:</p>
                 <h5 class="deposito">$0.00</h5>
         
                 `
             }else{
                 deposito.innerHTML = `
-                <p>Ultimo Ingreso:</p>
+                <p>Último Ingreso:</p>
                 <h5 class="deposito">$${response_depo[0].monto}</h5>
                 `
             }
@@ -266,19 +266,19 @@ if(info_cliente){
                         <p class="editInfo" >${info_usuario.nom}</p>
                     </div>
                     <div class="rRow">
-                        <label>Primero Apellido:</label>
+                        <label>Primer Apellido:</label>
                         <p class="editInfo">${info_usuario.apellidoP}</p>
                     </div>
                     <div class="rRow">
                         <label>Segundo Apellido:</label>
-                        <p class="editInfo" >${info_usuario.apellidoM}</p>
+                        <p class="editInfo">${info_usuario.apellidoM}</p>
                     </div>
                 </div>
                 <label>CURP:</label>
                 <p class="editInfo">${info_usuario.curp}</p>
                 <div class="colums">
                     <div class="rRow">
-                        <label>Télefono:</label>
+                        <label>Teléfono:</label>
                         <p class="editInfo">${info_usuario.telefono}</p>
                     </div>
                     <div class="rRow">
@@ -334,8 +334,8 @@ formulario.addEventListener("submit", function name(ev) {
             console.log(response)
             if(response =='ok'){
                 Swal.fire({
-                    title:'¡Foto subida!',
-                    text:'Cambia tu foto cuando quieras',
+                    title:'¡Foto Actualizada!',
+                    text:'Tu foto ha sido actualizada con éxito',
                     icon:'success',
                     showConfirmButton: false,
                     timer:3000
@@ -345,7 +345,7 @@ formulario.addEventListener("submit", function name(ev) {
             }else if(response == 'larga'){
                 Swal.fire({
                     title:'¡Oops, ha ocurrido un error!',
-                    text:'La foto tiene medidas no permitidas :c.',
+                    text:'La foto tiene medidas no permitidas, intenta con otra foto.',
                     icon:'error',
                     showConfirmButton: false,
                     timer:3000
@@ -354,7 +354,7 @@ formulario.addEventListener("submit", function name(ev) {
             else if(response == 'formato'){
                 Swal.fire({
                     title:'¡Oops, ha ocurrido un error!',
-                    text:'Formato de no permitido.',
+                    text:'Formato de no permitido, intenta probar subiendo una imagen.',
                     icon:'error',
                     showConfirmButton: false,
                     timer:3000
@@ -362,8 +362,9 @@ formulario.addEventListener("submit", function name(ev) {
             }else{
                 Swal.fire({
                     title:'¡Oops, ha ocurrido un error!',
-                    text:'Intenta mas tarde.',
+                    text:'Intentalo de nuevo más tarde',
                     icon:'error',
+                    footer:'Si el problema persiste comunicate con el soporte',
                     showConfirmButton: false,
                     timer:3000
                   })

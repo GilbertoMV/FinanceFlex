@@ -37,16 +37,15 @@ if(isset($_SESSION['id_ejecutivo'])){
     <script src="https://kit.fontawesome.com/6dc1722754.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js"></script>
-    <script defer src="../public/js/navbar.js"></script>
 </head>
 <body>
     <?php require 'nav.php'?>
     <main>
         <div class="main">
             <div>
-                <h1 class="title">Lista de Prestamos</h1>
+                <h1 class="title">Lista de Préstamos</h1>
                 <h2 class="infocliente">CLIENTE: <?php echo $res['nom']; ?></h2>
-                <h2 class="infocliente">NUMERO DE CUENTA: <?php echo $num['numCta']; ?></h2>
+                <h2 class="infocliente">NÚMERO DE CUENTA: <?php echo $num['numCta']; ?></h2>
             </div>
             <div class="colum2">
                 <div class="buscar">
@@ -62,11 +61,11 @@ if(isset($_SESSION['id_ejecutivo'])){
             <table class="clients__table" id=tabla border="0" cellspacing="0">
                 <thead>
                     <tr class="encabezado_clientes">
-                        <th width="10%">Id Prestamo</th>
-                        <th width="20%">Monto Prestamo</th>
+                        <th width="10%">Id Préstamo</th>
+                        <th width="20%">Mónto Préstamo</th>
                         <th width="10%">Interés Anual</th>
                         <th width="20%">Fecha de Inicio</th>
-                        <th width="20%">Fecha de Termino</th>
+                        <th width="20%">Fecha de Término</th>
                         <th width="20%">Tabla de Amortización</th>
                     </tr>
                 </thead>
@@ -85,9 +84,9 @@ if(isset($_SESSION['id_ejecutivo'])){
                                         <input type="hidden" name="id" value="<?php echo $id;?>"/>
                                         <input type="hidden" name="idPrestamo" value="<?php echo $prestamo['id_prestamo'];?>"/>
                                         <?php if ($prestamo['status'] === '1'){ ?>
-                                        <button class="pdf"><i class="bi bi-filetype-pdf"> Descargar PDF</i></button>
+                                        <a class="pdf"><i class="bi bi-filetype-pdf"> Descargar PDF</i></a>
                                         <?php }else{?>
-                                            <button class="pagado"><i class="bi bi-filetype-pdf">Prestamo pagado</i></button>
+                                            <button class="pagado"><i class="bi bi-filetype-pdf">Préstamo Pagado</i></button>
                                         <?php }?>
                                     </form>
                             </td> 

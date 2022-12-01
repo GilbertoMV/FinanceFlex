@@ -53,7 +53,7 @@ if(isset($_SESSION['id_ejecutivo'])){
                     <input type="email" name="correo" id="email" class="inputs center" required>
                 </div>
                 <div class="bloque">
-                    <label for="telefono" class="labels">Numero de teléfono</label>
+                    <label for="telefono" class="labels">Número de Teléfono</label>
                     <p class="lineaF"></p>
                     <input type="text" name="telefono" id="Ntelefono" class="inputs center" pattern="[0-9]{10}" title="Solo se permiten numeros. Verifica tu numero a 10 digitos." required>
                 </div>
@@ -68,7 +68,7 @@ if(isset($_SESSION['id_ejecutivo'])){
                     <input type="date" name="fechaN" id="fechaN" class="inputs center" min="1951-01-01" max="2003-01-01" required>
                 </div class="bloque">
                 <div class="di bloque">
-                    <label for="password" class="labels">Password</label>
+                    <label for="password" class="labels">Contraseña</label>
                     <p class="lineaF"></p>
                     <input type="password" name="password" id="password" class="inputs" autocomplete="off" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Debe contener al menos un número y una letra mayúscula y minúscula, y al menos 8 o más caracteres."required>
                 </div>
@@ -78,7 +78,7 @@ if(isset($_SESSION['id_ejecutivo'])){
                     <input type="text" name="rfc" id="rfc" class="inputs" pattern="[A-Za-z0-9]{12,13}" title="Verifica que tu RFC este escrito correctamente." required>
                 </div>
                 <div class="bloque">    
-                    <label for="genero" class="labels">GENERO</label>
+                    <label for="genero" class="labels">Género</label>
                     <p class="lineaF"></p>
                     <select name="genero" id="" class="inputSelect" required>
                         <option value="Masculino">Masculino</option>

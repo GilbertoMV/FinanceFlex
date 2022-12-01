@@ -32,7 +32,7 @@ if(isset($_SESSION['id_ejecutivo'])){
     <main>
         <div class="main">
             <div>
-                <h1 class="title">Lista de clientes</h1>
+                <h1 class="title">Cartera de Clientes</h1>
             </div>
             <div class="colum2">
                 <div class="buscar">
@@ -50,7 +50,7 @@ if(isset($_SESSION['id_ejecutivo'])){
                     <tr class="encabezado_clientes">
                         <th>id</th>
                         <th width="25%">Nombre Cliente</th>
-                        <th width="10%">Genero</th>
+                        <th width="10%">Género</th>
                         <th width="20%">RFC</th>
                         <th>Teléfono</th>
                         <th width="30%">Acciones</th>
@@ -68,9 +68,9 @@ if(isset($_SESSION['id_ejecutivo'])){
                                 <button onclick="options(<?php echo $resultado['id_cliente']; ?>)"class="info"><i class="bi bi-info-circle"> Más</i></button>
                                 <button onclick="edit(<?php echo $resultado['id_cliente']; ?>)"class="editar"><i class="bi bi-pencil-square"> Editar</i></button>
                                 <?php if($resultado['status'] === '1'){ ?>
-                                    <button onclick="delet(<?php echo $resultado['id_cliente']; ?>)"class="eliminar"><i class="bi bi-person-x"> Dar baja</i></button>
+                                    <button onclick="delet(<?php echo $resultado['id_cliente']; ?>)"class="eliminar"><i class="bi bi-person-x"> Inhabilitar</i></button>
                                 <?php }else{ ?>
-                                    <button onclick="reactivar(<?php echo $resultado['id_cliente']; ?>)"class="reactivar"><i class="bi bi-person-x"> Reactivar</i></button>
+                                    <button onclick="reactivar(<?php echo $resultado['id_cliente']; ?>)"class="reactivar"><i class="bi bi-person-x"> Habilitar</i></button>
                                 <?php } ?>
                             </td> 
                         </tr>

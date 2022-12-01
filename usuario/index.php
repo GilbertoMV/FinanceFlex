@@ -112,7 +112,6 @@ $mensualidad = $infopr['monto'] / $meses;
                     </div>
                 </div>
                 <?php }else{?>
-                    
                     <div class="row1">
                         <div class="head">
                             <div class="titulo">
@@ -123,15 +122,72 @@ $mensualidad = $infopr['monto'] / $meses;
                             </div>
                         </div>
                         <div class="bannerPrestamo">
-                            <div class="long">
-                            <p class="pText">Aún no cuentas con un prestamo FinanceFlex, ¡¿Qué esperas?!, ve al apartado <a class="prestamos" href="prestamos.php">Prestamos</a></p>                             </div>
-                            <!-- <div>
-                                <input type="hidden" id="email" value="<?php echo $_SESSION["email"];?>"</input>
-                                <button class="hero__cta">¡SOLICITALO AHORA!</button>
-                            </div> -->
+                            <div>
+                                <p class="pText">Aún no cuentas con un préstamo FinanceFlex, ¡¿Qué esperas?!</p> 
+                            </div>
+                            <div>
+                                <input type="hidden" id="email" value="<?php echo $_SESSION["email"];?>"/>
+                                <button class="hero__cta button-85">¡SOLICITALO AHORA!</button>
+                            </div>
                         </div>
-                    <?php }?>
-            </div>
+                            <section class="modal1">
+                                <div class="modal__container">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-12 col-sm-12 col-lg-4 ab">
+                                                <h2 class="h2">Simulador de Préstamos</h2>
+                                                <form id="datos_prestamo" name="datos" target="_blank" method="post">
+                                                    <div class="form-group mt-2 mb-3">
+                                                        <label for="monto">Monto</label>
+                                                        <input name="monto" type="text" class="form-control" id="monto" placeholder="Ingresar monto" required>
+                                                    </div>
+                                                    <div class="input-group mb-3">
+                                                        <label class="input-group-text" for="tiempo">Elige los Plazos</label>
+                                                        <select class="form-select" id="tiempo" name="tiempo">
+                                                            <option value="6" selected>6 Meses</option>
+                                                            <option value="9">9 Meses</option>
+                                                            <option value="12">12 Meses</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group mt-2 mb-3 alert alert-danger" hidden id="alert-error">
+                                                        Debes llenar todos los campos!
+                                                    </div>
+                                                    <div class="form-group mt-1 mb-3 alert alert-success">
+                                                        El interés para 6 meses es de 3%. <br>
+                                                        El interés para 9 meses es de 5%. <br>
+                                                        El interés para 12 meses es de 7%. <br>
+                                                    </div>
+                                                    <div class="mb-3">
+                                                        <button type="button" class="btn btn-warning" id="btnCalcular">Calcular</button>
+                                                        <button formaction="../controllers/pdfClient.php" class="btn btn-danger">PDF</button>        
+                                                </form>
+                                                <button type="button" class="btn btn-success" id="solicitarPrestamo">Solicitar</button>
+                                            </div>
+                                            <div>
+                                                <button type="button" class="btn btn-primary modal__close">Cerrar</button>
+                                            </div>
+                                        </div>
+                                            <div class="col-12 col-sm-12 col-lg-8">
+                                                <table id="lista-tabla" class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th  class="thT">Fecha</th>
+                                                            <th  class="thT">Amortización</th>
+                                                            <th  class="thT">Interés</th>
+                                                            <th  class="thT">Cuota</th>
+                                                            <th  class="thT">Saldo</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody></tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+            <?php }?>
+        </div>
         </div>
             
         <div class="panel2">
@@ -157,6 +213,9 @@ $mensualidad = $infopr['monto'] / $meses;
     <script src="../public/js/functions-cliente.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../public/js/alertas.js"></script>
+    <script src="../public/js/dayjs.min.js"></script>
+    <script src="../public/js/aleman.js"></script>
+    <script src="../public/js/modalSimulador.js"></script>
 </body>
 </html>
 <?php
