@@ -67,13 +67,13 @@ if(saldo){
             console.log(response_retiro);
             if(response_retiro === 'null'){
                 retiro.innerHTML = `
-                <p>Ultimo Retiro</p>
+                <p>Último Retiro</p>
                 <h5 class="retiro">$0.00</h5>
         
                 `
             }else{
                 retiro.innerHTML = `
-                <p>Ultimo Retiro:</p>
+                <p>Último Retiro:</p>
                 <h5 class="retiro">$${response_retiro[0].monto}</h5>
                 `
             }
@@ -193,6 +193,7 @@ if(cliente){
                         <label for="ejecutivoName">Saldo de la Cuenta:</label>
                         <p class="editInfo"></p>
                     </div>
+                    <button class="actuInfo" id="ActualizarDatosCliente">Quiero cambiar mis datos.</button>
                 </div>
                 </form>
                 `
@@ -216,6 +217,8 @@ if(cliente){
                         <p class="editInfo">$ ${info_usuario.saldo}</p>
                     </div>
                 </div>
+                
+                <button class="deleteCuenta" id="cerrarCuenta">Dar de Baja Mi Cuenta</button>
                 </form>
                 `
         

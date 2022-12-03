@@ -48,7 +48,7 @@ if(isset($_SESSION['id_cliente'])){
                         <?php }?>
                     <input type="file" name="file-1[]" id="file-1" class="inputfile inputfile-1" data-multiple-caption="{count} files selected" multiple />
                     <label for="file-1" class="fotoload">
-                        <span><i class="bi bi-cloud-arrow-up"></i> Escoge una foto...</span>
+                        <span><i class="bi bi-cloud-arrow-up"></i> Sube una foto</span>
                     </label>
                     <button id="subir" class="subirFoto">Cambiar Foto</button>
                 </form>
@@ -58,7 +58,7 @@ if(isset($_SESSION['id_cliente'])){
                     <li><a class="opc check" href="miCuentaConfig.php"><i class="bi bi-person-vcard"></i> Mi Cuenta</a></li>
                     <li><a class="opc" href="configuracion.php"><i class="bi bi-person-badge"></i> Mi Perfil</a></li>
                     <li><a class="opc" href="seguridadConfig.php"> <i class="bi bi-shield-check"></i> Seguridad</a></li>
-                    <li><a class="opc_CerrarCuenta" id="cerrarCuenta"> <i class="bi bi-exclamation-triangle"></i> Cerrar Cuenta</a></li>
+                    <li><a href="../controllers/logoutcontroller.php" class="opc_CerrarCuenta"><i class="bi bi-door-closed"></i> Cerrar Sesión </a></li>
                 </ul>
             </div>
         </div>
@@ -69,6 +69,7 @@ if(isset($_SESSION['id_cliente'])){
             </div>
             <div class="c2-2">
                 <div id="infoCliente" class="informacionGeneral">
+                    
                 </div>
             </div>
         </div>

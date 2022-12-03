@@ -96,7 +96,7 @@ $mensualidad = $infopr['monto'] / $meses;
                     <div class="extras">
                         <div class="extras_row1">
                             <div class="contenedorh1">
-                                <p>Proximo Pago:</p>
+                                <p>Próximo Pago:</p>
                                 <h5>$<?php echo round($mensualidad, 2)?></h5>
                             </div>
                         </div>
@@ -127,7 +127,7 @@ $mensualidad = $infopr['monto'] / $meses;
                             </div>
                             <div>
                                 <input type="hidden" id="email" value="<?php echo $_SESSION["email"];?>"/>
-                                <button class="hero__cta button-85">¡SOLICITALO AHORA!</button>
+                                <button class="hero__cta button-85">¡SOLICÍTALO AHORA!</button>
                             </div>
                         </div>
                             <section class="modal1">

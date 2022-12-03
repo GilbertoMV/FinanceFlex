@@ -58,7 +58,7 @@ $("#politica").click(function() {
   })
 })
 
-// MODAL DE INHABILITAR DE CLIENTE
+// MODAL DE INHABILITACIÓN CLIENTE
 function delet(id) {
   const swalWithBootstrapButtons = Swal.mixin({
     color:'#fff',
@@ -115,7 +115,7 @@ function delet(id) {
     }
   })
 }
-// MODAL DE HABILITACIÓN DE CLIENTE
+// MODAL DE HABILITACIÓN CLIENTE
 function reactivar(id) {
   const swalWithBootstrapButtons = Swal.mixin({
     color:'#fff',
@@ -171,7 +171,7 @@ function reactivar(id) {
     }
   })
 }
-// MODAL DE MODIFICACIÓN DE PERSONA
+// MODAL DE MODIFICACIÓN CLIENTE
 function edit(id) {
   console.log(id);
   fetch('../controllers/infocliente.php?num_cliente='+id,{
@@ -376,7 +376,7 @@ function options(id) {
     
   })
 }
-// MODAL DE DEPÓSITAR
+// MODAL DE DEPÓSITAR A CUENTA
 $("#depositar").click(function() {
   const monto = document.getElementById("montoDeposito").value;
   const numcta = document.getElementById("numeroCuenta").value;
@@ -466,7 +466,7 @@ $("#depositar").click(function() {
   })
   }
 });
-// MODAL DE RETIRAR
+// MODAL DE RETIRAR A CUENTA
 $("#retirar").click(function() {
   const monto = document.getElementById("montoRetiro").value;
   const numcta = document.getElementById("numeroCuenta_Retiro").value;
@@ -569,13 +569,12 @@ $("#retirar").click(function() {
 
 // ALERTAS DEL USUARIO
 
-// ALERTA DE INFORMACION SALDO A PAGAR
+// ALERTA DE INFORMACIÓN SALDO A PAGAR
 $("#infoPago").click(function() {
   Swal.fire({
     icon:'question',
-    title:'¿Qué veo?',
-    text:'En este apartado se encuentra una preview de su prestamo más relevante, la cantidad que debe, los plazos que han sido pagados, así como también los plazos restantes para concluir el prestamo.',
-    // background:'#d9d9d9',
+    title:'¿Qué es este apartado?',
+    text:'Desde este apartado podrás ver su próximo pago a vencer y encontrarás la opción de realizar el pago inmediatamente!!!',
     showCancelButton: false,
     showConfirmButton:false,
     showCloseButton:true,
@@ -587,8 +586,8 @@ $("#infoPago").click(function() {
 $("#infoSolicitar").click(function() {
   Swal.fire({
     icon:'question',
-    title:'¿Qué Es Este Apartado?',
-    text:'En este apartado podrás establecer los detalles de un prestamo, puedes ingresar el monto y el número de plazos en lo que deseas pagarlo y te mostrará la tabla de amortización, si así lo decides puedes solicitar ahí mismo tu prestamo!!!',
+    title:'¿Qué es este apartado?',
+    text:'En este apartado podrás simular tu próximo préstamo, puedes ingresar el mónto y el número de plazos en lo que deseas pagarlo y verás inmediatamente la tabla de amortización con los detalles de plazos, pagos y fechas de pago, si así lo decides puedes solicitar desde este apartado, la validación de tu préstamo!!!',
     // background:'#d9d9d9',
     showCancelButton: false,
     showConfirmButton:false,
@@ -608,15 +607,15 @@ function pagar(mensualidad, saldo, id, numcta, correo) {
   Swal.fire({
     title: 'Ingresa tu Contraseña',
     input: 'password',
-    inputPlaceholder: 'Ingresa tu Contraseña:',
+    inputPlaceholder: 'Ingresa tu Contraseña...',
     inputAttributes: {
       autocapitalize: 'off',
       autocorrect: 'off'
     },
     confirmButtonColor: '#28a745',
     cancelButtonColor: '#d8514b',
-    confirmButtonText: 'Confirmar',
-    cancelButtonText: 'No, Cancelar',
+    confirmButtonText: 'Confirmar.',
+    cancelButtonText: 'No, Cancelar.',
     showCancelButton: true,
     allowEscapeKey:false,
     allowOutsideClick:false,
@@ -740,7 +739,7 @@ $("#solicitarPrestamo").click(function() {
     Swal.fire({
       title: 'Ingresa tu Contraseña',
       input: 'password',
-      inputPlaceholder: 'Ingresa tu Contraseña:',
+      inputPlaceholder: 'Ingresa tu Contraseña...',
       inputAttributes: {
         autocapitalize: 'off',
         autocorrect: 'off'
@@ -748,8 +747,8 @@ $("#solicitarPrestamo").click(function() {
       showCancelButton: true,
       confirmButtonColor: '#198754',
       cancelButtonColor: '#dc3545',
-      confirmButtonText: 'Confirmar',
-      cancelButtonText: 'Cancelar'
+      confirmButtonText: 'Si, Confirmar.',
+      cancelButtonText: 'Cancelar.'
     }).then((result)=>{ 
       if(result.isConfirmed) {
         
@@ -771,7 +770,7 @@ $("#solicitarPrestamo").click(function() {
         if(monto === '' || monto === '0'){
           Swal.fire({
             title:'¡Ha ocurrido un error!',
-            text:'Debes indicar el monto del prestamo.',
+            text:'Debes indicar el monto del préstamo.',
             icon:'error',
             showConfirmButton: false,
             timer:2500
@@ -791,8 +790,8 @@ $("#solicitarPrestamo").click(function() {
             console.log(data_prestamo);
             if(data_prestamo === 'ok_generado'){
               Swal.fire({
-                title:'¡Prestamo confirmado!',
-                text:'Recuerda pagar a tiempo tus pagos.',
+                title:'¡Préstamo confirmado!',
+                text:'El monto de tu préstamo ha sido agregado a tu cuenta.',
                 icon:'success',
                 showConfirmButton: false,
                 timer:2500
@@ -803,7 +802,7 @@ $("#solicitarPrestamo").click(function() {
             else if(data_prestamo === 'error'){
               Swal.fire({
                 title:'¡Ha ocurrido un error!',
-                text:'Contacta a soporte tecnico.',
+                text:'Si el problema persiste contacta a soporte técnico.',
                 icon:'error',
                 showConfirmButton: false,
                 timer:2500
@@ -814,7 +813,7 @@ $("#solicitarPrestamo").click(function() {
         }else{
           Swal.fire({
             title:'¡Oops, parece que no eres tú!',
-            text:'Revisa que la informacion ingresada sea correcta.',
+            text:'Revisa que la información ingresada sea correcta.',
             icon:'error',
             showConfirmButton: false,
             timer:2500
@@ -825,7 +824,7 @@ $("#solicitarPrestamo").click(function() {
     Swal.fire({
         icon:'error',
         title:'¡Cancelado!',
-        text:'La operación fue cancelada con exito.',
+        text:'La operación fue cancelada con éxito.',
         showConfirmButton: false,
         timer:2500
       })
@@ -833,14 +832,13 @@ $("#solicitarPrestamo").click(function() {
 })
 })
 
-
 // CONFIGURACION ALERTAS 
 // ALERTA GUARDAR DATOS GENERALES 
 $('#ActualizarDatosCliente').click(function() {
   Swal.fire({
     icon: 'warning',
     title: 'Oops...',
-    text: 'Para modificar tus datos personales es necesario contactar con tu ejecutivo',
+    text: 'Para modificar tus datos personales es necesario contactar con tu ejecutivo.',
     confirmButtonText: 'Entendido',
     confirmButtonColor:'#198754'
   })
@@ -855,7 +853,8 @@ $('#ActualizarCredencialesCliente').click(function() {
     if(passNew == ''){
       Swal.fire({
         icon: 'warning',
-        title: 'Campos vacios no permitidos.',
+        title: '¡Campos vacíos!',
+        text:'Intenta rellenando los campos para continuar.',
         showConfirmButton: false,
         timer: 2500
       })
@@ -863,7 +862,8 @@ $('#ActualizarCredencialesCliente').click(function() {
     if(passOld == ''){
       Swal.fire({
         icon: 'warning',
-        title: 'Campos vacios no permitidos.',
+        title: '¡Campos vacíos!',
+        text:'Intenta rellenando los campos para continuar.',
         showConfirmButton: false,
         timer: 2500
       })
@@ -871,7 +871,8 @@ $('#ActualizarCredencialesCliente').click(function() {
     if(passValid == ''){
       Swal.fire({
         icon: 'warning',
-        title: 'Campos vacios no permitidos.',
+        title: '¡Campos vacíos!',
+        text:'Intenta rellenando los campos para continuar.',
         showConfirmButton: false,
         timer: 2500
       })
@@ -879,7 +880,8 @@ $('#ActualizarCredencialesCliente').click(function() {
     else if(passNew != passValid){
     Swal.fire({
       icon: 'warning',
-      title: 'Las contraseñas no son iguales.',
+      text: '¡Constraseñas no coiciden!',
+      title: 'Ambas contraseñas deben ser iguales.',
       showConfirmButton: false,
       timer: 2500
     })
@@ -908,7 +910,8 @@ $('#ActualizarCredencialesCliente').click(function() {
         if(data_new === 'ok'){
           Swal.fire({
             icon: 'success',
-            title: 'Tus cambios han sido realizados con exito.',
+            title: '¡Actualización exitosa!',
+            title: 'Tus cambios han sido realizados y almacenados con éxito.',
             showConfirmButton: false,
             timer: 2500
           })
@@ -916,7 +919,7 @@ $('#ActualizarCredencialesCliente').click(function() {
           Swal.fire({
             icon:'error',
             title:'¡Cancelado!',
-            text:'Ha ocurrido un error.',
+            text:'La operación ha sido cancelada con éxito.',
             showConfirmButton: false,
             timer:2500
           })
@@ -927,7 +930,8 @@ $('#ActualizarCredencialesCliente').click(function() {
       }else{
         Swal.fire({
           icon: 'warning',
-          title: 'La contraseña actual no es correcta',
+          title:'¡Error de autenticación!',
+          text: 'La contraseña actual no es correcta',
           showConfirmButton: false,
           timer: 2500
         })
@@ -939,7 +943,8 @@ $('#ActualizarCredencialesCliente').click(function() {
   else{
     Swal.fire({
       icon: 'warning',
-      title: 'Debe contener al menos un número y una letra mayúscula y minúscula, y al menos 8 o más caracteres.',
+      title:'¡Constraseña no valida!',
+      text: 'Debe contener al menos un número y una letra mayúscula y minúscula, y al menos 8 o más caractéres.',
       showConfirmButton: false,
       timer: 2500
     })
@@ -952,7 +957,7 @@ $('#cerrarCuenta').click(function() {
   Swal.fire({
     icon: 'warning',
     title: 'Oops...',
-    text: 'Para cerrar tu cuenta es necesario contactar con tu ejecutivo',
+    text: 'Para dar de baja tu cuenta es necesario contactar con tu ejecutivo',
     confirmButtonText: 'Entendido',
     confirmButtonColor:'#198754'
   })

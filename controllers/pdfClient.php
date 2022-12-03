@@ -99,10 +99,10 @@ $pdf->setX(10);
 $pdf->SetDrawColor(89,89,89);
 $pdf->SetTextColor(89,89,89);
 
-$pdf->Cell(140,8,'Fecha de inicio: '.$fechaActual,'B',0,'L',0);
+$pdf->Cell(140,8,'Fecha de Inicio: '.$fechaActual,'B',0,'L',0);
 $pdf->SetY(120); 
 $pdf->setX(10);
-$pdf->Cell(140,8,'Fecha de termino: '.$fechaTermino,'B',0,'L',0);
+$pdf->Cell(140,8,'Fecha de Termino: '.$fechaTermino,'B',0,'L',0);
 $pdf->SetY(130); 
 $pdf->setX(10);
 $pdf->Cell(140,8,'Interes: '.$interes.'%','B',0,'L',0);
@@ -122,11 +122,11 @@ $pdf->SetTextColor(89,89,89);
 $pdf->SetY(190); 
 $pdf->setX(10);
 $pdf->Cell(31,10,'Fecha','B',0,'C',0);
-$pdf->Cell(31,10,'Saldo incial','B',0,'C',0);
+$pdf->Cell(31,10,'Saldo Incial','B',0,'C',0);
 $pdf->Cell(31,10,'Cuota','B',0,'C',0);
 $pdf->Cell(31,10,'Interes','B',0,'C',0);
-$pdf->Cell(31,10,'Pago total','B',0,'C',0);
-$pdf->Cell(31,10,'Saldo restante','B',0,'C',0);
+$pdf->Cell(31,10,'Pago Total','B',0,'C',0);
+$pdf->Cell(31,10,'Saldo Restante','B',0,'C',0);
 $pdf->SetY(200);
 
 $fechaActual= date('y-m-d');

@@ -815,9 +815,6 @@ main {
 }
 .opc, .opc_CerrarCuenta{
   color: #000;
-  text-decoration: none;
-  display: flex;
-  justify-content: left;
   align-items: center;
   padding-left: 10px;
   transition: all .2s;
@@ -906,6 +903,19 @@ main {
   background-color: #fff;
   border: solid 1px #1c1d1f;
   color: #000;
+}
+.deleteCuenta {
+  margin-top: 20px;
+  border: solid 1px #dc3545;
+  background-color: #dc3545;
+  color: #fff;
+  padding: .5rem 1.3rem;
+  transition: all .3s;
+}
+.deleteCuenta:hover {
+  background-color: #fff;
+  border: solid 1px #dc3545;
+  color: #dc3545;
 }
 .contenedor-foto span:hover {
   color: #fff;

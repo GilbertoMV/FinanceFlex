@@ -20,7 +20,7 @@
                 <?php }?>
                     <ul >
                         <li><a href="configuracion.php" class="a"><i class="bi bi-sliders"></i> Configuración</a></li>
-                        <li><a href="../controllers/logoutcontroller.php" class="a"><i class="bi bi-door-closed"></i> Cerrar Sesion </a></li>
+                        <li><a href="../controllers/logoutcontroller.php" class="a"><i class="bi bi-door-closed"></i> Cerrar Sesión </a></li>
                     </ul>
                 </li>
             </ul>
