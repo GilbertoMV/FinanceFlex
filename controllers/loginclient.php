@@ -11,7 +11,10 @@ require __DIR__ . '\..\includes\db.php';
         $records->bindParam(':email', $email);
         $records->execute();
         $results = $records->fetch(PDO::FETCH_ASSOC);
-        if($results['status'] == '2'){
+        if(is_countable($results) < 0){
+            echo json_encode('not_exist');
+        }
+        else if(is_countable($results) > 0 && $results['status'] == '2'){
             echo json_encode('inactivo');
         }
         else{

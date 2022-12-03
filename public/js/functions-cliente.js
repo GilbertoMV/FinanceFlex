@@ -201,7 +201,7 @@ if(cliente){
             }else{
                 cliente.innerHTML = `
                 <p>Información de Mi cuenta</p>
-                <form action="">
+                <form>
                 <label for="nCuenta">Número de Cuenta:</label>
                 <p class="editInfo">${info_usuario.numCta}</p>
                 <label for="rfc">RFC:</label>
@@ -218,8 +218,9 @@ if(cliente){
                     </div>
                 </div>
                 
-                <button class="deleteCuenta" id="cerrarCuenta">Dar de Baja Mi Cuenta</button>
+               
                 </form>
+                <button onclick="baja()" class="deleteCuenta" id="cerrarCuenta">Dar de Baja Mi Cuenta</button>
                 `
         
             }
