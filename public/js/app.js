@@ -227,6 +227,13 @@ if(loginclient)
                     </span> 
                     `
                 }
+                else if(data === 'not_exist'){
+                    respuesta_client.innerHTML = `
+                    <span class="error">
+                        Datos incorrectos o cuenta no registrada
+                    </span> 
+                    `
+                }
                 else if(data === 'inactivo'){
                     respuesta_client.innerHTML = `
                     <span class="error">

@@ -953,7 +953,7 @@ $('#ActualizarCredencialesCliente').click(function() {
 })
 
 // ALERTA CERRAR CUENTA DESDE CLIENTE 
-$('#cerrarCuenta').click(function() {
+function baja() {
   Swal.fire({
     icon: 'warning',
     title: 'Oops...',
@@ -961,4 +961,4 @@ $('#cerrarCuenta').click(function() {
     confirmButtonText: 'Entendido',
     confirmButtonColor:'#198754'
   })
-})
+}
